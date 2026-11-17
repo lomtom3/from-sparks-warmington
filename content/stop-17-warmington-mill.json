@@ -1,28 +1,28 @@
 {
-  "_readme": "Colour code: [[r:...]] RED = best guess, unconfirmed. [[c:...]] CYAN = new or unknown, suggested by Claude for approval. Plain = confirmed by owner.",
+  "_readme": "Colour code: [[c:...]] CYAN = not confirmed yet (a best guess or a new idea from Claude, for the owner to approve). Plain text = confirmed by the owner.",
   "id": "stop-17",
   "order": 17,
   "name": "Warmington Mill",
   "map": [
-    320,
-    552,
-    "guess"
+    376,
+    567,
+    "confirmed"
   ],
   "photo": "images/20261019_174630.jpg",
   "photo_caption": "Warmington Mill",
   "layers": {
-    "essential_history": "[[r:Warmington Mill is recorded in the Domesday Book. The building you see now is later, and milling stopped in 1958.]]",
-    "deeper_history": "[[c:Deeper history for this stop is still to be written.]]",
+    "essential_history": "[[c:Warmington Mill is mentioned in the Domesday Book. The building you see now is newer, and milling here stopped in 1958.]]",
+    "deeper_history": "[[c:A mill at Warmington is recorded in 1086 (Domesday) and again in 1125. The building you see now dates from the early or mid 19th century, with a rebuild recorded in 1838, and in 1847 and 1862 it was advertised for sale as a working corn mill with four pairs of stones. It's Grade II listed. The village board says the mill closed in 1958 when Matthew Hayes retired.]]",
     "mystery": "[[c:Journal page: you check the mill's records against the estate's own.]]"
   },
   "puzzle": {
     "ref": "P4",
     "title": "The missing sacks",
-    "intro": "[[c:PLACEHOLDER IDEA, for your approval. Compare the two records.]]",
+    "intro": "[[c:Compare the mill's record with the estate's.]]",
     "material": [
-      "[[c:MILL DISPATCH RECORD: 12 sacks of grain sent to the estate.]]",
+      "[[c:MILL RECORD: 12 sacks of grain sent to the estate.]]",
       "[[c:ESTATE RECEIPT: 10 sacks of grain received.]]",
-      "[[c:A riverside delivery note, marked with the same sack symbol, shows two sacks sold to a private buyer.]]"
+      "[[c:RIVERSIDE NOTE: marked with the same sack symbol, it shows two sacks sold to a private buyer.]]"
     ],
     "question": "[[c:How many sacks are missing?]]",
     "answer": "2",
@@ -32,17 +32,27 @@
     ],
     "hints": [
       "[[c:Compare the number sent with the number received.]]",
-      "[[c:Subtract the smaller number from the larger.]]",
+      "[[c:Take the smaller number from the larger.]]",
       "[[c:Twelve take away ten.]]"
     ],
-    "reveal": "[[c:Two sacks are missing, and the delivery note shows where they went. The grain accounts do not add up.]]",
-    "fallback": "[[c:This puzzle uses only the story text.]]"
+    "reveal": "[[c:Two sacks are missing, and the riverside note shows where they went. The grain accounts don't add up.]]",
+    "fallback": "[[c:You can work this one out from the clues above.]]"
   },
   "evidence": [
-    "[[c:Mill record: 12 sacks sent, 10 received. Two went to a private buyer. The grain accounts do not reconcile.]]"
+    "[[c:The mill sent 12 sacks but the estate only received 10. Two went to a private buyer, so the grain accounts don't add up.]]"
   ],
-  "directions_to_next": "[[c:Directions to be supplied after the recce. Next stop: Elton Boat Club.]]",
+  "directions_to_next": "[[c:Next is the Elton Boat Club. Full directions coming soon.]]",
   "notes": [
-    "Placeholder: the owner will confirm or replace this puzzle. Do not use a wheel count or anything that may change."
+    "Puzzle idea awaiting owner approval. Do not use a wheel count or anything that may change."
+  ],
+  "sources": [
+    {
+      "title": "Warmington Mill, Northamptonshire HER",
+      "url": "https://her.northamptonshire.gov.uk/Monument/MNN107912"
+    },
+    {
+      "title": "Village history board (photos taken on the recce, 19 Oct 2026)",
+      "url": "https://www.warmington.org"
+    }
   ]
 }

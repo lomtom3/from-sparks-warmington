@@ -1,43 +1,61 @@
 {
-  "_readme": "Colour code: [[r:...]] RED = best guess, not yet confirmed by owner. [[c:...]] CYAN = new idea/puzzle suggested by Claude. Plain = confirmed. Answers here are readable in the public repository.",
+  "_readme": "Colour code: [[c:...]] CYAN = not confirmed yet (a best guess or a new idea from Claude, for the owner to approve). Plain text = confirmed by the owner.",
   "id": "stop-01",
   "order": 1,
   "name": "Red Lion",
-  "map": [433, 635, "confirmed"],
+  "map": [
+    433,
+    635,
+    "confirmed"
+  ],
   "photo": "images/20261019_175746.jpg",
   "photo_caption": "The Red Lion",
   "layers": {
-    "essential_history": "[[r:The Red Lion is where the walk begins and ends. Local sources disagree about its age: the village board says late 17th or early 18th century, and the village website says early 1800s.]]",
-    "deeper_history": "[[r:Deeper history for this stop is still to be written.]]",
-    "mystery": "[[r:The housekeeper presses a note into your hand. A sealed order has vanished, and the carter comes for the evening collection soon. Four people had a reason to be near it: the miller's assistant, the stable hand, the messenger and the steward. Start by listening to what they say.]]"
+    "essential_history": "[[c:This is where the walk starts and finishes. Nobody is quite sure how old the pub is: the village board says late 17th or early 18th century, while the village website says early 1800s.]]",
+    "deeper_history": "[[c:The village board says the toilet block by the pub was once the village fish and chip shop.]]",
+    "mystery": "[[c:The housekeeper catches you at the door. \"A sealed order has gone missing, and the carter will be here for it this evening. Four people were near it: ]]Martha[[c: at the mill, ]]Jonas[[c: in the stables, ]]Alice[[c: the messenger and ]]Mr Vale[[c: the steward. Find out what each of them has to say.\"]]"
   },
   "puzzle": {
     "ref": "P5",
-    "title": "Who cannot be telling the truth?",
-    "intro": "[[c:The three witnesses below were asked where they were. One account cannot be true. Compare them with the receipt.]]",
+    "title": "Whose story can't be true?",
+    "intro": "[[c:Here are three accounts of the afternoon, and a receipt. One of them can't be true. Can you spot which?]]",
     "material": [
-      "[[c:RECEIPT: The sealed order was handed into the dispatch room at the second bell. Signed for by the housekeeper.]]",
-      "[[c:ALICE MILLER, miller's assistant: \"I was at the mill all afternoon. I loaded the cart before the second bell and it left on time.\"]]",
-      "[[c:THOMAS CARTER, stable hand: \"I was in the yard with the horses. I saw the messenger ride in at the third bell with the order still in her bag.\"]]",
-      "[[c:ANNE FLETCHER, messenger: \"I reached the dispatch room at the second bell and handed the order over to the housekeeper.\"]]"
+      "[[c:RECEIPT: the sealed order was handed into the dispatch room at the second bell. Signed for by the housekeeper.]]",
+      "MARTHA[[c:, miller's assistant: \"I was at the mill all afternoon. I loaded the cart before the second bell and it left on time.\"]]",
+      "JONAS[[c:, stable hand: \"I was in the yard with the horses. I saw ]]Alice[[c: ride in at the third bell with the order still in her bag.\"]]",
+      "ALICE[[c:, messenger: \"I got to the dispatch room at the second bell and handed the order to the housekeeper.\"]]"
     ],
-    "question": "[[c:Which witness's account cannot be true? Type their first name.]]",
-    "answer": "Thomas",
-    "accepted_variants": ["thomas", "thomas carter", "carter", "the stable hand", "stable hand"],
+    "question": "[[c:Whose story can't be true? Type their name.]]",
+    "answer": "Jonas",
+    "accepted_variants": [
+      "jonas",
+      "jonas pike",
+      "pike",
+      "mr pike",
+      "stable hand",
+      "the stable hand"
+    ],
     "hints": [
-      "[[c:Look at what time the receipt says the order was handed over.]]",
-      "[[c:Two of the witnesses mention the second bell. One mentions a different bell.]]",
-      "[[c:Someone saw the order still in a bag after it had already been handed over.]]"
+      "[[c:Check what time the receipt says the order was handed in.]]",
+      "[[c:Two of them mention the second bell. One of them mentions the third.]]",
+      "[[c:Someone says they saw the order in a bag after it had already been handed over.]]"
     ],
-    "reveal": "[[c:The receipt shows the order was handed over at the second bell. Thomas says he saw it still in the messenger's bag at the third bell, so his account cannot be true. Why would he say that? Keep it in mind.]]",
-    "fallback": "[[c:This puzzle uses only the story text above, so it works even if you are not at the pub.]]"
+    "reveal": "[[c:The receipt says the order was handed in at the second bell, so ]]Jonas[[c: can't have seen it in ]]Alice[[c:'s bag at the third. Why would he say that? Keep it in mind.]]",
+    "fallback": "[[c:Can't get to the pub? You can still work this one out from the clues above.]]"
   },
   "evidence": [
-    "[[c:The messenger handed over the order intact at the second bell (receipt).]]"
+    "Alice[[c: handed the order over safely at the second bell. The receipt proves it.]]"
   ],
-  "directions_to_next": "[[r:Follow the road south from the Red Lion towards the village centre. The Possible Manor House is about 250 metres along, near Manor Place. View it from the road only.]]",
+  "directions_to_next": "[[c:Follow the road south from the Red Lion towards the village centre. About 250 metres along you'll reach the Manor House, near Manor Place. Look from the road only.]]",
   "notes": [
     "Optional refreshment stop. No purchase required.",
     "No business partnership has been agreed with the pub."
+  ],
+  "support": "[[c:Support the village: have a drink before your walk, or book a table for when you get back.]]",
+  "sources": [
+    {
+      "title": "Village history board (photos taken on the recce, 19 Oct 2026)",
+      "url": "https://www.warmington.org"
+    }
   ]
 }

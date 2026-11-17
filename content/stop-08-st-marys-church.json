@@ -1,5 +1,5 @@
 {
-  "_readme": "Colour code: [[r:...]] RED = best guess, unconfirmed. [[c:...]] CYAN = new or unknown, suggested by Claude for approval. Plain = confirmed by owner.",
+  "_readme": "Colour code: [[c:...]] CYAN = not confirmed yet (a best guess or a new idea from Claude, for the owner to approve). Plain text = confirmed by the owner.",
   "id": "stop-08",
   "order": 8,
   "name": "St Mary's church",
@@ -11,16 +11,16 @@
   "photo": "images/20261019_180522.jpg",
   "photo_caption": "St Mary's church",
   "layers": {
-    "essential_history": "[[r:St Mary's church was built mostly between about 1180 and 1290. Sources differ slightly on the exact dates.]]",
-    "deeper_history": "[[c:Deeper history for this stop is still to be written.]]",
-    "mystery": "[[c:Journal page: the church bell marks the hours in this story. When a witness says a bell, listen carefully.]]"
+    "essential_history": "[[c:St Mary's was built mostly between about 1180 and 1290. Different sources give slightly different dates.]]",
+    "deeper_history": "[[c:Look up inside the church: the wooden roof is 13th century and made to look like stone vaulting, with nine carved Green Man faces. The church was repaired in 1875 and 1876 by Lord Carysfort, with Sir George Gilbert Scott designing the nave. There are six bells, and three of them are dated 1604, 1670 and 1710.]]",
+    "mystery": "[[c:Journal page: the church bell marks the hours in our story. When someone mentions a bell, listen carefully.]]"
   },
   "puzzle": {
     "ref": "P7",
-    "title": "The restoration plaque",
-    "intro": "[[r:Go to the rear of the church and find the plaque about the restoration grant. Stay on the public path.]]",
+    "title": "The plaque",
+    "intro": "[[c:Go round to the back of the church and look for the plaque about the restoration grant. Please stay on the public path.]]",
     "material": [],
-    "question": "[[r:What was the restoration grant amount, in pounds? (numbers only)]]",
+    "question": "[[c:How much was the restoration grant, in pounds? Numbers only.]]",
     "answer": "30",
     "accepted_variants": [
       "30",
@@ -30,16 +30,22 @@
       "thirty pounds"
     ],
     "hints": [
-      "[[r:Look at the back (rear) of the church for a small plaque.]]",
-      "[[r:The plaque mentions a grant for restoration.]]",
-      "[[r:The amount is a two-digit number.]]"
+      "[[c:Look at the back of the church for a small plaque.]]",
+      "[[c:The plaque is about a grant for restoration work.]]",
+      "[[c:The amount is a two-digit number.]]"
     ],
-    "reveal": "[[r:The grant was £30.]]",
-    "fallback": "[[r:If you cannot reach the plaque, look at the photo of it if one is shown, or ask for the answer.]]"
+    "reveal": "[[c:The grant was £30.]]",
+    "fallback": "[[c:Can't get to the plaque? Use the photo if there is one, or ask for the answer.]]"
   },
   "evidence": [],
-  "directions_to_next": "[[c:Directions to be supplied after the recce. Next stop: Taylor's Green.]]",
+  "directions_to_next": "[[c:Next is Taylor's Green. Full directions coming soon.]]",
   "notes": [
     "The year on the plaque is worn and unconfirmed. Do not ask for it."
+  ],
+  "sources": [
+    {
+      "title": "St Mary's church, Warmington Benefice",
+      "url": "https://warmingtonbenefice.org.uk/parishes/warmington/the-church-of-st-mary-the-blessed-virgin/warmington-4367.php"
+    }
   ]
 }

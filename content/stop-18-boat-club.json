@@ -1,18 +1,28 @@
 {
-  "_readme": "Colour code: [[r:...]] RED = best guess, unconfirmed. [[c:...]] CYAN = new or unknown, suggested by Claude for approval. Plain = confirmed by owner.",
+  "_readme": "Colour code: [[c:...]] CYAN = not confirmed yet (a best guess or a new idea from Claude, for the owner to approve). Plain text = confirmed by the owner.",
   "id": "stop-18",
   "order": 18,
   "name": "Elton Boat Club",
-  "map": null,
+  "map": [
+    360,
+    573,
+    "confirmed"
+  ],
   "photo": "images/20261019_174752.jpg",
   "photo_caption": "The boat club building",
   "layers": {
-    "essential_history": "[[c:Elton Boat Club has moorings on the river. Its founding year, possibly 1973, is not verified.]]",
-    "deeper_history": "[[c:Deeper history for this stop is still to be written.]]",
-    "mystery": "[[c:Journal page: goods once moved by river as well as by road, which makes a quiet delivery easy to arrange.]]"
+    "essential_history": "[[c:Elton Boat Club keeps boats on the river here. It was founded in 1973 and used a clubhouse beside the mill for 29 years before moving into a new one nearby in 2002.]]",
+    "deeper_history": "[[c:There's more history for this stop to come.]]",
+    "mystery": "[[c:Journal page: goods once travelled by river as well as by road, which makes a quiet delivery easy to arrange.]]"
   },
   "puzzle": null,
-  "puzzle_note": "[[c:No puzzle here yet.]]",
+  "puzzle_note": "[[c:No puzzle here. Look out for the boats.]]",
   "evidence": [],
-  "directions_to_next": "[[c:Directions to be supplied after the recce. Next stop: Willow and field crossing.]]"
+  "directions_to_next": "[[c:Next is the willow and field crossing. Full directions coming soon.]]",
+  "sources": [
+    {
+      "title": "Elton Boat Club, Association of Nene River Clubs",
+      "url": "https://www.anrc.org.uk/ebc.html"
+    }
+  ]
 }

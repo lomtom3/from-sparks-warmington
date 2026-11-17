@@ -1,26 +1,26 @@
 {
-  "_readme": "Colour code: [[r:...]] RED = best guess, unconfirmed. [[c:...]] CYAN = new or unknown, suggested by Claude for approval. Plain = confirmed by owner.",
+  "_readme": "Colour code: [[c:...]] CYAN = not confirmed yet (a best guess or a new idea from Claude, for the owner to approve). Plain text = confirmed by the owner.",
   "id": "stop-11",
   "order": 11,
   "name": "Big Green Pocket Park",
   "map": [
     573,
     690,
-    "guess"
+    "confirmed"
   ],
   "photo": "images/20261019_182935.jpg",
   "photo_caption": "The entrance to Big Green",
   "layers": {
-    "essential_history": "[[r:Big Green is a pocket park. Sources give its opening year as 1997 or 1998.]]",
-    "deeper_history": "[[c:Deeper history for this stop is still to be written.]]",
-    "mystery": "[[c:Journal page: you find a torn inventory page. It lists the estate's furniture, including one blue dispatch chest, last seen moved to the steward's store.]]"
+    "essential_history": "[[c:Big Green is a pocket park, and the village board says it was set up in 1997.]]",
+    "deeper_history": "[[c:The board says Big Green was once part of Warmington's Great Green, one of several commons at the edge of the village that were enclosed around 1800. The pocket park was made in 1997 on derelict land that had once been tried as allotments but was too heavy with clay and too prone to flooding. It's less than a third of an acre. Children from the village school helped create a meadow, a butterfly garden and a bog garden with a pond, and it's now used as an outdoor classroom.]]",
+    "mystery": "[[c:Journal page: you find a torn page from an inventory. It lists a blue dispatch chest, last seen being moved to ]]Mr Vale[[c:'s store.]]"
   },
   "puzzle": {
     "ref": "P9",
     "title": "The igloo",
-    "intro": "[[r:Find the information board at Big Green. Use the board, not the structure, as it may change.]]",
+    "intro": "[[c:Find the information board at Big Green. Use the board rather than the play structure, as that might change.]]",
     "material": [],
-    "question": "[[r:What living material was used to make the igloo described on the board?]]",
+    "question": "[[c:What living material was used to build the igloo on the board?]]",
     "answer": "Willow",
     "accepted_variants": [
       "willow",
@@ -29,15 +29,25 @@
       "willow stems"
     ],
     "hints": [
-      "[[r:Read the board about the play structure.]]",
-      "[[r:It is a tree or shrub material.]]",
-      "[[r:It also gives the name to a tree you can see on the walk.]]"
+      "[[c:Read the board about the play structure.]]",
+      "[[c:It comes from a tree or shrub.]]",
+      "[[c:It's also the name of a tree you can spot on this walk.]]"
     ],
-    "reveal": "[[r:The igloo is made of willow.]]",
-    "fallback": "[[r:If the board is hard to read, ask for the answer.]]"
+    "reveal": "[[c:The igloo is made of willow.]]",
+    "fallback": "[[c:Can't read the board? Ask for the answer.]]"
   },
   "evidence": [
-    "[[c:An inventory lists a blue dispatch chest, last moved to the steward's store.]]"
+    "[[c:An inventory lists a blue dispatch chest, last moved to ]]Mr Vale[[c:'s store.]]"
   ],
-  "directions_to_next": "[[c:Directions to be supplied after the recce. Next stop: Dexter Way.]]"
+  "directions_to_next": "[[c:Now to Dexter Way. Full directions coming soon.]]",
+  "sources": [
+    {
+      "title": "Village history board (photos taken on the recce, 19 Oct 2026)",
+      "url": "https://www.warmington.org"
+    },
+    {
+      "title": "Pocket parks, North Northamptonshire Council",
+      "url": "https://www.northnorthants.gov.uk/parks-sports-and-leisure/local-parks-and-pocket-parks/pocket-parks"
+    }
+  ]
 }

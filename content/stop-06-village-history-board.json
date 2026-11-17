@@ -1,20 +1,27 @@
 {
-  "_readme": "Colour code: [[r:...]] RED = best guess, unconfirmed. [[c:...]] CYAN = new or unknown, suggested by Claude for approval. Plain = confirmed by owner.",
+  "_readme": "Colour code: [[c:...]] CYAN = not confirmed yet (a best guess or a new idea from Claude, for the owner to approve). Plain text = confirmed by the owner.",
   "id": "stop-06",
   "order": 6,
   "name": "Village history board",
   "map": [
-    478,
+    481,
     743,
     "cyan"
   ],
   "layers": {
-    "essential_history": "[[c:The village history board tells the story of Warmington. Which facts to quote from it still need choosing, and its artwork must not be copied until the rights are checked.]]",
-    "deeper_history": "[[c:Deeper history for this stop is still to be written.]]",
-    "mystery": "[[c:Journal page: the estate steward keeps the grain accounts and the keys to the stores. Everybody trusts him. Almost everybody.]]"
+    "essential_history": "[[c:The village board is called Warmington: A Brief History. It says the village name comes from an Anglo-Saxon leader, and that the settlement was the farm of Wyrma's people. Late in the 7th century the King of Mercia gave the land to the Abbey of Peterborough, and Warmington appears in the Domesday Book.]]",
+    "deeper_history": "[[c:The board says the village stayed at around 300 people for five centuries, until the bypass opened in 1996 and new building began. The Nene Way across the water meadows leads to Fotheringhay, where Mary, Queen of Scots was executed in 1587. It also mentions The Fern, an ancient woodland shown on a 1621 map, with snowdrops and aconites in late winter and bluebells in spring.]]",
+    "mystery": "[[c:Journal page: ]]Mr Vale[[c:, the steward, keeps the grain accounts and the keys to the stores. Everyone trusts him. Almost everyone.]]"
   },
   "puzzle": null,
-  "puzzle_note": "[[c:No puzzle here yet.]]",
+  "puzzle_note": "[[c:No puzzle here.]]",
   "evidence": [],
-  "directions_to_next": "[[c:Directions to be supplied after the recce. Next stop: War memorial.]]"
+  "directions_to_next": "[[c:Head to the war memorial next. Full directions coming soon.]]",
+  "credit": "[[c:Board research by Robert Bosworth and artwork by Chris Ellard, a Warmington Parish Council project.]]",
+  "sources": [
+    {
+      "title": "Village history board (photos taken on the recce, 19 Oct 2026)",
+      "url": "https://www.warmington.org"
+    }
+  ]
 }
