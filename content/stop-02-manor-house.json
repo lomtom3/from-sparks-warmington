@@ -1,0 +1,43 @@
+{
+  "_readme": "STARTER FILE with dummy text. Anything starting PLACEHOLDER is to be written by the owner or approved by the owner. Do not invent content for it.",
+  "id": "stop-02",
+  "order": 2,
+  "name": "Possible Manor House",
+  "role": "Observation stop. No puzzle selected.",
+  "content_status": "STARTER - dummy text only. Building identification UNCONFIRMED.",
+  "coordinates": null,
+  "layers": {
+    "essential_history": "PLACEHOLDER: short fact. Do not write it until the owner confirms the building.",
+    "deeper_history": "PLACEHOLDER: optional longer history. Deferred by the owner.",
+    "mystery": "PLACEHOLDER: story scene or journal page. To be written."
+  },
+  "facts": [
+    {
+      "text": "A stone building with an inscription above the doorway was photographed. The owner assumed it is the old Manor House but this is not confirmed.",
+      "status": "uncertain",
+      "source": "owner recce"
+    },
+    {
+      "text": "Village board attributes the Manor House to the Elmes family (16th or early 17th century), replacing an older manor of Sir George Kirkham opposite the north end of Church Lane. Do not attach this to the photographed building until it is confirmed.",
+      "status": "uncertain",
+      "source": "village board"
+    },
+    {
+      "text": "Private residence. Observe from the public route only. No doorstep task and no looking inside.",
+      "status": "verified",
+      "source": "owner decision"
+    }
+  ],
+  "puzzle": null,
+  "puzzle_note": "No puzzle selected. A possible inscription or date clue is on hold until the inscription can be read from the photo.",
+  "evidence_unlocked": [],
+  "evidence_note": "PLACEHOLDER: evidence chain not yet written.",
+  "directions_to_next": "DIRECTIONS TO BE SUPPLIED",
+  "photos": [
+    "20261019_175956.jpg",
+    "20261019_180002.jpg"
+  ],
+  "notes": [
+    "Do not confuse this with Eaglethorpe House, which is elsewhere on the route."
+  ]
+}

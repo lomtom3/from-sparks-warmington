@@ -1,0 +1,64 @@
+{
+  "_readme": "STARTER FILE with dummy text. Anything starting PLACEHOLDER is to be written by the owner or approved by the owner. Do not invent content for it.",
+  "id": "stop-03",
+  "order": 3,
+  "name": "Former Wesleyan chapel",
+  "role": "P6 puzzle stop.",
+  "content_status": "STARTER - dummy text only. Puzzle wording is a DRAFT for owner approval.",
+  "coordinates": null,
+  "layers": {
+    "essential_history": "PLACEHOLDER: short fact. To be written.",
+    "deeper_history": "PLACEHOLDER: optional longer history. Deferred by the owner.",
+    "mystery": "PLACEHOLDER: story scene or journal page. To be written."
+  },
+  "facts": [
+    {
+      "text": "Red-brick frontage with a circular window and a Wesleyan stone.",
+      "status": "verified",
+      "source": "recce photo"
+    },
+    {
+      "text": "The year on the stone is 1881, recorded as the chapel's opening or completion year.",
+      "status": "verified",
+      "source": "owner approved P6 answer; legibility from the public route still to be checked"
+    },
+    {
+      "text": "Research in an earlier chat said it replaced a smaller Church Street chapel built in 1808.",
+      "status": "uncertain",
+      "source": "earlier chat research, not verified"
+    },
+    {
+      "text": "Now a private home. Observe from the public route only.",
+      "status": "verified",
+      "source": "owner"
+    }
+  ],
+  "puzzle": {
+    "ref": "P6",
+    "status": "approved; question wording is DRAFT, owner to approve",
+    "question": "DRAFT: What year is shown on the stone of the former Wesleyan chapel?",
+    "answer": "1881",
+    "accepted_variants": [
+      "1881"
+    ],
+    "hints": [
+      "PLACEHOLDER HINT 1",
+      "PLACEHOLDER HINT 2",
+      "PLACEHOLDER HINT 3"
+    ],
+    "reveal": "PLACEHOLDER REVEAL",
+    "fallback": "Show the photo 20261019_180016.jpg if the stone cannot be read on site.",
+    "checks_needed": [
+      "Confirm the digits are clearly readable from the public route."
+    ]
+  },
+  "evidence_unlocked": [],
+  "evidence_note": "PLACEHOLDER: evidence chain not yet written.",
+  "directions_to_next": "DIRECTIONS TO BE SUPPLIED",
+  "photos": [
+    "20261019_180016.jpg"
+  ],
+  "notes": [
+    "Never present the 1881 building as existing in the 1600s. The fictional story sits in the late 1600s; the modern stone and building only unlock fictional journal pages."
+  ]
+}

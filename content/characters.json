@@ -1,0 +1,51 @@
+{
+  "_readme": "STARTER FILE. All names are PLACEHOLDERS for the owner to comment on. Change names here only; every other file should refer to a character by its id. All characters, employers and crimes are fictional.",
+  "story_title": "The Missing Message",
+  "setting_year": "PENDING (late 1600s proposed, exact fictional year not decided)",
+  "player": {
+    "role": "A fictional estate servant, told in second person",
+    "task": "The housekeeper asks the player to recover a missing sealed order before the evening collection. No real-time countdown."
+  },
+  "fictional_employer": "PENDING (not named; must not be the real Proby family)",
+  "cast": [
+    {
+      "id": "miller_assistant",
+      "role": "Miller's assistant",
+      "name": "Alice Miller",
+      "original_draft_name": "Martha",
+      "name_status": "PLACEHOLDER - owner to approve or change",
+      "secret": "Gave grain to a hungry family without permission."
+    },
+    {
+      "id": "stable_hand",
+      "role": "Stable hand",
+      "name": "Thomas Carter",
+      "original_draft_name": "Jonas",
+      "name_status": "PLACEHOLDER - owner to approve or change",
+      "secret": "Lost a dispatch-room key."
+    },
+    {
+      "id": "messenger",
+      "role": "Messenger",
+      "name": "Anne Fletcher",
+      "original_draft_name": "Alice",
+      "name_status": "PLACEHOLDER - owner to approve or change",
+      "secret": "Made an unauthorised detour."
+    },
+    {
+      "id": "steward",
+      "role": "Steward",
+      "name": "Edward Harwood",
+      "original_draft_name": "Gideon",
+      "name_status": "PLACEHOLDER - owner to approve or change",
+      "secret": "Falsified the grain accounts.",
+      "is_culprit": true,
+      "motive": "Hid the order to delay an inspection that would expose his private grain sales."
+    }
+  ],
+  "notes": [
+    "The steward must not be obvious early. Each suspect needs a plausible reason to attract suspicion.",
+    "Strong evidence is held until later in the route.",
+    "Evidence chain is NOT yet written. See each stop file's evidence section."
+  ]
+}

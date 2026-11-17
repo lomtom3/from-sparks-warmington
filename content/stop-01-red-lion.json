@@ -1,0 +1,56 @@
+{
+  "_readme": "STARTER FILE with dummy text. Anything starting PLACEHOLDER is to be written by the owner or approved by the owner. Do not invent content for it.",
+  "id": "stop-01",
+  "order": 1,
+  "name": "Red Lion",
+  "role": "Start of the walk. P5 opening puzzle. The walk also finishes here (stop 20 holds the P10 finale).",
+  "content_status": "STARTER - dummy text only",
+  "coordinates": null,
+  "layers": {
+    "essential_history": "PLACEHOLDER: one or two short facts about the Red Lion. To be written.",
+    "deeper_history": "PLACEHOLDER: optional longer history. Deferred by the owner.",
+    "mystery": "PLACEHOLDER: opening narration, second person. The housekeeper asks the player to recover a missing sealed order. To be written. (An earlier spoken draft exists but its wording was never settled.)"
+  },
+  "facts": [
+    {
+      "text": "Pub with a car park.",
+      "status": "verified",
+      "source": "owner"
+    },
+    {
+      "text": "Village board says the toilet block was formerly a fish-and-chip shop.",
+      "status": "uncertain",
+      "source": "village board, not independently checked"
+    },
+    {
+      "text": "Age of the building conflicts: the village board says late 17th or early 18th century; the village website says early 1800s. Do not state an age until the owner resolves this.",
+      "status": "uncertain",
+      "source": "village board vs village website"
+    }
+  ],
+  "puzzle": {
+    "ref": "P5",
+    "status": "concept approved, NOT written",
+    "concept": "Compare three fictional witness statements with a timed receipt to find the impossible account.",
+    "question": "PLACEHOLDER QUESTION",
+    "answer": "PLACEHOLDER ANSWER",
+    "accepted_variants": [],
+    "hints": [
+      "PLACEHOLDER HINT 1",
+      "PLACEHOLDER HINT 2",
+      "PLACEHOLDER HINT 3"
+    ],
+    "reveal": "PLACEHOLDER REVEAL",
+    "fallback": "PLACEHOLDER FALLBACK"
+  },
+  "evidence_unlocked": [],
+  "evidence_note": "PLACEHOLDER: evidence chain not yet written.",
+  "directions_to_next": "DIRECTIONS TO BE SUPPLIED",
+  "photos": [
+    "20261019_175746.jpg"
+  ],
+  "notes": [
+    "Optional refreshment stop. No purchase required.",
+    "No business partnership has been agreed with the pub."
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "_readme": "Walk list. Stops appear in the app in the order listed here. To add a stop, create its file in this folder and add one line to 'stops'. Anything starting PLACEHOLDER is to be written or approved by the owner.",
+  "id": "warmington-medium",
+  "title": "Warmington Medium Walk",
+  "welcome_text": "PLACEHOLDER: welcome text. To be written.",
+  "start_text": "PLACEHOLDER: how to find the start (Red Lion). To be written.",
+  "layers": [
+    {
+      "key": "essential_history",
+      "label": "Essential history",
+      "description": "PLACEHOLDER: one-line explanation of this layer.",
+      "default_on": true
+    },
+    {
+      "key": "deeper_history",
+      "label": "Deeper history",
+      "description": "PLACEHOLDER: one-line explanation of this layer.",
+      "default_on": false
+    },
+    {
+      "key": "mystery",
+      "label": "Mystery story",
+      "description": "PLACEHOLDER: one-line explanation of this layer.",
+      "default_on": true
+    }
+  ],
+  "stops": [
+    "stop-01-red-lion.json",
+    "stop-02-manor-house.json",
+    "stop-03-wesleyan-chapel.json"
+  ]
+}
