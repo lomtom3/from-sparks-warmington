@@ -19,5 +19,9 @@
   "puzzle_note": "[[c:No puzzle here.]]",
   "evidence": [],
   "directions_to_next": "[[c:Now on to the village history board. Full directions coming soon.]]",
-  "support": "[[c:Support the village: Glebe Stores is the village shop. Pop in for a snack or a treat for later, because spending here helps keep it going.]]"
+  "support": "[[c:Support the village: Glebe Stores is the village shop. Pop in for a snack or a treat for later, because spending here helps keep it going.]]",
+  "character_art": {
+    "src": "images/characters/alice-letter.jpg",
+    "caption": "[[c:Alice the messenger, with a sealed letter. Glebe Stores used to be the village post office, so it felt like the right place to meet her.]]"
+  }
 }

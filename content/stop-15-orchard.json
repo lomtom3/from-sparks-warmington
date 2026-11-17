@@ -3,7 +3,11 @@
   "id": "stop-15",
   "order": 15,
   "name": "Orchard Pocket Park",
-  "map": null,
+  "map": [
+    402,
+    596,
+    "guess"
+  ],
   "photo": "images/20261019_174354.jpg",
   "photo_caption": "The orchard entrance board",
   "layers": {

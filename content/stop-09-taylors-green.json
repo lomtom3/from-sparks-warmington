@@ -51,5 +51,9 @@
       "title": "Village history board (photos taken on the recce, 19 Oct 2026)",
       "url": "https://www.warmington.org"
     }
-  ]
+  ],
+  "character_art": {
+    "src": "images/characters/mr-vale-ledger.jpg",
+    "caption": "[[c:Mr Vale going over his ledger.]]"
+  }
 }

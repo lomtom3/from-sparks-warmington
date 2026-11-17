@@ -28,5 +28,9 @@
       "title": "St Mary's church, Warmington Benefice",
       "url": "https://warmingtonbenefice.org.uk/parishes/warmington/the-church-of-st-mary-the-blessed-virgin/warmington-4367.php"
     }
-  ]
+  ],
+  "character_art": {
+    "src": "images/characters/jonas-horse.jpg",
+    "caption": "[[c:Jonas leads a horse across the stable yard.]]"
+  }
 }

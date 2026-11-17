@@ -219,13 +219,17 @@
       "name": "Orchard Pocket Park",
       "label": "Orchard",
       "dir": "r",
-      "map": null
+      "map": [
+        402,
+        596,
+        "guess"
+      ]
     },
     {
       "n": 16,
       "name": "Underpass mural",
       "label": "Mural",
-      "dir": "d",
+      "dir": "r",
       "map": [
         391,
         575,

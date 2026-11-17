@@ -198,6 +198,19 @@
     ]));
     settingsEl.appendChild(el('p', { className: 'muted', text: 'Plain text is confirmed.' }));
 
+    settingsEl.appendChild(el('h3', { text: 'Go back to a stop' }));
+    var done = reachedIndex();
+    if (done < 0) settingsEl.appendChild(el('p', { className: 'muted', text: "Nothing yet. The stops you reach will be listed here." }));
+    else {
+      var ul = el('ul', { className: 'route-list' });
+      for (var si = 0; si <= done; si++) {
+        (function (st) {
+          ul.appendChild(el('li', {}, [el('span', { className: 'num', text: String(st.order) }), el('a', { text: st.name + (stops[state.current] === st ? ' (you are here)' : ''), attrs: { href: '#' + st.id }, onClick: function () { closeSettings(); } })]));
+        })(stops[si]);
+      }
+      settingsEl.appendChild(ul);
+    }
+    settingsEl.appendChild(el('button', { className: 'secondary wide', text: 'Welcome page', onClick: function () { closeSettings(); location.hash = '#welcome'; } }));
     settingsEl.appendChild(el('h3', { text: 'The walk' }));
     settingsEl.appendChild(el('button', { className: 'secondary wide', text: 'Getting to the start', onClick: function () { closeSettings(); location.hash = '#start'; } }));
     settingsEl.appendChild(el('button', { className: 'secondary wide', text: 'Change my choices', onClick: function () { closeSettings(); location.hash = '#setup'; } }));
@@ -222,6 +235,49 @@
     settingsEl.appendChild(el('p', { className: 'muted', text: 'Map data © OpenStreetMap contributors.' }));
   }
 
+
+
+  // ---------- characters (pictures from the owner's artwork) ----------
+  var CHARS = [
+    { key: 'MARTHA', name: 'Martha', role: "Mrs Reed, the miller's assistant", img: 'images/characters/martha-portrait.jpg' },
+    { key: 'JONAS', name: 'Jonas Pike', role: 'the stable hand', img: 'images/characters/jonas-portrait.jpg' },
+    { key: 'ALICE', name: 'Alice Fen', role: 'the messenger', img: 'images/characters/alice-portrait.jpg' },
+    { key: 'MR VALE', name: 'Mr Vale', role: 'the steward', img: 'images/characters/mr-vale-portrait.jpg' }
+  ];
+  function charFor(text) {
+    var t = String(text).replace(/\[\[[rc]:|\]\]/g, '').trim().toUpperCase();
+    for (var i = 0; i < CHARS.length; i++) if (t.indexOf(CHARS[i].key) === 0) return CHARS[i];
+    return null;
+  }
+  function avatar(c) {
+    var img = document.createElement('img');
+    img.className = 'avatar'; img.src = c.img; img.alt = c.name; img.loading = 'lazy';
+    img.addEventListener('error', function () { img.remove(); });
+    return img;
+  }
+  function suspectsGrid(heading) {
+    var grid = el('div', { className: 'suspects' });
+    CHARS.forEach(function (c) {
+      var fig = el('figure', { className: 'suspect' });
+      var img = document.createElement('img');
+      img.src = c.img; img.alt = c.name; img.loading = 'lazy';
+      img.addEventListener('error', function () { fig.remove(); });
+      fig.appendChild(img);
+      fig.appendChild(el('figcaption', {}, [el('strong', { text: c.name }), document.createElement('br'), document.createTextNode(c.role)]));
+      grid.appendChild(fig);
+    });
+    return el('section', {}, [heading ? el('h2', { text: heading }) : null, grid]);
+  }
+  function sceneFigure(art) {
+    if (!art) return null;
+    var fig = el('figure', { className: 'stop-photo char-scene' });
+    var img = document.createElement('img');
+    img.src = art.src; img.alt = plain(art.caption || ''); img.loading = 'lazy';
+    img.addEventListener('error', function () { fig.remove(); });
+    fig.appendChild(img);
+    if (art.caption) fig.appendChild(el('figcaption', { text: art.caption }));
+    return fig;
+  }
 
   // ---------- location (opt-in, stays on the phone) ----------
   var GEO = { lat0: 52.50988, lon0: -0.41583, x0: 433, y0: 635, mpp: 3.4 };
@@ -382,6 +438,7 @@
   function storyScreen() {
     var nodes = [el('p', { className: 'kicker', text: 'The story so far' }), el('h1', { text: walk.title })];
     walk.story.forEach(function (p) { nodes.push(el('p', { className: 'story', text: p })); });
+    nodes.push(suspectsGrid('Who you\'ll meet'));
     nodes.push(
       el('button', { className: 'wide copper', text: '[[c:Find the start]]', onClick: function () { location.hash = '#start'; } }),
       el('button', { className: 'wide secondary', text: "[[c:I'm at the Red Lion: begin the walk]]", onClick: function () { var s1 = stops[0]; state.arrived[s1.id] = true; state.current = 0; saveState(); goStop(0); } }),
@@ -410,9 +467,9 @@
     walk.route.forEach(function (r) {
       var idx = -1;
       stops.forEach(function (s, i) { if (s.order === r.n) idx = i; });
-      var name = idx >= 0
+      var name = idx >= 0 && idx <= maxOpen()
         ? el('a', { text: r.name, attrs: { href: '#' + stops[idx].id } })
-        : el('span', { className: 'soon', text: r.name + ' (coming soon)' });
+        : el('span', { className: 'soon', text: r.name + (idx >= 0 ? ' (opens as you walk)' : ' (coming soon)') });
       list.appendChild(el('li', {}, [el('span', { className: 'num', text: String(r.n) }), name]));
     });
     show([
@@ -435,7 +492,7 @@
 
   function notebookScreen() {
     var items = collectEvidence();
-    var nodes = [el('p', { className: 'kicker', text: 'Your notes' }), el('h1', { text: 'Evidence notebook' })];
+    var nodes = [el('p', { className: 'kicker', text: 'Your notes' }), el('h1', { text: 'Evidence notebook' }), suspectsGrid('The four suspects')];
     if (!items.length) nodes.push(el('p', { className: 'muted', text: 'Nothing yet. Solve puzzles as you walk and your clues will turn up here.' }));
     items.forEach(function (it) {
       nodes.push(el('section', { className: 'card mystery' }, [el('p', { className: 'kicker', text: it.stop }), el('p', { text: it.text })]));
@@ -485,6 +542,7 @@
     var solved = !!state.solved[stop.id];
     var box = el('section', { className: 'card puzzle' }, [
       el('p', { className: 'kicker', text: 'The big finish' }), el('h2', { text: pz.title }), el('p', { text: pz.intro }),
+      suspectsGrid(null),
       el('button', { className: 'secondary small', text: 'Open my evidence notebook', onClick: function () { location.hash = '#notebook'; } }),
       el('p', { text: pz.question })
     ]);
@@ -511,6 +569,7 @@
       helpers(stop, pz, box, function () { route(true); });
       if (pz.fallback) box.appendChild(el('p', { className: 'muted', text: pz.fallback }));
     } else {
+      box.appendChild(sceneFigure({ src: 'images/characters/mr-vale-ledger.jpg', caption: '[[c:Mr Vale, caught out by his own ledger.]]' }));
       box.appendChild(el('p', { className: 'feedback ok', text: pz.reveal }));
     }
     return box;
@@ -538,7 +597,11 @@
     ]);
     if (pz.material && pz.material.length) {
       var mat = el('div', { className: 'puzzle-material' });
-      pz.material.forEach(function (m) { mat.appendChild(el('p', { text: m })); });
+      pz.material.forEach(function (m) {
+        var c = charFor(m);
+        if (c) mat.appendChild(el('div', { className: 'said' }, [avatar(c), el('p', { text: m })]));
+        else mat.appendChild(el('p', { text: m }));
+      });
       box.appendChild(mat);
     }
     box.appendChild(el('p', { text: pz.question }));
@@ -598,6 +661,7 @@
     } else {
       nodes.push(photoFigure(stop));
       if (stop.private_note) nodes.push(el('p', { className: 'notice', text: stop.private_note }));
+      if (stop.character_art) nodes.push(sceneFigure(stop.character_art));
       if (stop.credit) nodes.push(el('p', { className: 'muted', text: stop.credit }));
       if (stop.support) nodes.push(el('section', { className: 'card support' }, [el('p', { text: stop.support })]));
       var anyOn = false;
@@ -634,15 +698,17 @@
     }
     if (state.review) nodes.push(recordSpotCard(stop));
     var isLast = index === stops.length - 1;
-    nodes.push(el('div', { className: 'nav' }, [
-      el('button', { className: 'secondary', text: index === 0 ? 'Welcome' : 'Previous', onClick: function () { if (index === 0) location.hash = '#welcome'; else goStop(index - 1); } }),
-      el('button', { text: 'Next stop', disabled: isLast, onClick: function () { goStop(index + 1); } })
-    ]));
+    if (arrived && !isLast) {
+      nodes.push(el('div', { className: 'nav' }, [el('button', { text: 'On to the next stop', onClick: function () { goStop(index + 1); } })]));
+    }
     show(nodes);
   }
 
   // ---------- page addresses ----------
   function goStop(i) { location.hash = '#' + stops[i].id; }
+  // You can look back at any stop you've reached, and ahead only to the next one.
+  function reachedIndex() { var r = -1; stops.forEach(function (s, i) { if (state.arrived[s.id]) r = i; }); return r; }
+  function maxOpen() { return Math.min(reachedIndex() + 1, stops.length - 1); }
 
   var lastScroll = 0;
   function route(keepScroll) {
@@ -656,6 +722,7 @@
     else {
       var index = -1;
       stops.forEach(function (s, i) { if (s.id === id) index = i; });
+      if (index > maxOpen()) { location.replace('#' + stops[maxOpen()].id); return; }
       if (index >= 0) stopScreen(index); else welcomeScreen();
     }
     if (keepScroll === true) window.scrollTo(0, lastScroll);
