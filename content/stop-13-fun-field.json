@@ -1,0 +1,22 @@
+{
+  "_readme": "Colour code: [[r:...]] RED = best guess, unconfirmed. [[c:...]] CYAN = new or unknown, suggested by Claude for approval. Plain = confirmed by owner.",
+  "id": "stop-13",
+  "order": 13,
+  "name": "Fun Field",
+  "map": [
+    505,
+    591,
+    "confirmed"
+  ],
+  "photo": "images/20261019_173702.jpg",
+  "photo_caption": "Fun Field",
+  "layers": {
+    "essential_history": "Fun Field is managed by the Parish Council, and a local football team plays there.",
+    "deeper_history": "[[c:Deeper history for this stop is still to be written.]]",
+    "mystery": "[[c:Break from the mystery. Take a rest and stretch your legs.]]"
+  },
+  "puzzle": null,
+  "puzzle_note": "[[c:Play break: no puzzle here.]]",
+  "evidence": [],
+  "directions_to_next": "[[c:Directions to be supplied after the recce. Next stop: Eaglethorpe board and barns.]]"
+}

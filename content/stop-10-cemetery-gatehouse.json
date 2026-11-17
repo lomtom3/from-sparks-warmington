@@ -1,0 +1,25 @@
+{
+  "_readme": "Colour code: [[r:...]] RED = best guess, unconfirmed. [[c:...]] CYAN = new or unknown, suggested by Claude for approval. Plain = confirmed by owner.",
+  "id": "stop-10",
+  "order": 10,
+  "name": "Cemetery gatehouse",
+  "map": [
+    576,
+    793,
+    "guess"
+  ],
+  "photo": "images/20261019_181657.jpg",
+  "photo_caption": "The cemetery gatehouse plaque",
+  "layers": {
+    "essential_history": "[[r:The cemetery gatehouse has a plaque, thought to show the year 1926. This is not yet confirmed.]]",
+    "deeper_history": "[[c:Deeper history for this stop is still to be written.]]",
+    "mystery": "[[c:Journal page: the way home passes through quiet ground. Look at the gatehouse, not at the graves.]]"
+  },
+  "puzzle": null,
+  "puzzle_note": "[[c:No puzzle here yet.]]",
+  "evidence": [],
+  "directions_to_next": "[[c:Directions to be supplied after the recce. Next stop: Big Green Pocket Park.]]",
+  "notes": [
+    "Use the entrance plaque only. Do not use gravestones or names."
+  ]
+}

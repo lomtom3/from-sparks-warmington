@@ -1,0 +1,49 @@
+{
+  "_readme": "Colour code: [[r:...]] RED = best guess, unconfirmed. [[c:...]] CYAN = new or unknown, suggested by Claude for approval. Plain = confirmed by owner.",
+  "id": "stop-09",
+  "order": 9,
+  "name": "Taylor's Green",
+  "map": [
+    538,
+    825,
+    "guess"
+  ],
+  "layers": {
+    "essential_history": "[[c:Taylor's Green is part of the final route. The path to it and the history to share still need adding after your recce.]]",
+    "deeper_history": "[[c:Deeper history for this stop is still to be written.]]",
+    "mystery": "[[c:Journal page: you reach a field where the estate's animals once grazed. The steward says he spent the afternoon here.]]"
+  },
+  "puzzle": {
+    "ref": "P8",
+    "title": "A walk that cannot add up",
+    "intro": "[[c:The steward gave an account of his afternoon. Test it against the sketch map note.]]",
+    "material": [
+      "[[c:THE STEWARD SAYS: \"I left the stable yard at the second bell, walked to the far barn, spent one bell there, and walked back. I was in the yard again by the third bell.\"]]",
+      "[[c:SKETCH MAP NOTE: the walk from the stable yard to the far barn takes one bell each way.]]"
+    ],
+    "question": "[[c:At the earliest, at which bell could he have been back in the yard? (Type a number.)]]",
+    "answer": "5",
+    "accepted_variants": [
+      "5",
+      "five",
+      "fifth",
+      "5th",
+      "the fifth bell",
+      "fifth bell"
+    ],
+    "hints": [
+      "[[c:Count the walk there, the time at the barn, and the walk back.]]",
+      "[[c:He left at the second bell. One bell to get there, one bell at the barn, one bell back.]]",
+      "[[c:Two plus three bells.]]"
+    ],
+    "reveal": "[[c:He could not have been back before the fifth bell, so his claim of the third bell is impossible. His alibi does not hold.]]",
+    "fallback": "[[c:This puzzle uses only the story text, so it works even if you cannot reach the field. Alpacas are a possible bonus sighting, not part of the puzzle.]]"
+  },
+  "evidence": [
+    "[[c:The steward's alibi is impossible: he could not have been back at the third bell.]]"
+  ],
+  "directions_to_next": "[[c:Directions to be supplied after the recce. Next stop: Cemetery gatehouse.]]",
+  "notes": [
+    "Exact paths and how this joins the cemetery and Big Green are not known yet."
+  ]
+}

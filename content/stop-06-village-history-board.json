@@ -1,0 +1,20 @@
+{
+  "_readme": "Colour code: [[r:...]] RED = best guess, unconfirmed. [[c:...]] CYAN = new or unknown, suggested by Claude for approval. Plain = confirmed by owner.",
+  "id": "stop-06",
+  "order": 6,
+  "name": "Village history board",
+  "map": [
+    478,
+    743,
+    "cyan"
+  ],
+  "layers": {
+    "essential_history": "[[c:The village history board tells the story of Warmington. Which facts to quote from it still need choosing, and its artwork must not be copied until the rights are checked.]]",
+    "deeper_history": "[[c:Deeper history for this stop is still to be written.]]",
+    "mystery": "[[c:Journal page: the estate steward keeps the grain accounts and the keys to the stores. Everybody trusts him. Almost everybody.]]"
+  },
+  "puzzle": null,
+  "puzzle_note": "[[c:No puzzle here yet.]]",
+  "evidence": [],
+  "directions_to_next": "[[c:Directions to be supplied after the recce. Next stop: War memorial.]]"
+}

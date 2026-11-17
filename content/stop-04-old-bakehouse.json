@@ -1,0 +1,19 @@
+{
+  "_readme": "Colour code: [[r:...]] RED = best guess, unconfirmed. [[c:...]] CYAN = new or unknown, suggested by Claude for approval. Plain = confirmed by owner.",
+  "id": "stop-04",
+  "order": 4,
+  "name": "Old Bakehouse",
+  "map": null,
+  "photo": "images/20261019_180124.jpg",
+  "photo_caption": "The Old Bakehouse",
+  "layers": {
+    "essential_history": "[[c:A private home on the route. Its name suggests it was once a bakehouse. No further fact is confirmed yet; one could be added after asking a local.]]",
+    "deeper_history": "[[c:Deeper history for this stop is still to be written.]]",
+    "mystery": "[[c:Journal page: bread and grain pass through every kitchen on the estate. Someone has been counting the sacks a little too carefully.]]"
+  },
+  "puzzle": null,
+  "puzzle_note": "[[c:No puzzle here yet.]]",
+  "evidence": [],
+  "directions_to_next": "[[c:Directions to be supplied after the recce. Next stop: Glebe Stores.]]",
+  "private_note": "This is a private home. Look from the road only."
+}

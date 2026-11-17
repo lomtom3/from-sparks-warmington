@@ -1,0 +1,18 @@
+{
+  "_readme": "Colour code: [[r:...]] RED = best guess, unconfirmed. [[c:...]] CYAN = new or unknown, suggested by Claude for approval. Plain = confirmed by owner.",
+  "id": "stop-19",
+  "order": 19,
+  "name": "Willow and field crossing",
+  "map": null,
+  "photo": "images/20261019_175613.jpg",
+  "photo_caption": "The field path and willow",
+  "layers": {
+    "essential_history": "[[c:The last stretch crosses a field with willows. A fact could be added after the recce.]]",
+    "deeper_history": "[[c:Deeper history for this stop is still to be written.]]",
+    "mystery": "[[c:Journal page: you are close to the estate gate now. You know most of the story. Time to gather your evidence.]]"
+  },
+  "puzzle": null,
+  "puzzle_note": "[[c:No puzzle here yet.]]",
+  "evidence": [],
+  "directions_to_next": "[[c:Directions to be supplied after the recce. Next stop: Red Lion (finale).]]"
+}

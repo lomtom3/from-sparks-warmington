@@ -1,0 +1,42 @@
+{
+  "_readme": "Colour code: [[r:...]] RED = best guess, unconfirmed. [[c:...]] CYAN = new or unknown, suggested by Claude for approval. Plain = confirmed by owner.",
+  "id": "stop-12",
+  "order": 12,
+  "name": "Dexter Way",
+  "map": [
+    501,
+    638,
+    "guess"
+  ],
+  "photo": "images/20261019_173810.jpg",
+  "photo_caption": "The Dexter Way sign",
+  "layers": {
+    "essential_history": "[[c:Dexter Way is a modern street. No history fact is chosen yet.]]",
+    "deeper_history": "[[c:Deeper history for this stop is still to be written.]]",
+    "mystery": "[[c:Journal page: the housekeeper's rooms are on a quiet lane. The names here are only for you to read.]]"
+  },
+  "puzzle": {
+    "ref": "P1",
+    "title": "The street sign",
+    "intro": "[[r:Find the sign that lists the Closes off Dexter Way.]]",
+    "material": [],
+    "question": "Which Close on this sign has the shortest name?",
+    "answer": "Short",
+    "accepted_variants": [
+      "short",
+      "short close"
+    ],
+    "hints": [
+      "[[r:Look at the sign at the start of Dexter Way.]]",
+      "[[r:It lists Bosworth Close, Short Close and Bevan Close.]]",
+      "[[r:The shortest name is also an adjective.]]"
+    ],
+    "reveal": "[[r:Short Close has the shortest name.]]",
+    "fallback": "[[r:If you cannot find the sign, use the photo if shown, or ask for the answer.]]"
+  },
+  "evidence": [],
+  "directions_to_next": "[[c:Directions to be supplied after the recce. Next stop: Fun Field.]]",
+  "notes": [
+    "This puzzle used to open the walk. What replaces its tutorial role is still undecided."
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "_readme": "Colour code: [[r:...]] RED = best guess, unconfirmed. [[c:...]] CYAN = new or unknown, suggested by Claude for approval. Plain = confirmed by owner.",
+  "id": "stop-15",
+  "order": 15,
+  "name": "Orchard Pocket Park",
+  "map": null,
+  "photo": "images/20261019_174354.jpg",
+  "photo_caption": "The orchard entrance board",
+  "layers": {
+    "essential_history": "[[r:The orchard is a community pocket park, with an October apple day.]]",
+    "deeper_history": "[[c:Deeper history for this stop is still to be written.]]",
+    "mystery": "[[c:Journal page: apples keep through the winter, and so does grain, if it is guarded well.]]"
+  },
+  "puzzle": {
+    "ref": "P2",
+    "title": "Tree 21",
+    "intro": "[[r:Find the numbered tree plan, then tree 21. Look for the Bess Pool apple plaque.]]",
+    "material": [],
+    "question": "[[r:What planting year does the Bess Pool apple plaque show?]]",
+    "answer": "1999",
+    "accepted_variants": [
+      "1999"
+    ],
+    "hints": [
+      "[[r:The orchard has a map of numbered trees.]]",
+      "[[r:Find tree 21 and the plaque by it.]]",
+      "[[r:The year starts with 19.]]"
+    ],
+    "reveal": "[[r:The plaque shows 1999.]]",
+    "fallback": "[[r:If the plaque cannot be found, use the photo if shown, or ask for the answer.]]"
+  },
+  "evidence": [],
+  "directions_to_next": "[[c:Directions to be supplied after the recce. Next stop: Underpass mural.]]",
+  "notes": [
+    "Seasonal vegetation may hide the tree. Keep the photo fallback."
+  ]
+}

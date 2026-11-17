@@ -121,7 +121,15 @@ button.wide { width: 100%; margin: var(--gap) 0; }
 .pin.guess { border-style: dashed; }
 .dot { position: absolute; width: 22px; height: 22px; transform: translate(-50%, -50%); border-radius: 50%; background: var(--forest); color: var(--paper); font-size: 11px; line-height: 22px; text-align: center; font-weight: 700; border: 2px solid var(--paper); }
 .dot.guess { background: var(--red); }
+.dot.cyan { background: #00a5b8; }
 .dot.current { outline: 3px solid #c0281d; }
+.brand-logo { height: 40px; width: 40px; border-radius: 9px; object-fit: cover; }
+.logo-hero { margin: 0 0 var(--gap); }
+.logo-hero img { width: 100%; height: auto; display: block; mix-blend-mode: multiply; }
+.field { display: block; margin: 12px 0; }
+.field .label { display: block; font-weight: 600; margin-bottom: 4px; }
+.field select { width: 100%; font: inherit; min-height: 48px; padding: 8px 10px; border: 2px solid var(--forest); border-radius: 6px; background: #fffaf0; color: var(--ink); }
+.hero img { border-width: 6px; }
 .mapcap { font-size: .85em; color: var(--muted); margin: -6px 0 var(--gap); }
 
 .stop-photo { margin: var(--gap) 0; }

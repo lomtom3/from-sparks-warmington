@@ -1,0 +1,70 @@
+{
+  "_readme": "Colour code: [[r:...]] RED = best guess, unconfirmed. [[c:...]] CYAN = new or unknown, suggested by Claude for approval. Plain = confirmed by owner.",
+  "id": "stop-20",
+  "order": 20,
+  "name": "Red Lion (finale)",
+  "map": [
+    433,
+    635,
+    "confirmed"
+  ],
+  "photo": "images/20261019_175746.jpg",
+  "photo_caption": "The Red Lion",
+  "layers": {
+    "essential_history": "You are back where you started.",
+    "deeper_history": "[[c:Deeper history for this stop is still to be written.]]",
+    "mystery": "[[r:The evening collection is here. Open your notebook, then say who took the order, why, and where it is hidden.]]"
+  },
+  "puzzle": {
+    "ref": "P10",
+    "type": "accuse",
+    "title": "The finale",
+    "intro": "[[r:Use your evidence notebook, then make your accusation.]]",
+    "material": [],
+    "question": "[[r:Who took the order, why, and where is it hidden?]]",
+    "fields": [
+      {
+        "key": "who",
+        "label": "Who took it?",
+        "options": [
+          "Alice Miller (miller's assistant)",
+          "Thomas Carter (stable hand)",
+          "Anne Fletcher (messenger)",
+          "Edward Harwood (steward)"
+        ],
+        "answer": "Edward Harwood (steward)"
+      },
+      {
+        "key": "why",
+        "label": "Why?",
+        "options": [
+          "To hide a kindness to a hungry family",
+          "To hide a lost key",
+          "To hide an unauthorised detour",
+          "To delay an inspection that would expose private grain sales"
+        ],
+        "answer": "To delay an inspection that would expose private grain sales"
+      },
+      {
+        "key": "where",
+        "label": "Where is it hidden?",
+        "options": [
+          "The mill loft",
+          "The stable hayloft",
+          "The blue dispatch chest",
+          "The church tower"
+        ],
+        "answer": "The blue dispatch chest"
+      }
+    ],
+    "hints": [
+      "[[r:Which suspect's account is impossible?]]",
+      "[[r:Whose accounts do not add up?]]",
+      "[[r:Which object was moved to the steward's store?]]"
+    ],
+    "reveal": "[[r:The steward, Edward Harwood, hid the order to delay an inspection that would have exposed his private grain sales. It was in the blue dispatch chest. The order is recovered, the winter relief can go ahead, and the grain accounts will be checked. The miller's assistant gave grain to a hungry family out of kindness. The steward lied to protect himself.]]",
+    "fallback": "[[r:The finale uses only the story and your notebook.]]"
+  },
+  "evidence": [],
+  "directions_to_next": "[[c:That is the end of the walk. Well done.]]"
+}

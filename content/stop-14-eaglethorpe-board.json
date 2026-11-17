@@ -1,0 +1,22 @@
+{
+  "_readme": "Colour code: [[r:...]] RED = best guess, unconfirmed. [[c:...]] CYAN = new or unknown, suggested by Claude for approval. Plain = confirmed by owner.",
+  "id": "stop-14",
+  "order": 14,
+  "name": "Eaglethorpe board and barns",
+  "map": [
+    475,
+    579,
+    "cyan"
+  ],
+  "photo": "images/20261019_173907.jpg",
+  "photo_caption": "The Eaglethorpe Barns sign",
+  "layers": {
+    "essential_history": "The Proby family has owned farmland around Warmington since Sir Peter Proby first acquired land at Elton in 1595, and has held Elton Hall since 1660. [[r:The board also mentions a possible late Saxon hamlet and a survey of 1621. The dovecote is said to have about 800 nests.]]",
+    "deeper_history": "[[r:An Early Bronze Age burial was found near the mill in 1995. Sources differ on its exact date. It is a findspot, not a place to visit.]]",
+    "mystery": "[[c:Journal page: the estate is old and grand, and its stores are full. That makes a missing sack all the harder to notice.]]"
+  },
+  "puzzle": null,
+  "puzzle_note": "[[c:No puzzle here yet.]]",
+  "evidence": [],
+  "directions_to_next": "[[c:Directions to be supplied after the recce. Next stop: Orchard Pocket Park.]]"
+}

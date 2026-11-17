@@ -1,0 +1,43 @@
+{
+  "_readme": "Colour code: [[r:...]] RED = best guess, unconfirmed. [[c:...]] CYAN = new or unknown, suggested by Claude for approval. Plain = confirmed by owner.",
+  "id": "stop-11",
+  "order": 11,
+  "name": "Big Green Pocket Park",
+  "map": [
+    573,
+    690,
+    "guess"
+  ],
+  "photo": "images/20261019_182935.jpg",
+  "photo_caption": "The entrance to Big Green",
+  "layers": {
+    "essential_history": "[[r:Big Green is a pocket park. Sources give its opening year as 1997 or 1998.]]",
+    "deeper_history": "[[c:Deeper history for this stop is still to be written.]]",
+    "mystery": "[[c:Journal page: you find a torn inventory page. It lists the estate's furniture, including one blue dispatch chest, last seen moved to the steward's store.]]"
+  },
+  "puzzle": {
+    "ref": "P9",
+    "title": "The igloo",
+    "intro": "[[r:Find the information board at Big Green. Use the board, not the structure, as it may change.]]",
+    "material": [],
+    "question": "[[r:What living material was used to make the igloo described on the board?]]",
+    "answer": "Willow",
+    "accepted_variants": [
+      "willow",
+      "willows",
+      "willow branches",
+      "willow stems"
+    ],
+    "hints": [
+      "[[r:Read the board about the play structure.]]",
+      "[[r:It is a tree or shrub material.]]",
+      "[[r:It also gives the name to a tree you can see on the walk.]]"
+    ],
+    "reveal": "[[r:The igloo is made of willow.]]",
+    "fallback": "[[r:If the board is hard to read, ask for the answer.]]"
+  },
+  "evidence": [
+    "[[c:An inventory lists a blue dispatch chest, last moved to the steward's store.]]"
+  ],
+  "directions_to_next": "[[c:Directions to be supplied after the recce. Next stop: Dexter Way.]]"
+}

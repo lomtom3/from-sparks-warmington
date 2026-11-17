@@ -1,0 +1,22 @@
+{
+  "_readme": "Colour code: [[r:...]] RED = best guess, unconfirmed. [[c:...]] CYAN = new or unknown, suggested by Claude for approval. Plain = confirmed by owner.",
+  "id": "stop-05",
+  "order": 5,
+  "name": "Glebe Stores",
+  "map": [
+    468,
+    718,
+    "confirmed"
+  ],
+  "photo": "images/20261019_180220.jpg",
+  "photo_caption": "Glebe Stores",
+  "layers": {
+    "essential_history": "[[r:The village shop, which used to be the post office. There is no need to buy anything.]]",
+    "deeper_history": "[[c:Deeper history for this stop is still to be written.]]",
+    "mystery": "[[c:Journal page: in the 1600s news travelled slowly and by messenger. The messenger's route home is not as short as it should be.]]"
+  },
+  "puzzle": null,
+  "puzzle_note": "[[c:No puzzle here yet.]]",
+  "evidence": [],
+  "directions_to_next": "[[c:Directions to be supplied after the recce. Next stop: Village history board.]]"
+}

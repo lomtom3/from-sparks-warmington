@@ -1,0 +1,45 @@
+{
+  "_readme": "Colour code: [[r:...]] RED = best guess, unconfirmed. [[c:...]] CYAN = new or unknown, suggested by Claude for approval. Plain = confirmed by owner.",
+  "id": "stop-08",
+  "order": 8,
+  "name": "St Mary's church",
+  "map": [
+    467,
+    749,
+    "confirmed"
+  ],
+  "photo": "images/20261019_180522.jpg",
+  "photo_caption": "St Mary's church",
+  "layers": {
+    "essential_history": "[[r:St Mary's church was built mostly between about 1180 and 1290. Sources differ slightly on the exact dates.]]",
+    "deeper_history": "[[c:Deeper history for this stop is still to be written.]]",
+    "mystery": "[[c:Journal page: the church bell marks the hours in this story. When a witness says a bell, listen carefully.]]"
+  },
+  "puzzle": {
+    "ref": "P7",
+    "title": "The restoration plaque",
+    "intro": "[[r:Go to the rear of the church and find the plaque about the restoration grant. Stay on the public path.]]",
+    "material": [],
+    "question": "[[r:What was the restoration grant amount, in pounds? (numbers only)]]",
+    "answer": "30",
+    "accepted_variants": [
+      "30",
+      "£30",
+      "30 pounds",
+      "thirty",
+      "thirty pounds"
+    ],
+    "hints": [
+      "[[r:Look at the back (rear) of the church for a small plaque.]]",
+      "[[r:The plaque mentions a grant for restoration.]]",
+      "[[r:The amount is a two-digit number.]]"
+    ],
+    "reveal": "[[r:The grant was £30.]]",
+    "fallback": "[[r:If you cannot reach the plaque, look at the photo of it if one is shown, or ask for the answer.]]"
+  },
+  "evidence": [],
+  "directions_to_next": "[[c:Directions to be supplied after the recce. Next stop: Taylor's Green.]]",
+  "notes": [
+    "The year on the plaque is worn and unconfirmed. Do not ask for it."
+  ]
+}

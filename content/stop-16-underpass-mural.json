@@ -1,0 +1,18 @@
+{
+  "_readme": "Colour code: [[r:...]] RED = best guess, unconfirmed. [[c:...]] CYAN = new or unknown, suggested by Claude for approval. Plain = confirmed by owner.",
+  "id": "stop-16",
+  "order": 16,
+  "name": "Underpass mural",
+  "map": null,
+  "photo": "images/20261019_174445.jpg",
+  "photo_caption": "The underpass mural",
+  "layers": {
+    "essential_history": "A mural painted by villagers and the school brightens the underpass. [[c:Its date and the number of painters are not confirmed.]]",
+    "deeper_history": "[[c:Deeper history for this stop is still to be written.]]",
+    "mystery": "[[c:No story page here. The mural is only a history stop.]]"
+  },
+  "puzzle": null,
+  "puzzle_note": "[[c:No puzzle here: the mural-age puzzle was dropped.]]",
+  "evidence": [],
+  "directions_to_next": "[[c:Directions to be supplied after the recce. Next stop: Warmington Mill.]]"
+}

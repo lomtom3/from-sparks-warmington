@@ -1,0 +1,48 @@
+{
+  "_readme": "Colour code: [[r:...]] RED = best guess, unconfirmed. [[c:...]] CYAN = new or unknown, suggested by Claude for approval. Plain = confirmed by owner.",
+  "id": "stop-17",
+  "order": 17,
+  "name": "Warmington Mill",
+  "map": [
+    320,
+    552,
+    "guess"
+  ],
+  "photo": "images/20261019_174630.jpg",
+  "photo_caption": "Warmington Mill",
+  "layers": {
+    "essential_history": "[[r:Warmington Mill is recorded in the Domesday Book. The building you see now is later, and milling stopped in 1958.]]",
+    "deeper_history": "[[c:Deeper history for this stop is still to be written.]]",
+    "mystery": "[[c:Journal page: you check the mill's records against the estate's own.]]"
+  },
+  "puzzle": {
+    "ref": "P4",
+    "title": "The missing sacks",
+    "intro": "[[c:PLACEHOLDER IDEA, for your approval. Compare the two records.]]",
+    "material": [
+      "[[c:MILL DISPATCH RECORD: 12 sacks of grain sent to the estate.]]",
+      "[[c:ESTATE RECEIPT: 10 sacks of grain received.]]",
+      "[[c:A riverside delivery note, marked with the same sack symbol, shows two sacks sold to a private buyer.]]"
+    ],
+    "question": "[[c:How many sacks are missing?]]",
+    "answer": "2",
+    "accepted_variants": [
+      "2",
+      "two"
+    ],
+    "hints": [
+      "[[c:Compare the number sent with the number received.]]",
+      "[[c:Subtract the smaller number from the larger.]]",
+      "[[c:Twelve take away ten.]]"
+    ],
+    "reveal": "[[c:Two sacks are missing, and the delivery note shows where they went. The grain accounts do not add up.]]",
+    "fallback": "[[c:This puzzle uses only the story text.]]"
+  },
+  "evidence": [
+    "[[c:Mill record: 12 sacks sent, 10 received. Two went to a private buyer. The grain accounts do not reconcile.]]"
+  ],
+  "directions_to_next": "[[c:Directions to be supplied after the recce. Next stop: Elton Boat Club.]]",
+  "notes": [
+    "Placeholder: the owner will confirm or replace this puzzle. Do not use a wheel count or anything that may change."
+  ]
+}

@@ -97,7 +97,7 @@
       walk.route.forEach(function (r) {
         if (!r.map) return;
         var p = pct(r.map[0], r.map[1]);
-        var d = el('div', { className: 'dot' + (r.map[2] !== 'confirmed' ? ' guess' : '') });
+        var d = el('div', { className: 'dot' + (r.map[2] === 'guess' ? ' guess' : r.map[2] === 'cyan' ? ' cyan' : '') + (opts.current === r.n ? ' current' : '') });
         d.textContent = r.n;
         d.style.left = p.l; d.style.top = p.t;
         wrap.appendChild(d);
@@ -164,6 +164,7 @@
 
     settingsEl.appendChild(el('h3', { text: 'The walk' }));
     settingsEl.appendChild(el('button', { className: 'secondary wide', text: 'Route and map', onClick: function () { closeSettings(); location.hash = '#route'; } }));
+    settingsEl.appendChild(el('button', { className: 'secondary wide', text: 'Evidence notebook', onClick: function () { closeSettings(); location.hash = '#notebook'; } }));
     settingsEl.appendChild(el('button', { className: 'secondary wide', text: 'Reset my progress', onClick: function () {
       if (window.confirm('Start the walk again from the beginning?')) {
         state.current = 0; state.arrived = {}; state.solved = {}; state.hints = {}; saveState();
@@ -174,12 +175,46 @@
   }
 
   // ---------- screens ----------
+  // Character picture (DRAFT, not final). Hidden safely if the file is missing.
+  function heroImage() {
+    var fig = el('figure', { className: 'stop-photo hero' });
+    var img = document.createElement('img');
+    img.src = 'images/characters.jpg'; img.alt = 'First concept of the characters in the story (draft)';
+    img.addEventListener('error', function () { fig.remove(); });
+    fig.appendChild(img);
+    fig.appendChild(el('figcaption', { text: 'The characters: first concept (draft).' }));
+    return fig;
+  }
+
+  function logoHero() {
+    var fig = el('figure', { className: 'logo-hero' });
+    var img = document.createElement('img');
+    img.src = 'images/logo-full.jpg'; img.alt = 'From Sparks Adventures (draft logo)';
+    img.addEventListener('error', function () { fig.remove(); });
+    fig.appendChild(img);
+    return fig;
+  }
+
+  // Logo (DRAFT, not final): swaps in images/logo.png if it exists.
+  function loadLogo() {
+    var probe = new Image();
+    probe.onload = function () {
+      var mark = document.querySelector('.brand-mark');
+      if (!mark) return;
+      probe.className = 'brand-logo'; probe.alt = 'From Sparks Adventures';
+      mark.replaceWith(probe);
+    };
+    probe.src = 'images/logo.png';
+  }
+
   function welcomeScreen() {
     var started = Object.keys(state.arrived).length > 0 || state.current > 0;
     show([
+      logoHero(),
       el('p', { className: 'kicker', text: walk.subtitle }),
       el('h1', { text: walk.title }),
       el('p', { text: walk.welcome_text }),
+      heroImage(),
       mapView({ dots: true }),
       el('p', { className: 'mapcap', text: walk.map_note }),
       el('div', { className: 'card' }, [
@@ -208,10 +243,63 @@
       el('p', { className: 'kicker', text: walk.subtitle }),
       el('h1', { text: 'The route' }),
       mapView({ dots: true }),
-      el('p', { className: 'mapcap', text: 'Green numbers are confirmed positions. Red numbers are best guesses. Stops without a number are not placed yet.' }),
+      el('p', { className: 'mapcap', text: 'Green numbers are confirmed positions. Red numbers are best guesses. Blue numbers are unknown positions, suggested only. Stops without a number are not placed yet.' }),
       list,
       el('div', { className: 'nav' }, [el('button', { className: 'secondary', text: 'Back to start', onClick: function () { location.hash = '#welcome'; } })])
     ]);
+  }
+
+  function collectEvidence() {
+    var items = [];
+    stops.forEach(function (s) {
+      if (state.solved[s.id] && s.evidence) s.evidence.forEach(function (e) { items.push({ stop: s.name, text: e }); });
+    });
+    return items;
+  }
+
+  function notebookScreen() {
+    var items = collectEvidence();
+    var nodes = [el('p', { className: 'kicker', text: 'Your notes' }), el('h1', { text: 'Evidence notebook' })];
+    if (!items.length) nodes.push(el('p', { className: 'muted', text: 'Nothing yet. Solve puzzles along the walk and the clues are added here.' }));
+    items.forEach(function (it) {
+      nodes.push(el('section', { className: 'card mystery' }, [el('p', { className: 'kicker', text: it.stop }), el('p', { text: it.text })]));
+    });
+    nodes.push(el('div', { className: 'nav' }, [el('button', { className: 'secondary', text: 'Back to the walk', onClick: function () { goStop(state.current); } })]));
+    show(nodes);
+  }
+
+  function accuseBlock(stop) {
+    var pz = stop.puzzle;
+    var solved = !!state.solved[stop.id];
+    var box = el('section', { className: 'card puzzle' }, [
+      el('p', { className: 'kicker', text: 'Finale' }), el('h2', { text: pz.title }), el('p', { text: pz.intro }),
+      el('button', { className: 'secondary small', text: 'Open my evidence notebook', onClick: function () { location.hash = '#notebook'; } }),
+      el('p', { text: pz.question })
+    ]);
+    var feedback = el('p', { className: 'feedback', attrs: { 'aria-live': 'polite' } });
+    var selects = {};
+    pz.fields.forEach(function (f) {
+      var sel = document.createElement('select');
+      sel.setAttribute('aria-label', f.label);
+      var ph = document.createElement('option'); ph.value = ''; ph.textContent = 'Choose...'; sel.appendChild(ph);
+      f.options.forEach(function (o) { var op = document.createElement('option'); op.value = o; op.textContent = o; sel.appendChild(op); });
+      if (solved) { sel.value = f.answer; sel.disabled = true; }
+      selects[f.key] = sel;
+      box.appendChild(el('label', { className: 'field' }, [el('span', { className: 'label', text: f.label }), sel]));
+    });
+    if (!solved) {
+      box.appendChild(el('button', { className: 'wide copper', text: 'Make my accusation', onClick: function () {
+        var right = 0, empty = false;
+        pz.fields.forEach(function (f) { var v = selects[f.key].value; if (!v) empty = true; else if (v === f.answer) right++; });
+        if (empty) { feedback.className = 'feedback no'; feedback.textContent = 'Choose an answer for each question first.'; return; }
+        if (right === pz.fields.length) { state.solved[stop.id] = true; saveState(); route(true); }
+        else { feedback.className = 'feedback no'; feedback.textContent = 'Not quite: ' + right + ' of ' + pz.fields.length + ' are right. Check your notebook and try again.'; }
+      } }));
+      box.appendChild(feedback);
+    } else {
+      box.appendChild(el('p', { className: 'feedback ok', text: pz.reveal }));
+    }
+    return box;
   }
 
   function photoFigure(stop) {
@@ -325,7 +413,7 @@
         nodes.push(el('section', { className: 'card' + (l.key === 'mystery' ? ' mystery' : '') }, [el('h2', { text: l.label }), el('p', { text: text })]));
       });
       if (!anyOn) nodes.push(el('p', { className: 'muted', text: 'All layers are switched off. Open the menu to switch one on.' }));
-      if (stop.puzzle && state.layers.mystery) nodes.push(puzzleBlock(stop));
+      if (stop.puzzle && state.layers.mystery) nodes.push(stop.puzzle.type === 'accuse' ? accuseBlock(stop) : puzzleBlock(stop));
       if (!stop.puzzle && stop.puzzle_note && state.layers.mystery) nodes.push(el('p', { className: 'muted', text: stop.puzzle_note }));
       if (stop.evidence && stop.evidence.length && state.layers.mystery && (!stop.puzzle || state.solved[stop.id])) {
         var ev = el('section', { className: 'card mystery' }, [el('h2', { text: 'Added to your notebook' })]);
@@ -339,7 +427,6 @@
         nodes.push(el('section', { className: 'card' }, [
           el('h2', { text: 'Next' }),
           el('p', { text: stop.directions_to_next }),
-          el('p', { className: 'muted', text: 'That is as far as this draft goes. The remaining stops are still being written.' })
         ]));
       }
     }
@@ -360,6 +447,7 @@
     if (keepScroll === true) lastScroll = window.scrollY;
     var id = location.hash.replace('#', '');
     if (id === 'route') routeScreen();
+    else if (id === 'notebook') notebookScreen();
     else {
       var index = -1;
       stops.forEach(function (s, i) { if (s.id === id) index = i; });
@@ -384,6 +472,7 @@
     .then(function (loaded) {
       stops = loaded;
       state = loadState();
+      loadLogo();
       menuButton.addEventListener('click', function () { if (settingsEl.hidden) openSettings(); else closeSettings(); });
       scrim.addEventListener('click', closeSettings);
       document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !settingsEl.hidden) closeSettings(); });

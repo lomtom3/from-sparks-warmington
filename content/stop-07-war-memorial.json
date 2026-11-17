@@ -1,0 +1,21 @@
+{
+  "_readme": "Colour code: [[r:...]] RED = best guess, unconfirmed. [[c:...]] CYAN = new or unknown, suggested by Claude for approval. Plain = confirmed by owner.",
+  "id": "stop-07",
+  "order": 7,
+  "name": "War memorial",
+  "map": null,
+  "photo": "images/20261019_180537.jpg",
+  "photo_caption": "The war memorial and church",
+  "layers": {
+    "essential_history": "[[c:A quiet moment to remember. A short respectful line could go here once chosen.]]",
+    "deeper_history": "[[c:Deeper history for this stop is still to be written.]]",
+    "mystery": "[[c:No story page here, on purpose. The memorial stays outside the made-up story.]]"
+  },
+  "puzzle": null,
+  "puzzle_note": "[[c:No puzzle here, on purpose.]]",
+  "evidence": [],
+  "directions_to_next": "[[c:Directions to be supplied after the recce. Next stop: St Mary's church.]]",
+  "notes": [
+    "Keep the war memorial and individual graves out of the fictional mystery."
+  ]
+}

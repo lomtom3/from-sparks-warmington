@@ -29,28 +29,181 @@
   "stops": [
     "stop-01-red-lion.json",
     "stop-02-manor-house.json",
-    "stop-03-wesleyan-chapel.json"
+    "stop-03-wesleyan-chapel.json",
+    "stop-04-old-bakehouse.json",
+    "stop-05-glebe-stores.json",
+    "stop-06-village-history-board.json",
+    "stop-07-war-memorial.json",
+    "stop-08-st-marys-church.json",
+    "stop-09-taylors-green.json",
+    "stop-10-cemetery-gatehouse.json",
+    "stop-11-big-green.json",
+    "stop-12-dexter-way.json",
+    "stop-13-fun-field.json",
+    "stop-14-eaglethorpe-board.json",
+    "stop-15-orchard.json",
+    "stop-16-underpass-mural.json",
+    "stop-17-warmington-mill.json",
+    "stop-18-boat-club.json",
+    "stop-19-willow-field.json",
+    "stop-20-red-lion-finale.json"
   ],
   "route": [
-    { "n": 1,  "name": "Red Lion (start)",                 "map": [433, 635, "confirmed"] },
-    { "n": 2,  "name": "Possible Manor House",             "map": [485, 687, "guess"] },
-    { "n": 3,  "name": "Former Wesleyan chapel",           "map": [453, 676, "guess"] },
-    { "n": 4,  "name": "Old Bakehouse",                    "map": null },
-    { "n": 5,  "name": "Glebe Stores",                     "map": [468, 718, "confirmed"] },
-    { "n": 6,  "name": "Village history board",            "map": null },
-    { "n": 7,  "name": "War memorial",                     "map": null },
-    { "n": 8,  "name": "St Mary's church",                 "map": [467, 749, "confirmed"] },
-    { "n": 9,  "name": "Taylor's Green",                   "map": [538, 825, "guess"] },
-    { "n": 10, "name": "Cemetery gatehouse",               "map": [576, 793, "guess"] },
-    { "n": 11, "name": "Big Green Pocket Park",            "map": [573, 690, "guess"] },
-    { "n": 12, "name": "Dexter Way",                       "map": null },
-    { "n": 13, "name": "Fun Field (play break)",           "map": [505, 591, "confirmed"] },
-    { "n": 14, "name": "Eaglethorpe board and barns",      "map": null },
-    { "n": 15, "name": "Orchard Pocket Park",              "map": null },
-    { "n": 16, "name": "Underpass mural",                  "map": null },
-    { "n": 17, "name": "Warmington Mill",                  "map": [320, 552, "guess"] },
-    { "n": 18, "name": "Elton Boat Club",                  "map": null },
-    { "n": 19, "name": "Willow and field crossing",        "map": null },
-    { "n": 20, "name": "Red Lion (finale)",                "map": [433, 635, "confirmed"] }
+    {
+      "n": 1,
+      "name": "Red Lion (start)",
+      "map": [
+        433,
+        635,
+        "confirmed"
+      ]
+    },
+    {
+      "n": 2,
+      "name": "Possible Manor House",
+      "map": [
+        485,
+        687,
+        "guess"
+      ]
+    },
+    {
+      "n": 3,
+      "name": "Former Wesleyan chapel",
+      "map": [
+        453,
+        676,
+        "guess"
+      ]
+    },
+    {
+      "n": 4,
+      "name": "Old Bakehouse",
+      "map": null
+    },
+    {
+      "n": 5,
+      "name": "Glebe Stores",
+      "map": [
+        468,
+        718,
+        "confirmed"
+      ]
+    },
+    {
+      "n": 6,
+      "name": "Village history board",
+      "map": [
+        478,
+        743,
+        "cyan"
+      ]
+    },
+    {
+      "n": 7,
+      "name": "War memorial",
+      "map": null
+    },
+    {
+      "n": 8,
+      "name": "St Mary's church",
+      "map": [
+        467,
+        749,
+        "confirmed"
+      ]
+    },
+    {
+      "n": 9,
+      "name": "Taylor's Green",
+      "map": [
+        538,
+        825,
+        "guess"
+      ]
+    },
+    {
+      "n": 10,
+      "name": "Cemetery gatehouse",
+      "map": [
+        576,
+        793,
+        "guess"
+      ]
+    },
+    {
+      "n": 11,
+      "name": "Big Green Pocket Park",
+      "map": [
+        573,
+        690,
+        "guess"
+      ]
+    },
+    {
+      "n": 12,
+      "name": "Dexter Way",
+      "map": [
+        501,
+        638,
+        "guess"
+      ]
+    },
+    {
+      "n": 13,
+      "name": "Fun Field (play break)",
+      "map": [
+        505,
+        591,
+        "confirmed"
+      ]
+    },
+    {
+      "n": 14,
+      "name": "Eaglethorpe board and barns",
+      "map": [
+        475,
+        579,
+        "cyan"
+      ]
+    },
+    {
+      "n": 15,
+      "name": "Orchard Pocket Park",
+      "map": null
+    },
+    {
+      "n": 16,
+      "name": "Underpass mural",
+      "map": null
+    },
+    {
+      "n": 17,
+      "name": "Warmington Mill",
+      "map": [
+        320,
+        552,
+        "guess"
+      ]
+    },
+    {
+      "n": 18,
+      "name": "Elton Boat Club",
+      "map": null
+    },
+    {
+      "n": 19,
+      "name": "Willow and field crossing",
+      "map": null
+    },
+    {
+      "n": 20,
+      "name": "Red Lion (finale)",
+      "map": [
+        433,
+        635,
+        "confirmed"
+      ]
+    }
   ]
 }

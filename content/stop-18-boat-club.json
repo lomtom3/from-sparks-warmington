@@ -1,0 +1,18 @@
+{
+  "_readme": "Colour code: [[r:...]] RED = best guess, unconfirmed. [[c:...]] CYAN = new or unknown, suggested by Claude for approval. Plain = confirmed by owner.",
+  "id": "stop-18",
+  "order": 18,
+  "name": "Elton Boat Club",
+  "map": null,
+  "photo": "images/20261019_174752.jpg",
+  "photo_caption": "The boat club building",
+  "layers": {
+    "essential_history": "[[c:Elton Boat Club has moorings on the river. Its founding year, possibly 1973, is not verified.]]",
+    "deeper_history": "[[c:Deeper history for this stop is still to be written.]]",
+    "mystery": "[[c:Journal page: goods once moved by river as well as by road, which makes a quiet delivery easy to arrange.]]"
+  },
+  "puzzle": null,
+  "puzzle_note": "[[c:No puzzle here yet.]]",
+  "evidence": [],
+  "directions_to_next": "[[c:Directions to be supplied after the recce. Next stop: Willow and field crossing.]]"
+}
