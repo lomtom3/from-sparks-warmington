@@ -1,26 +1,28 @@
 {
-  "_readme": "Walk list. Stops appear in the app in the order listed here. To add a stop, create its file in this folder and add one line to 'stops'. Anything starting PLACEHOLDER is to be written or approved by the owner.",
+  "_readme": "Walk list and shared text. Colour code in any text: [[r:...]] = RED, best guess not yet confirmed by the owner; [[c:...]] = CYAN, new idea or new puzzle suggested by Claude; plain text = confirmed. Stops appear in the order listed in 'stops'. 'route' lists all 20 planned stops (only some have content files yet). Map positions are x,y on map/warmington-map.svg (viewBox 215 470 490 430).",
   "id": "warmington-medium",
-  "title": "Warmington Medium Walk",
-  "welcome_text": "PLACEHOLDER: welcome text. To be written.",
-  "start_text": "PLACEHOLDER: how to find the start (Red Lion). To be written.",
+  "title": "The Missing Message",
+  "subtitle": "Warmington Medium Walk",
+  "welcome_text": "[[r:A sealed order has gone missing from the estate. You are a servant of the estate, and the housekeeper needs it found before the evening collection. Walk the village, follow the clues, and work out who took it, why, and where it is hidden.]]",
+  "start_text": "[[r:Start at the Red Lion pub, on the Peterborough Road at Eaglethorpe. There is a car park. You do not need to buy anything.]]",
+  "map_note": "[[r:Today's village layout, drawn in an old style. The modern streets and buildings are not shown as if they stood in the 1600s.]]",
   "layers": [
     {
       "key": "essential_history",
       "label": "Essential history",
-      "description": "PLACEHOLDER: one-line explanation of this layer.",
+      "description": "[[r:A short true fact about each stop. Keep this on for the real story of the village.]]",
       "default_on": true
     },
     {
       "key": "deeper_history",
       "label": "Deeper history",
-      "description": "PLACEHOLDER: one-line explanation of this layer.",
+      "description": "[[r:Longer history for the curious. Switched off to begin with.]]",
       "default_on": false
     },
     {
       "key": "mystery",
       "label": "Mystery story",
-      "description": "PLACEHOLDER: one-line explanation of this layer.",
+      "description": "[[r:The made-up story and puzzles. Switch it off for a history-only walk; your place on the route is kept.]]",
       "default_on": true
     }
   ],
@@ -28,5 +30,27 @@
     "stop-01-red-lion.json",
     "stop-02-manor-house.json",
     "stop-03-wesleyan-chapel.json"
+  ],
+  "route": [
+    { "n": 1,  "name": "Red Lion (start)",                 "map": [433, 635, "confirmed"] },
+    { "n": 2,  "name": "Possible Manor House",             "map": [485, 687, "guess"] },
+    { "n": 3,  "name": "Former Wesleyan chapel",           "map": [453, 676, "guess"] },
+    { "n": 4,  "name": "Old Bakehouse",                    "map": null },
+    { "n": 5,  "name": "Glebe Stores",                     "map": [468, 718, "confirmed"] },
+    { "n": 6,  "name": "Village history board",            "map": null },
+    { "n": 7,  "name": "War memorial",                     "map": null },
+    { "n": 8,  "name": "St Mary's church",                 "map": [467, 749, "confirmed"] },
+    { "n": 9,  "name": "Taylor's Green",                   "map": [538, 825, "guess"] },
+    { "n": 10, "name": "Cemetery gatehouse",               "map": [576, 793, "guess"] },
+    { "n": 11, "name": "Big Green Pocket Park",            "map": [573, 690, "guess"] },
+    { "n": 12, "name": "Dexter Way",                       "map": null },
+    { "n": 13, "name": "Fun Field (play break)",           "map": [505, 591, "confirmed"] },
+    { "n": 14, "name": "Eaglethorpe board and barns",      "map": null },
+    { "n": 15, "name": "Orchard Pocket Park",              "map": null },
+    { "n": 16, "name": "Underpass mural",                  "map": null },
+    { "n": 17, "name": "Warmington Mill",                  "map": [320, 552, "guess"] },
+    { "n": 18, "name": "Elton Boat Club",                  "map": null },
+    { "n": 19, "name": "Willow and field crossing",        "map": null },
+    { "n": 20, "name": "Red Lion (finale)",                "map": [433, 635, "confirmed"] }
   ]
 }

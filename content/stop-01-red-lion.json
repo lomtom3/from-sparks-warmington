@@ -1,54 +1,41 @@
 {
-  "_readme": "STARTER FILE with dummy text. Anything starting PLACEHOLDER is to be written by the owner or approved by the owner. Do not invent content for it.",
+  "_readme": "Colour code: [[r:...]] RED = best guess, not yet confirmed by owner. [[c:...]] CYAN = new idea/puzzle suggested by Claude. Plain = confirmed. Answers here are readable in the public repository.",
   "id": "stop-01",
   "order": 1,
   "name": "Red Lion",
-  "role": "Start of the walk. P5 opening puzzle. The walk also finishes here (stop 20 holds the P10 finale).",
-  "content_status": "STARTER - dummy text only",
-  "coordinates": null,
+  "map": [433, 635, "confirmed"],
+  "photo": "images/20261019_175746.jpg",
+  "photo_caption": "The Red Lion",
   "layers": {
-    "essential_history": "PLACEHOLDER: one or two short facts about the Red Lion. To be written.",
-    "deeper_history": "PLACEHOLDER: optional longer history. Deferred by the owner.",
-    "mystery": "PLACEHOLDER: opening narration, second person. The housekeeper asks the player to recover a missing sealed order. To be written. (An earlier spoken draft exists but its wording was never settled.)"
+    "essential_history": "[[r:The Red Lion is where the walk begins and ends. Local sources disagree about its age: the village board says late 17th or early 18th century, and the village website says early 1800s.]]",
+    "deeper_history": "[[r:Deeper history for this stop is still to be written.]]",
+    "mystery": "[[r:The housekeeper presses a note into your hand. A sealed order has vanished, and the carter comes for the evening collection soon. Four people had a reason to be near it: the miller's assistant, the stable hand, the messenger and the steward. Start by listening to what they say.]]"
   },
-  "facts": [
-    {
-      "text": "Pub with a car park.",
-      "status": "verified",
-      "source": "owner"
-    },
-    {
-      "text": "Village board says the toilet block was formerly a fish-and-chip shop.",
-      "status": "uncertain",
-      "source": "village board, not independently checked"
-    },
-    {
-      "text": "Age of the building conflicts: the village board says late 17th or early 18th century; the village website says early 1800s. Do not state an age until the owner resolves this.",
-      "status": "uncertain",
-      "source": "village board vs village website"
-    }
-  ],
   "puzzle": {
     "ref": "P5",
-    "status": "concept approved, NOT written",
-    "concept": "Compare three fictional witness statements with a timed receipt to find the impossible account.",
-    "question": "PLACEHOLDER QUESTION",
-    "answer": "PLACEHOLDER ANSWER",
-    "accepted_variants": [],
-    "hints": [
-      "PLACEHOLDER HINT 1",
-      "PLACEHOLDER HINT 2",
-      "PLACEHOLDER HINT 3"
+    "title": "Who cannot be telling the truth?",
+    "intro": "[[c:The three witnesses below were asked where they were. One account cannot be true. Compare them with the receipt.]]",
+    "material": [
+      "[[c:RECEIPT: The sealed order was handed into the dispatch room at the second bell. Signed for by the housekeeper.]]",
+      "[[c:ALICE MILLER, miller's assistant: \"I was at the mill all afternoon. I loaded the cart before the second bell and it left on time.\"]]",
+      "[[c:THOMAS CARTER, stable hand: \"I was in the yard with the horses. I saw the messenger ride in at the third bell with the order still in her bag.\"]]",
+      "[[c:ANNE FLETCHER, messenger: \"I reached the dispatch room at the second bell and handed the order over to the housekeeper.\"]]"
     ],
-    "reveal": "PLACEHOLDER REVEAL",
-    "fallback": "PLACEHOLDER FALLBACK"
+    "question": "[[c:Which witness's account cannot be true? Type their first name.]]",
+    "answer": "Thomas",
+    "accepted_variants": ["thomas", "thomas carter", "carter", "the stable hand", "stable hand"],
+    "hints": [
+      "[[c:Look at what time the receipt says the order was handed over.]]",
+      "[[c:Two of the witnesses mention the second bell. One mentions a different bell.]]",
+      "[[c:Someone saw the order still in a bag after it had already been handed over.]]"
+    ],
+    "reveal": "[[c:The receipt shows the order was handed over at the second bell. Thomas says he saw it still in the messenger's bag at the third bell, so his account cannot be true. Why would he say that? Keep it in mind.]]",
+    "fallback": "[[c:This puzzle uses only the story text above, so it works even if you are not at the pub.]]"
   },
-  "evidence_unlocked": [],
-  "evidence_note": "PLACEHOLDER: evidence chain not yet written.",
-  "directions_to_next": "DIRECTIONS TO BE SUPPLIED",
-  "photos": [
-    "20261019_175746.jpg"
+  "evidence": [
+    "[[c:The messenger handed over the order intact at the second bell (receipt).]]"
   ],
+  "directions_to_next": "[[r:Follow the road south from the Red Lion towards the village centre. The Possible Manor House is about 250 metres along, near Manor Place. View it from the road only.]]",
   "notes": [
     "Optional refreshment stop. No purchase required.",
     "No business partnership has been agreed with the pub."

@@ -1,42 +1,21 @@
 {
-  "_readme": "STARTER FILE with dummy text. Anything starting PLACEHOLDER is to be written by the owner or approved by the owner. Do not invent content for it.",
+  "_readme": "Colour code: [[r:...]] RED = best guess, not yet confirmed by owner. [[c:...]] CYAN = new idea suggested by Claude. Plain = confirmed.",
   "id": "stop-02",
   "order": 2,
   "name": "Possible Manor House",
-  "role": "Observation stop. No puzzle selected.",
-  "content_status": "STARTER - dummy text only. Building identification UNCONFIRMED.",
-  "coordinates": null,
+  "map": [485, 687, "guess"],
+  "photo": "images/20261019_180002.jpg",
+  "photo_caption": "A stone building that may be the old Manor House",
   "layers": {
-    "essential_history": "PLACEHOLDER: short fact. Do not write it until the owner confirms the building.",
-    "deeper_history": "PLACEHOLDER: optional longer history. Deferred by the owner.",
-    "mystery": "PLACEHOLDER: story scene or journal page. To be written."
+    "essential_history": "[[r:This stone building, with an inscription above the doorway, is thought to be the old Manor House, though that is not yet confirmed. The village board says the Manor House was built by the Elmes family in the 16th or early 17th century, replacing an older manor belonging to Sir George Kirkham.]]",
+    "deeper_history": "[[r:Deeper history for this stop is still to be written.]]",
+    "mystery": "[[r:Journal page: the order was last seen being carried towards the dispatch room at the big house. Everyone at the house says they never touched it. Somebody is not telling the whole story.]]"
   },
-  "facts": [
-    {
-      "text": "A stone building with an inscription above the doorway was photographed. The owner assumed it is the old Manor House but this is not confirmed.",
-      "status": "uncertain",
-      "source": "owner recce"
-    },
-    {
-      "text": "Village board attributes the Manor House to the Elmes family (16th or early 17th century), replacing an older manor of Sir George Kirkham opposite the north end of Church Lane. Do not attach this to the photographed building until it is confirmed.",
-      "status": "uncertain",
-      "source": "village board"
-    },
-    {
-      "text": "Private residence. Observe from the public route only. No doorstep task and no looking inside.",
-      "status": "verified",
-      "source": "owner decision"
-    }
-  ],
   "puzzle": null,
-  "puzzle_note": "No puzzle selected. A possible inscription or date clue is on hold until the inscription can be read from the photo.",
-  "evidence_unlocked": [],
-  "evidence_note": "PLACEHOLDER: evidence chain not yet written.",
-  "directions_to_next": "DIRECTIONS TO BE SUPPLIED",
-  "photos": [
-    "20261019_175956.jpg",
-    "20261019_180002.jpg"
-  ],
+  "puzzle_note": "[[c:No puzzle here yet. Suggested: an observation question about the doorway inscription, once it can be read from the photo.]]",
+  "evidence": [],
+  "directions_to_next": "[[r:Walk on a short way, about 100 metres, towards Chapel Street. The former Wesleyan chapel is a red-brick building with a round window.]]",
+  "private_note": "This is a private home. Look from the road only.",
   "notes": [
     "Do not confuse this with Eaglethorpe House, which is elsewhere on the route."
   ]

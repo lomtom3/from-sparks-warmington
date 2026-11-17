@@ -1,64 +1,36 @@
 {
-  "_readme": "STARTER FILE with dummy text. Anything starting PLACEHOLDER is to be written by the owner or approved by the owner. Do not invent content for it.",
+  "_readme": "Colour code: [[r:...]] RED = best guess, not yet confirmed by owner. [[c:...]] CYAN = new idea suggested by Claude. Plain = confirmed.",
   "id": "stop-03",
   "order": 3,
   "name": "Former Wesleyan chapel",
-  "role": "P6 puzzle stop.",
-  "content_status": "STARTER - dummy text only. Puzzle wording is a DRAFT for owner approval.",
-  "coordinates": null,
+  "map": [453, 676, "guess"],
+  "photo": "images/20261019_180016.jpg",
+  "photo_caption": "The former Wesleyan chapel",
   "layers": {
-    "essential_history": "PLACEHOLDER: short fact. To be written.",
-    "deeper_history": "PLACEHOLDER: optional longer history. Deferred by the owner.",
-    "mystery": "PLACEHOLDER: story scene or journal page. To be written."
+    "essential_history": "Red-brick frontage with a circular window and a Wesleyan stone. [[r:It is now a private home. An earlier note says it replaced a smaller Church Street chapel built in 1808, which has not been checked.]]",
+    "deeper_history": "[[r:Deeper history for this stop is still to be written.]]",
+    "mystery": "[[r:Journal page: the messenger, Anne Fletcher, is known to have come back from the dispatch room by a longer way than she should have. The chapel you see today is far newer than the story, which is set in the 1600s. It is only here to unlock the page.]]"
   },
-  "facts": [
-    {
-      "text": "Red-brick frontage with a circular window and a Wesleyan stone.",
-      "status": "verified",
-      "source": "recce photo"
-    },
-    {
-      "text": "The year on the stone is 1881, recorded as the chapel's opening or completion year.",
-      "status": "verified",
-      "source": "owner approved P6 answer; legibility from the public route still to be checked"
-    },
-    {
-      "text": "Research in an earlier chat said it replaced a smaller Church Street chapel built in 1808.",
-      "status": "uncertain",
-      "source": "earlier chat research, not verified"
-    },
-    {
-      "text": "Now a private home. Observe from the public route only.",
-      "status": "verified",
-      "source": "owner"
-    }
-  ],
   "puzzle": {
     "ref": "P6",
-    "status": "approved; question wording is DRAFT, owner to approve",
-    "question": "DRAFT: What year is shown on the stone of the former Wesleyan chapel?",
+    "title": "The stone",
+    "intro": "[[r:Look at the front of the building from the public road. Do not go through any gate.]]",
+    "material": [],
+    "question": "[[r:What year is shown on the stone of the former Wesleyan chapel?]]",
     "answer": "1881",
-    "accepted_variants": [
-      "1881"
-    ],
+    "accepted_variants": ["1881"],
     "hints": [
-      "PLACEHOLDER HINT 1",
-      "PLACEHOLDER HINT 2",
-      "PLACEHOLDER HINT 3"
+      "[[r:Look for a stone set into the red-brick front of the building.]]",
+      "[[r:The year is four digits, on the stone that mentions the Wesleyans.]]",
+      "[[r:The year begins with 18.]]"
     ],
-    "reveal": "PLACEHOLDER REVEAL",
-    "fallback": "Show the photo 20261019_180016.jpg if the stone cannot be read on site.",
-    "checks_needed": [
-      "Confirm the digits are clearly readable from the public route."
-    ]
+    "reveal": "[[r:The stone shows 1881.]]",
+    "fallback": "[[r:If you cannot read the stone, use the photo shown at the top of this stop.]]"
   },
-  "evidence_unlocked": [],
-  "evidence_note": "PLACEHOLDER: evidence chain not yet written.",
-  "directions_to_next": "DIRECTIONS TO BE SUPPLIED",
-  "photos": [
-    "20261019_180016.jpg"
-  ],
+  "evidence": [],
+  "directions_to_next": "[[r:The next stop is the Old Bakehouse, a short way along the road. Exact directions are still to be supplied, and stops 4 onwards are still being written.]]",
+  "private_note": "This is a private home. Look from the road only.",
   "notes": [
-    "Never present the 1881 building as existing in the 1600s. The fictional story sits in the late 1600s; the modern stone and building only unlock fictional journal pages."
+    "Never present the 1881 building as existing in the 1600s."
   ]
 }
