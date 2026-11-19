@@ -12,7 +12,7 @@
   "photo_caption": "The Dexter Way sign",
   "layers": {
     "essential_history": "[[c:Dexter Way is a modern street, so there isn't much history here. We'll find a fact for it later.]]",
-    "deeper_history": "[[c:There's more history for this stop to come.]]",
+    "deeper_history": "[[c:Streets like this often appeared after the bypass opened in 1996, when the village board says new building began. That's our best guess, and we still need to find out when Dexter Way was built and who it's named after.]]",
     "mystery": "[[c:Journal page: the housekeeper's rooms are along a quiet lane. The street names here are just for fun.]]"
   },
   "puzzle": {
@@ -35,7 +35,7 @@
     "fallback": "[[c:Can't find the sign? Use the photo, or ask for the answer.]]"
   },
   "evidence": [],
-  "directions_to_next": "[[c:Next up is Fun Field, for a play break. Full directions coming soon.]]",
+  "directions_to_next": "[[c:Head north for about 160 metres to Fun Field. A good place for a play break. Keep to the pavements and paths, and look from the road only.]]",
   "notes": [
     "This puzzle used to open the walk. What replaces its tutorial role is still undecided."
   ]

@@ -1,0 +1,32 @@
+{
+  "_readme": "The village chooser. status 'ready' opens the walk in folder; 'soon' shows a Coming soon card. Text in [[c:...]] is cyan (not confirmed).",
+  "villages": [
+    {
+      "id": "warmington",
+      "name": "Warmington",
+      "walk_title": "Warmington Walk",
+      "story": "The Missing Message",
+      "status": "ready",
+      "folder": "content/warmington/",
+      "teaser": "[[c:A mystery walk around the village, starting and finishing at the Red Lion.]]",
+      "details": "[[c:About 1 hr 30 to 2 hr 30, depending on your pace.]]",
+      "image": "images/20261019_175746.jpg",
+      "image_alt": "The Red Lion, Warmington"
+    },
+    {
+      "id": "elton",
+      "name": "Elton",
+      "status": "soon"
+    },
+    {
+      "id": "oundle",
+      "name": "Oundle",
+      "status": "soon"
+    },
+    {
+      "id": "stamford",
+      "name": "Stamford",
+      "status": "soon"
+    }
+  ]
+}

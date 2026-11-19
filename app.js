@@ -6,8 +6,11 @@
 (function () {
   'use strict';
 
-  var CONTENT = 'content/';
+  var ROOT_CONTENT = 'content/';
+  var CONTENT = 'content/warmington/';       // set to the chosen village's folder when a walk loads
   var MAP = { src: 'map/warmington-map.svg', x0: 215, y0: 470, w: 490, h: 430 };
+  var VILLAGE_KEY = 'fromsparks:village';
+  var villages = [], villageId = null, allStops = [], ROUTE = [], booted = false;
   var app = document.getElementById('app');
   var settingsEl = document.getElementById('settings');
   var scrim = document.getElementById('scrim');
@@ -19,10 +22,11 @@
   function loadState() {
     var saved = null;
     try { saved = JSON.parse(localStorage.getItem(storageKey())); } catch (e) { saved = null; }
-    var s = { current: 0, arrived: {}, solved: {}, hints: {}, wallet: null, revealed: {}, layers: {}, review: true, setupDone: false, gps: false };
+    var s = { current: 0, arrived: {}, solved: {}, hints: {}, wallet: null, revealed: {}, layers: {}, review: true, setupDone: false, gps: false, furthest: 0, access: false, length: null };
     walk.layers.forEach(function (l) { s.layers[l.key] = !!l.default_on; });
     if (saved && typeof saved === 'object') {
       if (typeof saved.current === 'number') s.current = saved.current;
+      if (typeof saved.furthest === 'number') s.furthest = saved.furthest;
       ['arrived', 'solved', 'hints', 'revealed'].forEach(function (k) {
         if (saved[k] && typeof saved[k] === 'object') s[k] = saved[k];
       });
@@ -30,6 +34,8 @@
       if (typeof saved.review === 'boolean') s.review = saved.review;
       if (typeof saved.setupDone === 'boolean') s.setupDone = saved.setupDone;
       if (typeof saved.gps === 'boolean') s.gps = saved.gps;
+      if (typeof saved.access === 'boolean') s.access = saved.access;
+      if (typeof saved.length === 'string') s.length = saved.length;
       if (saved.layers) Object.keys(s.layers).forEach(function (k) {
         if (typeof saved.layers[k] === 'boolean') s.layers[k] = saved.layers[k];
       });
@@ -72,10 +78,13 @@
 
   function plain(text) { return String(text).replace(/\[\[[rc]:([\s\S]*?)\]\]/g, '$1'); }
 
+  function reviewGuess() {
+    try { var s = JSON.parse(localStorage.getItem('fromsparks:warmington-medium')); return !s || s.review !== false; } catch (e) { return true; }
+  }
   function show(nodes) {
     app.innerHTML = '';
     nodes.forEach(function (n) { if (n) app.appendChild(n); });
-    document.body.classList.toggle('review', !!state && state.review);
+    document.body.classList.toggle('review', state ? !!state.review : reviewGuess());
     window.scrollTo(0, 0);
   }
 
@@ -109,7 +118,17 @@
       svg.appendChild(n);
       return n;
     }
-    var placed = walk.route.filter(function (r) { return r.map; });
+    var placed = ROUTE.filter(function (r) { return r.map; });
+    // Route line: the whole walk as a very faint half-tone grey; legs you have already walked are drawn darker.
+    var far = Math.max(state.furthest || 0, state.current || 0);      // 0-based index of the furthest stop opened
+    for (var li = 0; li < placed.length - 1; li++) {
+      var pa = placed[li], pb = placed[li + 1];
+      if (pa.map[0] === pb.map[0] && pa.map[1] === pb.map[1]) continue;
+      var walked = far >= pa.n;                                      // you have moved on from stop pa
+      add('line', walked
+        ? { x1: pa.map[0], y1: pa.map[1], x2: pb.map[0], y2: pb.map[1], stroke: '#1e1a12', 'stroke-opacity': 0.55, 'stroke-width': 2.4, 'stroke-linecap': 'round' }
+        : { x1: pa.map[0], y1: pa.map[1], x2: pb.map[0], y2: pb.map[1], stroke: '#8a8578', 'stroke-opacity': 0.28, 'stroke-width': 2, 'stroke-linecap': 'round', 'stroke-dasharray': '5 4' });
+    }
     placed.forEach(function (r) {
       var twin = placed.filter(function (o) { return o.n !== r.n && o.map[0] === r.map[0] && o.map[1] === r.map[1]; })[0];
       if (twin && twin.n < r.n) return;                       // stops 1 and 20 share one marker
@@ -128,12 +147,13 @@
         if (unconfirmed) ring['stroke-dasharray'] = '4 3';
         add('circle', ring);
       }
-      add('circle', { cx: x, cy: y, r: 7, fill: dot, stroke: '#f3e7c9', 'stroke-width': 1.5 });
+      var fade = (visited && !isFocus && !unconfirmed) ? 0.5 : 1;
+      add('circle', { cx: x, cy: y, r: 7, fill: dot, stroke: '#f3e7c9', 'stroke-width': 1.5, opacity: fade });
       add('text', { x: x, y: y + 3, 'text-anchor': 'middle', 'font-size': 8.5, 'font-weight': 700, fill: '#fff', 'font-family': 'system-ui,sans-serif' }, String(group[0]));
       var left = r.dir === 'l', up = r.dir === 'u', down = r.dir === 'd';
       add('text', {
         x: (up || down) ? x : (left ? x - 12 : x + 12), y: up ? y - 13 : (down ? y + 21 : y + 3.5), 'text-anchor': (up || down) ? 'middle' : (left ? 'end' : 'start'), 'font-size': 11.5,
-        'font-family': 'Georgia,serif', 'font-weight': isFocus ? 700 : 400, fill: txt,
+        'font-family': 'Georgia,serif', 'font-weight': isFocus ? 700 : 400, fill: txt, opacity: fade,
         stroke: '#ead9ab', 'stroke-width': 2.6, 'paint-order': 'stroke'
       }, r.label + (twin ? ' (start, finish)' : ''));
     });
@@ -210,6 +230,12 @@
       }
       settingsEl.appendChild(ul);
     }
+    if (accessOn() && !state.access) settingsEl.appendChild(el('button', { className: 'secondary wide', text: 'Enter access code', onClick: function () { closeSettings(); location.hash = '#unlock'; } }));
+    if (lengths().length > 1) {
+      settingsEl.appendChild(el('h3', { text: 'Walk length' }));
+      lengthRows().forEach(function (r) { r.querySelector('input').addEventListener('change', function () { route(true); }); settingsEl.appendChild(r); });
+    }
+    settingsEl.appendChild(el('button', { className: 'secondary wide', text: 'Choose a different village', onClick: function () { closeSettings(); location.hash = '#villages'; } }));
     settingsEl.appendChild(el('button', { className: 'secondary wide', text: 'Welcome page', onClick: function () { closeSettings(); location.hash = '#welcome'; } }));
     settingsEl.appendChild(el('h3', { text: 'The walk' }));
     settingsEl.appendChild(el('button', { className: 'secondary wide', text: 'Getting to the start', onClick: function () { closeSettings(); location.hash = '#start'; } }));
@@ -218,7 +244,7 @@
     settingsEl.appendChild(el('button', { className: 'secondary wide', text: 'Evidence notebook', onClick: function () { closeSettings(); location.hash = '#notebook'; } }));
     settingsEl.appendChild(el('button', { className: 'secondary wide', text: 'Reset my progress', onClick: function () {
       if (window.confirm('Start the walk again from the beginning?')) {
-        state.current = 0; state.arrived = {}; state.solved = {}; state.hints = {}; state.wallet = walk.coins.start_total; state.revealed = {}; saveState();
+        state.current = 0; state.furthest = 0; state.arrived = {}; state.solved = {}; state.hints = {}; state.wallet = walk.coins.start_total; state.revealed = {}; saveState();
         closeSettings(); location.hash = '#welcome'; route(true);
       }
     } }));
@@ -295,7 +321,7 @@
   function stopLL(stop) {
     var rec = loadRecce();
     if (rec[stop.id]) return { lat: rec[stop.id].lat, lon: rec[stop.id].lon, recorded: true };
-    var r = walk.route.filter(function (n) { return n.n === stop.order; })[0];
+    var r = ROUTE.filter(function (n) { return n.n === stop.order; })[0];
     return r && r.map ? xyToLL(r.map[0], r.map[1]) : null;
   }
   var geo = { id: null, pos: null, err: null };
@@ -350,6 +376,17 @@
     var out = el('p', { className: 'muted' });
     var rec = loadRecce();
     if (rec[stop.id]) out.textContent = 'Saved: ' + rec[stop.id].lat.toFixed(6) + ', ' + rec[stop.id].lon.toFixed(6) + ' (about ' + Math.round(rec[stop.id].acc) + ' m accuracy)';
+    var live = el('p', { className: 'geo-note', text: 'Checking your location accuracy...' });
+    if (navigator.geolocation) {
+      var wid = navigator.geolocation.watchPosition(function (p) {
+        var a = Math.round(p.coords.accuracy);
+        live.textContent = 'Accuracy right now: about ' + a + ' m. ' + (a <= 15 ? 'Good enough, tap Record.' : 'Wait a few seconds, it improves outdoors.');
+        live.className = 'geo-note' + (a <= 15 ? ' ready-note' : '');
+      }, function () { live.textContent = 'No location yet. Check the location permission for this site.'; }, { enableHighAccuracy: true, maximumAge: 0, timeout: 60000 });
+      var stopWatch = function () { navigator.geolocation.clearWatch(wid); };
+      window.addEventListener('hashchange', stopWatch, { once: true });
+      setTimeout(stopWatch, 180000);
+    }
     var btn = el('button', { className: 'secondary small', text: 'Record this spot', onClick: function () {
       if (!navigator.geolocation) { out.textContent = 'This phone cannot give a location.'; return; }
       out.textContent = 'Getting a good fix... stand still for a few seconds.';
@@ -358,7 +395,7 @@
         out.textContent = 'Saved: ' + p.coords.latitude.toFixed(6) + ', ' + p.coords.longitude.toFixed(6) + ' (about ' + Math.round(p.coords.accuracy) + ' m accuracy)';
       }, function () { out.textContent = 'Could not get a location. Check the location permission for this site.'; }, { enableHighAccuracy: true, timeout: 30000, maximumAge: 0 });
     } });
-    return el('section', { className: 'card admin' }, [el('p', { className: 'kicker', text: 'Admin (draft colours on)' }), el('p', { className: 'muted', text: 'Standing at this stop? Record the spot so the walk can use the real location.' }), btn, out]);
+    return el('section', { className: 'card admin' }, [el('p', { className: 'kicker', text: 'Admin (draft colours on)' }), el('p', { className: 'muted', text: 'Standing at this stop? Record the spot so the walk can use the real location.' }), live, btn, out]);
   }
 
   // ---------- screens ----------
@@ -405,7 +442,8 @@
       heroImage(),
       el('button', { className: 'wide copper', text: started ? 'Continue my walk' : "Let's get started", onClick: go }),
       el('button', { className: 'wide secondary', text: '[[c:Find the start (parking and directions)]]', onClick: function () { location.hash = '#start'; } }),
-      el('button', { className: 'wide secondary', text: 'See the whole route', onClick: function () { location.hash = '#route'; } })
+      el('button', { className: 'wide secondary', text: 'See the whole route', onClick: function () { location.hash = '#route'; } }),
+      el('button', { className: 'wide secondary', text: 'Choose a different village', onClick: function () { location.hash = '#villages'; } })
     ]);
   }
 
@@ -417,6 +455,7 @@
       el('p', { className: 'kicker', text: walk.subtitle }),
       el('h1', { text: '[[c:How would you like your walk?]]' }),
       el('p', { className: 'muted', text: "[[c:Nothing here is fixed. You can change any of it later from the menu at the top right.]]" }),
+      lengths().length > 1 ? el('section', { className: 'card' }, [el('h2', { text: '[[c:How long a walk?]]' })].concat(lengthRows())) : null,
       step(1, '[[c:How much history?]]', [
         toggleRow('Essential history', '[[c:Short, true facts about each stop.]]', !!state.layers.essential_history, function (v) { state.layers.essential_history = v; saveState(); }),
         toggleRow('Deeper history', '[[c:More for the curious. Fewer people want this, so it starts switched off.]]', !!state.layers.deeper_history, function (v) { state.layers.deeper_history = v; saveState(); })
@@ -437,6 +476,11 @@
 
   function storyScreen() {
     var nodes = [el('p', { className: 'kicker', text: 'The story so far' }), el('h1', { text: walk.title })];
+    var sealed = el('figure', { className: 'stop-photo hero' }), simg = document.createElement('img');
+    simg.src = 'images/scenes/sealed-order.jpg'; simg.alt = 'A sealed letter on a wooden table by a village window';
+    simg.addEventListener('error', function () { sealed.remove(); });
+    sealed.appendChild(simg); sealed.appendChild(el('figcaption', { text: '[[c:The sealed order: the letter that went missing.]]' }));
+    nodes.push(sealed);
     walk.story.forEach(function (p) { nodes.push(el('p', { className: 'story', text: p })); });
     nodes.push(suspectsGrid('Who you\'ll meet'));
     nodes.push(
@@ -447,11 +491,121 @@
     show(nodes);
   }
 
+  // ---------- walk length (shorter / longer). Choice shows once walk.json has 2+ lengths ----------
+  function lengths() { return walk.lengths && walk.lengths.length ? walk.lengths : [{ key: 'standard', stops: 'all' }]; }
+  function currentLength() {
+    var L = lengths(), k = state.length;
+    return L.filter(function (l) { return l.key === k; })[0] || L[0];
+  }
+  function applyLength() {
+    var len = currentLength(), keepId = stops[state.current] && stops[state.current].id;
+    var ok = function (n) { return len.stops === 'all' || len.stops.indexOf(n) >= 0; };
+    stops = allStops.filter(function (s) { return ok(s.order); });
+    ROUTE = walk.route.filter(function (r) { return ok(r.n); });
+    if (keepId) { var i = stops.map(function (s) { return s.id; }).indexOf(keepId); if (i >= 0) state.current = i; }
+    state.current = Math.max(0, Math.min(state.current, stops.length - 1));
+  }
+  function lengthRows() {
+    return lengths().map(function (l) {
+      var input = document.createElement('input');
+      input.type = 'radio'; input.name = 'walk-length'; input.checked = currentLength().key === l.key;
+      input.addEventListener('change', function () { state.length = l.key; applyLength(); saveState(); });
+      return el('label', { className: 'toggle' }, [input, el('span', {}, [el('span', { className: 'label', text: l.label }), el('span', { className: 'desc', text: l.description || '' })])]);
+    });
+  }
+
+  // ---------- village chooser ----------
+  function villagesScreen() {
+    menuButton.hidden = !walk;
+    var sl = document.querySelector('.startlink'); if (sl) sl.hidden = !walk;
+    var nodes = [logoHero(), el('p', { className: 'kicker', text: 'From Sparks Adventures' }), el('h1', { text: '[[c:Where would you like to walk?]]' }),
+      el('p', { className: 'muted', text: '[[c:Choose a village to start. More walks are on the way.]]' })];
+    var grid = el('div', { className: 'villages' });
+    villages.forEach(function (v) {
+      var ready = v.status === 'ready';
+      var kids = [];
+      if (v.image) {
+        var im = document.createElement('img'); im.src = v.image; im.alt = v.image_alt || v.name; im.className = 'village-img';
+        im.addEventListener('error', function () { im.remove(); });
+        kids.push(im);
+      }
+      kids.push(el('h2', { text: ready ? v.walk_title : v.name }));
+      if (ready && v.story) kids.push(el('p', { className: 'kicker', text: v.story }));
+      if (v.teaser) kids.push(el('p', { text: v.teaser }));
+      if (v.details) kids.push(el('p', { className: 'muted', text: v.details }));
+      kids.push(ready
+        ? el('button', { className: 'wide copper', text: villageId === v.id && walk ? 'Carry on with this walk' : 'Choose this walk', onClick: function () { chooseVillage(v); } })
+        : el('p', { className: 'badge-soon', text: 'Coming soon' }));
+      grid.appendChild(el('section', { className: 'card village' + (ready ? '' : ' soon') }, kids));
+    });
+    nodes.push(grid);
+    show(nodes);
+  }
+  function chooseVillage(v) {
+    try { localStorage.setItem(VILLAGE_KEY, v.id); } catch (e) { /* ignore */ }
+    if (walk && villageId === v.id) { location.hash = '#welcome'; return; }
+    if (walk) { location.hash = '#welcome'; location.reload(); return; }
+    location.hash = '#welcome';
+    loadWalk(v);
+  }
+
+  // ---------- access codes (off until walk.json access.enabled is true) ----------
+  function accessOn() { return !!(walk.access && walk.access.enabled); }
+  function accessLocked(i) { return accessOn() && !state.access && i >= walk.access.free_stops; }
+  function sha256Hex(str) {
+    return crypto.subtle.digest('SHA-256', new TextEncoder().encode(str)).then(function (buf) {
+      return Array.prototype.map.call(new Uint8Array(buf), function (b) { return ('0' + b.toString(16)).slice(-2); }).join('');
+    });
+  }
+  function checkCode(raw) {
+    var code = String(raw || '').toUpperCase().replace(/\s+/g, '');
+    if (!code) return Promise.resolve(false);
+    if (walk.access.verify_url) {
+      return fetch(walk.access.verify_url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ code: code }) })
+        .then(function (r) { return r.json(); }).then(function (j) { return !!(j && j.ok); });
+    }
+    return fetchJson(CONTENT + 'access-codes.json').then(function (c) {
+      return sha256Hex(c.salt + ':' + code).then(function (h) { return c.hashes.indexOf(h) >= 0; });
+    });
+  }
+  function unlockScreen() {
+    if (!accessOn() || state.access) { goStop(state.current); return; }
+    var ac = walk.access, msg = el('p', { className: 'muted' });
+    var input = document.createElement('input');
+    input.type = 'text'; input.placeholder = 'Access code'; input.autocomplete = 'off'; input.autocapitalize = 'characters'; input.id = 'access-input';
+    function submit() {
+      msg.textContent = 'Checking...';
+      checkCode(input.value).then(function (ok) {
+        if (ok) { state.access = true; saveState(); location.hash = '#' + stops[Math.min(ac.free_stops, stops.length - 1)].id; route(); }
+        else msg.textContent = 'That code did not work. Check it and try again.';
+      }).catch(function () { msg.textContent = 'Could not check the code just now. Check your signal and try again.'; });
+    }
+    input.addEventListener('keydown', function (e) { if (e.key === 'Enter') submit(); });
+    var nodes = [el('p', { className: 'kicker', text: walk.subtitle }), el('h1', { text: ac.title }), el('p', { text: ac.text }), input,
+      el('button', { className: 'wide copper', text: 'Unlock', onClick: submit, attrs: { id: 'access-btn' } }), msg];
+    if (ac.buy_url) nodes.push(el('a', { className: 'btn-link wide', text: ac.buy_text, attrs: { href: ac.buy_url, target: '_blank', rel: 'noopener' } }));
+    nodes.push(el('div', { className: 'nav' }, [el('button', { className: 'secondary', text: 'Back to the walk', onClick: function () { goStop(Math.min(state.current, ac.free_stops - 1)); } })]));
+    show(nodes);
+  }
+
   function startScreen() {
     var sp = walk.start_page;
     var nodes = [el('p', { className: 'kicker', text: 'Before you set off' }), el('h1', { text: sp.title }), el('p', { text: sp.intro })];
     if (stops[0].photo) nodes.push(photoFigure(stops[0]));
     sp.parking.forEach(function (p) { nodes.push(el('p', { text: p })); });
+    (sp.parking_photos || []).forEach(function (ph) {
+      var fig = el('figure', { className: 'stop-photo' }), im = document.createElement('img');
+      im.src = ph.src; im.alt = ph.caption || ''; im.addEventListener('error', function () { fig.remove(); });
+      fig.appendChild(im); if (ph.caption) fig.appendChild(el('figcaption', { text: ph.caption })); nodes.push(fig);
+    });
+    if (sp.directions) {
+      var dir = sp.directions, btns = el('div', { className: 'dir-buttons' });
+      dir.buttons.forEach(function (b) {
+        btns.appendChild(el('a', { className: 'btn-link', text: b.label, attrs: { target: '_blank', rel: 'noopener',
+          href: 'https://www.google.com/maps/dir/?api=1&destination=' + encodeURIComponent(dir.destination) + '&travelmode=' + b.mode } }));
+      });
+      nodes.push(el('section', { className: 'card directions' }, [el('h2', { text: dir.heading }), el('p', { text: dir.text }), btns]));
+    }
     nodes.push(
       el('section', { className: 'card support' }, [el('p', { text: sp.support })]),
       el('a', { className: 'btn-link wide', text: sp.map_label, attrs: { href: sp.map_url, target: '_blank', rel: 'noopener' } }),
@@ -464,7 +618,7 @@
 
   function routeScreen() {
     var list = el('ul', { className: 'route-list' });
-    walk.route.forEach(function (r) {
+    ROUTE.forEach(function (r) {
       var idx = -1;
       stops.forEach(function (s, i) { if (s.order === r.n) idx = i; });
       var name = idx >= 0 && idx <= maxOpen()
@@ -640,10 +794,10 @@
 
   function stopScreen(index) {
     var stop = stops[index];
-    state.current = index; saveState();
+    state.current = index; state.furthest = Math.max(state.furthest || 0, index); saveState();
     var arrived = !!state.arrived[stop.id];
     var nodes = [
-      el('p', { className: 'kicker', text: 'Stop ' + stop.order + ' of ' + walk.route.length }),
+      el('p', { className: 'kicker', text: 'Stop ' + (index + 1) + ' of ' + stops.length }),
       el('h1', { text: stop.name })
     ];
 
@@ -714,14 +868,17 @@
   function route(keepScroll) {
     if (keepScroll === true) lastScroll = window.scrollY;
     var id = location.hash.replace('#', '');
+    if (id === 'villages') { villagesScreen(); return; }
     if (id === 'route') routeScreen();
     else if (id === 'setup') setupScreen();
     else if (id === 'story') storyScreen();
     else if (id === 'start') startScreen();
     else if (id === 'notebook') notebookScreen();
+    else if (id === 'unlock') unlockScreen();
     else {
       var index = -1;
       stops.forEach(function (s, i) { if (s.id === id) index = i; });
+      if (index >= 0 && accessLocked(index)) { location.replace('#unlock'); return; }
       if (index > maxOpen()) { location.replace('#' + stops[maxOpen()].id); return; }
       if (index >= 0) stopScreen(index); else welcomeScreen();
     }
@@ -738,20 +895,58 @@
   }
 
   // ---------- start ----------
-  fetchJson(CONTENT + 'walk.json')
-    .then(function (w) {
-      walk = w;
-      return Promise.all(w.stops.map(function (f) { return fetchJson(CONTENT + f); }));
-    })
-    .then(function (loaded) {
-      stops = loaded;
-      state = loadState();
-      loadLogo();
-      menuButton.addEventListener('click', function () { if (settingsEl.hidden) openSettings(); else closeSettings(); });
-      scrim.addEventListener('click', closeSettings);
-      document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !settingsEl.hidden) closeSettings(); });
-      window.addEventListener('hashchange', function () { route(); });
-      route();
+  function loadWalk(v) {
+    villageId = v.id; CONTENT = v.folder;
+    return fetchJson(CONTENT + 'walk.json')
+      .then(function (w) {
+        walk = w;
+        if (w.map) MAP = w.map;
+        return Promise.all(w.stops.map(function (f) { return fetchJson(CONTENT + f); }));
+      })
+      .then(function (loaded) {
+        allStops = loaded; stops = loaded;
+        state = loadState();
+        applyLength();
+        menuButton.hidden = false;
+        var sl = document.querySelector('.startlink'); if (sl) sl.hidden = false;
+        if (!booted) {
+          booted = true;
+          menuButton.addEventListener('click', function () { if (settingsEl.hidden) openSettings(); else closeSettings(); });
+          scrim.addEventListener('click', closeSettings);
+          document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !settingsEl.hidden) closeSettings(); });
+        }
+        route();
+      })
+      .catch(showError);
+  }
+
+  loadLogo();
+  window.addEventListener('hashchange', function () { if (walk) route(); else villagesScreen(); });
+  fetchJson(ROOT_CONTENT + 'walks.json')
+    .then(function (idx) {
+      villages = idx.villages;
+      var saved = null;
+      try { saved = localStorage.getItem(VILLAGE_KEY); } catch (e) { saved = null; }
+      var v = villages.filter(function (x) { return x.id === saved && x.status === 'ready'; })[0];
+      if (!v || location.hash === '#villages') { villagesScreen(); if (v) loadWalkQuiet(v); return; }
+      loadWalk(v);
     })
     .catch(showError);
+
+  // Load the saved walk in the background while the chooser shows, so the menu works there too.
+  function loadWalkQuiet(v) {
+    villageId = v.id; CONTENT = v.folder;
+    fetchJson(CONTENT + 'walk.json').then(function (w) {
+      return Promise.all(w.stops.map(function (f) { return fetchJson(CONTENT + f); })).then(function (loaded) {
+        walk = w; if (w.map) MAP = w.map; allStops = loaded; stops = loaded; state = loadState(); applyLength();
+        if (!booted) {
+          booted = true;
+          menuButton.addEventListener('click', function () { if (settingsEl.hidden) openSettings(); else closeSettings(); });
+          scrim.addEventListener('click', closeSettings);
+          document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !settingsEl.hidden) closeSettings(); });
+        }
+        if (location.hash === '#villages' || !location.hash) villagesScreen();
+      });
+    }).catch(function () { /* chooser still works */ });
+  }
 })();

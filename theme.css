@@ -183,3 +183,20 @@ pre.recce { white-space: pre-wrap; font-size: 12px; background: rgba(255,250,235
 .avatar { width: 64px; height: 64px; border-radius: 50%; object-fit: cover; object-position: top; border: 3px solid #fffaf0; box-shadow: 0 1px 5px rgba(60,40,10,.35); flex: none; }
 .char-scene img { max-width: 360px; margin: 0 auto; }
 .char-scene figcaption { text-align: center; }
+
+/* directions and access code */
+.card.directions h2 { margin-top: 0; }
+.dir-buttons { display: grid; grid-template-columns: 1fr; gap: 8px; }
+.dir-buttons .btn-link { margin: 0; }
+@media (min-width: 480px) { .dir-buttons { grid-template-columns: repeat(3, 1fr); } }
+#access-input { width: 100%; box-sizing: border-box; font-size: 1.1em; padding: 12px; border: 2px solid var(--forest); border-radius: 6px; background: #fffaf0; letter-spacing: .08em; text-transform: uppercase; margin: var(--gap) 0 0; }
+
+/* village chooser */
+.villages { display: grid; grid-template-columns: 1fr; gap: var(--gap); }
+@media (min-width: 640px) { .villages { grid-template-columns: 1fr 1fr; } }
+.card.village { margin: 0; display: flex; flex-direction: column; }
+.card.village h2 { margin: 6px 0 2px; }
+.card.village .village-img { width: calc(100% + 32px); margin: -16px -16px 8px; height: 180px; object-fit: cover; display: block; border-radius: 6px 6px 0 0; }
+.card.village button { margin-top: auto; }
+.card.village.soon { opacity: .72; }
+.badge-soon { display: inline-block; align-self: flex-start; margin-top: auto; padding: 4px 12px; border: 1.5px dashed var(--muted); border-radius: 99px; color: var(--muted); font-size: .85em; font-weight: 600; letter-spacing: .04em; }

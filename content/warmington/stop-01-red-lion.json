@@ -11,8 +11,8 @@
   "photo": "images/20261019_175746.jpg",
   "photo_caption": "The Red Lion",
   "layers": {
-    "essential_history": "[[c:This is where the walk starts and finishes. Nobody is quite sure how old the pub is: the village board says late 17th or early 18th century, while the village website says early 1800s.]]",
-    "deeper_history": "[[c:The village board says the toilet block by the pub was once the village fish and chip shop.]]",
+    "essential_history": "This is where the walk starts and finishes. Nobody is quite sure how old the pub is: the village board says late 17th or early 18th century, while the village website says early 1800s.",
+    "deeper_history": "The village board says the toilet block by the pub was once the village fish and chip shop.",
     "mystery": "[[c:The housekeeper catches you at the door. \"A sealed order has gone missing, and the carter will be here for it this evening. Four people were near it: ]]Martha[[c: at the mill, ]]Jonas[[c: in the stables, ]]Alice[[c: the messenger and ]]Mr Vale[[c: the steward. Find out what each of them has to say.\"]]"
   },
   "puzzle": {
@@ -51,7 +51,7 @@
     "Optional refreshment stop. No purchase required.",
     "No business partnership has been agreed with the pub."
   ],
-  "support": "[[c:Support the village: have a drink before your walk, or book a table for when you get back.]]",
+  "support": "[[c:Support the village: have a drink before your walk, or book a table for when you get back.]] [[c:The walk takes about 1 hr 30 depending on your pace, but allow up to 2 hr 30 if you stop to look around.]]",
   "sources": [
     {
       "title": "Village history board (photos taken on the recce, 19 Oct 2026)",

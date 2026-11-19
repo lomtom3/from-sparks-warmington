@@ -2,7 +2,7 @@
   "_readme": "Colour code: [[c:...]] CYAN = not confirmed yet (a best guess or a new idea from Claude, for the owner to approve). Plain text = confirmed by the owner. Map positions are x,y on map/warmington-map.svg (viewBox 215 470 490 430). 'dir' is which side of its dot the map label sits.",
   "id": "warmington-medium",
   "title": "The Missing Message",
-  "subtitle": "Warmington Medium Walk",
+  "subtitle": "Warmington Walk",
   "welcome_text": "[[c:A sealed order has gone missing from the big house, and the housekeeper needs it back before the evening collection. You're a servant on the estate, so off you go. Walk the village, spot the clues and work out who took it, why, and where it's hiding.]]",
   "start_text": "[[c:Start at the Red Lion, on the Peterborough Road in Eaglethorpe. There's a car park, and some space along the road beside it. Why not have a drink before you set off, or book a table for when you get back?]]",
   "map_note": "[[c:The map shows the village as it is today, drawn in an old style. Our story is set in the 1600s, long before most of these buildings.]]",
@@ -77,8 +77,8 @@
       "label": "Manor House?",
       "dir": "r",
       "map": [
-        485,
-        687,
+        468,
+        664,
         "guess"
       ]
     },
@@ -289,8 +289,54 @@
       "[[c:Parking: use the pub car park, or the road that runs alongside the pub. If you're driving, park first and then open the walk.]]",
       "[[c:Please park with care and leave room for people who live here.]]"
     ],
-    "support": "[[c:Support the village: have a drink before your walk, or book a table for when you get back.]]",
+    "support": "[[c:Support the village: have a drink before your walk, or book a table for when you get back. The walk takes about 1 hr 30 depending on your pace, but allow up to 2 hr 30 if you stop to look around.]]",
     "map_label": "Open the Red Lion in Maps",
-    "map_url": "https://www.google.com/maps/search/?api=1&query=Red+Lion+Eaglethorpe+Warmington+Peterborough"
-  }
+    "map_url": "https://www.google.com/maps/search/?api=1&query=Red+Lion+Eaglethorpe+Warmington+Peterborough",
+    "directions": {
+      "heading": "[[c:How to get here]]",
+      "text": "[[c:The Red Lion is on the Peterborough Road in Eaglethorpe, Warmington. Tap a button to open Google Maps with directions from where you are now.]]",
+      "destination": "Red Lion Eaglethorpe Warmington Peterborough",
+      "buttons": [
+        {
+          "label": "[[c:Drive there]]",
+          "mode": "driving"
+        },
+        {
+          "label": "[[c:Public transport]]",
+          "mode": "transit"
+        },
+        {
+          "label": "[[c:Walk there]]",
+          "mode": "walking"
+        }
+      ]
+    },
+    "parking_photos": []
+  },
+  "access": {
+    "enabled": false,
+    "free_stops": 2,
+    "verify_url": "",
+    "buy_url": "",
+    "title": "[[c:Unlock the rest of the walk]]",
+    "text": "[[c:The first two stops are free to try. Enter your access code to carry on with the rest of the walk. You will find it in your purchase email.]]",
+    "buy_text": "[[c:Don't have a code yet? Get one here.]]",
+    "note": "Set enabled to true when selling. Codes are made with tools/make_codes.py. See PAYWALL-SETUP.md."
+  },
+  "map": {
+    "src": "map/warmington-map.svg",
+    "x0": 215,
+    "y0": 470,
+    "w": 490,
+    "h": 430
+  },
+  "lengths": [
+    {
+      "key": "standard",
+      "label": "[[c:The full walk]]",
+      "description": "[[c:All the stops, about 1 hr 30 to 2 hr 30.]]",
+      "stops": "all"
+    }
+  ],
+  "lengths_note": "Add more entries (e.g. shorter, longer) with 'stops': [list of stop numbers]. The choice appears in setup and the menu once there are two or more."
 }
