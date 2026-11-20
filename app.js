@@ -385,6 +385,7 @@
     settingsEl.appendChild(el('button', { className: 'secondary wide', text: 'Getting to the start', onClick: function () { closeSettings(); location.hash = '#start'; } }));
     settingsEl.appendChild(el('button', { className: 'secondary wide', text: 'Change my choices', onClick: function () { closeSettings(); location.hash = '#setup'; } }));
     settingsEl.appendChild(el('button', { className: 'secondary wide', text: 'Route and map', onClick: function () { closeSettings(); location.hash = '#route'; } }));
+    if (sponsors().length) settingsEl.appendChild(el('button', { className: 'secondary wide', text: 'Places to eat and visit', onClick: function () { closeSettings(); location.hash = '#places'; } }));
     settingsEl.appendChild(el('button', { className: 'secondary wide', text: 'Evidence notebook', onClick: function () { closeSettings(); location.hash = '#notebook'; } }));
     settingsEl.appendChild(el('button', { className: 'secondary wide', text: 'Reset my progress', onClick: function () {
       if (window.confirm('Start the walk again from the beginning?')) {
@@ -584,6 +585,7 @@
       el('h2', { text: lengths().length > 1 ? 'The routes' : 'The route' }),
       mapView(0, { preview: true }),
       routeLegend(),
+      welcomeSponsor(),
       el('button', { className: 'wide copper', text: started ? 'Continue my walk' : "Let's get started", onClick: go }),
       el('button', { className: 'wide secondary', text: '[[c:Find the start (parking and directions)]]', onClick: function () { location.hash = '#start'; } }),
       el('button', { className: 'wide secondary', text: 'See the whole route', onClick: function () { location.hash = '#route'; } }),
@@ -591,16 +593,60 @@
     ].concat(salesPreview()));
   }
 
-  // Draft only (shown with "Show draft colours" on, while selling is switched off): how buying a walk will work.
+  // ---------- local sponsors ----------
+  // walk.sponsors: [{name, role: 'main'|'stop'|'listing', kind, line, hours, address, phone, url, logo, offer, stops: [stop numbers]}]
+  // Nothing shows until a real business is added. With draft colours on, empty spaces explain where a sponsor would go.
+  function sponsors(role) { return (walk.sponsors || []).filter(function (x) { return !role || x.role === role; }); }
+  function sponsorCard(sp, heading, opts) {
+    opts = opts || {};
+    var kids = [];
+    if (heading) kids.push(el('p', { className: 'kicker', text: heading }));
+    kids.push(el('p', { className: 'sponsor-tag', text: 'Sponsored' }));
+    var head = [];
+    if (sp.logo) { var im = document.createElement('img'); im.src = sp.logo; im.alt = ''; im.className = 'sponsor-logo'; head.push(im); }
+    head.push(el('h2', { text: sp.name }));
+    kids.push(el('div', { className: 'sponsor-head' }, head));
+    if (sp.line) kids.push(el('p', { text: sp.line }));
+    if (sp.hours) kids.push(el('p', { className: 'muted', text: sp.hours }));
+    if (sp.address) kids.push(el('p', { className: 'muted', text: sp.address }));
+    if (opts.offer && sp.offer) kids.push(el('p', { className: 'sponsor-offer', text: sp.offer }));
+    var links = [];
+    if (sp.url) links.push(el('a', { className: 'btn-link', text: 'Website', attrs: { href: sp.url, target: '_blank', rel: 'noopener sponsored' } }));
+    if (sp.phone) links.push(el('a', { className: 'btn-link', text: 'Call', attrs: { href: 'tel:' + sp.phone.replace(/\s/g, '') } }));
+    if (links.length) kids.push(el('div', { className: 'sponsor-links' }, links));
+    return el('section', { className: 'card sponsor' }, kids);
+  }
+  function sponsorSpace(where) {      // draft-only explanation of an empty sponsor space
+    if (!state.review) return null;
+    return el('section', { className: 'card sponsor sponsor-empty' }, [el('p', { className: 'sponsor-tag', text: 'Sponsor space' }), el('p', { text: '[[c:' + where + ' Nothing shows here until a real business is added to this walk.]]' })]);
+  }
+  function welcomeSponsor() {
+    var m = sponsors('main')[0];
+    return m ? sponsorCard(m, 'This walk is supported by') : sponsorSpace('When a local business supports this walk, their name, a line about them and their opening hours appear here, on the finish page and at the nearest stops.');
+  }
+  function stopSponsors(order) {
+    return sponsors().filter(function (x) { return x.role !== 'listing' && (x.stops || []).indexOf(order) >= 0; }).map(function (x) { return sponsorCard(x, 'Stop for a drink or a bite'); });
+  }
+  function finishSponsor() {
+    var m = sponsors('main')[0];
+    return m ? sponsorCard(m, 'Thanks for walking with us', { offer: true }) : sponsorSpace("A supporting business's thank-you offer appears here, for example 10% off food when you show this screen.");
+  }
+  function placesScreen() {
+    var all = sponsors();
+    var nodes = [el('p', { className: 'kicker', text: walk.title }), el('h1', { text: 'Places to eat and visit' })];
+    if (!all.length) nodes.push(el('p', { className: 'muted', text: 'No places listed for this walk yet.' }));
+    all.forEach(function (x) { nodes.push(sponsorCard(x, x.kind || '', { offer: true })); });
+    nodes.push(el('div', { className: 'nav' }, [el('button', { className: 'secondary', text: 'Back', onClick: function () { history.back(); } })]));
+    show(nodes);
+  }
+  // Draft only: how the walks are paid for.
   function salesPreview() {
-    if (!state.review || accessOn()) return [];
-    var ac = walk.access || {};
+    if (!state.review) return [];
     return [el('section', { className: 'card' }, [
-      el('h2', { text: '[[c:How buying a walk will work]]' }),
-      el('p', { text: '[[c:The first ' + (ac.free_stops || 2) + ' stops of every walk are free to try, so people can see what it is like before paying.]]' }),
-      el('p', { text: '[[c:To carry on, they buy the walk online and get an access code by email. The code unlocks every length of that walk on their phone, as many times as they like.]]' }),
-      el('p', { text: '[[c:Price to be decided.]]' }),
-      el('button', { className: 'wide secondary', text: '[[c:Preview the unlock page]]', onClick: function () { location.hash = '#unlock'; } })
+      el('h2', { text: '[[c:How the walks are paid for]]' }),
+      el('p', { text: '[[c:The walks are free for walkers. They are paid for by local pubs, cafes and businesses, who sponsor a walk and appear on it, labelled "Sponsored".]]' }),
+      el('p', { text: '[[c:The access code system is still built in, switched off, in case some walks or extras are ever sold.]]' }),
+      accessOn() ? null : el('button', { className: 'wide secondary', text: '[[c:Preview the unlock page]]', onClick: function () { location.hash = '#unlock'; } })
     ])];
   }
 
@@ -1057,6 +1103,7 @@
         stop.evidence.forEach(function (e) { ev.appendChild(el('p', { text: e })); });
         nodes.push(ev);
       }
+      stopSponsors(stop.order).forEach(function (n) { nodes.push(n); });
       if (index < stops.length - 1) {
         nodes.push(el('section', { className: 'card' }, [el('h2', { text: 'On to the next stop' }), el('p', { text: index < stops.length - 1 ? dirsBetween(stop, stops[index + 1]) : stop.directions_to_next })].concat(stop.on_the_way ? [el('p', { text: stop.on_the_way })] : [])));
         nodes.push(mapView(stops[index + 1].order));
@@ -1065,6 +1112,7 @@
           el('h2', { text: 'The end' }),
           el('p', { text: index < stops.length - 1 ? dirsBetween(stop, stops[index + 1]) : stop.directions_to_next }),
         ]));
+        nodes.push(finishSponsor());
       }
     }
 
@@ -1101,6 +1149,7 @@
     else if (id === 'start') startScreen();
     else if (id === 'notebook') notebookScreen();
     else if (id === 'unlock') unlockScreen();
+    else if (id === 'places') placesScreen();
     else {
       var index = -1;
       stops.forEach(function (s, i) { if (s.id === id) index = i; });

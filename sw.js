@@ -1,6 +1,6 @@
 /* From Sparks Adventures: offline support.
    Network first (so new versions show straight away), falling back to the saved copy when there is no signal. */
-var CACHE = 'fromsparks-v4';
+var CACHE = 'fromsparks-v5';
 var SHELL = ['./', 'index.html', 'app.js', 'theme.css', 'manifest.webmanifest', 'villages/walks.json',
   'images/logo.png', 'images/logo-full.jpg', 'images/icon-192.png'];
 

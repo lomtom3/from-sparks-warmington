@@ -223,3 +223,14 @@ pre.recce { white-space: pre-wrap; font-size: 12px; background: rgba(255,250,235
 .compass.floating { position: fixed; right: 12px; bottom: calc(14px + env(safe-area-inset-bottom)); z-index: 30; background: rgba(234,217,171,.96); border: 2px solid #3b2a14; border-radius: 14px; padding: 8px 12px 8px 8px; max-width: 250px; box-shadow: 0 4px 14px rgba(0,0,0,.25); }
 .compass.inline .compass-face { width: 84px; height: 84px; }
 .card.compass-card h2 { margin-top: 0; }
+
+/* Local sponsors: clearly labelled, in keeping with the paper style */
+.card.sponsor { border-left-color: #6b7f4a; position: relative; }
+.sponsor-tag { float: right; margin: 0 0 4px 8px; font-size: .7em; letter-spacing: 1.5px; text-transform: uppercase; color: #6b7f4a; font-weight: 700; }
+.sponsor-head { display: flex; align-items: center; gap: 10px; }
+.sponsor-head h2 { margin: 4px 0; }
+.sponsor-logo { width: 48px; height: 48px; object-fit: contain; border-radius: 6px; background: #fff; }
+.sponsor-offer { font-weight: 700; border: 2px dashed #6b7f4a; padding: 8px 10px; border-radius: 6px; }
+.sponsor-links { display: flex; gap: 10px; flex-wrap: wrap; }
+.sponsor-empty { opacity: .85; border-style: dashed; }
+body:not(.review) .sponsor-empty { display: none; }

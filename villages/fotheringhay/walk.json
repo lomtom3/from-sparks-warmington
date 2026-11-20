@@ -265,5 +265,7 @@
       "983,952 977,943 980,934 1009,916 1040,889 1049,861 1043,850 1047,834 1044,820 1034,812 1003,799 963,797 949,790 912,765 881,723 842,654 801,615 744,585 713,576 705,603 717,608 718,598"
     ]
   },
-  "lengths_note": "Route colours: short green, medium copper, long blue. legs = path along real roads/paths between consecutive stops (from OpenStreetMap)."
+  "lengths_note": "Route colours: short green, medium copper, long blue. legs = path along real roads/paths between consecutive stops (from OpenStreetMap).",
+  "_sponsors_readme": "Local businesses that support this walk. Leave empty until one signs up. Each entry: name, role ('main' = on the welcome and finish pages, 'stop' = card at the stops listed, 'listing' = Places page only), kind (e.g. Pub), line, hours, address, phone, url, logo (path in this folder), offer (finish-page offer, main only), stops (stop numbers). Shown labelled 'Sponsored'.",
+  "sponsors": []
 }

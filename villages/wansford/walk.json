@@ -366,5 +366,7 @@
       "[[c:Turn left along the lane past the Cross Keys and follow the footpath round the fields, coming back out onto Elton Road further south. Turn right up Elton Road, right along London Road, and back up the lane to the Haycock. About 1.1 km.]]"
     ]
   },
-  "lengths_note": "Route colours: short green, medium copper, long blue. legs = path along real roads/paths between consecutive stops (from OpenStreetMap)."
+  "lengths_note": "Route colours: short green, medium copper, long blue. legs = path along real roads/paths between consecutive stops (from OpenStreetMap).",
+  "_sponsors_readme": "Local businesses that support this walk. Leave empty until one signs up. Each entry: name, role ('main' = on the welcome and finish pages, 'stop' = card at the stops listed, 'listing' = Places page only), kind (e.g. Pub), line, hours, address, phone, url, logo (path in this folder), offer (finish-page offer, main only), stops (stop numbers). Shown labelled 'Sponsored'.",
+  "sponsors": []
 }

@@ -395,5 +395,7 @@
       "[[c:Walk north to the top of the lane, turn right, then follow the lanes east and south down to the war memorial. About 400 metres.]]"
     ]
   },
-  "lengths_note": "Route colours: short green, medium copper, long blue. legs = path along real roads/paths between consecutive stops (from OpenStreetMap)."
+  "lengths_note": "Route colours: short green, medium copper, long blue. legs = path along real roads/paths between consecutive stops (from OpenStreetMap).",
+  "_sponsors_readme": "Local businesses that support this walk. Leave empty until one signs up. Each entry: name, role ('main' = on the welcome and finish pages, 'stop' = card at the stops listed, 'listing' = Places page only), kind (e.g. Pub), line, hours, address, phone, url, logo (path in this folder), offer (finish-page offer, main only), stops (stop numbers). Shown labelled 'Sponsored'.",
+  "sponsors": []
 }

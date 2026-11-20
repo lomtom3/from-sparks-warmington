@@ -513,5 +513,7 @@
       "433,635 437,637 440,635 441,638 448,638 453,648 467,646 468,647 473,647 473,651 478,654 490,648 486,642 492,638 495,634 501,635 501,638",
       "[[c:Walk east from the Red Lion along the lane, then turn left up to Dexter Way. About 320 metres.]]"
     ]
-  }
+  },
+  "_sponsors_readme": "Local businesses that support this walk. Leave empty until one signs up. Each entry: name, role ('main' = on the welcome and finish pages, 'stop' = card at the stops listed, 'listing' = Places page only), kind (e.g. Pub), line, hours, address, phone, url, logo (path in this folder), offer (finish-page offer, main only), stops (stop numbers). Shown labelled 'Sponsored'.",
+  "sponsors": []
 }

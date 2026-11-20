@@ -39,3 +39,12 @@ To really protect the content, the stops after the free ones must also be served
    - Later, `tools/access-worker.js` on Cloudflare Workers can check codes and send them out automatically.
 5. **Switching it on for a walk:** in that walk's `walk.json`, set `access.enabled` to true and fill in `buy_url` with the Stripe link. Until then, nobody is asked for a code.
 6. **Previewing it:** with "Show draft colours" on, the welcome page shows a draft "How buying a walk will work" card and a preview of the unlock page.
+
+## Current plan: free walks, paid for by local sponsors
+- Walkers don't pay. Local businesses pay a flat fee to appear on a village's walk, labelled "Sponsored".
+- Add a sponsor in that walk's `walk.json` under `sponsors` (see `_sponsors_readme` there). Roles:
+  - `main`: shown on the welcome page and the finish page, including any offer.
+  - `stop`: a "Stop for a drink or a bite" card at the stop numbers you list.
+  - `listing`: shown on the Places page only.
+- Nothing shows until a real business is added. With draft colours on, dashed "Sponsor space" boxes show where sponsors will appear.
+- The access-code paywall stays built in but switched off, in case it's ever needed.
