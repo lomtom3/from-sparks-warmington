@@ -192,10 +192,25 @@
   },
   "lengths": [
     {
-      "key": "standard",
-      "label": "[[c:The full walk]]",
-      "description": "[[c:All the stops.]]",
-      "stops": "all"
+      "key": "short",
+      "label": "[[c:Short walk: church and college]]",
+      "description": "[[c:The inn, the great church and the college site.]]",
+      "stops": [
+        1,
+        2,
+        3,
+        7
+      ],
+      "colour": "#4f7a3a",
+      "default": false
+    },
+    {
+      "key": "medium",
+      "label": "[[c:Medium walk: river and castle]]",
+      "description": "[[c:Adds the bridge, the castle mound and the memorial.]]",
+      "stops": "all",
+      "colour": "#a8592a",
+      "default": true
     }
   ],
   "cast": [
@@ -223,5 +238,36 @@
       "role": "a wine merchant",
       "img": "images/characters/fotheringhay/venn-portrait.jpg"
     }
-  ]
+  ],
+  "legs": {
+    "1-2": [
+      277,
+      "718,598 717,608 705,603 713,576 744,585 801,615 837,650 797,698 805,712"
+    ],
+    "2-3": [
+      73,
+      "805,712 797,698 813,752"
+    ],
+    "3-7": [
+      317,
+      "813,752 797,698 837,650 801,615 744,585 713,576 705,603 717,608 718,598"
+    ],
+    "3-4": [
+      436,
+      "813,752 797,698 837,650 842,654 881,723 912,765 913,776 908,787 864,825 852,857 848,879"
+    ],
+    "4-5": [
+      432,
+      "848,879 852,857 864,825 908,787 913,776 912,765 949,790 1045,841 1043,850 1049,861 1040,889 1009,916 1004,912"
+    ],
+    "5-6": [
+      61,
+      "1004,912 1009,916 980,934 977,943 983,952"
+    ],
+    "6-7": [
+      638,
+      "983,952 977,943 980,934 1009,916 1040,889 1049,861 1043,850 1045,841 949,790 912,765 881,723 842,654 801,615 744,585 713,576 705,603 717,608 718,598"
+    ]
+  },
+  "lengths_note": "Route colours: short green, medium copper, long blue. legs = path along real roads/paths between consecutive stops (from OpenStreetMap)."
 }

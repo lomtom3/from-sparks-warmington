@@ -82,6 +82,7 @@
     try { var s = JSON.parse(localStorage.getItem('fromsparks:warmington-medium')); return !s || s.review !== false; } catch (e) { return true; }
   }
   function show(nodes) {
+    if (typeof hideCompass === 'function') hideCompass();
     app.innerHTML = '';
     nodes.forEach(function (n) { if (n) app.appendChild(n); });
     document.body.classList.toggle('review', state ? !!state.review : reviewGuess());
@@ -99,14 +100,41 @@
 
   // ---------- map (markers are drawn here so they can change colour as you walk) ----------
   // Red = where we're talking about. Grey = already visited. Black = still to visit. Cyan = position not confirmed.
-  function mapView(focus) {
+  function legPoints(a, b) {
+    var L = walk.legs && (walk.legs[a.n + '-' + b.n]);
+    if (!L) return [[a.map[0], a.map[1]], [b.map[0], b.map[1]]];
+    return L[1].split(' ').map(function (p) { return p.split(',').map(Number); });
+  }
+  function idOfOrder(n) { var s = allStops.filter(function (x) { return x.order === n; })[0]; return s ? s.id : ''; }
+  function lengthStops(len) { return walk.route.filter(function (r) { return len.stops === 'all' || len.stops.indexOf(r.n) >= 0; }); }
+  function lengthKm(len) {
+    var rs = lengthStops(len).filter(function (r) { return r.map; }), m = 0;
+    for (var i = 0; i < rs.length - 1; i++) { var L = walk.legs && walk.legs[rs[i].n + '-' + rs[i + 1].n]; if (L) m += L[0]; else return null; }
+    return Math.round(m / 100) / 10;
+  }
+  // Directions between two stops on the chosen route. Uses the written directions when the next stop is the very next one,
+  // otherwise (a shorter route skipping stops) builds them from the map.
+  function dirsBetween(a, b) {
+    if (!a || !b) return '';
+    if (b.order === a.order + 1 || !a.directions_to_next) return a.directions_to_next || '';
+    var ra = walk.route.filter(function (r) { return r.n === a.order; })[0], rb = walk.route.filter(function (r) { return r.n === b.order; })[0];
+    var L = walk.legs && walk.legs[a.order + '-' + b.order];
+    var name = b.name.replace(/\[\[c:|\]\]/g, '');
+    if (!ra || !rb || !ra.map || !rb.map) return '[[c:Next, head to ' + name + '. Follow the route line on the map.]]';
+    var la = xyToLL(ra.map[0], ra.map[1]), lb = xyToLL(rb.map[0], rb.map[1]);
+    var m = L ? L[0] : distM(la, lb);
+    m = m < 100 ? Math.round(m / 10) * 10 : Math.round(m / 50) * 50;
+    return '[[c:Next, head ' + compassWord(bearingTo(la, lb)) + ' to ' + name + ', about ' + m + ' metres along the route. Follow the coloured line on the map. Keep to pavements and public paths.]]';
+  }
+  function mapView(focus, opts) {
+    opts = opts || {};
     var NS = 'http://www.w3.org/2000/svg';
     var RED = '#c0281d', GREY = '#8a8578', GREYT = '#6f6a5c', BLACK = '#1e1a12', CYAN = '#00a5b8', CYANT = '#007f92';
     var K = MAP.scale || 1;
     var wrap = el('div', { className: 'mapwrap' });
     var img = document.createElement('img');
     img.src = MAP.src;
-    img.alt = 'Old-style map of Warmington showing the walk';
+    img.alt = 'Old-style map of the village showing the walk';
     wrap.appendChild(img);
     var svg = document.createElementNS(NS, 'svg');
     svg.setAttribute('viewBox', MAP.x0 + ' ' + MAP.y0 + ' ' + MAP.w + ' ' + MAP.h);
@@ -119,23 +147,32 @@
       svg.appendChild(n);
       return n;
     }
-    var placed = ROUTE.filter(function (r) { return r.map; });
-    // Route line: the whole walk as a very faint half-tone grey; legs you have already walked are drawn darker.
-    var far = Math.max(state.furthest || 0, state.current || 0);      // 0-based index of the furthest stop opened
-    for (var li = 0; li < placed.length - 1; li++) {
-      var pa = placed[li], pb = placed[li + 1];
-      if (pa.map[0] === pb.map[0] && pa.map[1] === pb.map[1]) continue;
-      var walked = far >= pa.n;                                      // you have moved on from stop pa
-      add('line', walked
-        ? { x1: pa.map[0], y1: pa.map[1], x2: pb.map[0], y2: pb.map[1], stroke: '#1e1a12', 'stroke-opacity': 0.55, 'stroke-width': 2.4 * K, 'stroke-linecap': 'round' }
-        : { x1: pa.map[0], y1: pa.map[1], x2: pb.map[0], y2: pb.map[1], stroke: '#8a8578', 'stroke-opacity': 0.28, 'stroke-width': 2 * K, 'stroke-linecap': 'round', 'stroke-dasharray': (5 * K) + ' ' + (4 * K) });
+    var placed = (opts.preview ? walk.route : ROUTE).filter(function (r) { return r.map; });
+    function poly(pts, attrs) { attrs.points = pts.map(function (p) { return p.join(','); }).join(' '); attrs.fill = 'none'; attrs['stroke-linecap'] = 'round'; attrs['stroke-linejoin'] = 'round'; return add('polyline', attrs); }
+    if (opts.preview) {
+      // Every route in its own colour: long underneath, short on top.
+      lengths().slice().reverse().forEach(function (len) {
+        var rs = lengthStops(len).filter(function (r) { return r.map; });
+        for (var j = 0; j < rs.length - 1; j++) poly(legPoints(rs[j], rs[j + 1]), { stroke: len.colour || '#a8592a', 'stroke-opacity': 0.9, 'stroke-width': (len.key === 'short' ? 3 : 4.2) * K });
+      });
+    } else {
+      // Route line along the real roads and paths: faint half-tone grey ahead, darker where you've walked.
+      var far = Math.max(state.furthest || 0, state.current || 0);      // index of the furthest stop opened
+      for (var li = 0; li < placed.length - 1; li++) {
+        var pa = placed[li], pb = placed[li + 1];
+        if (pa.map[0] === pb.map[0] && pa.map[1] === pb.map[1]) continue;
+        var walked = far >= li + 1;
+        poly(legPoints(pa, pb), walked
+          ? { stroke: '#1e1a12', 'stroke-opacity': 0.55, 'stroke-width': 2.4 * K }
+          : { stroke: '#8a8578', 'stroke-opacity': 0.35, 'stroke-width': 2 * K, 'stroke-dasharray': (5 * K) + ' ' + (4 * K) });
+      }
     }
     placed.forEach(function (r) {
       var twin = placed.filter(function (o) { return o.n !== r.n && o.map[0] === r.map[0] && o.map[1] === r.map[1]; })[0];
       if (twin && twin.n < r.n) return;                       // stops 1 and 20 share one marker
       var group = twin ? [r.n, twin.n] : [r.n];
-      var isFocus = group.indexOf(focus) >= 0;
-      var visited = group.every(function (n) { return !!state.arrived['stop-' + pad(n)]; });
+      var isFocus = !opts.preview && group.indexOf(focus) >= 0;
+      var visited = !opts.preview && group.every(function (n) { return !!state.arrived[idOfOrder(n)]; });
       var unconfirmed = r.map[2] !== 'confirmed';
       var dot, txt;
       if (unconfirmed) { dot = CYAN; txt = CYANT; }
@@ -163,6 +200,90 @@
     add('circle', { class: 'you-dot', cx: 0, cy: 0, r: 6 * K, fill: '#2b6cff', stroke: '#fff', 'stroke-width': 2 * K, style: 'display:none' });
     wrap.appendChild(svg);
     return wrap;
+  }
+
+  function routeLegend() {
+    var box = el('div', { className: 'route-legend' });
+    lengths().forEach(function (len) {
+      var km = lengthKm(len), n = lengthStops(len).length;
+      box.appendChild(el('p', {}, [el('span', { className: 'swatch', attrs: { style: 'background:' + (len.colour || '#a8592a') } }), el('strong', { text: len.label }), el('span', { className: 'muted', text: '  ' + n + ' stops' + (km ? ', about ' + km + ' km' : '') })]));
+    });
+    return box;
+  }
+
+  // ---------- direction compass ----------
+  var compass = { el: null, target: null, heading: null, listening: false };
+  function compassFace() {
+    var t = ['N', 'E', 'S', 'W'].map(function (l, i) { var a = i * 90 * Math.PI / 180; return '<text x="' + (50 + 33 * Math.sin(a)).toFixed(1) + '" y="' + (53 - 33 * Math.cos(a)).toFixed(1) + '" text-anchor="middle" font-size="10" font-family="Georgia,serif" fill="' + (l === 'N' ? '#a8592a' : '#3b2a14') + '">' + l + '</text>'; }).join('');
+    return '<svg viewBox="0 0 100 100" class="compass-svg"><circle cx="50" cy="50" r="47" fill="#ead9ab" stroke="#3b2a14" stroke-width="3"/><circle cx="50" cy="50" r="41" fill="none" stroke="#3b2a14" stroke-width="1"/>' +
+      '<g class="rose" opacity=".35"><path d="M50 14 L54 50 L50 86 L46 50Z M14 50 L50 46 L86 50 L50 54Z" fill="#3b2a14"/></g>' + t +
+      '<g class="needle"><path d="M50 12 L57 52 L50 46 L43 52Z" fill="#a8592a" stroke="#3b2a14" stroke-width="1"/><path d="M50 88 L56 52 L50 56 L44 52Z" fill="#f3e7c9" stroke="#3b2a14" stroke-width="1"/><circle cx="50" cy="50" r="4" fill="#3b2a14"/></g></svg>';
+  }
+  function bearingTo(a, b) {
+    var p = Math.PI / 180, y = Math.sin((b.lon - a.lon) * p) * Math.cos(b.lat * p);
+    var x = Math.cos(a.lat * p) * Math.sin(b.lat * p) - Math.sin(a.lat * p) * Math.cos(b.lat * p) * Math.cos((b.lon - a.lon) * p);
+    return (Math.atan2(y, x) / p + 360) % 360;
+  }
+  function compassWord(deg) { return ['north', 'north-east', 'east', 'south-east', 'south', 'south-west', 'west', 'north-west'][Math.round(deg / 45) % 8]; }
+  function onOrient(e) {
+    var h = null;
+    if (typeof e.webkitCompassHeading === 'number') h = e.webkitCompassHeading;
+    else if (e.absolute && typeof e.alpha === 'number') h = 360 - e.alpha;
+    if (h != null) { compass.heading = h; updateCompass(); }
+  }
+  function listenHeading() {
+    if (compass.listening) return; compass.listening = true;
+    window.addEventListener('deviceorientationabsolute', onOrient, true);
+    window.addEventListener('deviceorientation', onOrient, true);
+  }
+  function askHeading() {
+    if (window.DeviceOrientationEvent && typeof DeviceOrientationEvent.requestPermission === 'function') {
+      DeviceOrientationEvent.requestPermission().then(function (r) { if (r === 'granted') listenHeading(); updateCompass(); }).catch(function () { updateCompass(); });
+    } else listenHeading();
+  }
+  function showCompass(target, label, container) {
+    hideCompass();
+    if (!target) return null;
+    var box = el('div', { className: container ? 'compass inline' : 'compass floating', attrs: { role: 'status' } });
+    var face = el('div', { className: 'compass-face' }); face.innerHTML = compassFace();
+    var txt = el('div', { className: 'compass-text' });
+    box.appendChild(face); box.appendChild(txt);
+    compass.el = box; compass.target = target; compass.label = label;
+    if (!(window.DeviceOrientationEvent && typeof DeviceOrientationEvent.requestPermission === 'function')) listenHeading();
+    (container || document.body).appendChild(box);
+    if (state.gps) startGeo();
+    updateCompass();
+    return box;
+  }
+  function hideCompass() { if (compass.el && compass.el.parentNode) compass.el.parentNode.removeChild(compass.el); compass.el = null; compass.target = null; }
+  function updateCompass() {
+    var box = compass.el; if (!box) return;
+    var txt = box.querySelector('.compass-text'), needle = box.querySelector('.needle'), rose = box.querySelector('.rose');
+    txt.innerHTML = '';
+    if (!state.gps) {
+      txt.appendChild(el('span', { text: 'Compass to ' + compass.label }));
+      txt.appendChild(el('button', { className: 'small', text: 'Use my location', onClick: function () { state.gps = true; saveState(); startGeo(); askHeading(); updateCompass(); } }));
+      needle.setAttribute('transform', 'rotate(0 50 50)'); return;
+    }
+    if (geo.err) { txt.appendChild(el('span', { text: 'Location unavailable. Follow the directions on the page.' })); return; }
+    if (!geo.pos) { txt.appendChild(el('span', { text: 'Finding where you are...' })); return; }
+    var d = distM(geo.pos, compass.target), b = bearingTo(geo.pos, compass.target);
+    var near = Math.max(40, geo.pos.acc || 0);
+    var m = d < 100 ? Math.round(d / 10) * 10 : (d < 1000 ? Math.round(d / 50) * 50 : Math.round(d / 100) * 100);
+    if (compass.heading != null) {
+      needle.setAttribute('transform', 'rotate(' + (b - compass.heading).toFixed(1) + ' 50 50)');
+      rose.setAttribute('transform', 'rotate(' + (-compass.heading).toFixed(1) + ' 50 50)');
+    } else {
+      needle.setAttribute('transform', 'rotate(' + b.toFixed(1) + ' 50 50)'); rose.removeAttribute('transform');
+    }
+    if (d <= near) { txt.appendChild(el('strong', { text: "You're about there!" })); return; }
+    txt.appendChild(el('strong', { text: (m >= 1000 ? (m / 1000).toFixed(1) + ' km' : m + ' m') }));
+    txt.appendChild(el('span', { text: ' ' + compassWord(b) + ' to ' + compass.label }));
+    if (compass.heading == null && window.DeviceOrientationEvent && typeof DeviceOrientationEvent.requestPermission === 'function') {
+      txt.appendChild(el('button', { className: 'small', text: 'Turn on compass', onClick: askHeading }));
+    } else if (compass.heading == null) {
+      txt.appendChild(el('span', { className: 'muted', text: ' (needle points as if the top of your phone faces north)' }));
+    }
   }
 
   // ---------- settings (burger menu) ----------
@@ -374,7 +495,7 @@
       note.appendChild(rich("[[c:" + msg + "]]"));
     }
   }
-  function geoChanged() { updateYouDots(); updateArrivalNote(); }
+  function geoChanged() { updateYouDots(); updateArrivalNote(); updateCompass(); }
   function recordSpotCard(stop) {
     var out = el('p', { className: 'muted' });
     var rec = loadRecce();
@@ -444,6 +565,9 @@
       el('h1', { text: walk.title }),
       el('p', { text: walk.welcome_text }),
       heroImage(),
+      el('h2', { text: lengths().length > 1 ? 'The routes' : 'The route' }),
+      mapView(0, { preview: true }),
+      routeLegend(),
       el('button', { className: 'wide copper', text: started ? 'Continue my walk' : "Let's get started", onClick: go }),
       el('button', { className: 'wide secondary', text: '[[c:Find the start (parking and directions)]]', onClick: function () { location.hash = '#start'; } }),
       el('button', { className: 'wide secondary', text: 'See the whole route', onClick: function () { location.hash = '#route'; } }),
@@ -501,7 +625,7 @@
   function lengths() { return walk.lengths && walk.lengths.length ? walk.lengths : [{ key: 'standard', stops: 'all' }]; }
   function currentLength() {
     var L = lengths(), k = state.length;
-    return L.filter(function (l) { return l.key === k; })[0] || L[0];
+    return L.filter(function (l) { return l.key === k; })[0] || L.filter(function (l) { return l.default; })[0] || L[0];
   }
   function applyLength() {
     var len = currentLength(), keepId = stops[state.current] && stops[state.current].id;
@@ -516,7 +640,8 @@
       var input = document.createElement('input');
       input.type = 'radio'; input.name = 'walk-length'; input.checked = currentLength().key === l.key;
       input.addEventListener('change', function () { state.length = l.key; applyLength(); saveState(); });
-      return el('label', { className: 'toggle' }, [input, el('span', {}, [el('span', { className: 'label', text: l.label }), el('span', { className: 'desc', text: l.description || '' })])]);
+      var km = lengthKm(l);
+      return el('label', { className: 'toggle' }, [input, el('span', {}, [el('span', { className: 'label' }, [el('span', { className: 'swatch', attrs: { style: 'background:' + (l.colour || '#a8592a') } }), document.createTextNode(' '), rich(l.label)]), el('span', { className: 'desc', text: (l.description || '') + (km ? ' About ' + km + ' km.' : '') })])]);
     });
   }
 
@@ -671,6 +796,10 @@
       el('div', { className: 'nav' }, [el('button', { className: 'secondary', text: 'Back', onClick: function () { history.length > 1 ? history.back() : (location.hash = '#welcome'); } })])
     );
     show(nodes);
+    var cbox = el('section', { className: 'card compass-card' }, [el('h2', { text: 'Compass to the start' })]);
+    var main = document.querySelector('main') || document.body; var sup = main.querySelector('.card.support');
+    if (sup) sup.parentNode.insertBefore(cbox, sup); else main.appendChild(cbox);
+    showCompass(stopLL(stops[0]), 'the start', cbox);
   }
 
   function routeScreen() {
@@ -695,8 +824,14 @@
 
   function collectEvidence() {
     var items = [];
-    stops.forEach(function (s) {
-      if (state.solved[s.id] && s.evidence) s.evidence.forEach(function (e) { items.push({ stop: s.name, text: e }); });
+    var onRoute = {}; stops.forEach(function (s) { onRoute[s.id] = true; });
+    allStops.forEach(function (s) {
+      if (!s.evidence) return;
+      if (onRoute[s.id]) {
+        if (state.solved[s.id] || (!s.puzzle && state.arrived[s.id])) s.evidence.forEach(function (e) { items.push({ stop: s.name, text: e }); });
+      } else {
+        s.evidence.forEach(function (e) { items.push({ stop: s.name + ' (a clue from the longer walk, given to you)', text: e }); });
+      }
     });
     return items;
   }
@@ -859,7 +994,7 @@
     ];
 
     if (!arrived) {
-      var how = index === 0 ? walk.start_text : stops[index - 1].directions_to_next;
+      var how = index === 0 ? walk.start_text : dirsBetween(stops[index - 1], stop);
       nodes.push(
         el('h2', { text: 'How to get there' }),
         el('p', { text: how }),
@@ -892,12 +1027,12 @@
         nodes.push(ev);
       }
       if (index < stops.length - 1) {
-        nodes.push(el('section', { className: 'card' }, [el('h2', { text: 'On to the next stop' }), el('p', { text: stop.directions_to_next })].concat(stop.on_the_way ? [el('p', { text: stop.on_the_way })] : [])));
+        nodes.push(el('section', { className: 'card' }, [el('h2', { text: 'On to the next stop' }), el('p', { text: index < stops.length - 1 ? dirsBetween(stop, stops[index + 1]) : stop.directions_to_next })].concat(stop.on_the_way ? [el('p', { text: stop.on_the_way })] : [])));
         nodes.push(mapView(stops[index + 1].order));
       } else {
         nodes.push(el('section', { className: 'card' }, [
           el('h2', { text: 'The end' }),
-          el('p', { text: stop.directions_to_next }),
+          el('p', { text: index < stops.length - 1 ? dirsBetween(stop, stops[index + 1]) : stop.directions_to_next }),
         ]));
       }
     }
@@ -913,6 +1048,7 @@
       nodes.push(el('div', { className: 'nav' }, [el('button', { text: 'On to the next stop', onClick: function () { goStop(index + 1); } })]));
     }
     show(nodes);
+    if (!arrived && index > 0) showCompass(stopLL(stop), stop.name.replace(/\[\[c:|\]\]/g, ''));
   }
 
   // ---------- page addresses ----------
@@ -924,6 +1060,7 @@
   var lastScroll = 0;
   function route(keepScroll) {
     if (keepScroll === true) lastScroll = window.scrollY;
+    hideCompass();
     var id = location.hash.replace('#', '');
     if (id === 'villages') { villagesScreen(); return; }
     if (id === 'about') { aboutScreen(); return; }
