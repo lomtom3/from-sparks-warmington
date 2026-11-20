@@ -580,7 +580,7 @@
         kids.push(im);
       }
       kids.push(el('h2', { text: ready ? v.walk_title : v.name }));
-      if (v.status === 'draft') kids.push(el('p', { className: 'badge-soon', text: 'Draft: only you can see this' }));
+      if (v.status === 'draft') kids.push(el('p', { className: 'badge-draft', text: 'Draft: only you can see this' }));
       if (ready && v.story) kids.push(el('p', { className: 'kicker', text: v.story }));
       if (v.teaser) kids.push(el('p', { text: v.teaser }));
       if (v.details) kids.push(el('p', { className: 'muted', text: v.details }));

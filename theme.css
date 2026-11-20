@@ -206,3 +206,4 @@ pre.recce { white-space: pre-wrap; font-size: 12px; background: rgba(255,250,235
 .suggest-input { width: 100%; box-sizing: border-box; font-size: 1em; padding: 10px; border: 2px solid var(--forest); border-radius: 6px; background: #fffaf0; margin: 4px 0 8px; }
 .card.village.suggest { border-style: dashed; }
 .suspect.no-pic { min-height: 0; padding: 10px; background: rgba(255,250,235,.6); border: 1px dashed var(--line); border-radius: 6px; }
+.badge-draft { display: inline-block; align-self: flex-start; margin: 0 0 4px; padding: 3px 10px; border-radius: 99px; background: #d9f6fb; color: #0b6f80; font-size: .8em; font-weight: 700; }

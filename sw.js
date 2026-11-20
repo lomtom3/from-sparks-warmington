@@ -1,6 +1,6 @@
 /* From Sparks Adventures: offline support.
    Network first (so new versions show straight away), falling back to the saved copy when there is no signal. */
-var CACHE = 'fromsparks-v1';
+var CACHE = 'fromsparks-v2';
 var SHELL = ['./', 'index.html', 'app.js', 'theme.css', 'manifest.webmanifest', 'content/walks.json',
   'images/logo.png', 'images/logo-full.jpg', 'images/icon-192.png'];
 
@@ -15,7 +15,7 @@ self.addEventListener('activate', function (e) {
 self.addEventListener('fetch', function (e) {
   var req = e.request;
   if (req.method !== 'GET' || new URL(req.url).origin !== self.location.origin) return;
-  e.respondWith(fetch(req).then(function (res) {
+  e.respondWith(fetch(req, { cache: 'no-cache' }).then(function (res) {
     if (res && res.ok) { var copy = res.clone(); caches.open(CACHE).then(function (c) { c.put(req, copy); }); }
     return res;
   }).catch(function () {
