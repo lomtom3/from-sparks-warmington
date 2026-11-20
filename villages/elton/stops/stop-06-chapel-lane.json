@@ -1,0 +1,26 @@
+{
+  "name": "Chapel Lane and the Elton Hall parkland",
+  "map": [
+    528,
+    1175,
+    "guess"
+  ],
+  "layers": {
+    "essential_history": "[[c:Chapel Lane is one of Elton's prettiest streets: look at the house names as you go. At its end it becomes a track into the parkland of Elton Hall, the home of the Proby family since 1660.]]",
+    "deeper_history": "[[c:Elton Hall was begun by Sir Richard Sapcote in the 1400s. It is a private house, opened to visitors on some summer days, with restored Victorian gardens. Please stay on the public track.]]",
+    "mystery": "[[c:A shepherd by the parkland gate says a rider passed in the night, heading for the river with a bundle in front of him. (Long walk only.)]]"
+  },
+  "sources": [
+    {
+      "title": "Elton Parish Council: A short history of Elton",
+      "url": "https://eltonparishcouncil.gov.uk/a-short-history-of-elton"
+    },
+    {
+      "title": "Northamptonshire Walks: Walk 58 (Fotheringhay circular, through Elton)",
+      "url": "https://northamptonshirewalks.co.uk/about/walk-58-off-with-her-head-fotheringhay/"
+    }
+  ],
+  "order": 6,
+  "id": "elton-06",
+  "directions_to_next": "[[c:Head north-east to Hayes Walk, about 630 metres along the route. Follow the line on the map, and keep to pavements and public paths.]]"
+}

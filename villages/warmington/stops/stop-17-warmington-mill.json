@@ -1,0 +1,62 @@
+{
+  "_readme": "Colour code: [[c:...]] CYAN = not confirmed yet (a best guess or a new idea from Claude, for the owner to approve). Plain text = confirmed by the owner.",
+  "id": "stop-17",
+  "order": 17,
+  "name": "Warmington Mill",
+  "map": [
+    376,
+    567,
+    "confirmed"
+  ],
+  "photo": "villages/warmington/photos/20261019_174630.jpg",
+  "photo_caption": "Warmington Mill",
+  "layers": {
+    "essential_history": "[[c:Warmington Mill is mentioned in the Domesday Book. The building you see now is newer, and milling here stopped in 1958.]]",
+    "deeper_history": "[[c:A mill at Warmington is recorded in 1086 (Domesday) and again in 1125. The building you see now dates from the early or mid 19th century, with a rebuild recorded in 1838, and in 1847 and 1862 it was advertised for sale as a working corn mill with four pairs of stones. It's Grade II listed. The village board says the mill closed in 1958 when Matthew Hayes retired.]]",
+    "mystery": "[[c:Journal page: you check the mill's records against the estate's own.]]"
+  },
+  "puzzle": {
+    "ref": "P4",
+    "title": "The missing sacks",
+    "intro": "[[c:Compare the mill's record with the estate's.]]",
+    "material": [
+      "[[c:MILL RECORD: 12 sacks of grain sent to the estate.]]",
+      "[[c:ESTATE RECEIPT: 10 sacks of grain received.]]",
+      "[[c:RIVERSIDE NOTE: marked with the same sack symbol, it shows two sacks sold to a private buyer.]]"
+    ],
+    "question": "[[c:How many sacks are missing?]]",
+    "answer": "2",
+    "accepted_variants": [
+      "2",
+      "two"
+    ],
+    "hints": [
+      "[[c:Compare the number sent with the number received.]]",
+      "[[c:Take the smaller number from the larger.]]",
+      "[[c:Twelve take away ten.]]"
+    ],
+    "reveal": "[[c:Two sacks are missing, and the riverside note shows where they went. The grain accounts don't add up.]]",
+    "fallback": "[[c:You can work this one out from the clues above.]]"
+  },
+  "evidence": [
+    "[[c:The mill sent 12 sacks but the estate only received 10. Two went to a private buyer, so the grain accounts don't add up.]]"
+  ],
+  "directions_to_next": "[[c:Head west for about 60 metres to the Elton Boat Club. The Boat Club is on the corner of the road. Keep to the pavements and paths, and look from the road only.]]",
+  "notes": [
+    "Puzzle idea awaiting owner approval. Do not use a wheel count or anything that may change."
+  ],
+  "sources": [
+    {
+      "title": "Warmington Mill, Northamptonshire HER",
+      "url": "https://her.northamptonshire.gov.uk/Monument/MNN107912"
+    },
+    {
+      "title": "Village history board (photos taken on the recce, 19 Oct 2026)",
+      "url": "https://www.warmington.org"
+    }
+  ],
+  "character_art": {
+    "src": "villages/warmington/characters/martha-mill.jpg",
+    "caption": "[[c:Martha loading sacks at the mill.]]"
+  }
+}

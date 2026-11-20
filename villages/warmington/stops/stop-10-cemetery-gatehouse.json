@@ -1,0 +1,25 @@
+{
+  "_readme": "Colour code: [[c:...]] CYAN = not confirmed yet (a best guess or a new idea from Claude, for the owner to approve). Plain text = confirmed by the owner.",
+  "id": "stop-10",
+  "order": 10,
+  "name": "Cemetery gatehouse",
+  "map": [
+    576,
+    793,
+    "confirmed"
+  ],
+  "photo": "villages/warmington/photos/20261019_181657.jpg",
+  "photo_caption": "The cemetery gatehouse plaque",
+  "layers": {
+    "essential_history": "[[c:The cemetery gatehouse has a plaque that we think shows 1926. We're still checking.]]",
+    "deeper_history": "[[c:Village cemeteries like this often opened once the churchyard was getting full, and a gatehouse was a tidy way to mark the entrance. That's our best guess for Warmington, and we haven't checked it yet.]]",
+    "mystery": "[[c:Journal page: the way home passes through a quiet place. Look at the gatehouse, not the graves.]]"
+  },
+  "puzzle": null,
+  "puzzle_note": "[[c:No puzzle here.]]",
+  "evidence": [],
+  "directions_to_next": "[[c:Head north for about 350 metres to Big Green Pocket Park. Head back towards the village. Keep to the pavements and paths, and look from the road only.]]",
+  "notes": [
+    "Use the entrance plaque only. Do not use gravestones or names."
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "_readme": "Draft Wansford walk. [[c:...]] = cyan, not confirmed. Positions are guesses until recorded on site.",
+  "id": "wansford-05",
+  "order": 5,
+  "name": "St Mary the Virgin Church",
+  "map": [
+    643,
+    414,
+    "guess"
+  ],
+  "layers": {
+    "essential_history": "[[c:St Mary's is Grade I listed. Its Norman font dates from around 1120 and was brought here from Sibberton Lodge in the parish of Thornhaugh.]]",
+    "deeper_history": "[[c:Churches along the Great North Road saw centuries of travellers passing by.]]",
+    "mystery": "[[c:The sexton says Nell Briggs was polishing the church brass all evening for Sunday, with the vicar's wife beside her.]]"
+  },
+  "sources": [
+    {
+      "title": "Wikipedia: Wansford, Cambridgeshire",
+      "url": "https://en.wikipedia.org/wiki/Wansford,_Cambridgeshire"
+    }
+  ],
+  "evidence": [
+    "[[c:Nell Briggs was polishing the church brass all evening, with a witness.]]"
+  ],
+  "directions_to_next": "[[c:Head north-west, about 260 metres as the crow flies, to Old Leicester Road. Head north-west from the church. Keep to pavements and public paths.]]"
+}

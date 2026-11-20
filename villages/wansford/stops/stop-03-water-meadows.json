@@ -1,0 +1,26 @@
+{
+  "name": "The water meadows",
+  "map": [
+    700,
+    600,
+    "guess"
+  ],
+  "layers": {
+    "essential_history": "[[c:From the church side of the Old Bridge, a footpath leads through a gate and across the water meadows beside the Nene. It is the start of a favourite local walk along the river towards Yarwell.]]",
+    "deeper_history": "[[c:Red kites are often seen over the river here. The meadows flood in wet winters, so expect mud and keep to the path.]]",
+    "mystery": "[[c:In the long grass you find a coachman's glove, soaked through. Someone came this way in the dark. (Long walk only.)]]"
+  },
+  "sources": [
+    {
+      "title": "Northamptonshire Walks: Walk 65 (Wansford watermeadows)",
+      "url": "https://northamptonshirewalks.co.uk/about/walk-65-watermeadows-around-wansford/"
+    },
+    {
+      "title": "Wikipedia: Wansford, Cambridgeshire",
+      "url": "https://en.wikipedia.org/wiki/Wansford,_Cambridgeshire"
+    }
+  ],
+  "order": 3,
+  "id": "wansford-03",
+  "directions_to_next": "[[c:Head north-east to the riverside, about 590 metres along the route. Follow the line on the map, and keep to pavements and public paths.]]"
+}

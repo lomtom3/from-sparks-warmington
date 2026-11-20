@@ -1,0 +1,77 @@
+{
+  "_readme": "Draft Fotheringhay walk. [[c:...]] = cyan, not confirmed. Positions are guesses until recorded on site.",
+  "id": "fotheringhay-07",
+  "order": 7,
+  "name": "Back to the Falcon",
+  "map": [
+    718,
+    598,
+    "guess"
+  ],
+  "layers": {
+    "essential_history": "[[c:Back where you started. Few villages so small have seen so much royal history.]]",
+    "deeper_history": "[[c:On the way back along the main street, look for the house with a blue plaque remembering Richard III, born at the castle in 1452. The Falcon is named after the falcon badge of the House of York.]]",
+    "mystery": "[[c:The King arrives at dawn. Before he does, say who took the white rose.]]"
+  },
+  "sources": [
+    {
+      "title": "Wikipedia: Fotheringhay",
+      "url": "https://en.wikipedia.org/wiki/Fotheringhay"
+    },
+    {
+      "title": "Wikipedia: Fotheringhay Castle",
+      "url": "https://en.wikipedia.org/wiki/Fotheringhay_Castle"
+    }
+  ],
+  "directions_to_next": "[[c:That's the end of the walk. Well done, detective!]]",
+  "puzzle": {
+    "ref": "F6",
+    "type": "accuse",
+    "title": "[[c:Who took the white rose?]]",
+    "intro": "[[c:Look through your evidence notebook, then make your accusation.]]",
+    "material": [],
+    "question": "[[c:Who took the rose, why, and where is it now?]]",
+    "fields": [
+      {
+        "key": "who",
+        "label": "Who did it?",
+        "options": [
+          "Will Hobbs (the mason)",
+          "Joan Fairfax (the cook)",
+          "Kit Ashby (the page)",
+          "Master Lucas Venn (the merchant)"
+        ],
+        "answer": "Master Lucas Venn (the merchant)"
+      },
+      {
+        "key": "why",
+        "label": "Why?",
+        "options": [
+          "To melt down the silver and sell it",
+          "To keep it safe",
+          "As a prank",
+          "To give to the Queen"
+        ],
+        "answer": "To melt down the silver and sell it"
+      },
+      {
+        "key": "where",
+        "label": "Where is it now?",
+        "options": [
+          "In the church tower",
+          "In a wine barrel across the river",
+          "In the castle kitchen",
+          "In the Falcon's cellar"
+        ],
+        "answer": "In a wine barrel across the river"
+      }
+    ],
+    "hints": [
+      "[[c:Who crossed the ford twice?]]",
+      "[[c:What did the merchant's bill spell?]]",
+      "[[c:Which suspect had witnesses all night?]]"
+    ],
+    "reveal": "[[c:It was Master Lucas Venn. He carried the rose across the ford in a sack and hid it in a wine barrel on the far bank, meaning to melt down the silver in London. The rose is back in the church before the King arrives.]]",
+    "fallback": "[[c:You can solve this from your notebook alone.]]"
+  }
+}

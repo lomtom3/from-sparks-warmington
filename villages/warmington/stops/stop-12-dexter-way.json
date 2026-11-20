@@ -1,0 +1,42 @@
+{
+  "_readme": "Colour code: [[c:...]] CYAN = not confirmed yet (a best guess or a new idea from Claude, for the owner to approve). Plain text = confirmed by the owner.",
+  "id": "stop-12",
+  "order": 12,
+  "name": "Dexter Way",
+  "map": [
+    501,
+    638,
+    "guess"
+  ],
+  "photo": "villages/warmington/photos/20261019_173810.jpg",
+  "photo_caption": "The Dexter Way sign",
+  "layers": {
+    "essential_history": "[[c:Dexter Way is a modern street, so there isn't much history here. We'll find a fact for it later.]]",
+    "deeper_history": "[[c:Streets like this often appeared after the bypass opened in 1996, when the village board says new building began. That's our best guess, and we still need to find out when Dexter Way was built and who it's named after.]]",
+    "mystery": "[[c:Journal page: the housekeeper's rooms are along a quiet lane. The street names here are just for fun.]]"
+  },
+  "puzzle": {
+    "ref": "P1",
+    "title": "The street sign",
+    "intro": "[[c:Find the sign that lists the Closes off Dexter Way.]]",
+    "material": [],
+    "question": "Which Close on this sign has the shortest name?",
+    "answer": "Short",
+    "accepted_variants": [
+      "short",
+      "short close"
+    ],
+    "hints": [
+      "[[c:Look at the sign at the start of Dexter Way.]]",
+      "[[c:It lists Bosworth Close, Short Close and Bevan Close.]]",
+      "[[c:The shortest name is also a word for \"not tall\".]]"
+    ],
+    "reveal": "[[c:Short Close has the shortest name.]]",
+    "fallback": "[[c:Can't find the sign? Use the photo, or ask for the answer.]]"
+  },
+  "evidence": [],
+  "directions_to_next": "[[c:Head north for about 160 metres to Fun Field. A good place for a play break. Keep to the pavements and paths, and look from the road only.]]",
+  "notes": [
+    "This puzzle used to open the walk. What replaces its tutorial role is still undecided."
+  ]
+}

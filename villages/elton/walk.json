@@ -1,0 +1,438 @@
+{
+  "_readme": "DRAFT Elton walk (status draft in content/walks.json, only shown with draft colours on). Plot: The Queen's Last Journey (1587), made-up suspects. Puzzles E1-E10 written (cyan). Character art still to make: images/characters/elton/*.jpg.",
+  "id": "elton",
+  "title": "The Queen's Last Journey",
+  "subtitle": "Elton Walk",
+  "welcome_text": "[[c:A mystery walk around Elton's lanes, mill and church, starting and finishing at the Crown Inn. Follow the night in 1587 when a queen's coffin passed through the village.]]",
+  "start_text": "[[c:Start at the Crown Inn on Duck Street, by the little green in the middle of the village.]]",
+  "coins": {
+    "start_total": 5,
+    "cost_by_hints_used": {
+      "0": 4,
+      "1": 3,
+      "2": 2,
+      "3": 1
+    },
+    "explain": "[[c:You have a purse of 5 coins for the whole walk. Hints are free. Showing an answer costs coins.]]"
+  },
+  "layers": [
+    {
+      "key": "essential_history",
+      "label": "Essential history",
+      "description": "[[c:Short, true facts about each stop.]]",
+      "default_on": true
+    },
+    {
+      "key": "deeper_history",
+      "label": "Deeper history",
+      "description": "[[c:More history for the curious.]]",
+      "default_on": false
+    },
+    {
+      "key": "mystery",
+      "label": "Mystery story",
+      "description": "[[c:The story and puzzles, once the story is chosen.]]",
+      "default_on": true
+    }
+  ],
+  "stops": [
+    "stops/stop-01-crown-inn.json",
+    "stops/stop-02-stocks-green.json",
+    "stops/stop-03-elton-mill.json",
+    "stops/stop-04-elton-lock.json",
+    "stops/stop-05-methodist-church.json",
+    "stops/stop-06-chapel-lane.json",
+    "stops/stop-07-hayes-walk.json",
+    "stops/stop-08-brawn-way.json",
+    "stops/stop-09-highgate-hall.json",
+    "stops/stop-10-village-store.json",
+    "stops/stop-11-school-lane.json",
+    "stops/stop-12-all-saints-church.json",
+    "stops/stop-13-black-horse.json",
+    "stops/stop-14-overend.json",
+    "stops/stop-15-crown-inn-finale.json"
+  ],
+  "route": [
+    {
+      "n": 1,
+      "name": "The Crown Inn",
+      "label": "The Crown Inn",
+      "dir": "u",
+      "map": [
+        755,
+        805,
+        "guess"
+      ]
+    },
+    {
+      "n": 2,
+      "name": "Stocks Green",
+      "label": "Stocks Green",
+      "dir": "d",
+      "map": [
+        640,
+        868,
+        "guess"
+      ]
+    },
+    {
+      "n": 3,
+      "name": "Elton Mill",
+      "label": "Elton Mill",
+      "dir": "u",
+      "map": [
+        496,
+        862,
+        "guess"
+      ]
+    },
+    {
+      "n": 4,
+      "name": "Elton Lock",
+      "label": "Elton Lock",
+      "dir": "d",
+      "map": [
+        447,
+        856,
+        "guess"
+      ]
+    },
+    {
+      "n": 5,
+      "name": "Elton Methodist Church",
+      "label": "Methodist Church",
+      "dir": "l",
+      "map": [
+        670,
+        947,
+        "guess"
+      ]
+    },
+    {
+      "name": "Chapel Lane and the Elton Hall parkland",
+      "label": "Chapel Lane",
+      "dir": "l",
+      "map": [
+        528,
+        1175,
+        "guess"
+      ],
+      "n": 6
+    },
+    {
+      "n": 7,
+      "name": "Hayes Walk",
+      "label": "Hayes Walk",
+      "dir": "r",
+      "map": [
+        907,
+        866,
+        "guess"
+      ]
+    },
+    {
+      "n": 8,
+      "name": "Brawn Way and Faber Lane",
+      "label": "Brawn Way",
+      "dir": "r",
+      "map": [
+        930,
+        805,
+        "guess"
+      ]
+    },
+    {
+      "n": 9,
+      "name": "Highgate Green and Highgate Hall",
+      "label": "Highgate Hall",
+      "dir": "r",
+      "map": [
+        1124,
+        1027,
+        "guess"
+      ]
+    },
+    {
+      "n": 10,
+      "name": "Elton Village Store",
+      "label": "Village Store",
+      "dir": "l",
+      "map": [
+        868,
+        1022,
+        "guess"
+      ]
+    },
+    {
+      "n": 11,
+      "name": "School Lane",
+      "label": "School Lane",
+      "dir": "l",
+      "map": [
+        968,
+        1095,
+        "guess"
+      ]
+    },
+    {
+      "n": 12,
+      "name": "All Saints Church",
+      "label": "All Saints Church",
+      "dir": "l",
+      "map": [
+        1003,
+        1258,
+        "guess"
+      ]
+    },
+    {
+      "n": 13,
+      "name": "The Black Horse",
+      "label": "Black Horse",
+      "dir": "r",
+      "map": [
+        1052,
+        1349,
+        "guess"
+      ]
+    },
+    {
+      "n": 14,
+      "name": "Overend",
+      "label": "Overend",
+      "dir": "r",
+      "map": [
+        1078,
+        1505,
+        "guess"
+      ]
+    },
+    {
+      "n": 15,
+      "name": "The Crown Inn (finale)",
+      "label": "The Crown Inn",
+      "dir": "r",
+      "map": [
+        755,
+        805,
+        "guess"
+      ]
+    }
+  ],
+  "story": [
+    "[[c:One night in July 1587, a slow procession of riders and torches came along Overend. On the cart lay the coffin of Mary, Queen of Scots, executed at Fotheringhay that February, on its way to Peterborough Cathedral.]]",
+    "[[c:The procession rested in Elton before crossing the river. By morning, a small silver casket that the Queen's servants had guarded all the way from Fotheringhay had vanished.]]",
+    "[[c:Four people were close to it that night: Ned Cobb, who kept the river crossing; Thomas Wade, the miller; Mistress Ellen Carey, one of the Queen's own servants; and Master Richard Hale, an officer of Queen Elizabeth's court.]]",
+    "[[c:Walk the village, solve the puzzles, gather the clues and work out who took the casket, and why.]]"
+  ],
+  "start_page": {
+    "title": "Getting to the start",
+    "intro": "[[c:The walk starts and finishes at the Crown Inn, in the middle of Elton.]]",
+    "address": [
+      "The Crown Inn",
+      "8 Duck Street",
+      "Elton",
+      "Peterborough",
+      "PE8 6RQ"
+    ],
+    "parking": [
+      "[[c:Parking: please check with the Crown Inn, or park considerately on the village streets. If you're driving, park first and then open the walk.]]"
+    ],
+    "support": "[[c:Support the village: have a drink before your walk, or book a table for when you get back. The walk takes about 1 hr 15 to 2 hr, depending on your pace.]]",
+    "directions": {
+      "heading": "[[c:How to get here]]",
+      "text": "[[c:Tap a button to open Google Maps with directions from where you are now.]]",
+      "destination": "The Crown Inn, 8 Duck Street, Elton, Peterborough PE8 6RQ",
+      "buttons": [
+        {
+          "label": "[[c:Drive there]]",
+          "mode": "driving"
+        },
+        {
+          "label": "[[c:Public transport]]",
+          "mode": "transit"
+        },
+        {
+          "label": "[[c:Walk there]]",
+          "mode": "walking"
+        }
+      ]
+    },
+    "parking_photos": [],
+    "map_label": "Open the Crown Inn in Maps",
+    "map_url": "https://www.google.com/maps/search/?api=1&query=Crown+Inn+8+Duck+Street+Elton+PE8+6RQ",
+    "begin_label": "[[c:I'm at the Crown Inn: begin the walk]]"
+  },
+  "access": {
+    "enabled": false,
+    "free_stops": 2,
+    "verify_url": "",
+    "buy_url": "",
+    "title": "[[c:Unlock the rest of the walk]]",
+    "text": "[[c:The first two stops are free to try. Enter your access code to carry on.]]",
+    "buy_text": "[[c:Don't have a code yet? Get one here.]]"
+  },
+  "map": {
+    "src": "villages/elton/map.svg",
+    "x0": 330,
+    "y0": 520,
+    "w": 1000,
+    "h": 1060,
+    "scale": 1.7
+  },
+  "geo": {
+    "lat0": 52.5404,
+    "lon0": -0.4113,
+    "x0": 0,
+    "y0": 0,
+    "mpp": 1
+  },
+  "lengths": [
+    {
+      "key": "short",
+      "label": "[[c:Short walk: mill and church]]",
+      "description": "[[c:The green, the mill and lock, the shop and All Saints.]]",
+      "stops": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        10,
+        11,
+        12,
+        15
+      ],
+      "colour": "#4f7a3a",
+      "default": false
+    },
+    {
+      "key": "medium",
+      "label": "[[c:Medium walk: the whole village]]",
+      "description": "[[c:Every stop, including Hayes Walk, Highgate Hall, the Black Horse and Overend.]]",
+      "stops": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "colour": "#a8592a",
+      "default": true
+    },
+    {
+      "key": "long",
+      "label": "[[c:Long walk: village and parkland]]",
+      "description": "[[c:Adds Chapel Lane and the edge of the Elton Hall parkland.]]",
+      "stops": "all",
+      "colour": "#2c4f7c",
+      "default": false
+    }
+  ],
+  "cast": [
+    {
+      "key": "NED",
+      "name": "Ned Cobb",
+      "role": "the ford-keeper",
+      "img": "villages/elton/characters/ned-portrait.jpg"
+    },
+    {
+      "key": "THOMAS",
+      "name": "Thomas Wade",
+      "role": "the miller",
+      "img": "villages/elton/characters/thomas-portrait.jpg"
+    },
+    {
+      "key": "ELLEN",
+      "name": "Mistress Ellen Carey",
+      "role": "the Queen's servant",
+      "img": "villages/elton/characters/ellen-portrait.jpg"
+    },
+    {
+      "key": "MASTER HALE",
+      "name": "Master Richard Hale",
+      "role": "an officer of Queen Elizabeth",
+      "img": "villages/elton/characters/hale-portrait.jpg"
+    }
+  ],
+  "legs": {
+    "1-2": [
+      164,
+      "755,805 761,817 730,811 728,817 713,814 668,856 647,856 640,868"
+    ],
+    "2-3": [
+      297,
+      "640,868 647,856 668,856 649,891 648,903 642,894 633,897 598,923 580,927 543,914 528,898 516,871 496,853 496,862"
+    ],
+    "3-4": [
+      71,
+      "496,862 496,853 492,851 442,851 447,856"
+    ],
+    "4-5": [
+      314,
+      "447,856 442,851 492,851 516,871 528,898 543,914 580,927 598,923 626,901 642,894 656,912 662,940 670,947"
+    ],
+    "5-10": [
+      255,
+      "670,947 662,940 672,925 708,948 744,966 868,1010 868,1022"
+    ],
+    "10-11": [
+      177,
+      "868,1022 868,1010 964,1043 970,1058 968,1095"
+    ],
+    "11-12": [
+      218,
+      "968,1095 969,1130 953,1229 961,1250 983,1270 994,1274 1003,1258"
+    ],
+    "12-15": [
+      758,
+      "1003,1258 994,1274 983,1270 961,1250 953,1229 970,1114 970,1058 964,1043 868,1010 882,980 897,913 722,868 723,837 730,811 761,817 755,805"
+    ],
+    "5-7": [
+      386,
+      "670,947 662,940 659,920 647,897 668,856 893,912 907,866"
+    ],
+    "7-8": [
+      66,
+      "907,866 921,821 930,805"
+    ],
+    "8-9": [
+      409,
+      "930,805 921,821 893,912 1041,959 1085,969 1097,966 1109,989 1123,1005 1111,1015 1124,1027"
+    ],
+    "9-10": [
+      300,
+      "1124,1027 1111,1015 1095,1036 1089,1049 1075,1048 1020,1058 991,1052 868,1010 868,1022"
+    ],
+    "12-13": [
+      150,
+      "1003,1258 994,1274 1061,1291 1059,1344 1052,1349"
+    ],
+    "13-14": [
+      191,
+      "1052,1349 1059,1344 1075,1515 1078,1505"
+    ],
+    "14-15": [
+      1044,
+      "1078,1505 1075,1515 1065,1417 1059,1344 1061,1291 1016,1281 983,1270 961,1250 953,1229 970,1114 970,1058 964,1043 868,1010 882,980 897,913 722,868 723,837 730,811 761,817 755,805"
+    ],
+    "5-6": [
+      282,
+      "670,947 662,940 552,1108 528,1175"
+    ],
+    "6-7": [
+      631,
+      "528,1175 552,1108 578,1067 668,1109 773,1010 785,1005 796,986 868,1010 882,980 897,913 893,912 907,866"
+    ]
+  },
+  "lengths_note": "Route colours: short green, medium copper, long blue. legs = path along real roads/paths between consecutive stops (from OpenStreetMap)."
+}

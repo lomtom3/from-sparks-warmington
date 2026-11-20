@@ -1,0 +1,29 @@
+{
+  "_readme": "Colour code: [[c:...]] CYAN = not confirmed yet (a best guess or a new idea from Claude, for the owner to approve). Plain text = confirmed by the owner.",
+  "id": "stop-14",
+  "order": 14,
+  "name": "Eaglethorpe board and barns",
+  "map": [
+    475,
+    579,
+    "cyan"
+  ],
+  "photo": "villages/warmington/photos/20261019_173907.jpg",
+  "photo_caption": "The Eaglethorpe Barns sign",
+  "layers": {
+    "essential_history": "The Proby family has owned farmland around Warmington since Sir Peter Proby first bought land at Elton in 1595, and has held Elton Hall since 1660. [[c:The board here also talks about a possible hamlet from late Saxon times and a survey from 1621. The dovecote is said to have about 800 nests.]]",
+    "deeper_history": "[[c:A burial from the Early Bronze Age was found near the mill in 1995. Sources give different dates for it, and it's where it was found, not somewhere to visit. In 2002, archaeologists also found a skeleton about 1,500 years old in Eaglethorpe.]]",
+    "mystery": "[[c:Journal page: the estate is old and grand and its stores are full, which makes a missing sack very hard to spot.]]"
+  },
+  "puzzle": null,
+  "puzzle_note": "[[c:No puzzle here.]]",
+  "evidence": [],
+  "directions_to_next": "[[c:Head west for about 250 metres to the orchard. The orchard is reached by the footpath behind the Red Lion that crosses the bonfire field, just before the underpass. Keep to the pavements and paths, and look from the road only.]]",
+  "on_the_way": "The footpath to the orchard runs behind the Red Lion and across the field that hosts the village bonfire and fireworks night every bonfire night, with food vans and stalls that raise money for the village. The orchard is just before the bypass underpass, as you come from the village.",
+  "sources": [
+    {
+      "title": "Warmington, Northamptonshire (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Warmington,_Northamptonshire"
+    }
+  ]
+}

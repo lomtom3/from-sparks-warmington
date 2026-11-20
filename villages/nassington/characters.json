@@ -1,0 +1,29 @@
+{
+  "_readme": "Nassington cast (made-up characters).",
+  "characters": [
+    {
+      "key": "ULF",
+      "name": "Ulf",
+      "role": "a Danish guard",
+      "img": "villages/nassington/characters/ulf-portrait.jpg"
+    },
+    {
+      "key": "EDITH",
+      "name": "Edith",
+      "role": "the hall cook",
+      "img": "villages/nassington/characters/edith-portrait.jpg"
+    },
+    {
+      "key": "BROTHER ALDRED",
+      "name": "Brother Aldred",
+      "role": "a bishop's clerk",
+      "img": "villages/nassington/characters/aldred-portrait.jpg"
+    },
+    {
+      "key": "ORM",
+      "name": "Orm",
+      "role": "a travelling poet",
+      "img": "villages/nassington/characters/orm-portrait.jpg"
+    }
+  ]
+}

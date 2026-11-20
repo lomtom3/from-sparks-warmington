@@ -6,9 +6,9 @@
 (function () {
   'use strict';
 
-  var ROOT_CONTENT = 'content/';
-  var CONTENT = 'content/warmington/';       // set to the chosen village's folder when a walk loads
-  var MAP = { src: 'map/warmington-map.svg', x0: 215, y0: 470, w: 490, h: 430 };
+  var ROOT_CONTENT = 'villages/';
+  var CONTENT = 'villages/warmington/';       // set to the chosen village's folder when a walk loads
+  var MAP = { src: 'villages/warmington/map.svg', x0: 215, y0: 470, w: 490, h: 430 };
   var VILLAGE_KEY = 'fromsparks:village';
   var villages = [], villageId = null, allStops = [], ROUTE = [], booted = false;
   var app = document.getElementById('app');
@@ -915,7 +915,7 @@
       helpers(stop, pz, box, function () { route(true); });
       if (pz.fallback) box.appendChild(el('p', { className: 'muted', text: pz.fallback }));
     } else {
-      box.appendChild(sceneFigure({ src: 'images/characters/mr-vale-ledger.jpg', caption: '[[c:Mr Vale, caught out by his own ledger.]]' }));
+      if (pz.solved_art) box.appendChild(sceneFigure(pz.solved_art));
       box.appendChild(el('p', { className: 'feedback ok', text: pz.reveal }));
     }
     return box;

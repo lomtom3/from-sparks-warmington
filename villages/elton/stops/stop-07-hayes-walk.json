@@ -1,0 +1,49 @@
+{
+  "_readme": "Elton draft. [[c:...]] is cyan = not confirmed. History from the Elton Parish Council short history unless noted.",
+  "id": "elton-07",
+  "order": 7,
+  "name": "Hayes Walk",
+  "map": [
+    907,
+    866,
+    "guess"
+  ],
+  "layers": {
+    "essential_history": "[[c:Hayes Walk is named after James Hayes, who patented milling and harvesting machines in the 1850s and showed them at the Crystal Palace. His works employed men from all over the village.]]",
+    "deeper_history": "[[c:In 1871 a young Henry Royce, who later founded Rolls-Royce, asked for work at the Hayes Works and was turned down for not being strong enough.]]",
+    "mystery": "[[c:Thomas Wade's young apprentice stops you. He overheard a conversation in the inn yard and wrote it down the only way he knew how.]]"
+  },
+  "sources": [
+    {
+      "title": "Elton Parish Council: A short history of Elton",
+      "url": "https://eltonparishcouncil.gov.uk/a-short-history-of-elton"
+    }
+  ],
+  "directions_to_next": "[[c:Head north, about 70 metres as the crow flies, to Brawn Way and Faber Lane. Brawn Way and Faber Lane branch off just to the north. Keep to the pavements and paths.]]",
+  "puzzle": {
+    "ref": "E5",
+    "title": "[[c:The apprentice's lines]]",
+    "intro": "[[c:Read the first letter of each line.]]",
+    "material": [
+      "[[c:Keep the door locked, he said,]]",
+      "[[c:Every sack is counted,]]",
+      "[[c:Yes, but lend it me tonight, sir.]]"
+    ],
+    "question": "[[c:What did someone borrow from the miller?]]",
+    "answer": "key",
+    "accepted_variants": [
+      "the key",
+      "mill key",
+      "the mill key"
+    ],
+    "hints": [
+      "[[c:Look at the first letters only.]]",
+      "[[c:K, E, Y.]]",
+      "[[c:It opens the mill door.]]"
+    ],
+    "reveal": "[[c:The first letters spell KEY. Someone borrowed the mill key that night.]]"
+  },
+  "evidence": [
+    "[[c:Someone borrowed the mill key from Thomas Wade that night.]]"
+  ]
+}

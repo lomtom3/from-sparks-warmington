@@ -1,0 +1,47 @@
+{
+  "_readme": "Draft Oundle walk. [[c:...]] = cyan, not confirmed. Positions are guesses until recorded on site.",
+  "id": "oundle-08",
+  "order": 8,
+  "name": "South Bridge and the River Nene",
+  "map": [
+    754,
+    1551,
+    "guess"
+  ],
+  "layers": {
+    "essential_history": "[[c:Oundle sits on the River Nene, which loops around the east and south of the town and forms the parish boundary on those sides.]]",
+    "deeper_history": "[[c:Close by is Barnwell Country Park: about 37 acres of lakes, riverbank and meadows with waymarked trails, flat paths and a café. A good place to extend your walk.]]",
+    "mystery": "[[c:By the river, Silas the mason admits he was here at midnight, checking the barges of stone. The boatman swears to it. (Long walk only: this clears Silas.)]]"
+  },
+  "sources": [
+    {
+      "title": "Wikipedia: Oundle",
+      "url": "https://en.wikipedia.org/wiki/Oundle"
+    }
+  ],
+  "evidence": [
+    "[[c:Silas the mason was at the river checking barges at midnight. The boatman saw him.]]"
+  ],
+  "directions_to_next": "[[c:Head north-east, about 390 metres as the crow flies, to the Ship Inn. Head back up into the town to West Street. Keep to pavements and public paths.]]",
+  "puzzle": {
+    "ref": "O5b",
+    "title": "[[c:The boatman's tally]]",
+    "intro": "",
+    "material": [
+      "[[c:BOATMAN: \"Silas counted my barges at midnight: seven barges, each with six blocks of stone.\"]]"
+    ],
+    "question": "[[c:How many blocks of stone did Silas count?]]",
+    "answer": "42",
+    "accepted_variants": [
+      "forty two",
+      "forty-two"
+    ],
+    "hints": [
+      "[[c:Seven barges.]]",
+      "[[c:Six blocks on each.]]",
+      "[[c:Seven times six.]]"
+    ],
+    "reveal": "[[c:Forty-two. Counting that many blocks took Silas most of the night, so he was at the river, not the Talbot.]]",
+    "fallback": "[[c:Stuck? Take a hint: hints are free.]]"
+  }
+}

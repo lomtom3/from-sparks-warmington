@@ -1,0 +1,48 @@
+{
+  "_readme": "Elton draft. [[c:...]] is cyan = not confirmed. History from the Elton Parish Council short history unless noted.",
+  "id": "elton-11",
+  "order": 11,
+  "name": "School Lane",
+  "map": [
+    968,
+    1095,
+    "guess"
+  ],
+  "layers": {
+    "essential_history": "[[c:School Lane used to be called Church Lane. It was renamed in 1876, when a new school for boys and girls opened here.]]",
+    "deeper_history": "[[c:An earlier boys' school was built in 1727, and a girls' school once met in the old women's workhouse, paid for by Lady Jane Proby's will in 1712.]]",
+    "mystery": "[[c:This lane was once called Church Lane. The parish clerk left a note about who was in the church that night, written backwards so the soldiers couldn't read it.]]"
+  },
+  "sources": [
+    {
+      "title": "Elton Parish Council: A short history of Elton",
+      "url": "https://eltonparishcouncil.gov.uk/a-short-history-of-elton"
+    }
+  ],
+  "directions_to_next": "[[c:Head south, about 170 metres as the crow flies, to All Saints Church. Follow School Lane to the church at the end. Keep to the pavements and paths.]]",
+  "puzzle": {
+    "ref": "E7",
+    "title": "[[c:The clerk's mirror note]]",
+    "intro": "[[c:Read it from right to left.]]",
+    "material": [
+      "[[c:THGINDIM TA GNIYARP SAW YERAC SSERTSIM]]"
+    ],
+    "question": "[[c:What was Mistress Carey doing at midnight? (one word)]]",
+    "answer": "praying",
+    "accepted_variants": [
+      "prayed",
+      "prayer",
+      "praying in the church",
+      "she was praying"
+    ],
+    "hints": [
+      "[[c:Start at the end of the line.]]",
+      "[[c:The last word, read backwards, is MISTRESS.]]",
+      "[[c:She was talking to God.]]"
+    ],
+    "reveal": "[[c:It reads MISTRESS CAREY WAS PRAYING AT MIDNIGHT. She was in the church, not at the ford.]]"
+  },
+  "evidence": [
+    "[[c:Mistress Carey was praying in the church at midnight. The clerk saw her.]]"
+  ]
+}

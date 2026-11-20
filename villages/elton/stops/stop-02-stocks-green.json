@@ -1,0 +1,23 @@
+{
+  "_readme": "Elton draft. [[c:...]] is cyan = not confirmed. History from the Elton Parish Council short history unless noted.",
+  "id": "elton-02",
+  "order": 2,
+  "name": "Stocks Green",
+  "map": [
+    640,
+    868,
+    "guess"
+  ],
+  "layers": {
+    "essential_history": "[[c:This little green sits where Duck Street, Middle Street and River Lane meet. Its name suggests the village stocks once stood here, where wrongdoers were locked up for all to see.]]",
+    "deeper_history": "[[c:Stocks were common on village greens across England until the early 1800s. No record of Elton's own stocks has been found yet, so treat the story behind the name as a likely one, not a certain one.]]",
+    "mystery": "[[c:Where the green is now, the procession's horses were tied up for the night. A stable boy says one rider took his horse out again after the church bell struck twelve, and came back without a word.]]"
+  },
+  "sources": [
+    {
+      "title": "Elton Parish Council: A short history of Elton",
+      "url": "https://eltonparishcouncil.gov.uk/a-short-history-of-elton"
+    }
+  ],
+  "directions_to_next": "[[c:Head west, about 140 metres as the crow flies, to Elton Mill. Follow River Lane down towards the river; the mill is along the lane on the left. Look from the lane only. Keep to the pavements and paths.]]"
+}

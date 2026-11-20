@@ -1,0 +1,29 @@
+{
+  "_readme": "Wansford cast (made-up characters).",
+  "characters": [
+    {
+      "key": "BARNABY",
+      "name": "Barnaby Hale",
+      "role": "the farmhand",
+      "img": "villages/wansford/characters/barnaby-portrait.jpg"
+    },
+    {
+      "key": "NELL",
+      "name": "Nell Briggs",
+      "role": "the innkeeper's wife",
+      "img": "villages/wansford/characters/nell-portrait.jpg"
+    },
+    {
+      "key": "NED",
+      "name": "Ned Turpin",
+      "role": "the coach guard",
+      "img": "villages/wansford/characters/ned-portrait.jpg"
+    },
+    {
+      "key": "SIGNOR ROSSI",
+      "name": "Signor Rossi",
+      "role": "a travelling showman",
+      "img": "villages/wansford/characters/rossi-portrait.jpg"
+    }
+  ]
+}

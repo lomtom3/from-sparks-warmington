@@ -1,0 +1,51 @@
+{
+  "_readme": "Elton draft. [[c:...]] is cyan = not confirmed. History from the Elton Parish Council short history unless noted.",
+  "id": "elton-05",
+  "order": 5,
+  "name": "Elton Methodist Church",
+  "map": [
+    670,
+    947,
+    "guess"
+  ],
+  "layers": {
+    "essential_history": "[[c:The Methodist chapel was built in 1864, replacing an older chapel on the next-door plot. One of its best-known members was James Hayes, an inventor from the village.]]",
+    "deeper_history": "[[c:Elton has had both a church and a chapel for over 150 years, a sign of how lively and divided village life could be in Victorian times.]]",
+    "mystery": "[[c:This corner was fields in 1587. Ned Cobb is waiting for you, nervous, jingling the coins in his purse.]]"
+  },
+  "sources": [
+    {
+      "title": "Elton Parish Council: A short history of Elton",
+      "url": "https://eltonparishcouncil.gov.uk/a-short-history-of-elton"
+    }
+  ],
+  "directions_to_next": "[[c:Head south-west to Chapel Lane and the Elton Hall parkland, about 280 metres along the route. Follow the line on the map, and keep to pavements and public paths.]]",
+  "puzzle": {
+    "ref": "E4",
+    "title": "[[c:Ned's purse]]",
+    "intro": "",
+    "material": [
+      "[[c:NED: \"I charge a penny a crossing. Four people crossed tonight, so I earned four pence.\"]]",
+      "[[c:But Ned's purse holds sixteen pence.]]"
+    ],
+    "question": "[[c:How many pence does Ned have that he can't explain?]]",
+    "answer": "12",
+    "accepted_variants": [
+      "twelve",
+      "12 pence",
+      "twelve pence",
+      "a shilling",
+      "1 shilling",
+      "one shilling"
+    ],
+    "hints": [
+      "[[c:How much should he have?]]",
+      "[[c:Sixteen take away four.]]",
+      "[[c:It's the same as one shilling.]]"
+    ],
+    "reveal": "[[c:Ned has twelve pence too many: a whole shilling. Someone paid him extra that night. Ned admits Master Hale gave it to him to keep quiet.]]"
+  },
+  "evidence": [
+    "[[c:Master Hale paid Ned Cobb a shilling to keep quiet about the crossings.]]"
+  ]
+}

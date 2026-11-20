@@ -1,0 +1,29 @@
+{
+  "_readme": "Oundle cast (made-up characters).",
+  "characters": [
+    {
+      "key": "SILAS",
+      "name": "Silas Webb",
+      "role": "the master mason",
+      "img": "villages/oundle/characters/silas-portrait.jpg"
+    },
+    {
+      "key": "TOM",
+      "name": "Tom Crane",
+      "role": "a boy from Laxton's school",
+      "img": "villages/oundle/characters/tom-portrait.jpg"
+    },
+    {
+      "key": "MARTHA",
+      "name": "Martha Pell",
+      "role": "the carter",
+      "img": "villages/oundle/characters/martha-portrait.jpg"
+    },
+    {
+      "key": "JOSIAH",
+      "name": "Josiah Gant",
+      "role": "landlord of a rival inn",
+      "img": "villages/oundle/characters/josiah-portrait.jpg"
+    }
+  ]
+}

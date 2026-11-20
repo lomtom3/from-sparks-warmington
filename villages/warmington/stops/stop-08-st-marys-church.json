@@ -1,0 +1,51 @@
+{
+  "_readme": "Colour code: [[c:...]] CYAN = not confirmed yet (a best guess or a new idea from Claude, for the owner to approve). Plain text = confirmed by the owner.",
+  "id": "stop-08",
+  "order": 8,
+  "name": "St Mary's church",
+  "map": [
+    467,
+    749,
+    "confirmed"
+  ],
+  "photo": "villages/warmington/photos/20261019_180522.jpg",
+  "photo_caption": "St Mary's church",
+  "layers": {
+    "essential_history": "[[c:St Mary's was built mostly between about 1180 and 1290. Different sources give slightly different dates.]]",
+    "deeper_history": "[[c:Look up inside the church: the wooden roof is 13th century and made to look like stone vaulting, with nine carved Green Man faces. The church was repaired in 1875 and 1876 by Lord Carysfort, with Sir George Gilbert Scott designing the nave. There are six bells, and three of them are dated 1604, 1670 and 1710.]]",
+    "mystery": "[[c:Journal page: the church bell marks the hours in our story. When someone mentions a bell, listen carefully.]]"
+  },
+  "puzzle": {
+    "ref": "P7",
+    "title": "The plaque",
+    "intro": "[[c:Go round to the back of the church and look for the plaque about the restoration grant. Please stay on the public path.]]",
+    "material": [],
+    "question": "[[c:How much was the restoration grant, in pounds? Numbers only.]]",
+    "answer": "30",
+    "accepted_variants": [
+      "30",
+      "£30",
+      "30 pounds",
+      "thirty",
+      "thirty pounds"
+    ],
+    "hints": [
+      "[[c:Look at the back of the church for a small plaque.]]",
+      "[[c:The plaque is about a grant for restoration work.]]",
+      "[[c:The amount is a two-digit number.]]"
+    ],
+    "reveal": "[[c:The grant was £30.]]",
+    "fallback": "[[c:Can't get to the plaque? Use the photo if there is one, or ask for the answer.]]"
+  },
+  "evidence": [],
+  "directions_to_next": "[[c:Head south-east for about 350 metres to Taylor's Green. Follow the roads out of the village centre. Keep to the pavements and paths, and look from the road only.]]",
+  "notes": [
+    "The year on the plaque is worn and unconfirmed. Do not ask for it."
+  ],
+  "sources": [
+    {
+      "title": "St Mary's church, Warmington Benefice",
+      "url": "https://warmingtonbenefice.org.uk/parishes/warmington/the-church-of-st-mary-the-blessed-virgin/warmington-4367.php"
+    }
+  ]
+}

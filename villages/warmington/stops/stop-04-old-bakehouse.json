@@ -1,0 +1,23 @@
+{
+  "_readme": "Colour code: [[c:...]] CYAN = not confirmed yet (a best guess or a new idea from Claude, for the owner to approve). Plain text = confirmed by the owner.",
+  "id": "stop-04",
+  "order": 4,
+  "name": "Old Bakehouse",
+  "map": [
+    480,
+    729,
+    "confirmed"
+  ],
+  "photo": "villages/warmington/photos/20261019_180124.jpg",
+  "photo_caption": "The Old Bakehouse",
+  "layers": {
+    "essential_history": "[[c:This private home gets its name from an old bakehouse. We'd love to add a proper fact here once we've asked around the village.]]",
+    "deeper_history": "[[c:The name suggests this house was once the village bakehouse, where bread was baked in a big oven for the neighbours. That's our best guess, and we still need to find out when it stopped baking.]]",
+    "mystery": "[[c:Journal page: bread and grain pass through every kitchen on the estate, and somebody has been counting the sacks very carefully.]]"
+  },
+  "puzzle": null,
+  "puzzle_note": "[[c:No puzzle here. Just enjoy the view.]]",
+  "evidence": [],
+  "directions_to_next": "[[c:Head north-west for about 60 metres to Glebe Stores. It is the village shop, close to the Bakehouse. Keep to the pavements and paths, and look from the road only.]]",
+  "private_note": "This is a private home, so please look from the road only."
+}

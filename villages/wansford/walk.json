@@ -1,0 +1,363 @@
+{
+  "_readme": "DRAFT Wansford walk (status draft in content/walks.json: only shown with draft colours on). Made by Claude from public sources; everything cyan until the owner approves. Character art still to make.",
+  "id": "wansford",
+  "title": "Wansford in England",
+  "subtitle": "Wansford Walk",
+  "welcome_text": "[[c:A mystery walk around Wansford, its old stone bridge and the Great North Road, home of the famous haycock legend.]]",
+  "start_text": "[[c:Start at the Haycock, by the old bridge.]]",
+  "coins": {
+    "start_total": 5,
+    "cost_by_hints_used": {
+      "0": 4,
+      "1": 3,
+      "2": 2,
+      "3": 1
+    },
+    "explain": "[[c:You have a purse of 5 coins for the whole walk. Hints are free. Showing an answer costs coins.]]"
+  },
+  "layers": [
+    {
+      "key": "essential_history",
+      "label": "Essential history",
+      "description": "[[c:Short, true facts about each stop.]]",
+      "default_on": true
+    },
+    {
+      "key": "deeper_history",
+      "label": "Deeper history",
+      "description": "[[c:More history for the curious.]]",
+      "default_on": false
+    },
+    {
+      "key": "mystery",
+      "label": "Mystery story",
+      "description": "[[c:The story and the puzzles. Switch it off for a history-only walk.]]",
+      "default_on": true
+    }
+  ],
+  "stops": [
+    "stops/stop-01-haycock.json",
+    "stops/stop-02-old-bridge.json",
+    "stops/stop-03-water-meadows.json",
+    "stops/stop-04-riverside.json",
+    "stops/stop-05-st-marys.json",
+    "stops/stop-06-old-leicester-road.json",
+    "stops/stop-07-old-north-road.json",
+    "stops/stop-08-great-north-road.json",
+    "stops/stop-09-papermills.json",
+    "stops/stop-10-cross-keys.json",
+    "stops/stop-11-haycock-finale.json"
+  ],
+  "route": [
+    {
+      "n": 1,
+      "name": "The Haycock",
+      "label": "The Haycock",
+      "dir": "r",
+      "map": [
+        912,
+        577,
+        "guess"
+      ]
+    },
+    {
+      "n": 2,
+      "name": "Wansford Old Bridge",
+      "label": "Old Bridge",
+      "dir": "l",
+      "map": [
+        800,
+        565,
+        "guess"
+      ]
+    },
+    {
+      "name": "The water meadows",
+      "label": "Water meadows",
+      "dir": "l",
+      "map": [
+        700,
+        600,
+        "guess"
+      ],
+      "n": 3
+    },
+    {
+      "n": 4,
+      "name": "The riverside",
+      "label": "Riverside",
+      "dir": "r",
+      "map": [
+        768,
+        440,
+        "guess"
+      ]
+    },
+    {
+      "n": 5,
+      "name": "St Mary the Virgin Church",
+      "label": "St Mary's",
+      "dir": "l",
+      "map": [
+        643,
+        414,
+        "guess"
+      ]
+    },
+    {
+      "n": 6,
+      "name": "Old Leicester Road",
+      "label": "Old Leicester Road",
+      "dir": "l",
+      "map": [
+        496,
+        195,
+        "guess"
+      ]
+    },
+    {
+      "n": 7,
+      "name": "The Old North Road",
+      "label": "Old North Road",
+      "dir": "r",
+      "map": [
+        654,
+        172,
+        "guess"
+      ]
+    },
+    {
+      "n": 8,
+      "name": "The Great North Road",
+      "label": "Great North Road",
+      "dir": "r",
+      "map": [
+        700,
+        330,
+        "guess"
+      ]
+    },
+    {
+      "n": 9,
+      "name": "The Papermills",
+      "label": "Papermills",
+      "dir": "r",
+      "map": [
+        874,
+        696,
+        "guess"
+      ]
+    },
+    {
+      "n": 10,
+      "name": "The Cross Keys and the old chapel",
+      "label": "Cross Keys",
+      "dir": "r",
+      "map": [
+        958,
+        755,
+        "guess"
+      ]
+    },
+    {
+      "n": 11,
+      "name": "Back to the Haycock",
+      "label": "The Haycock",
+      "dir": "r",
+      "map": [
+        912,
+        577,
+        "guess"
+      ]
+    }
+  ],
+  "story": [
+    "[[c:Wansford, 1724. Coaches thunder along the Great North Road, and everyone at the inn is laughing about Barnaby, who swears he fell asleep on a haycock, floated down the Nene and woke up asking 'Wansford in England?']]",
+    "[[c:While everyone was laughing, the strongbox from the London coach went missing from the inn yard.]]",
+    "[[c:Four people were about: Barnaby Hale, the farmhand with the haycock story; Nell Briggs, the innkeeper's wife; Ned Turpin, the coach guard (no relation to the highwayman, he says); and Signor Rossi, a travelling showman. Find the strongbox before the coach leaves.]]"
+  ],
+  "start_page": {
+    "title": "Getting to the start",
+    "intro": "[[c:The walk starts and finishes at the Haycock, beside the old bridge over the Nene.]]",
+    "address": [
+      "The Haycock",
+      "London Road",
+      "Wansford",
+      "Peterborough",
+      "PE8 6JA"
+    ],
+    "parking": [
+      "[[c:Parking: please park considerately on the village streets, or ask at the pub. If you're driving, park first and then open the walk.]]"
+    ],
+    "support": "[[c:Support the village: Wansford has pubs and places to eat. The walk takes about 45 minutes to 1 hour 15.]]",
+    "directions": {
+      "heading": "[[c:How to get here]]",
+      "text": "[[c:Tap a button to open Google Maps with directions from where you are now.]]",
+      "destination": "The Haycock Hotel, London Road, Wansford, Peterborough PE8 6JA",
+      "buttons": [
+        {
+          "label": "[[c:Drive there]]",
+          "mode": "driving"
+        },
+        {
+          "label": "[[c:Public transport]]",
+          "mode": "transit"
+        },
+        {
+          "label": "[[c:Walk there]]",
+          "mode": "walking"
+        }
+      ]
+    },
+    "parking_photos": [],
+    "map_label": "Open the start in Maps",
+    "map_url": "https://www.google.com/maps/search/?api=1&query=The+Haycock+Hotel+London+Road+Wansford+Peterborough+PE8+6JA",
+    "begin_label": "[[c:I'm at the Haycock: begin the walk]]"
+  },
+  "access": {
+    "enabled": false,
+    "free_stops": 2,
+    "verify_url": "",
+    "buy_url": "",
+    "title": "[[c:Unlock the rest of the walk]]",
+    "text": "[[c:The first two stops are free to try. Enter your access code to carry on.]]",
+    "buy_text": "[[c:Don't have a code yet? Get one here.]]"
+  },
+  "map": {
+    "src": "villages/wansford/map.svg",
+    "x0": 380,
+    "y0": 40,
+    "w": 960,
+    "h": 1010,
+    "scale": 1.6
+  },
+  "geo": {
+    "lat0": 52.58429,
+    "lon0": -0.42683,
+    "x0": 0,
+    "y0": 0,
+    "mpp": 1
+  },
+  "lengths": [
+    {
+      "key": "short",
+      "label": "[[c:Short walk: bridge and church]]",
+      "description": "[[c:Over the Old Bridge to the riverside and St Mary's.]]",
+      "stops": [
+        1,
+        2,
+        4,
+        5,
+        11
+      ],
+      "colour": "#4f7a3a",
+      "default": false
+    },
+    {
+      "key": "medium",
+      "label": "[[c:Medium walk: both sides of the river]]",
+      "description": "[[c:Adds the Great North Road, the Papermills and the Cross Keys.]]",
+      "stops": [
+        1,
+        2,
+        4,
+        5,
+        8,
+        9,
+        10,
+        11
+      ],
+      "colour": "#a8592a",
+      "default": true
+    },
+    {
+      "key": "long",
+      "label": "[[c:Long walk: the north of the village]]",
+      "description": "[[c:Adds Old Leicester Road and the Old North Road at the north end.]]",
+      "stops": "all",
+      "colour": "#2c4f7c",
+      "default": false
+    }
+  ],
+  "cast": [
+    {
+      "key": "BARNABY",
+      "name": "Barnaby Hale",
+      "role": "the farmhand",
+      "img": "villages/wansford/characters/barnaby-portrait.jpg"
+    },
+    {
+      "key": "NELL",
+      "name": "Nell Briggs",
+      "role": "the innkeeper's wife",
+      "img": "villages/wansford/characters/nell-portrait.jpg"
+    },
+    {
+      "key": "NED",
+      "name": "Ned Turpin",
+      "role": "the coach guard",
+      "img": "villages/wansford/characters/ned-portrait.jpg"
+    },
+    {
+      "key": "SIGNOR ROSSI",
+      "name": "Signor Rossi",
+      "role": "a travelling showman",
+      "img": "villages/wansford/characters/rossi-portrait.jpg"
+    }
+  ],
+  "legs": {
+    "1-2": [
+      362,
+      "912,577 931,575 969,648 969,659 938,663 877,680 822,580 800,556 800,565"
+    ],
+    "2-4": [
+      560,
+      "800,565 800,556 697,456 690,442 669,378 797,301 805,326 770,350 771,363 786,390 787,403 784,413 771,422 764,438 768,440"
+    ],
+    "4-5": [
+      409,
+      "768,440 764,438 771,422 784,413 787,403 786,390 771,363 770,350 805,326 797,301 669,378 674,391 626,414 643,414"
+    ],
+    "5-11": [
+      637,
+      "643,414 626,414 674,391 690,442 697,456 815,572 877,680 938,663 969,659 969,648 931,575 912,577"
+    ],
+    "5-8": [
+      145,
+      "643,414 626,414 674,391 669,378 683,371 685,359 700,330"
+    ],
+    "8-9": [
+      467,
+      "700,330 685,359 683,371 669,378 693,450 703,463 800,556 822,580 885,695 874,701 874,696"
+    ],
+    "9-10": [
+      186,
+      "874,696 874,701 885,695 937,801 958,755"
+    ],
+    "10-11": [
+      393,
+      "958,755 937,801 877,680 938,663 969,659 969,648 931,575 912,577"
+    ],
+    "2-3": [
+      318,
+      "800,565 800,556 703,463 693,473 681,506 656,558 662,568 703,594 700,600"
+    ],
+    "3-4": [
+      591,
+      "700,600 703,594 662,568 656,558 681,506 693,473 703,463 690,442 669,378 797,301 805,326 770,350 771,363 786,390 787,403 784,413 771,422 764,438 768,440"
+    ],
+    "5-6": [
+      365,
+      "643,414 626,414 674,391 669,378 635,389 620,385 609,377 547,261 522,224 496,195"
+    ],
+    "6-7": [
+      307,
+      "496,195 532,238 550,265 557,262 627,278 658,279 654,232 654,172"
+    ],
+    "7-8": [
+      253,
+      "654,172 655,258 671,351 678,373 683,371 685,359 700,330"
+    ]
+  },
+  "lengths_note": "Route colours: short green, medium copper, long blue. legs = path along real roads/paths between consecutive stops (from OpenStreetMap)."
+}

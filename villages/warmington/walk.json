@@ -1,0 +1,498 @@
+{
+  "_readme": "Colour code: [[c:...]] CYAN = not confirmed yet (a best guess or a new idea from Claude, for the owner to approve). Plain text = confirmed by the owner. Map positions are x,y on map/warmington-map.svg (viewBox 215 470 490 430). 'dir' is which side of its dot the map label sits.",
+  "id": "warmington-medium",
+  "title": "The Missing Message",
+  "subtitle": "Warmington Walk",
+  "welcome_text": "[[c:A sealed order has gone missing from the big house, and the housekeeper needs it back before the evening collection. You're a servant on the estate, so off you go. Walk the village, spot the clues and work out who took it, why, and where it's hiding.]]",
+  "start_text": "[[c:Start at the Red Lion, on the Peterborough Road in Eaglethorpe. There's a car park, and some space along the road beside it. Why not have a drink before you set off, or book a table for when you get back?]]",
+  "map_note": "[[c:The map shows the village as it is today, drawn in an old style. Our story is set in the 1600s, long before most of these buildings.]]",
+  "coins": {
+    "start_total": 5,
+    "cost_by_hints_used": {
+      "0": 4,
+      "1": 3,
+      "2": 2,
+      "3": 1
+    },
+    "coin_value_pence": 25,
+    "explain": "[[c:You start with 5 coins to last the whole walk. Hints are always free. If you're really stuck, you can spend coins to see an answer. The more hints you read first, the fewer coins it costs.]]"
+  },
+  "layers": [
+    {
+      "key": "essential_history",
+      "label": "Essential history",
+      "description": "[[c:Short, true facts about each stop.]]",
+      "default_on": true
+    },
+    {
+      "key": "deeper_history",
+      "label": "Deeper history",
+      "description": "[[c:More history for the curious. Off to begin with.]]",
+      "default_on": false
+    },
+    {
+      "key": "mystery",
+      "label": "Mystery story",
+      "description": "[[c:The story and the puzzles. Switch it off for a history-only walk and we'll keep your place.]]",
+      "default_on": true
+    }
+  ],
+  "stops": [
+    "stops/stop-01-red-lion.json",
+    "stops/stop-02-manor-house.json",
+    "stops/stop-03-wesleyan-chapel.json",
+    "stops/stop-04-old-bakehouse.json",
+    "stops/stop-05-glebe-stores.json",
+    "stops/stop-06-village-history-board.json",
+    "stops/stop-07-war-memorial.json",
+    "stops/stop-08-st-marys-church.json",
+    "stops/stop-09-taylors-green.json",
+    "stops/stop-10-cemetery-gatehouse.json",
+    "stops/stop-11-big-green.json",
+    "stops/stop-12-dexter-way.json",
+    "stops/stop-13-fun-field.json",
+    "stops/stop-14-eaglethorpe-board.json",
+    "stops/stop-15-orchard.json",
+    "stops/stop-16-underpass-mural.json",
+    "stops/stop-17-warmington-mill.json",
+    "stops/stop-18-boat-club.json",
+    "stops/stop-19-willow-field.json",
+    "stops/stop-20-red-lion-finale.json"
+  ],
+  "route": [
+    {
+      "n": 1,
+      "name": "Red Lion (start)",
+      "label": "Red Lion",
+      "dir": "l",
+      "map": [
+        433,
+        635,
+        "confirmed"
+      ]
+    },
+    {
+      "n": 2,
+      "name": "Possible Manor House",
+      "label": "Manor House?",
+      "dir": "r",
+      "map": [
+        468,
+        664,
+        "guess"
+      ]
+    },
+    {
+      "n": 3,
+      "name": "Former Wesleyan chapel",
+      "label": "Old chapel",
+      "dir": "l",
+      "map": [
+        453,
+        676,
+        "confirmed"
+      ]
+    },
+    {
+      "n": 4,
+      "name": "Old Bakehouse",
+      "label": "Bakehouse",
+      "dir": "r",
+      "map": [
+        480,
+        729,
+        "confirmed"
+      ]
+    },
+    {
+      "n": 5,
+      "name": "Glebe Stores",
+      "label": "Glebe Stores",
+      "dir": "r",
+      "map": [
+        468,
+        718,
+        "confirmed"
+      ]
+    },
+    {
+      "n": 6,
+      "name": "Village history board",
+      "label": "History board",
+      "dir": "r",
+      "map": [
+        481,
+        743,
+        "cyan"
+      ]
+    },
+    {
+      "n": 7,
+      "name": "War memorial",
+      "label": "War memorial",
+      "dir": "r",
+      "map": [
+        476,
+        756,
+        "confirmed"
+      ]
+    },
+    {
+      "n": 8,
+      "name": "St Mary's church",
+      "label": "St Mary's",
+      "dir": "l",
+      "map": [
+        467,
+        749,
+        "confirmed"
+      ]
+    },
+    {
+      "n": 9,
+      "name": "Taylor's Green",
+      "label": "Taylor's Green",
+      "dir": "r",
+      "map": [
+        538,
+        825,
+        "confirmed"
+      ]
+    },
+    {
+      "n": 10,
+      "name": "Cemetery gatehouse",
+      "label": "Cemetery",
+      "dir": "r",
+      "map": [
+        576,
+        793,
+        "confirmed"
+      ]
+    },
+    {
+      "n": 11,
+      "name": "Big Green Pocket Park",
+      "label": "Big Green",
+      "dir": "r",
+      "map": [
+        573,
+        690,
+        "confirmed"
+      ]
+    },
+    {
+      "n": 12,
+      "name": "Dexter Way",
+      "label": "Dexter Way",
+      "dir": "r",
+      "map": [
+        501,
+        638,
+        "guess"
+      ]
+    },
+    {
+      "n": 13,
+      "name": "Fun Field (play break)",
+      "label": "Fun Field",
+      "dir": "r",
+      "map": [
+        505,
+        591,
+        "confirmed"
+      ]
+    },
+    {
+      "n": 14,
+      "name": "Eaglethorpe board and barns",
+      "label": "Eaglethorpe board",
+      "dir": "u",
+      "map": [
+        475,
+        579,
+        "cyan"
+      ]
+    },
+    {
+      "n": 15,
+      "name": "Orchard Pocket Park",
+      "label": "Orchard",
+      "dir": "r",
+      "map": [
+        402,
+        596,
+        "guess"
+      ]
+    },
+    {
+      "n": 16,
+      "name": "Underpass mural",
+      "label": "Mural",
+      "dir": "r",
+      "map": [
+        391,
+        575,
+        "cyan"
+      ]
+    },
+    {
+      "n": 17,
+      "name": "Warmington Mill",
+      "label": "Mill",
+      "dir": "u",
+      "map": [
+        376,
+        567,
+        "confirmed"
+      ]
+    },
+    {
+      "n": 18,
+      "name": "Elton Boat Club",
+      "label": "Boat Club",
+      "dir": "l",
+      "map": [
+        360,
+        573,
+        "confirmed"
+      ]
+    },
+    {
+      "n": 19,
+      "name": "Willow and field crossing",
+      "label": "Willows",
+      "dir": "r",
+      "map": null
+    },
+    {
+      "n": 20,
+      "name": "Red Lion (finale)",
+      "label": "Red Lion",
+      "dir": "l",
+      "map": [
+        433,
+        635,
+        "confirmed"
+      ]
+    }
+  ],
+  "story": [
+    "[[c:Warmington, a long time ago. The big house is in uproar. A sealed order, the one that decides who gets the winter grain, has gone missing, and the carter is coming for it this evening.]]",
+    "[[c:The housekeeper has chosen you, the newest servant on the estate, to find it. She can't spare anyone else, and she isn't sure who to trust.]]",
+    "[[c:Four people were near the order today: ]]Martha[[c: at the mill, ]]Jonas[[c: in the stables, ]]Alice[[c: the messenger and ]]Mr Vale[[c: the steward. Walk the village, listen to what they say and look closely at what you find. One of them isn't telling the truth.]]"
+  ],
+  "start_page": {
+    "title": "Getting to the start",
+    "intro": "[[c:The walk starts and finishes at the Red Lion, on the Peterborough Road in Eaglethorpe, Warmington.]]",
+    "parking": [
+      "[[c:Parking: use the pub car park, or the road that runs alongside the pub. If you're driving, park first and then open the walk.]]",
+      "[[c:Please park with care and leave room for people who live here.]]"
+    ],
+    "support": "[[c:Support the village: have a drink before your walk, or book a table for when you get back. The walk takes about 1 hr 30 depending on your pace, but allow up to 2 hr 30 if you stop to look around.]]",
+    "map_label": "Open the Red Lion in Maps",
+    "map_url": "https://www.google.com/maps/search/?api=1&query=Red+Lion+Eaglethorpe+Warmington+Peterborough",
+    "directions": {
+      "heading": "[[c:How to get here]]",
+      "text": "[[c:The Red Lion is on the Peterborough Road in Eaglethorpe, Warmington. Tap a button to open Google Maps with directions from where you are now.]]",
+      "destination": "The Red Lion, Peterborough Road, Warmington, Peterborough PE8 6TN",
+      "buttons": [
+        {
+          "label": "[[c:Drive there]]",
+          "mode": "driving"
+        },
+        {
+          "label": "[[c:Public transport]]",
+          "mode": "transit"
+        },
+        {
+          "label": "[[c:Walk there]]",
+          "mode": "walking"
+        }
+      ]
+    },
+    "parking_photos": [],
+    "begin_label": "[[c:I'm at the Red Lion: begin the walk]]",
+    "address": [
+      "The Red Lion",
+      "Peterborough Road",
+      "Warmington",
+      "Peterborough",
+      "PE8 6TN"
+    ]
+  },
+  "access": {
+    "enabled": false,
+    "free_stops": 2,
+    "verify_url": "",
+    "buy_url": "",
+    "title": "[[c:Unlock the rest of the walk]]",
+    "text": "[[c:The first two stops are free to try. Enter your access code to carry on with the rest of the walk. You will find it in your purchase email.]]",
+    "buy_text": "[[c:Don't have a code yet? Get one here.]]",
+    "note": "Set enabled to true when selling. Codes are made with tools/make_codes.py. See PAYWALL-SETUP.md."
+  },
+  "map": {
+    "src": "villages/warmington/map.svg",
+    "x0": 215,
+    "y0": 470,
+    "w": 490,
+    "h": 430
+  },
+  "lengths": [
+    {
+      "key": "short",
+      "label": "[[c:Short walk: the village centre]]",
+      "description": "[[c:The middle of the village, the church and Fun Field. Clues from the stops you skip are given to you.]]",
+      "stops": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        12,
+        13,
+        14,
+        20
+      ],
+      "colour": "#4f7a3a",
+      "default": false
+    },
+    {
+      "key": "medium",
+      "label": "[[c:Medium walk: the full mystery]]",
+      "description": "[[c:Every stop, out to the cemetery, Big Green and the mill.]]",
+      "stops": "all",
+      "colour": "#a8592a",
+      "default": true
+    }
+  ],
+  "lengths_note": "Route colours: short green, medium copper, long blue. legs = path along real roads/paths between consecutive stops (from OpenStreetMap).",
+  "geo": {
+    "lat0": 52.50988,
+    "lon0": -0.41583,
+    "x0": 433,
+    "y0": 635,
+    "mpp": 3.4
+  },
+  "cast": [
+    {
+      "key": "MARTHA",
+      "name": "Martha",
+      "role": "Mrs Reed, the miller's assistant",
+      "img": "villages/warmington/characters/martha-portrait.jpg"
+    },
+    {
+      "key": "JONAS",
+      "name": "Jonas Pike",
+      "role": "the stable hand",
+      "img": "villages/warmington/characters/jonas-portrait.jpg"
+    },
+    {
+      "key": "ALICE",
+      "name": "Alice Fen",
+      "role": "the messenger",
+      "img": "villages/warmington/characters/alice-portrait.jpg"
+    },
+    {
+      "key": "MR VALE",
+      "name": "Mr Vale",
+      "role": "the steward",
+      "img": "villages/warmington/characters/mr-vale-portrait.jpg"
+    }
+  ],
+  "hero_image": {
+    "src": "villages/warmington/characters/characters-concept.jpg",
+    "alt": "First concept of the characters in the story (draft)",
+    "caption": "The characters: first concept (draft)."
+  },
+  "story_image": {
+    "src": "villages/warmington/scenes/sealed-order.jpg",
+    "alt": "A sealed letter on a wooden table by a village window",
+    "caption": "[[c:The sealed order: the letter that went missing.]]"
+  },
+  "legs": {
+    "1-2": [
+      228,
+      "433,635 437,637 440,635 441,638 448,638 453,648 467,646 468,647 473,647 473,651 468,664"
+    ],
+    "2-3": [
+      235,
+      "468,664 473,651 473,647 468,647 467,646 453,648 455,657 457,673 453,676"
+    ],
+    "3-4": [
+      260,
+      "453,676 457,673 459,681 461,684 469,690 474,697 471,721 472,725 475,727 482,728 480,729"
+    ],
+    "4-5": [
+      79,
+      "480,729 482,728 475,727 472,725 471,721 471,717 468,718"
+    ],
+    "5-6": [
+      138,
+      "468,718 471,717 471,721 472,725 475,727 482,728 479,744 481,743"
+    ],
+    "6-7": [
+      77,
+      "481,743 479,744 476,760 476,756"
+    ],
+    "7-8": [
+      123,
+      "476,756 476,760 464,758 465,754 461,751 461,749 463,746 465,746 467,749"
+    ],
+    "8-12": [
+      587,
+      "467,749 465,746 476,746 479,735 481,735 482,728 475,727 472,725 471,721 474,697 480,694 482,695 487,679 480,674 481,671 483,669 478,654 490,648 486,642 492,638 495,634 501,635 501,638"
+    ],
+    "12-13": [
+      200,
+      "501,638 501,635 495,634 495,627 499,614 501,604 500,590 505,591"
+    ],
+    "13-14": [
+      140,
+      "505,591 500,590 499,581 483,584 483,580 475,579"
+    ],
+    "14-20": [
+      336,
+      "475,579 483,580 483,584 458,588 453,590 449,593 446,598 444,608 443,627 440,635 437,637 433,635"
+    ],
+    "8-9": [
+      701,
+      "467,749 465,746 463,746 461,749 461,751 465,754 464,758 471,759 464,794 453,828 472,838 499,846 513,846 542,839 538,825"
+    ],
+    "9-10": [
+      371,
+      "538,825 542,839 560,834 574,825 586,813 592,805 595,800 593,793 587,789 585,792 576,793"
+    ],
+    "10-11": [
+      575,
+      "576,793 585,792 586,790 576,781 557,759 537,740 538,739 536,738 533,730 534,700 562,697 571,698 573,690"
+    ],
+    "11-12": [
+      647,
+      "573,690 571,698 562,697 534,700 535,698 526,701 495,697 482,695 487,679 480,674 481,671 483,669 478,654 490,648 486,642 492,638 495,634 501,635 501,638"
+    ],
+    "14-15": [
+      416,
+      "475,579 483,580 483,584 466,586 453,590 449,593 446,598 432,597 416,593 400,584 398,599 402,596"
+    ],
+    "15-16": [
+      146,
+      "402,596 398,599 400,584 388,571 391,575"
+    ],
+    "16-17": [
+      61,
+      "391,575 388,571 384,569 381,569 376,567"
+    ],
+    "17-18": [
+      80,
+      "376,567 362,566 360,568 359,570 360,573"
+    ],
+    "18-20": [
+      461,
+      "360,573 359,570 360,568 362,566 378,568 381,569 384,569 388,571 400,584 398,599 423,628 427,640 437,637 433,635"
+    ]
+  }
+}

@@ -1,0 +1,397 @@
+{
+  "_readme": "DRAFT Oundle walk (status draft in content/walks.json: only shown with draft colours on). Made by Claude from public sources; everything cyan until the owner approves. Character art still to make.",
+  "id": "oundle",
+  "title": "The Drumming Well",
+  "subtitle": "Oundle Walk",
+  "welcome_text": "[[c:A mystery walk through Oundle's market place, inns, school and church. Choose the short town-centre loop or the longer walk down to the River Nene.]]",
+  "start_text": "[[c:Start in the Market Place, by the old town hall in the middle of Oundle.]]",
+  "coins": {
+    "start_total": 5,
+    "cost_by_hints_used": {
+      "0": 4,
+      "1": 3,
+      "2": 2,
+      "3": 1
+    },
+    "explain": "[[c:You have a purse of 5 coins for the whole walk. Hints are free. Showing an answer costs coins.]]"
+  },
+  "layers": [
+    {
+      "key": "essential_history",
+      "label": "Essential history",
+      "description": "[[c:Short, true facts about each stop.]]",
+      "default_on": true
+    },
+    {
+      "key": "deeper_history",
+      "label": "Deeper history",
+      "description": "[[c:More history for the curious.]]",
+      "default_on": false
+    },
+    {
+      "key": "mystery",
+      "label": "Mystery story",
+      "description": "[[c:The story and the puzzles. Switch it off for a history-only walk.]]",
+      "default_on": true
+    }
+  ],
+  "stops": [
+    "stops/stop-01-market-place.json",
+    "stops/stop-02-talbot.json",
+    "stops/stop-03-drumming-well.json",
+    "stops/stop-04-school-chapel.json",
+    "stops/stop-05-stahl-theatre.json",
+    "stops/stop-06-jesus-church.json",
+    "stops/stop-07-museum.json",
+    "stops/stop-08-south-bridge.json",
+    "stops/stop-09-ship-inn.json",
+    "stops/stop-10-war-memorial.json",
+    "stops/stop-11-st-peters.json",
+    "stops/stop-12-oundle-school.json",
+    "stops/stop-13-market-place-finale.json"
+  ],
+  "route": [
+    {
+      "n": 1,
+      "name": "Market Place and the old town hall",
+      "label": "Market Place",
+      "dir": "r",
+      "map": [
+        1228,
+        1242,
+        "guess"
+      ]
+    },
+    {
+      "n": 2,
+      "name": "The Talbot",
+      "label": "The Talbot",
+      "dir": "l",
+      "map": [
+        1089,
+        1216,
+        "guess"
+      ]
+    },
+    {
+      "n": 3,
+      "name": "Drumming Well Lane",
+      "label": "Drumming Well",
+      "dir": "r",
+      "map": [
+        1055,
+        1102,
+        "guess"
+      ]
+    },
+    {
+      "n": 4,
+      "name": "Oundle School Chapel",
+      "label": "School Chapel",
+      "dir": "l",
+      "map": [
+        884,
+        1005,
+        "guess"
+      ]
+    },
+    {
+      "n": 5,
+      "name": "West Street and the Stahl Theatre",
+      "label": "Stahl Theatre",
+      "dir": "r",
+      "map": [
+        880,
+        1227,
+        "guess"
+      ]
+    },
+    {
+      "n": 6,
+      "name": "The Jesus Church",
+      "label": "Jesus Church",
+      "dir": "l",
+      "map": [
+        730,
+        1242,
+        "guess"
+      ]
+    },
+    {
+      "n": 7,
+      "name": "Oundle Museum",
+      "label": "Museum",
+      "dir": "l",
+      "map": [
+        720,
+        1280,
+        "guess"
+      ]
+    },
+    {
+      "n": 8,
+      "name": "South Bridge and the River Nene",
+      "label": "South Bridge",
+      "dir": "r",
+      "map": [
+        754,
+        1551,
+        "guess"
+      ]
+    },
+    {
+      "n": 9,
+      "name": "The Ship Inn",
+      "label": "The Ship",
+      "dir": "l",
+      "map": [
+        1032,
+        1284,
+        "guess"
+      ]
+    },
+    {
+      "n": 10,
+      "name": "The war memorial",
+      "label": "War memorial",
+      "dir": "r",
+      "map": [
+        1145,
+        1258,
+        "guess"
+      ]
+    },
+    {
+      "n": 11,
+      "name": "St Peter's Church",
+      "label": "St Peter's",
+      "dir": "r",
+      "map": [
+        1239,
+        1153,
+        "guess"
+      ]
+    },
+    {
+      "n": 12,
+      "name": "Oundle School and the Cripps Library",
+      "label": "Oundle School",
+      "dir": "r",
+      "map": [
+        1223,
+        1207,
+        "guess"
+      ]
+    },
+    {
+      "n": 13,
+      "name": "Back to the Market Place",
+      "label": "Market Place",
+      "dir": "r",
+      "map": [
+        1228,
+        1242,
+        "guess"
+      ]
+    }
+  ],
+  "story": [
+    "[[c:Oundle, 1626. The Talbot inn is being rebuilt in fine stone, and carts have been bringing stone from the ruins of Fotheringhay Castle, where Mary, Queen of Scots, was executed.]]",
+    "[[c:With the stone came a carved oak crown, said to be from the staircase the Queen walked down on her last morning. The landlord meant to set it on his new staircase.]]",
+    "[[c:Last night the old well in the inn yard began to drum, as people say it does before trouble. By morning the oak crown was gone.]]",
+    "[[c:Four people were about the yard that night: Silas Webb, the master mason; Tom Crane, a boy from Laxton's school; Martha Pell, the carter who brought the stone; and Josiah Gant, landlord of a rival inn. Find out who took the crown, and why.]]"
+  ],
+  "start_page": {
+    "title": "Getting to the start",
+    "intro": "[[c:The walk starts and finishes in the Market Place, in the centre of Oundle.]]",
+    "address": [
+      "Market Place",
+      "Oundle",
+      "Peterborough",
+      "PE8 4BA"
+    ],
+    "parking": [
+      "[[c:Parking: Oundle has several town car parks a short walk from the Market Place. If you're driving, park first and then open the walk.]]"
+    ],
+    "support": "[[c:Support the town: there are cafés, pubs and independent shops around the Market Place. The short walk takes about 45 minutes to 1 hour 15; the long walk about 1 hour 30 to 2 hours.]]",
+    "directions": {
+      "heading": "[[c:How to get here]]",
+      "text": "[[c:Tap a button to open Google Maps with directions from where you are now.]]",
+      "destination": "Market Place, Oundle, Peterborough PE8 4BA",
+      "buttons": [
+        {
+          "label": "[[c:Drive there]]",
+          "mode": "driving"
+        },
+        {
+          "label": "[[c:Public transport]]",
+          "mode": "transit"
+        },
+        {
+          "label": "[[c:Walk there]]",
+          "mode": "walking"
+        }
+      ]
+    },
+    "parking_photos": [],
+    "map_label": "Open the start in Maps",
+    "map_url": "https://www.google.com/maps/search/?api=1&query=Market+Place+Oundle+Peterborough+PE8+4BA",
+    "begin_label": "[[c:I'm in the Market Place: begin the walk]]"
+  },
+  "access": {
+    "enabled": false,
+    "free_stops": 2,
+    "verify_url": "",
+    "buy_url": "",
+    "title": "[[c:Unlock the rest of the walk]]",
+    "text": "[[c:The first two stops are free to try. Enter your access code to carry on.]]",
+    "buy_text": "[[c:Don't have a code yet? Get one here.]]"
+  },
+  "map": {
+    "src": "villages/oundle/map.svg",
+    "x0": 550,
+    "y0": 850,
+    "w": 1100,
+    "h": 1000,
+    "scale": 1.8
+  },
+  "geo": {
+    "lat0": 52.49213,
+    "lon0": -0.48543,
+    "x0": 0,
+    "y0": 0,
+    "mpp": 1
+  },
+  "lengths": [
+    {
+      "key": "short",
+      "label": "[[c:Short walk: the town centre]]",
+      "description": "[[c:The Market Place, inns, church and school.]]",
+      "stops": [
+        1,
+        2,
+        3,
+        5,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "colour": "#4f7a3a",
+      "default": false
+    },
+    {
+      "key": "medium",
+      "label": "[[c:Medium walk: town and school]]",
+      "description": "[[c:Adds the school chapel.]]",
+      "stops": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "colour": "#a8592a",
+      "default": true
+    },
+    {
+      "key": "long",
+      "label": "[[c:Long walk: town and river]]",
+      "description": "[[c:Adds the Jesus Church, the museum and South Bridge over the Nene.]]",
+      "stops": "all",
+      "colour": "#2c4f7c",
+      "default": false
+    }
+  ],
+  "cast": [
+    {
+      "key": "SILAS",
+      "name": "Silas Webb",
+      "role": "the master mason",
+      "img": "villages/oundle/characters/silas-portrait.jpg"
+    },
+    {
+      "key": "TOM",
+      "name": "Tom Crane",
+      "role": "a boy from Laxton's school",
+      "img": "villages/oundle/characters/tom-portrait.jpg"
+    },
+    {
+      "key": "MARTHA",
+      "name": "Martha Pell",
+      "role": "the carter",
+      "img": "villages/oundle/characters/martha-portrait.jpg"
+    },
+    {
+      "key": "JOSIAH",
+      "name": "Josiah Gant",
+      "role": "landlord of a rival inn",
+      "img": "villages/oundle/characters/josiah-portrait.jpg"
+    }
+  ],
+  "legs": {
+    "1-2": [
+      171,
+      "1228,1242 1170,1259 1143,1259 1141,1250 1133,1238 1133,1230 1092,1226 1089,1216"
+    ],
+    "2-3": [
+      158,
+      "1089,1216 1092,1226 1078,1222 1071,1219 1068,1206 1059,1202 1065,1161 1061,1114 1055,1102"
+    ],
+    "3-5": [
+      336,
+      "1055,1102 1061,1114 1065,1161 1040,1170 1037,1174 1021,1264 888,1243 880,1227"
+    ],
+    "5-9": [
+      183,
+      "880,1227 888,1243 1032,1265 1030,1277 1032,1284"
+    ],
+    "9-10": [
+      133,
+      "1032,1284 1030,1277 1032,1265 1084,1267 1145,1258"
+    ],
+    "10-11": [
+      203,
+      "1145,1258 1143,1259 1141,1250 1133,1238 1136,1185 1178,1194 1206,1192 1239,1153"
+    ],
+    "11-12": [
+      81,
+      "1239,1153 1206,1192 1207,1202 1211,1207 1223,1207"
+    ],
+    "12-13": [
+      53,
+      "1223,1207 1211,1207 1212,1213 1215,1223 1223,1226 1228,1242"
+    ],
+    "3-4": [
+      313,
+      "1055,1102 1061,1114 1047,1036 968,1056 883,1059 884,1005"
+    ],
+    "4-5": [
+      374,
+      "884,1005 883,1059 938,1057 940,1154 948,1174 944,1227 939,1250 888,1243 880,1227"
+    ],
+    "5-6": [
+      184,
+      "880,1227 888,1243 826,1235 788,1234 758,1241 742,1251 730,1242"
+    ],
+    "6-7": [
+      56,
+      "730,1242 742,1251 736,1258 734,1276 720,1280"
+    ],
+    "7-8": [
+      358,
+      "720,1280 734,1276 756,1380 754,1551"
+    ],
+    "8-9": [
+      681,
+      "754,1551 756,1380 814,1387 939,1410 992,1423 1034,1333 1033,1315 1048,1267 1032,1265 1030,1277 1032,1284"
+    ]
+  },
+  "lengths_note": "Route colours: short green, medium copper, long blue. legs = path along real roads/paths between consecutive stops (from OpenStreetMap)."
+}

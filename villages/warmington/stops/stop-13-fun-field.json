@@ -1,0 +1,22 @@
+{
+  "_readme": "Colour code: [[c:...]] CYAN = not confirmed yet (a best guess or a new idea from Claude, for the owner to approve). Plain text = confirmed by the owner.",
+  "id": "stop-13",
+  "order": 13,
+  "name": "Fun Field",
+  "map": [
+    505,
+    591,
+    "confirmed"
+  ],
+  "photo": "villages/warmington/photos/20261019_173702.jpg",
+  "photo_caption": "Fun Field",
+  "layers": {
+    "essential_history": "Fun Field is looked after by the Parish Council. At weekends it's often used by football teams from the surrounding villages: men's, boys' and girls'.",
+    "deeper_history": "[[c:There's more history for this stop to come.]]",
+    "mystery": "[[c:Time for a break from the mystery. Have a play, stretch your legs and get ready for the rest of the walk.]]"
+  },
+  "puzzle": null,
+  "puzzle_note": "[[c:No puzzle here. It's a play break!]]",
+  "evidence": [],
+  "directions_to_next": "[[c:Head west for about 110 metres to the Eaglethorpe board and barns. Look for the board by the barns. Keep to the pavements and paths, and look from the road only.]]"
+}

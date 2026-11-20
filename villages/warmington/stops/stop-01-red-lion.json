@@ -1,0 +1,61 @@
+{
+  "_readme": "Colour code: [[c:...]] CYAN = not confirmed yet (a best guess or a new idea from Claude, for the owner to approve). Plain text = confirmed by the owner.",
+  "id": "stop-01",
+  "order": 1,
+  "name": "Red Lion",
+  "map": [
+    433,
+    635,
+    "confirmed"
+  ],
+  "photo": "villages/warmington/photos/20261019_175746.jpg",
+  "photo_caption": "The Red Lion",
+  "layers": {
+    "essential_history": "This is where the walk starts and finishes. Nobody is quite sure how old the pub is: the village board says late 17th or early 18th century, while the village website says early 1800s.",
+    "deeper_history": "The village board says the toilet block by the pub was once the village fish and chip shop.",
+    "mystery": "[[c:The housekeeper catches you at the door. \"A sealed order has gone missing, and the carter will be here for it this evening. Four people were near it: ]]Martha[[c: at the mill, ]]Jonas[[c: in the stables, ]]Alice[[c: the messenger and ]]Mr Vale[[c: the steward. Find out what each of them has to say.\"]]"
+  },
+  "puzzle": {
+    "ref": "P5",
+    "title": "Whose story can't be true?",
+    "intro": "[[c:Here are three accounts of the afternoon, and a receipt. One of them can't be true. Can you spot which?]]",
+    "material": [
+      "[[c:RECEIPT: the sealed order was handed into the dispatch room at the second bell. Signed for by the housekeeper.]]",
+      "MARTHA[[c:, miller's assistant: \"I was at the mill all afternoon. I loaded the cart before the second bell and it left on time.\"]]",
+      "JONAS[[c:, stable hand: \"I was in the yard with the horses. I saw ]]Alice[[c: ride in at the third bell with the order still in her bag.\"]]",
+      "ALICE[[c:, messenger: \"I got to the dispatch room at the second bell and handed the order to the housekeeper.\"]]"
+    ],
+    "question": "[[c:Whose story can't be true? Type their name.]]",
+    "answer": "Jonas",
+    "accepted_variants": [
+      "jonas",
+      "jonas pike",
+      "pike",
+      "mr pike",
+      "stable hand",
+      "the stable hand"
+    ],
+    "hints": [
+      "[[c:Check what time the receipt says the order was handed in.]]",
+      "[[c:Two of them mention the second bell. One of them mentions the third.]]",
+      "[[c:Someone says they saw the order in a bag after it had already been handed over.]]"
+    ],
+    "reveal": "[[c:The receipt says the order was handed in at the second bell, so ]]Jonas[[c: can't have seen it in ]]Alice[[c:'s bag at the third. Why would he say that? Keep it in mind.]]",
+    "fallback": "[[c:Can't get to the pub? You can still work this one out from the clues above.]]"
+  },
+  "evidence": [
+    "Alice[[c: handed the order over safely at the second bell. The receipt proves it.]]"
+  ],
+  "directions_to_next": "[[c:Follow the road south from the Red Lion towards the village centre. About 250 metres along you'll reach the Manor House, near Manor Place. Look from the road only.]]",
+  "notes": [
+    "Optional refreshment stop. No purchase required.",
+    "No business partnership has been agreed with the pub."
+  ],
+  "support": "[[c:Support the village: have a drink before your walk, or book a table for when you get back.]] [[c:The walk takes about 1 hr 30 depending on your pace, but allow up to 2 hr 30 if you stop to look around.]]",
+  "sources": [
+    {
+      "title": "Village history board (photos taken on the recce, 19 Oct 2026)",
+      "url": "https://www.warmington.org"
+    }
+  ]
+}

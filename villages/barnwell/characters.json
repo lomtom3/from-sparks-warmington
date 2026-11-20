@@ -1,0 +1,29 @@
+{
+  "_readme": "Barnwell cast (made-up characters).",
+  "characters": [
+    {
+      "key": "HAL",
+      "name": "Hal Freeman",
+      "role": "the castle keeper",
+      "img": "villages/barnwell/characters/hal-portrait.jpg"
+    },
+    {
+      "key": "BESS",
+      "name": "Bess Carter",
+      "role": "the parson's housekeeper",
+      "img": "villages/barnwell/characters/bess-portrait.jpg"
+    },
+    {
+      "key": "ROBIN",
+      "name": "Robin Stokes",
+      "role": "the miller's son",
+      "img": "villages/barnwell/characters/robin-portrait.jpg"
+    },
+    {
+      "key": "MASTER THORNE",
+      "name": "Master Giles Thorne",
+      "role": "a London lawyer",
+      "img": "villages/barnwell/characters/thorne-portrait.jpg"
+    }
+  ]
+}

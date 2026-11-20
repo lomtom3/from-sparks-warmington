@@ -1,0 +1,312 @@
+{
+  "_readme": "DRAFT Barnwell walk (status draft in content/walks.json: only shown with draft colours on). Made by Claude from public sources; everything cyan until the owner approves. Character art still to make.",
+  "id": "barnwell",
+  "title": "The Castle Key",
+  "subtitle": "Barnwell Walk",
+  "welcome_text": "[[c:A mystery walk along Barnwell Brook, past a 13th-century castle, two churches and a set of 1601 almshouses.]]",
+  "start_text": "[[c:Start at the Montagu Arms on Main Street.]]",
+  "coins": {
+    "start_total": 5,
+    "cost_by_hints_used": {
+      "0": 4,
+      "1": 3,
+      "2": 2,
+      "3": 1
+    },
+    "explain": "[[c:You have a purse of 5 coins for the whole walk. Hints are free. Showing an answer costs coins.]]"
+  },
+  "layers": [
+    {
+      "key": "essential_history",
+      "label": "Essential history",
+      "description": "[[c:Short, true facts about each stop.]]",
+      "default_on": true
+    },
+    {
+      "key": "deeper_history",
+      "label": "Deeper history",
+      "description": "[[c:More history for the curious.]]",
+      "default_on": false
+    },
+    {
+      "key": "mystery",
+      "label": "Mystery story",
+      "description": "[[c:The story and the puzzles. Switch it off for a history-only walk.]]",
+      "default_on": true
+    }
+  ],
+  "stops": [
+    "stops/stop-01-montagu-arms.json",
+    "stops/stop-02-almshouses.json",
+    "stops/stop-03-war-memorial.json",
+    "stops/stop-04-st-andrews.json",
+    "stops/stop-05-rectory.json",
+    "stops/stop-06-castle.json",
+    "stops/stop-07-manor.json",
+    "stops/stop-08-all-saints.json",
+    "stops/stop-09-montagu-finale.json"
+  ],
+  "route": [
+    {
+      "n": 1,
+      "name": "The Montagu Arms",
+      "label": "Montagu Arms",
+      "dir": "r",
+      "map": [
+        1000,
+        828,
+        "guess"
+      ]
+    },
+    {
+      "n": 2,
+      "name": "Latham's Almshouses",
+      "label": "Almshouses",
+      "dir": "r",
+      "map": [
+        911,
+        820,
+        "guess"
+      ]
+    },
+    {
+      "n": 3,
+      "name": "The war memorial",
+      "label": "War memorial",
+      "dir": "l",
+      "map": [
+        887,
+        753,
+        "guess"
+      ]
+    },
+    {
+      "n": 4,
+      "name": "St Andrew's Church",
+      "label": "St Andrew's",
+      "dir": "r",
+      "map": [
+        885,
+        721,
+        "guess"
+      ]
+    },
+    {
+      "n": 5,
+      "name": "The Rectory",
+      "label": "Rectory",
+      "dir": "l",
+      "map": [
+        835,
+        704,
+        "guess"
+      ]
+    },
+    {
+      "n": 6,
+      "name": "Barnwell Castle",
+      "label": "Barnwell Castle",
+      "dir": "r",
+      "map": [
+        872,
+        522,
+        "guess"
+      ]
+    },
+    {
+      "n": 7,
+      "name": "Barnwell Manor",
+      "label": "Barnwell Manor",
+      "dir": "r",
+      "map": [
+        955,
+        540,
+        "guess"
+      ]
+    },
+    {
+      "n": 8,
+      "name": "All Saints chancel",
+      "label": "All Saints",
+      "dir": "r",
+      "map": [
+        817,
+        1275,
+        "guess"
+      ]
+    },
+    {
+      "n": 9,
+      "name": "Back to the Montagu Arms",
+      "label": "Montagu Arms",
+      "dir": "r",
+      "map": [
+        1000,
+        828,
+        "guess"
+      ]
+    }
+  ],
+  "story": [
+    "[[c:Barnwell, 1601. Parson Nicholas Latham has just founded almshouses for the poor of the village, and the money for them is kept in a chest in the old castle.]]",
+    "[[c:This morning the great iron key to the chest has vanished, and with it the parson's plans.]]",
+    "[[c:Four people had a chance to take it: Hal Freeman, the castle keeper; Bess Carter, who keeps house for the parson; Robin Stokes, the miller's son; and Master Giles Thorne, a lawyer from London. Find the key.]]"
+  ],
+  "start_page": {
+    "title": "Getting to the start",
+    "intro": "[[c:The walk starts and finishes at the Montagu Arms.]]",
+    "address": [
+      "Montagu Arms",
+      "Main Street",
+      "Barnwell",
+      "Peterborough",
+      "PE8 5PH"
+    ],
+    "parking": [
+      "[[c:Parking: please park considerately on the village streets, or ask at the pub. If you're driving, park first and then open the walk.]]"
+    ],
+    "support": "[[c:Support the village: have a drink at the Montagu Arms before or after your walk. The walk takes about 1 hour to 1 hour 30.]]",
+    "directions": {
+      "heading": "[[c:How to get here]]",
+      "text": "[[c:Tap a button to open Google Maps with directions from where you are now.]]",
+      "destination": "Montagu Arms, Main Street, Barnwell, Peterborough PE8 5PH",
+      "buttons": [
+        {
+          "label": "[[c:Drive there]]",
+          "mode": "driving"
+        },
+        {
+          "label": "[[c:Public transport]]",
+          "mode": "transit"
+        },
+        {
+          "label": "[[c:Walk there]]",
+          "mode": "walking"
+        }
+      ]
+    },
+    "parking_photos": [],
+    "map_label": "Open the start in Maps",
+    "map_url": "https://www.google.com/maps/search/?api=1&query=Montagu+Arms+Main+Street+Barnwell+Peterborough+PE8+5PH",
+    "begin_label": "[[c:I'm at the Montagu Arms: begin the walk]]"
+  },
+  "access": {
+    "enabled": false,
+    "free_stops": 2,
+    "verify_url": "",
+    "buy_url": "",
+    "title": "[[c:Unlock the rest of the walk]]",
+    "text": "[[c:The first two stops are free to try. Enter your access code to carry on.]]",
+    "buy_text": "[[c:Don't have a code yet? Get one here.]]"
+  },
+  "map": {
+    "src": "villages/barnwell/map.svg",
+    "x0": 350,
+    "y0": 250,
+    "w": 1000,
+    "h": 1100,
+    "scale": 1.7
+  },
+  "geo": {
+    "lat0": 52.45909,
+    "lon0": -0.47048,
+    "x0": 0,
+    "y0": 0,
+    "mpp": 1
+  },
+  "lengths": [
+    {
+      "key": "short",
+      "label": "[[c:Short walk: castle and churches]]",
+      "description": "[[c:The almshouses, St Andrew's, the castle and the manor.]]",
+      "stops": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        9
+      ],
+      "colour": "#4f7a3a",
+      "default": false
+    },
+    {
+      "key": "medium",
+      "label": "[[c:Medium walk: the whole village]]",
+      "description": "[[c:Adds the rectory and All Saints chancel at the south end.]]",
+      "stops": "all",
+      "colour": "#a8592a",
+      "default": true
+    }
+  ],
+  "cast": [
+    {
+      "key": "HAL",
+      "name": "Hal Freeman",
+      "role": "the castle keeper",
+      "img": "villages/barnwell/characters/hal-portrait.jpg"
+    },
+    {
+      "key": "BESS",
+      "name": "Bess Carter",
+      "role": "the parson's housekeeper",
+      "img": "villages/barnwell/characters/bess-portrait.jpg"
+    },
+    {
+      "key": "ROBIN",
+      "name": "Robin Stokes",
+      "role": "the miller's son",
+      "img": "villages/barnwell/characters/robin-portrait.jpg"
+    },
+    {
+      "key": "MASTER THORNE",
+      "name": "Master Giles Thorne",
+      "role": "a London lawyer",
+      "img": "villages/barnwell/characters/thorne-portrait.jpg"
+    }
+  ],
+  "legs": {
+    "1-2": [
+      197,
+      "1000,828 988,835 971,828 944,795 896,776 883,816 911,820"
+    ],
+    "2-3": [
+      138,
+      "911,820 883,816 896,776 871,766 876,742 887,753"
+    ],
+    "3-4": [
+      40,
+      "887,753 876,742 878,730 885,721"
+    ],
+    "4-6": [
+      350,
+      "885,721 878,730 876,742 899,722 904,679 935,583 941,575 923,562 842,524 872,522"
+    ],
+    "6-7": [
+      236,
+      "872,522 842,524 923,562 959,591 936,546 936,544 955,540"
+    ],
+    "7-9": [
+      345,
+      "955,540 936,544 936,546 959,591 985,622 1001,654 1006,684 1008,718 988,835 1000,828"
+    ],
+    "4-5": [
+      159,
+      "885,721 878,730 871,766 817,755 820,745 818,739 835,704"
+    ],
+    "5-6": [
+      462,
+      "835,704 818,739 820,745 817,755 871,766 876,742 899,722 904,679 935,583 941,575 923,562 842,524 872,522"
+    ],
+    "7-8": [
+      843,
+      "955,540 936,544 936,546 959,591 985,622 1001,654 1006,684 1008,718 983,874 982,898 989,935 988,953 961,1017 939,1096 917,1134 904,1185 876,1245 851,1258 820,1283 817,1275"
+    ],
+    "8-9": [
+      525,
+      "817,1275 820,1283 851,1258 876,1245 904,1185 917,1134 939,1096 961,1017 988,953 989,935 982,898 983,874 988,835 1000,828"
+    ]
+  },
+  "lengths_note": "Route colours: short green, medium copper, long blue. legs = path along real roads/paths between consecutive stops (from OpenStreetMap)."
+}

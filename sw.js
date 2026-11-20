@@ -1,7 +1,7 @@
 /* From Sparks Adventures: offline support.
    Network first (so new versions show straight away), falling back to the saved copy when there is no signal. */
-var CACHE = 'fromsparks-v2';
-var SHELL = ['./', 'index.html', 'app.js', 'theme.css', 'manifest.webmanifest', 'content/walks.json',
+var CACHE = 'fromsparks-v3';
+var SHELL = ['./', 'index.html', 'app.js', 'theme.css', 'manifest.webmanifest', 'villages/walks.json',
   'images/logo.png', 'images/logo-full.jpg', 'images/icon-192.png'];
 
 self.addEventListener('install', function (e) {

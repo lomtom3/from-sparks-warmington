@@ -1,0 +1,128 @@
+{
+  "_readme": "The village chooser. status 'ready' opens the walk in folder; 'soon' shows a Coming soon card. Text in [[c:...]] is cyan (not confirmed). status 'draft' shows only with draft colours on. status 'suggest' is the suggest-a-village card (opens an email).",
+  "villages": [
+    {
+      "id": "warmington",
+      "name": "Warmington",
+      "walk_title": "Warmington Walk",
+      "story": "The Missing Message",
+      "status": "ready",
+      "folder": "villages/warmington/",
+      "teaser": "[[c:A mystery walk around the village, starting and finishing at the Red Lion.]]",
+      "details": "[[c:About 1 hr 30 to 2 hr 30, depending on your pace.]]",
+      "image": "villages/warmington/photos/20261019_175746.jpg",
+      "image_alt": "The Red Lion, Warmington"
+    },
+    {
+      "id": "elton",
+      "name": "Elton",
+      "status": "draft",
+      "walk_title": "Elton Walk",
+      "story": "The Queen's Last Journey",
+      "folder": "villages/elton/",
+      "teaser": "[[c:Lanes, a riverside mill and a Saxon church, starting and finishing at the Crown Inn.]]",
+      "details": "[[c:About 3 km, 1 hr 15 to 2 hr.]]"
+    },
+    {
+      "id": "oundle",
+      "name": "Oundle",
+      "walk_title": "Oundle Walk",
+      "story": "The Drumming Well",
+      "status": "draft",
+      "folder": "villages/oundle/",
+      "teaser": "[[c:Inns, a famous school, a soaring spire and the River Nene. Short or long walk.]]",
+      "details": "[[c:Short: about 1.5 km. Long: about 3.5 km.]]"
+    },
+    {
+      "id": "fotheringhay",
+      "name": "Fotheringhay",
+      "walk_title": "Fotheringhay Walk",
+      "story": "The White Rose",
+      "status": "draft",
+      "folder": "villages/fotheringhay/",
+      "teaser": "[[c:A tiny village with a royal past: Richard III's birthplace and the castle where Mary, Queen of Scots, died.]]",
+      "details": "[[c:About 1.5 km, 45 minutes to 1 hour 15.]]"
+    },
+    {
+      "id": "nassington",
+      "name": "Nassington",
+      "walk_title": "Nassington Walk",
+      "story": "The King's Chessman",
+      "status": "draft",
+      "folder": "villages/nassington/",
+      "teaser": "[[c:A royal hall, King Cnut's chess and the oldest house in the county.]]",
+      "details": "[[c:About 2.5 km, 1 hour to 1 hour 30.]]"
+    },
+    {
+      "id": "barnwell",
+      "name": "Barnwell",
+      "walk_title": "Barnwell Walk",
+      "story": "The Castle Key",
+      "status": "draft",
+      "folder": "villages/barnwell/",
+      "teaser": "[[c:A 13th-century castle, two churches and almshouses from 1601.]]",
+      "details": "[[c:About 3 km, 1 hour to 1 hour 30.]]"
+    },
+    {
+      "id": "polebrook",
+      "name": "Polebrook",
+      "walk_title": "Polebrook Walk",
+      "story": "The Missing Reel",
+      "status": "draft",
+      "folder": "villages/polebrook/",
+      "teaser": "[[c:A quiet village next to a busy American bomber base in the Second World War.]]",
+      "details": "[[c:About 2 km, 45 minutes to 1 hour 15.]]"
+    },
+    {
+      "id": "wansford",
+      "name": "Wansford",
+      "walk_title": "Wansford Walk",
+      "story": "Wansford in England",
+      "status": "draft",
+      "folder": "villages/wansford/",
+      "teaser": "[[c:An old stone bridge, the Great North Road and the famous haycock legend.]]",
+      "details": "[[c:About 2 km, 45 minutes to 1 hour 15.]]"
+    },
+    {
+      "id": "suggest",
+      "name": "Suggest a village",
+      "status": "suggest",
+      "teaser": "[[c:Where would you like a From Sparks walk next? Tell us and we'll take a look.]]",
+      "email": "tsjprints+villages@gmail.com"
+    }
+  ],
+  "about": {
+    "title": "[[c:About, safety and privacy]]",
+    "sections": [
+      {
+        "heading": "[[c:About]]",
+        "text": [
+          "[[c:From Sparks Adventures makes self-guided mystery walks around local villages. Walk at your own pace, solve the puzzles and learn a little local history on the way.]]"
+        ]
+      },
+      {
+        "heading": "[[c:Stay safe]]",
+        "text": [
+          "[[c:Take care near roads and keep to pavements, public footpaths and open spaces.]]",
+          "[[c:Children should be with an adult. Look at buildings from the road: please don't go into private property or gardens.]]",
+          "[[c:Be kind to the people who live here: keep noise down, take litter home and leave gates as you find them.]]"
+        ]
+      },
+      {
+        "heading": "[[c:Your privacy]]",
+        "text": [
+          "[[c:There are no accounts. Your progress, settings and any unlock are saved only on your phone, in this browser.]]",
+          "[[c:If you switch on location, it is used on your phone to show where you are and is never sent to us or anyone else.]]",
+          "[[c:The directions buttons open Google Maps, which has its own privacy policy.]]"
+        ]
+      },
+      {
+        "heading": "[[c:Credits]]",
+        "text": [
+          "Map data © OpenStreetMap contributors, available under the Open Database Licence (openstreetmap.org/copyright).",
+          "[[c:Illustrations made for From Sparks Adventures with the help of AI image tools.]]"
+        ]
+      }
+    ]
+  }
+}

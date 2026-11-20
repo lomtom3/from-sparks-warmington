@@ -1,0 +1,26 @@
+{
+  "_readme": "Elton draft. [[c:...]] is cyan = not confirmed. History from the Elton Parish Council short history unless noted.",
+  "id": "elton-12",
+  "order": 12,
+  "name": "All Saints Church",
+  "map": [
+    1003,
+    1258,
+    "guess"
+  ],
+  "layers": {
+    "essential_history": "[[c:Work on the stone chancel arch of All Saints began in 1270. Inside are two Saxon crosses, found buried north of the chancel during repairs in 1885 and 1886.]]",
+    "deeper_history": "[[c:The crosses were moved inside the church in 2022 to protect them. Parish records here go back to 1279.]]",
+    "mystery": "[[c:Inside All Saints, the clerk shows you where Mistress Carey knelt. She explains the coded scrap from the stable: she wrote it for herself, to remember where she saw the officer take the casket.]]"
+  },
+  "sources": [
+    {
+      "title": "Elton Parish Council: A short history of Elton",
+      "url": "https://eltonparishcouncil.gov.uk/a-short-history-of-elton"
+    }
+  ],
+  "directions_to_next": "[[c:Head south-east, about 100 metres as the crow flies, to The Black Horse. The Black Horse is on Overend, just east of the church. Keep to the pavements and paths.]]",
+  "evidence": [
+    "[[c:Mistress Carey saw the casket taken to the ford and wrote it down in code.]]"
+  ]
+}

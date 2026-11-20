@@ -1,0 +1,48 @@
+{
+  "_readme": "Draft Oundle walk. [[c:...]] = cyan, not confirmed. Positions are guesses until recorded on site.",
+  "id": "oundle-04",
+  "order": 4,
+  "name": "Oundle School Chapel",
+  "map": [
+    884,
+    1005,
+    "guess"
+  ],
+  "layers": {
+    "essential_history": "[[c:Oundle School grew from Laxton Grammar School, founded in 1556 under the will of Sir William Laxton, a grocer who became Lord Mayor of London. The Worshipful Company of Grocers still runs the school.]]",
+    "deeper_history": "[[c:The school chapel was built in 1922 as a memorial to the First World War, and has an east window by the artist John Piper. A school existed in Oundle by at least 1465. Please look from the road: the school is private.]]",
+    "mystery": "[[c:The schoolmaster vouches for Tom: the boy was back in his bed by one o'clock, and the school door was barred. (Long walk only: this clears Tom.)]]"
+  },
+  "sources": [
+    {
+      "title": "Wikipedia: Oundle",
+      "url": "https://en.wikipedia.org/wiki/Oundle"
+    }
+  ],
+  "evidence": [
+    "[[c:Tom was back in school by one o'clock: he could not have hidden anything after that.]]"
+  ],
+  "directions_to_next": "[[c:Head south, about 220 metres as the crow flies, to West Street and the Stahl Theatre. Head down to West Street. Keep to pavements and public paths.]]",
+  "puzzle": {
+    "ref": "O4b",
+    "title": "[[c:The school bell]]",
+    "intro": "",
+    "material": [
+      "[[c:SCHOOLMASTER: \"The bell rang at nine for bed. I checked every boy at midnight, and again an hour later. Tom was asleep both times.\"]]"
+    ],
+    "question": "[[c:At what hour did the schoolmaster check the boys the second time? (just the number)]]",
+    "answer": "1",
+    "accepted_variants": [
+      "one",
+      "1 o'clock",
+      "one o'clock"
+    ],
+    "hints": [
+      "[[c:The first check was at midnight.]]",
+      "[[c:Add one hour.]]",
+      "[[c:It's one o'clock.]]"
+    ],
+    "reveal": "[[c:One o'clock. Tom was asleep at midnight and at one, so he could not have hidden the crown.]]",
+    "fallback": "[[c:Stuck? Take a hint: hints are free.]]"
+  }
+}
