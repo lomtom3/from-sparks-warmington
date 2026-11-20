@@ -4,8 +4,8 @@
   "order": 7,
   "name": "Roberts Lane",
   "map": [
-    560,
-    858,
+    600,
+    857,
     "guess"
   ],
   "layers": {
@@ -49,5 +49,5 @@
   "evidence": [
     "[[c:Mr Pryce was the only guest at the inn, and was out of his room at one.]]"
   ],
-  "directions_to_next": "[[c:Head north back to the Kings Arms, about 460 metres along the route. Follow the line on the map, and keep to pavements and public paths.]]"
+  "directions_to_next": "[[c:Walk north up the footpath back into the village and up Kings Arms Lane to the Kings Arms. About 380 metres.]]"
 }

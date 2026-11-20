@@ -42,14 +42,14 @@
     "stops/stop-04-elton-lock.json",
     "stops/stop-05-methodist-church.json",
     "stops/stop-06-chapel-lane.json",
-    "stops/stop-07-hayes-walk.json",
-    "stops/stop-08-brawn-way.json",
-    "stops/stop-09-highgate-hall.json",
-    "stops/stop-10-village-store.json",
-    "stops/stop-11-school-lane.json",
-    "stops/stop-12-all-saints-church.json",
-    "stops/stop-13-black-horse.json",
-    "stops/stop-14-overend.json",
+    "stops/stop-07-overend.json",
+    "stops/stop-08-black-horse.json",
+    "stops/stop-09-all-saints-church.json",
+    "stops/stop-10-school-lane.json",
+    "stops/stop-11-village-store.json",
+    "stops/stop-12-highgate-hall.json",
+    "stops/stop-13-hayes-walk.json",
+    "stops/stop-14-brawn-way.json",
     "stops/stop-15-crown-inn-finale.json"
   ],
   "route": [
@@ -121,72 +121,17 @@
     },
     {
       "n": 7,
-      "name": "Hayes Walk",
-      "label": "Hayes Walk",
+      "name": "Overend",
+      "label": "Overend",
       "dir": "r",
       "map": [
-        907,
-        866,
+        1078,
+        1505,
         "guess"
       ]
     },
     {
       "n": 8,
-      "name": "Brawn Way and Faber Lane",
-      "label": "Brawn Way",
-      "dir": "r",
-      "map": [
-        930,
-        805,
-        "guess"
-      ]
-    },
-    {
-      "n": 9,
-      "name": "Highgate Green and Highgate Hall",
-      "label": "Highgate Hall",
-      "dir": "r",
-      "map": [
-        1124,
-        1027,
-        "guess"
-      ]
-    },
-    {
-      "n": 10,
-      "name": "Elton Village Store",
-      "label": "Village Store",
-      "dir": "l",
-      "map": [
-        868,
-        1022,
-        "guess"
-      ]
-    },
-    {
-      "n": 11,
-      "name": "School Lane",
-      "label": "School Lane",
-      "dir": "l",
-      "map": [
-        968,
-        1095,
-        "guess"
-      ]
-    },
-    {
-      "n": 12,
-      "name": "All Saints Church",
-      "label": "All Saints Church",
-      "dir": "l",
-      "map": [
-        1003,
-        1258,
-        "guess"
-      ]
-    },
-    {
-      "n": 13,
       "name": "The Black Horse",
       "label": "Black Horse",
       "dir": "r",
@@ -197,13 +142,68 @@
       ]
     },
     {
-      "n": 14,
-      "name": "Overend",
-      "label": "Overend",
+      "n": 9,
+      "name": "All Saints Church",
+      "label": "All Saints Church",
+      "dir": "l",
+      "map": [
+        1003,
+        1258,
+        "guess"
+      ]
+    },
+    {
+      "n": 10,
+      "name": "School Lane",
+      "label": "School Lane",
+      "dir": "l",
+      "map": [
+        968,
+        1095,
+        "guess"
+      ]
+    },
+    {
+      "n": 11,
+      "name": "Elton Village Store",
+      "label": "Village Store",
+      "dir": "l",
+      "map": [
+        868,
+        1022,
+        "guess"
+      ]
+    },
+    {
+      "n": 12,
+      "name": "Highgate Green and Highgate Hall",
+      "label": "Highgate Hall",
       "dir": "r",
       "map": [
-        1078,
-        1505,
+        1124,
+        1027,
+        "guess"
+      ]
+    },
+    {
+      "n": 13,
+      "name": "Hayes Walk",
+      "label": "Hayes Walk",
+      "dir": "r",
+      "map": [
+        907,
+        866,
+        "guess"
+      ]
+    },
+    {
+      "n": 14,
+      "name": "Brawn Way and Faber Lane",
+      "label": "Brawn Way",
+      "dir": "r",
+      "map": [
+        930,
+        805,
         "guess"
       ]
     },
@@ -290,17 +290,15 @@
   "lengths": [
     {
       "key": "short",
-      "label": "[[c:Short walk: mill and church]]",
-      "description": "[[c:The green, the mill and lock, the shop and All Saints.]]",
+      "label": "[[c:Short walk: the village centre]]",
+      "description": "[[c:Stocks Green, the Methodist church, the village store, Hayes Walk and Brawn Way.]]",
       "stops": [
         1,
         2,
-        3,
-        4,
         5,
-        10,
         11,
-        12,
+        13,
+        14,
         15
       ],
       "colour": "#4f7a3a",
@@ -308,17 +306,14 @@
     },
     {
       "key": "medium",
-      "label": "[[c:Medium walk: the whole village]]",
-      "description": "[[c:Every stop, including Hayes Walk, Highgate Hall, the Black Horse and Overend.]]",
+      "label": "[[c:Medium walk: mill, lock and church lanes]]",
+      "description": "[[c:Adds the mill and the lock by the river, School Lane and Highgate Hall.]]",
       "stops": [
         1,
         2,
         3,
         4,
         5,
-        7,
-        8,
-        9,
         10,
         11,
         12,
@@ -331,8 +326,8 @@
     },
     {
       "key": "long",
-      "label": "[[c:Long walk: village and parkland]]",
-      "description": "[[c:Adds Chapel Lane and the edge of the Elton Hall parkland.]]",
+      "label": "[[c:Long walk: Chapel Lane, Overend and the north fields]]",
+      "description": "[[c:Adds Chapel Lane and the field path, Overend, the Black Horse and All Saints, and a field loop at the north end. About 4 km: the parkland and the tracks south of Elton are private, so it can't go further.]]",
       "stops": "all",
       "colour": "#2c4f7c",
       "default": false
@@ -366,72 +361,90 @@
   ],
   "legs": {
     "1-2": [
-      164,
+      137,
       "755,805 761,817 730,811 728,817 713,814 668,856 647,856 640,868"
     ],
     "2-3": [
-      297,
-      "640,868 647,856 668,856 649,891 648,903 642,894 633,897 598,923 580,927 543,914 528,898 516,871 496,853 496,862"
+      277,
+      "640,868 647,856 610,855 642,894 626,901 598,923 580,927 543,914 528,898 516,871 496,853 496,862"
     ],
     "3-4": [
-      71,
+      55,
       "496,862 496,853 492,851 442,851 447,856"
     ],
     "4-5": [
-      314,
+      297,
       "447,856 442,851 492,851 516,871 528,898 543,914 580,927 598,923 626,901 642,894 656,912 662,940 670,947"
     ],
-    "5-10": [
-      255,
-      "670,947 662,940 672,925 708,948 744,966 868,1010 868,1022"
-    ],
-    "10-11": [
-      177,
-      "868,1022 868,1010 964,1043 970,1058 968,1095"
-    ],
-    "11-12": [
-      218,
-      "968,1095 969,1130 953,1229 961,1250 983,1270 994,1274 1003,1258"
-    ],
-    "12-15": [
-      758,
-      "1003,1258 994,1274 983,1270 961,1250 953,1229 970,1114 970,1058 964,1043 868,1010 882,980 897,913 722,868 723,837 730,811 761,817 755,805"
-    ],
-    "5-7": [
-      386,
-      "670,947 662,940 659,920 647,897 668,856 893,912 907,866"
-    ],
-    "7-8": [
-      66,
-      "907,866 921,821 930,805"
-    ],
-    "8-9": [
-      409,
-      "930,805 921,821 893,912 1041,959 1085,969 1097,966 1109,989 1123,1005 1111,1015 1124,1027"
-    ],
-    "9-10": [
-      300,
-      "1124,1027 1111,1015 1095,1036 1089,1049 1075,1048 1020,1058 991,1052 868,1010 868,1022"
-    ],
-    "12-13": [
-      150,
-      "1003,1258 994,1274 1061,1291 1059,1344 1052,1349"
-    ],
-    "13-14": [
-      191,
-      "1052,1349 1059,1344 1075,1515 1078,1505"
-    ],
-    "14-15": [
-      1044,
-      "1078,1505 1075,1515 1065,1417 1059,1344 1061,1291 1016,1281 983,1270 961,1250 953,1229 970,1114 970,1058 964,1043 868,1010 882,980 897,913 722,868 723,837 730,811 761,817 755,805"
-    ],
     "5-6": [
-      282,
+      272,
       "670,947 662,940 552,1108 528,1175"
     ],
     "6-7": [
-      631,
-      "528,1175 552,1108 578,1067 668,1109 773,1010 785,1005 796,986 868,1010 882,980 897,913 893,912 907,866"
+      906,
+      "528,1175 552,1108 578,1067 752,1148 865,1186 957,1206 953,1229 961,1250 983,1270 1016,1281 1061,1291 1059,1344 1065,1417 1075,1515 1078,1505"
+    ],
+    "7-8": [
+      172,
+      "1078,1505 1075,1515 1059,1344 1052,1349"
+    ],
+    "8-9": [
+      122,
+      "1052,1349 1059,1344 1061,1291 994,1274 1003,1258"
+    ],
+    "9-10": [
+      194,
+      "1003,1258 994,1274 983,1270 961,1250 953,1229 969,1130 968,1095"
+    ],
+    "10-11": [
+      160,
+      "968,1095 970,1058 964,1043 868,1010 868,1022"
+    ],
+    "11-12": [
+      300,
+      "868,1022 868,1010 991,1052 1020,1058 1075,1048 1089,1049 1095,1036 1111,1015 1124,1027"
+    ],
+    "12-13": [
+      300,
+      "1124,1027 1111,1015 1123,1005 1109,989 1097,966 1085,969 1041,959 893,912 907,866"
+    ],
+    "13-14": [
+      61,
+      "907,866 921,821 930,805"
+    ],
+    "14-15": [
+      676,
+      "930,805 936,794 948,782 975,766 959,730 950,718 927,601 933,591 823,555 812,562 814,582 811,605 780,712 730,811 761,817 755,805"
+    ],
+    "medium:5-10": [
+      400,
+      "670,947 662,940 672,925 708,948 744,966 796,986 964,1043 970,1058 968,1095",
+      "[[c:Walk east along Main Street, then turn right down School Lane, about 400 metres.]]"
+    ],
+    "medium:14-15": [
+      390,
+      "930,805 921,821 887,810 874,804 868,798 859,808 854,822 851,821 837,866 841,873 835,896 722,868 723,837 730,811 761,817 755,805",
+      "[[c:Walk back west through the village lanes to the Crown, about 390 metres.]]"
+    ],
+    "short:2-5": [
+      139,
+      "640,868 647,856 610,855 656,912 662,940 670,947",
+      "[[c:Down to the Methodist church, about 140 metres.]]"
+    ],
+    "short:5-11": [
+      233,
+      "670,947 662,940 672,925 708,948 744,966 868,1010 868,1022",
+      "[[c:East along Main Street to the village store, about 230 metres.]]"
+    ],
+    "short:11-13": [
+      156,
+      "868,1022 868,1010 882,980 897,913 893,912 907,866",
+      "[[c:Turn left up the lane and cross Main Street into Hayes Walk, about 160 metres.]]"
+    ],
+    "short:14-15": [
+      390,
+      "930,805 921,821 887,810 874,804 868,798 859,808 854,822 851,821 837,866 841,873 835,896 722,868 723,837 730,811 761,817 755,805",
+      "[[c:Walk back west through the village lanes to the Crown, about 390 metres.]]"
     ]
   },
   "lengths_note": "Route colours: short green, medium copper, long blue. legs = path along real roads/paths between consecutive stops (from OpenStreetMap)."

@@ -4,8 +4,8 @@
   "order": 6,
   "name": "Hemington Road and Goblin Brook",
   "map": [
-    782,
-    923,
+    724,
+    872,
     "guess"
   ],
   "layers": {
@@ -26,5 +26,5 @@
   "evidence": [
     "[[c:A man in a smart suit was seen at the airfield fence with a camera after midnight.]]"
   ],
-  "directions_to_next": "[[c:Head west to Roberts Lane, about 300 metres along the route. Follow the line on the map, and keep to pavements and public paths.]]"
+  "directions_to_next": "[[c:The countryside loop, about 2.7 km. Follow Hemington Road south-east out of the village for about 1.2 km. At the bend, take the footpath on the right heading west across the fields. Where it meets the lane, turn right and follow the lane north back to the village, to the end of Robert's Lane.]]"
 }

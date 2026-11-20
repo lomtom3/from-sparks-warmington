@@ -1,7 +1,7 @@
 {
   "_readme": "Elton draft. [[c:...]] is cyan = not confirmed. History from the Elton Parish Council short history unless noted.",
-  "id": "elton-11",
-  "order": 11,
+  "id": "elton-10",
+  "order": 10,
   "name": "School Lane",
   "map": [
     968,
@@ -19,7 +19,7 @@
       "url": "https://eltonparishcouncil.gov.uk/a-short-history-of-elton"
     }
   ],
-  "directions_to_next": "[[c:Head south, about 170 metres as the crow flies, to All Saints Church. Follow School Lane to the church at the end. Keep to the pavements and paths.]]",
+  "directions_to_next": "[[c:Walk down School Lane and turn left to the village store, about 160 metres.]]",
   "puzzle": {
     "ref": "E7",
     "title": "[[c:The clerk's mirror note]]",

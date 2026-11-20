@@ -1,11 +1,11 @@
 {
   "_readme": "Draft Wansford walk. [[c:...]] = cyan, not confirmed. Positions are guesses until recorded on site.",
-  "id": "wansford-08",
-  "order": 8,
+  "id": "wansford-05",
+  "order": 5,
   "name": "The Great North Road",
   "map": [
-    700,
-    330,
+    690,
+    345,
     "guess"
   ],
   "layers": {
@@ -45,5 +45,5 @@
   "evidence": [
     "[[c:Signor Rossi was performing all night: his ticket stubs add up.]]"
   ],
-  "directions_to_next": "[[c:Head south-east, about 410 metres as the crow flies, to the Papermills. Head back over to the south side of the river. Keep to pavements and public paths.]]"
+  "directions_to_next": "[[c:Head north up the Old North Road for about 220 metres.]]"
 }

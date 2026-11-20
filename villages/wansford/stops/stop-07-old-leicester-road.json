@@ -1,7 +1,7 @@
 {
   "_readme": "Draft Wansford walk. [[c:...]] = cyan, not confirmed. Positions are guesses until recorded on site.",
-  "id": "wansford-06",
-  "order": 6,
+  "id": "wansford-07",
+  "order": 7,
   "name": "Old Leicester Road",
   "map": [
     496,
@@ -19,5 +19,5 @@
       "url": "https://en.wikipedia.org/wiki/Wansford,_Cambridgeshire"
     }
   ],
-  "directions_to_next": "[[c:Head east, about 160 metres as the crow flies, to the Old North Road. Turn north-east along the Old North Road. Keep to pavements and public paths.]]"
+  "directions_to_next": "[[c:Walk down Old Leicester Road to the junction, then follow the lane to St Mary's Church. About 350 metres.]]"
 }

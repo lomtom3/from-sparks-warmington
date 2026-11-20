@@ -100,8 +100,14 @@
 
   // ---------- map (markers are drawn here so they can change colour as you walk) ----------
   // Red = where we're talking about. Grey = already visited. Black = still to visit. Cyan = position not confirmed.
-  function legPoints(a, b) {
-    var L = walk.legs && (walk.legs[a.n + '-' + b.n]);
+  // A leg can be drawn differently for one walk length: "long:4-5" beats "4-5".
+  function getLeg(a, b, lenKey) {
+    if (!walk.legs) return null;
+    var k = lenKey || (currentLength() || {}).key;
+    return walk.legs[k + ':' + a + '-' + b] || walk.legs[a + '-' + b] || null;
+  }
+  function legPoints(a, b, lenKey) {
+    var L = getLeg(a.n, b.n, lenKey);
     if (!L) return [[a.map[0], a.map[1]], [b.map[0], b.map[1]]];
     return L[1].split(' ').map(function (p) { return p.split(',').map(Number); });
   }
@@ -109,16 +115,18 @@
   function lengthStops(len) { return walk.route.filter(function (r) { return len.stops === 'all' || len.stops.indexOf(r.n) >= 0; }); }
   function lengthKm(len) {
     var rs = lengthStops(len).filter(function (r) { return r.map; }), m = 0;
-    for (var i = 0; i < rs.length - 1; i++) { var L = walk.legs && walk.legs[rs[i].n + '-' + rs[i + 1].n]; if (L) m += L[0]; else return null; }
+    for (var i = 0; i < rs.length - 1; i++) { var L = getLeg(rs[i].n, rs[i + 1].n, len.key); if (L) m += L[0]; else return null; }
     return Math.round(m / 100) / 10;
   }
   // Directions between two stops on the chosen route. Uses the written directions when the next stop is the very next one,
   // otherwise (a shorter route skipping stops) builds them from the map.
   function dirsBetween(a, b) {
     if (!a || !b) return '';
+    var own = getLeg(a.order, b.order);
+    if (own && own[2]) return own[2];                       // directions written for this walk length
     if (b.order === a.order + 1 || !a.directions_to_next) return a.directions_to_next || '';
     var ra = walk.route.filter(function (r) { return r.n === a.order; })[0], rb = walk.route.filter(function (r) { return r.n === b.order; })[0];
-    var L = walk.legs && walk.legs[a.order + '-' + b.order];
+    var L = own;
     var name = b.name.replace(/\[\[c:|\]\]/g, '');
     if (!ra || !rb || !ra.map || !rb.map) return '[[c:Next, head to ' + name + '. Follow the route line on the map.]]';
     var la = xyToLL(ra.map[0], ra.map[1]), lb = xyToLL(rb.map[0], rb.map[1]);
@@ -153,18 +161,26 @@
       // Every route in its own colour: long underneath, short on top.
       lengths().slice().reverse().forEach(function (len) {
         var rs = lengthStops(len).filter(function (r) { return r.map; });
-        for (var j = 0; j < rs.length - 1; j++) poly(legPoints(rs[j], rs[j + 1]), { stroke: len.colour || '#a8592a', 'stroke-opacity': 0.9, 'stroke-width': (len.key === 'short' ? 3 : 4.2) * K });
+        for (var j = 0; j < rs.length - 1; j++) poly(legPoints(rs[j], rs[j + 1], len.key), { stroke: len.colour || '#a8592a', 'stroke-opacity': 0.9, 'stroke-width': (len.key === 'short' ? 3 : 4.2) * K });
       });
     } else {
-      // Route line along the real roads and paths: faint half-tone grey ahead, darker where you've walked.
+      // Route line along the real roads and paths: the next leg bold, the rest of the route in a half-tone of this walk's colour, darker where you've walked.
       var far = Math.max(state.furthest || 0, state.current || 0);      // index of the furthest stop opened
       for (var li = 0; li < placed.length - 1; li++) {
         var pa = placed[li], pb = placed[li + 1];
         if (pa.map[0] === pb.map[0] && pa.map[1] === pb.map[1]) continue;
-        var walked = far >= li + 1;
-        poly(legPoints(pa, pb), walked
-          ? { stroke: '#1e1a12', 'stroke-opacity': 0.55, 'stroke-width': 2.4 * K }
-          : { stroke: '#8a8578', 'stroke-opacity': 0.35, 'stroke-width': 2 * K, 'stroke-dasharray': (5 * K) + ' ' + (4 * K) });
+        var walked = far >= li + 1, next = li === (state.current || 0);
+        var pts = legPoints(pa, pb);
+        if (next && !walked) {
+          // The leg you're walking now: bold in this walk's colour, with a pale edge so it stands off the roads.
+          var lc = (currentLength() || {}).colour || '#a8592a';
+          poly(pts, { stroke: '#fbf6ea', 'stroke-opacity': 0.9, 'stroke-width': 6.4 * K });
+          poly(pts, { stroke: lc, 'stroke-opacity': 0.95, 'stroke-width': 3.6 * K });
+        } else {
+          poly(pts, walked
+            ? { stroke: '#1e1a12', 'stroke-opacity': 0.7, 'stroke-width': 3 * K }
+            : { stroke: (currentLength() || {}).colour || '#a8592a', 'stroke-opacity': 0.5, 'stroke-width': 3.2 * K });
+        }
       }
     }
     placed.forEach(function (r) {
@@ -572,7 +588,20 @@
       el('button', { className: 'wide secondary', text: '[[c:Find the start (parking and directions)]]', onClick: function () { location.hash = '#start'; } }),
       el('button', { className: 'wide secondary', text: 'See the whole route', onClick: function () { location.hash = '#route'; } }),
       el('button', { className: 'wide secondary', text: 'Choose a different village', onClick: function () { location.hash = '#villages'; } })
-    ]);
+    ].concat(salesPreview()));
+  }
+
+  // Draft only (shown with "Show draft colours" on, while selling is switched off): how buying a walk will work.
+  function salesPreview() {
+    if (!state.review || accessOn()) return [];
+    var ac = walk.access || {};
+    return [el('section', { className: 'card' }, [
+      el('h2', { text: '[[c:How buying a walk will work]]' }),
+      el('p', { text: '[[c:The first ' + (ac.free_stops || 2) + ' stops of every walk are free to try, so people can see what it is like before paying.]]' }),
+      el('p', { text: '[[c:To carry on, they buy the walk online and get an access code by email. The code unlocks every length of that walk on their phone, as many times as they like.]]' }),
+      el('p', { text: '[[c:Price to be decided.]]' }),
+      el('button', { className: 'wide secondary', text: '[[c:Preview the unlock page]]', onClick: function () { location.hash = '#unlock'; } })
+    ])];
   }
 
   function setupScreen() {
@@ -746,7 +775,8 @@
     });
   }
   function unlockScreen() {
-    if (!accessOn() || state.access) { goStop(state.current); return; }
+    var preview = !accessOn() && state.review;
+    if ((!accessOn() && !preview) || state.access) { goStop(state.current); return; }
     var ac = walk.access, msg = el('p', { className: 'muted' });
     var input = document.createElement('input');
     input.type = 'text'; input.placeholder = 'Access code'; input.autocomplete = 'off'; input.autocapitalize = 'characters'; input.id = 'access-input';
@@ -760,6 +790,7 @@
     input.addEventListener('keydown', function (e) { if (e.key === 'Enter') submit(); });
     var nodes = [el('p', { className: 'kicker', text: walk.subtitle }), el('h1', { text: ac.title }), el('p', { text: ac.text }), input,
       el('button', { className: 'wide copper', text: 'Unlock', onClick: submit, attrs: { id: 'access-btn' } }), msg];
+    if (preview) nodes.unshift(el('p', { className: 'muted', text: '[[c:Preview only. Selling is switched off, so nobody is asked for a code yet.]]' }));
     if (ac.buy_url) nodes.push(el('a', { className: 'btn-link wide', text: ac.buy_text, attrs: { href: ac.buy_url, target: '_blank', rel: 'noopener' } }));
     nodes.push(el('div', { className: 'nav' }, [el('button', { className: 'secondary', text: 'Back to the walk', onClick: function () { goStop(Math.min(state.current, ac.free_stops - 1)); } })]));
     show(nodes);

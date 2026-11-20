@@ -177,11 +177,11 @@
   },
   "map": {
     "src": "villages/nassington/map.svg",
-    "x0": 300,
-    "y0": 200,
-    "w": 1100,
-    "h": 900,
-    "scale": 1.8
+    "x0": 200,
+    "y0": 150,
+    "w": 1000,
+    "h": 1730,
+    "scale": 1.7
   },
   "geo": {
     "lat0": 52.5594,
@@ -193,8 +193,8 @@
   "lengths": [
     {
       "key": "short",
-      "label": "[[c:Short walk: church and manor]]",
-      "description": "[[c:Church Street, the church and the Prebendal Manor.]]",
+      "label": "[[c:Short walk: Church Street loop]]",
+      "description": "[[c:Along Church Street to the church and the Prebendal Manor, back on the field path south of the village.]]",
       "stops": [
         1,
         2,
@@ -208,10 +208,18 @@
     {
       "key": "medium",
       "label": "[[c:Medium walk: round the village]]",
-      "description": "[[c:Adds the north of the village and the Queen's Head.]]",
+      "description": "[[c:Adds St Mary's Close and the Queen's Head, going round the west and north of the village.]]",
       "stops": "all",
       "colour": "#a8592a",
       "default": true
+    },
+    {
+      "key": "long",
+      "label": "[[c:Long walk: the southern fields]]",
+      "description": "[[c:A countryside loop south across the fields before coming back through the village to the north end.]]",
+      "stops": "all",
+      "colour": "#2c4f7c",
+      "default": false
     }
   ],
   "cast": [
@@ -242,32 +250,38 @@
   ],
   "legs": {
     "1-2": [
-      278,
+      242,
       "1024,716 1034,704 995,705 839,712 793,724 780,709"
     ],
     "2-3": [
-      230,
+      196,
       "780,709 793,724 769,731 731,737 682,741 654,740 640,733 602,723 602,708"
     ],
     "3-4": [
-      121,
+      86,
       "602,708 602,723 591,718 569,700 591,730 598,735 585,750"
     ],
-    "4-7": [
-      475,
-      "585,750 598,735 654,740 731,737 769,731 839,712 1034,704 1024,716"
-    ],
     "4-5": [
-      287,
-      "585,750 598,735 591,730 569,700 542,642 557,637 585,644 601,639 606,633 613,607 609,592 591,572"
+      3947,
+      "585,750 598,735 631,739 632,836 639,905 653,906 709,1019 755,1129 762,1155 854,1301 871,1413 880,1550 915,1693 936,1838 853,1813 546,1809 306,1801 313,1793 258,1770 274,1744 495,1458 532,1390 574,1328 630,1225 658,1196 696,1167 755,1129 823,1079 828,1065 922,1017 906,882 1055,844 1034,704 1043,641 1028,633 1026,629 1018,628 1014,659 957,641 841,619 743,614 707,608 651,612 635,609 620,609 613,607 609,592 591,572"
     ],
     "5-6": [
-      701,
-      "591,572 609,592 613,607 620,609 635,609 651,612 707,608 786,550 835,523 919,466 1005,419 1034,408 1052,366 1106,368 1099,403 1111,407 1105,418"
+      812,
+      "591,572 574,554 567,535 552,403 587,395 593,396 713,384 781,390 884,414 888,423 1034,408 1052,366 1081,365 1106,368 1099,403 1111,407 1105,418"
     ],
     "6-7": [
-      350,
+      322,
       "1105,418 1111,407 1099,403 1071,500 1060,541 1034,704 1024,716"
+    ],
+    "medium:4-5": [
+      900,
+      "585,750 598,735 631,739 632,836 639,905 518,905 460,879 402,758 434,733 470,716 516,706 564,688 542,642 557,637 585,644 601,639 610,623 613,607 609,592 591,572",
+      "[[c:Take the footpath south from the Prebendal Manor, turn right along the field path and follow it round the west of the village to Apethorpe Road. Turn right along the pavement, then go up St Mary's Close. About 900 metres.]]"
+    ],
+    "short:4-7": [
+      771,
+      "585,750 598,735 631,739 632,836 639,905 726,904 794,883 850,899 906,882 1055,844 1034,704 1024,716",
+      "[[c:Take the footpath south from the Prebendal Manor, then turn left along the field path east to Station Road. Turn left and walk back up to the Black Horse. About 770 metres.]]"
     ]
   },
   "lengths_note": "Route colours: short green, medium copper, long blue. legs = path along real roads/paths between consecutive stops (from OpenStreetMap)."

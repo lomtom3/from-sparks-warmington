@@ -1,7 +1,7 @@
 {
   "_readme": "Elton draft. [[c:...]] is cyan = not confirmed. History from the Elton Parish Council short history unless noted.",
-  "id": "elton-13",
-  "order": 13,
+  "id": "elton-08",
+  "order": 8,
   "name": "The Black Horse",
   "map": [
     1052,
@@ -19,7 +19,7 @@
       "url": "https://eltonparishcouncil.gov.uk/a-short-history-of-elton"
     }
   ],
-  "directions_to_next": "[[c:Head south, about 160 metres as the crow flies, to Overend. Carry on south along Overend. Keep to the pavements and paths.]]",
+  "directions_to_next": "[[c:Carry on north and turn left to All Saints Church, about 120 metres.]]",
   "support": "[[c:Support the village: the Black Horse is still a working pub.]]",
   "puzzle": {
     "ref": "E8",

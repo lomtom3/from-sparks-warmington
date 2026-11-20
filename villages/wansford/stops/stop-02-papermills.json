@@ -1,7 +1,7 @@
 {
   "_readme": "Draft Wansford walk. [[c:...]] = cyan, not confirmed. Positions are guesses until recorded on site.",
-  "id": "wansford-09",
-  "order": 9,
+  "id": "wansford-02",
+  "order": 2,
   "name": "The Papermills",
   "map": [
     874,
@@ -43,5 +43,5 @@
   "evidence": [
     "[[c:The coach guard's lantern was found near the bridge.]]"
   ],
-  "directions_to_next": "[[c:Head south-east, about 100 metres as the crow flies, to the Cross Keys.  Keep to pavements and public paths.]]"
+  "directions_to_next": "[[c:Carry on south along Elton Road for about 130 metres to the Cross Keys and the old chapel.]]"
 }

@@ -4,8 +4,8 @@
   "order": 5,
   "name": "The village school",
   "map": [
-    1024,
-    544,
+    1020,
+    503,
     "guess"
   ],
   "layers": {
@@ -47,5 +47,5 @@
   "evidence": [
     "[[c:The coded notebook page belongs to the salesman.]]"
   ],
-  "directions_to_next": "[[c:Head south-west to Hemington Road and Goblin Brook, about 780 metres along the route. Follow the line on the map, and keep to pavements and public paths.]]"
+  "directions_to_next": "[[c:Carry on along Main Street, keeping to the pavement, as it bends south onto Lutton Road. Just past the bend, take the footpath on the right beside the brook, heading west back towards the village. At the lane, turn left and walk down to the Hemington Road junction. About 1 km.]]"
 }

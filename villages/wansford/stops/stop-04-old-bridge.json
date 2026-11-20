@@ -1,7 +1,7 @@
 {
   "_readme": "Draft Wansford walk. [[c:...]] = cyan, not confirmed. Positions are guesses until recorded on site.",
-  "id": "wansford-02",
-  "order": 2,
+  "id": "wansford-04",
+  "order": 4,
   "name": "Wansford Old Bridge",
   "map": [
     800,
@@ -45,5 +45,5 @@
   "evidence": [
     "[[c:The box was wheeled to the middle of the bridge.]]"
   ],
-  "directions_to_next": "[[c:Head west to the water meadows, about 320 metres along the route. Follow the line on the map, and keep to pavements and public paths.]]"
+  "directions_to_next": "[[c:Cross the Old Bridge into the village and follow the road up the hill. Turn right towards Peterborough Road to the corner of the Great North Road. About 250 metres.]]"
 }

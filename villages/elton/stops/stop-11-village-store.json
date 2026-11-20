@@ -1,7 +1,7 @@
 {
   "_readme": "Elton draft. [[c:...]] is cyan = not confirmed. History from the Elton Parish Council short history unless noted.",
-  "id": "elton-10",
-  "order": 10,
+  "id": "elton-11",
+  "order": 11,
   "name": "Elton Village Store",
   "map": [
     868,
@@ -19,6 +19,6 @@
       "url": "https://eltonparishcouncil.gov.uk/a-short-history-of-elton"
     }
   ],
-  "directions_to_next": "[[c:Head south-east, about 120 metres as the crow flies, to School Lane. School Lane runs south from Middle Street. Keep to the pavements and paths.]]",
+  "directions_to_next": "[[c:Head east along the lane past the school to the main road and Highgate Hall, about 300 metres.]]",
   "support": "[[c:Support the village: Elton Village Store is the village shop. Spending here helps keep it going.]]"
 }

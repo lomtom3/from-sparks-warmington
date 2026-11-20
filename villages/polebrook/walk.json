@@ -96,8 +96,8 @@
       "label": "School",
       "dir": "r",
       "map": [
-        1024,
-        544,
+        1020,
+        503,
         "guess"
       ]
     },
@@ -107,8 +107,8 @@
       "label": "Goblin Brook",
       "dir": "r",
       "map": [
-        782,
-        923,
+        724,
+        872,
         "guess"
       ]
     },
@@ -118,8 +118,8 @@
       "label": "Roberts Lane",
       "dir": "l",
       "map": [
-        560,
-        858,
+        600,
+        857,
         "guess"
       ]
     },
@@ -190,10 +190,10 @@
   "map": {
     "src": "villages/polebrook/map.svg",
     "x0": 250,
-    "y0": 150,
-    "w": 1100,
-    "h": 900,
-    "scale": 1.8
+    "y0": 230,
+    "w": 1150,
+    "h": 1560,
+    "scale": 1.9
   },
   "geo": {
     "lat0": 52.47623,
@@ -205,8 +205,8 @@
   "lengths": [
     {
       "key": "short",
-      "label": "[[c:Short walk: the village centre]]",
-      "description": "[[c:The pub, the church and the hall.]]",
+      "label": "[[c:Short walk: around the village centre]]",
+      "description": "[[c:The Kings Arms, the village hall, All Saints and Polebrook Hall, back along Main Street.]]",
       "stops": [
         1,
         2,
@@ -219,11 +219,19 @@
     },
     {
       "key": "medium",
-      "label": "[[c:Medium walk: towards the airfield]]",
-      "description": "[[c:Adds the school, Goblin Brook and Roberts Lane, the loop local walkers use.]]",
+      "label": "[[c:Medium walk: along the brook]]",
+      "description": "[[c:Adds the old school and the footpath beside the brook, back by Hemington Road and Robert's Lane.]]",
       "stops": "all",
       "colour": "#a8592a",
       "default": true
+    },
+    {
+      "key": "long",
+      "label": "[[c:Long walk: Hemington Road and the fields]]",
+      "description": "[[c:The medium walk plus a countryside loop: out along Hemington Road, across the fields and back up the lane.]]",
+      "stops": "all",
+      "colour": "#2c4f7c",
+      "default": false
     }
   ],
   "cast": [
@@ -254,36 +262,42 @@
   ],
   "legs": {
     "1-2": [
-      174,
+      151,
       "626,504 630,514 626,557 674,565 682,571 713,580 729,581 722,592"
     ],
     "2-3": [
-      128,
+      105,
       "722,592 729,581 732,581 734,620 738,635 741,634 752,582"
     ],
     "3-4": [
-      286,
+      260,
       "752,582 748,593 739,587 741,574 749,569 752,541 777,528 866,518 905,515 899,554 891,567"
     ],
-    "4-8": [
-      361,
-      "891,567 899,554 905,515 777,528 752,526 680,511 654,502 641,493 630,514 626,504"
-    ],
     "4-5": [
-      220,
-      "891,567 899,554 905,515 974,513 1026,501 1024,544"
+      162,
+      "891,567 899,554 905,515 974,513 1020,503"
     ],
     "5-6": [
-      785,
-      "1024,544 1026,501 974,513 886,516 777,528 748,543 735,557 732,581 738,635 737,678 717,740 715,802 705,869 710,888 717,895 782,923"
+      1057,
+      "1020,503 1041,499 1087,496 1141,501 1167,510 1195,530 1213,556 1248,593 1260,621 1258,653 1262,659 1247,664 1209,665 1193,682 1133,678 1124,681 1112,699 1109,716 1094,723 1095,734 986,774 957,791 833,776 791,766 760,767 716,760 715,802 705,869 707,879 724,872"
     ],
     "6-7": [
-      295,
-      "782,923 717,895 710,888 705,869 645,855 599,851 549,848 560,858"
+      2727,
+      "724,872 707,879 717,895 832,943 879,985 945,1073 968,1084 998,1089 1010,1094 1019,1104 1084,1229 1105,1255 1141,1291 1156,1323 1160,1359 1153,1428 1155,1513 1164,1557 1179,1580 1122,1605 1103,1605 882,1707 870,1715 830,1727 718,1706 670,1693 500,1663 425,1642 369,1644 337,1657 350,1614 350,1543 356,1478 359,1458 371,1420 454,1229 486,1189 531,1142 571,1115 578,1104 608,1015 621,949 632,855 599,851 600,857"
     ],
     "7-8": [
-      460,
-      "560,858 549,848 632,855 630,843 612,807 609,789 616,761 613,711 623,642 618,620 630,514 626,504"
+      383,
+      "600,857 599,851 632,855 630,843 612,807 609,789 616,761 613,711 623,642 618,620 630,514 626,504"
+    ],
+    "medium:6-7": [
+      118,
+      "724,872 707,879 705,869 645,855 599,851 600,857",
+      "[[c:Turn left along the lane to the end of Robert's Lane, about 120 metres.]]"
+    ],
+    "short:4-8": [
+      335,
+      "891,567 899,554 905,515 777,528 752,526 680,511 654,502 641,493 630,514 626,504",
+      "[[c:Go back up to Main Street, turn left and walk along it back to the Kings Arms. About 330 metres.]]"
     ]
   },
   "lengths_note": "Route colours: short green, medium copper, long blue. legs = path along real roads/paths between consecutive stops (from OpenStreetMap)."

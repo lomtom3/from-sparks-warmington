@@ -1,7 +1,7 @@
 {
   "_readme": "Draft Wansford walk. [[c:...]] = cyan, not confirmed. Positions are guesses until recorded on site.",
-  "id": "wansford-07",
-  "order": 7,
+  "id": "wansford-06",
+  "order": 6,
   "name": "The Old North Road",
   "map": [
     654,
@@ -19,5 +19,5 @@
       "url": "https://en.wikipedia.org/wiki/Wansford,_Cambridgeshire"
     }
   ],
-  "directions_to_next": "[[c:Head south, about 160 metres as the crow flies, to the old Great North Road.  Keep to pavements and public paths.]]"
+  "directions_to_next": "[[c:Take the lane on the left and follow it round to Old Leicester Road, about 300 metres.]]"
 }

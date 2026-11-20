@@ -1,7 +1,7 @@
 {
   "_readme": "Elton draft. [[c:...]] is cyan = not confirmed. History from the Elton Parish Council short history unless noted.",
-  "id": "elton-08",
-  "order": 8,
+  "id": "elton-14",
+  "order": 14,
   "name": "Brawn Way and Faber Lane",
   "map": [
     930,
@@ -19,5 +19,5 @@
       "url": "https://eltonparishcouncil.gov.uk/a-short-history-of-elton"
     }
   ],
-  "directions_to_next": "[[c:Head south-east, about 290 metres as the crow flies, to Highgate Green and Highgate Hall. Head east to Highgate Green; the hall is by the main road. Keep to the pavements and paths.]]"
+  "directions_to_next": "[[c:Follow the footpath north out of the village, then west across the fields and back down the lane to the Crown. About 680 metres.]]"
 }

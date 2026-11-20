@@ -1,7 +1,7 @@
 {
   "_readme": "Elton draft. [[c:...]] is cyan = not confirmed. History from the Elton Parish Council short history unless noted.",
-  "id": "elton-12",
-  "order": 12,
+  "id": "elton-09",
+  "order": 9,
   "name": "All Saints Church",
   "map": [
     1003,
@@ -19,7 +19,7 @@
       "url": "https://eltonparishcouncil.gov.uk/a-short-history-of-elton"
     }
   ],
-  "directions_to_next": "[[c:Head south-east, about 100 metres as the crow flies, to The Black Horse. The Black Horse is on Overend, just east of the church. Keep to the pavements and paths.]]",
+  "directions_to_next": "[[c:Take the path north from the church to School Lane, about 190 metres.]]",
   "evidence": [
     "[[c:Mistress Carey saw the casket taken to the ford and wrote it down in code.]]"
   ]

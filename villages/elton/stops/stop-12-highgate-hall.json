@@ -1,7 +1,7 @@
 {
   "_readme": "Elton draft. [[c:...]] is cyan = not confirmed. History from the Elton Parish Council short history unless noted.",
-  "id": "elton-09",
-  "order": 9,
+  "id": "elton-12",
+  "order": 12,
   "name": "Highgate Green and Highgate Hall",
   "map": [
     1124,
@@ -19,7 +19,7 @@
       "url": "https://eltonparishcouncil.gov.uk/a-short-history-of-elton"
     }
   ],
-  "directions_to_next": "[[c:Head west, about 260 metres as the crow flies, to Elton Village Store. Head back west along Middle Street to the shop. Keep to the pavements and paths.]]",
+  "directions_to_next": "[[c:Walk back west along Main Street and turn right into Hayes Walk, about 300 metres.]]",
   "puzzle": {
     "ref": "E6",
     "title": "[[c:Where was the miller?]]",

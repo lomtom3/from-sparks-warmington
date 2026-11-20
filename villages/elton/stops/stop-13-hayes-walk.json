@@ -1,7 +1,7 @@
 {
   "_readme": "Elton draft. [[c:...]] is cyan = not confirmed. History from the Elton Parish Council short history unless noted.",
-  "id": "elton-07",
-  "order": 7,
+  "id": "elton-13",
+  "order": 13,
   "name": "Hayes Walk",
   "map": [
     907,
@@ -19,7 +19,7 @@
       "url": "https://eltonparishcouncil.gov.uk/a-short-history-of-elton"
     }
   ],
-  "directions_to_next": "[[c:Head north, about 70 metres as the crow flies, to Brawn Way and Faber Lane. Brawn Way and Faber Lane branch off just to the north. Keep to the pavements and paths.]]",
+  "directions_to_next": "[[c:On up to Brawn Way, about 60 metres.]]",
   "puzzle": {
     "ref": "E5",
     "title": "[[c:The apprentice's lines]]",

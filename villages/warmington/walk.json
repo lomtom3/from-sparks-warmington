@@ -341,7 +341,21 @@
   "lengths": [
     {
       "key": "short",
-      "label": "[[c:Short walk: the village centre]]",
+      "label": "[[c:Short walk: Dexter Way and Eaglethorpe]]",
+      "description": "[[c:A short loop north of the Red Lion: Dexter Way, the Fun Field and the Eaglethorpe board.]]",
+      "stops": [
+        1,
+        12,
+        13,
+        14,
+        20
+      ],
+      "colour": "#4f7a3a",
+      "default": false
+    },
+    {
+      "key": "medium",
+      "label": "[[c:Medium walk: the village centre]]",
       "description": "[[c:The middle of the village, the church and Fun Field. Clues from the stops you skip are given to you.]]",
       "stops": [
         1,
@@ -357,16 +371,16 @@
         14,
         20
       ],
-      "colour": "#4f7a3a",
-      "default": false
-    },
-    {
-      "key": "medium",
-      "label": "[[c:Medium walk: the full mystery]]",
-      "description": "[[c:Every stop, out to the cemetery, Big Green and the mill.]]",
-      "stops": "all",
       "colour": "#a8592a",
       "default": true
+    },
+    {
+      "key": "long",
+      "label": "[[c:Long walk: the full mystery]]",
+      "description": "[[c:Every stop, out to the cemetery, Big Green and the mill.]]",
+      "stops": "all",
+      "colour": "#2c4f7c",
+      "default": false
     }
   ],
   "lengths_note": "Route colours: short green, medium copper, long blue. legs = path along real roads/paths between consecutive stops (from OpenStreetMap).",
@@ -493,6 +507,11 @@
     "18-20": [
       461,
       "360,573 359,570 360,568 362,566 378,568 381,569 384,569 388,571 400,584 398,599 423,628 427,640 437,637 433,635"
+    ],
+    "short:1-12": [
+      317,
+      "433,635 437,637 440,635 441,638 448,638 453,648 467,646 468,647 473,647 473,651 478,654 490,648 486,642 492,638 495,634 501,635 501,638",
+      "[[c:Walk east from the Red Lion along the lane, then turn left up to Dexter Way. About 320 metres.]]"
     ]
   }
 }

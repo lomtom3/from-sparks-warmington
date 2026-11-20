@@ -1,11 +1,11 @@
 {
   "_readme": "Draft Wansford walk. [[c:...]] = cyan, not confirmed. Positions are guesses until recorded on site.",
-  "id": "wansford-10",
-  "order": 10,
+  "id": "wansford-03",
+  "order": 3,
   "name": "The Cross Keys and the old chapel",
   "map": [
-    958,
-    755,
+    940,
+    803,
     "guess"
   ],
   "layers": {
@@ -19,5 +19,5 @@
       "url": "https://en.wikipedia.org/wiki/Wansford,_Cambridgeshire"
     }
   ],
-  "directions_to_next": "[[c:Head north, about 180 metres as the crow flies, to the Haycock.  Keep to pavements and public paths.]]"
+  "directions_to_next": "[[c:Turn left along the lane past the Cross Keys and follow the footpath round the fields, coming back out onto Elton Road further south. Turn right, walk back up Elton Road and Bridge End to the Old Bridge. About 1.1 km.]]"
 }

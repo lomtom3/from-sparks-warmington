@@ -1,7 +1,7 @@
 {
   "_readme": "Elton draft. [[c:...]] is cyan = not confirmed. History from the Elton Parish Council short history unless noted.",
-  "id": "elton-14",
-  "order": 14,
+  "id": "elton-07",
+  "order": 7,
   "name": "Overend",
   "map": [
     1078,
@@ -23,7 +23,7 @@
       "url": "https://en.wikipedia.org/wiki/Elton,_Cambridgeshire"
     }
   ],
-  "directions_to_next": "[[c:Head north-west, about 770 metres as the crow flies, to The Crown Inn (finale). Head back north along Overend and west along Middle Street to the Crown. Keep to the pavements and paths.]]",
+  "directions_to_next": "[[c:Walk back north along the main road to the Black Horse, about 170 metres.]]",
   "puzzle": {
     "ref": "E9",
     "title": "[[c:The milestone numbers]]",
