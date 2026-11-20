@@ -1,0 +1,50 @@
+{
+  "_readme": "Draft Barnwell walk. [[c:...]] = cyan, not confirmed. Positions are guesses until recorded on site.",
+  "id": "barnwell-06",
+  "order": 6,
+  "name": "Barnwell Castle",
+  "map": [
+    895,
+    458,
+    "guess"
+  ],
+  "layers": {
+    "essential_history": "[[c:Barnwell Castle was built around 1266. It is described as the first example in Britain of the most monumental type of castle building. It is private, so please look from the road.]]",
+    "deeper_history": "[[c:The castle is a scheduled monument. Its four great corner towers still stand.]]",
+    "mystery": "[[c:Footprints in the mud by the castle gate: fine city shoes, not village boots.]]"
+  },
+  "sources": [
+    {
+      "title": "Wikipedia: Barnwell, Northamptonshire",
+      "url": "https://en.wikipedia.org/wiki/Barnwell,_Northamptonshire"
+    }
+  ],
+  "puzzle": {
+    "ref": "B4",
+    "title": "[[c:The footprints]]",
+    "intro": "",
+    "material": [
+      "[[c:Hal wears heavy boots.]]",
+      "[[c:Robin goes barefoot in summer.]]",
+      "[[c:Bess wears clogs.]]",
+      "[[c:Master Thorne wears buckled London shoes.]]"
+    ],
+    "question": "[[c:Whose shoes made the prints? (surname)]]",
+    "answer": "Thorne",
+    "accepted_variants": [
+      "master thorne",
+      "giles thorne"
+    ],
+    "hints": [
+      "[[c:Fine city shoes.]]",
+      "[[c:Who came from London?]]",
+      "[[c:The lawyer.]]"
+    ],
+    "reveal": "[[c:Only Master Thorne wears fine London shoes.]]",
+    "fallback": "[[c:Stuck? Take a hint: hints are free.]]"
+  },
+  "evidence": [
+    "[[c:Fine London shoe prints were found at the castle gate.]]"
+  ],
+  "directions_to_next": "[[c:Head south-east, about 100 metres as the crow flies, to Barnwell Manor.  Keep to pavements and public paths.]]"
+}

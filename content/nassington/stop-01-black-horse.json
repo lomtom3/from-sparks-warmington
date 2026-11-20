@@ -1,0 +1,51 @@
+{
+  "_readme": "Draft Nassington walk. [[c:...]] = cyan, not confirmed. Positions are guesses until recorded on site.",
+  "id": "nassington-01",
+  "order": 1,
+  "name": "The Black Horse",
+  "map": [
+    1024,
+    716,
+    "guess"
+  ],
+  "layers": {
+    "essential_history": "[[c:Nassington is an old village: farm buildings from around 140 AD have been found here, and excavations still go on.]]",
+    "deeper_history": "[[c:Today about 870 people live in the village.]]",
+    "mystery": "[[c:A cry goes up from the royal hall: the King's ivory chessman is missing. A servant shows you a scratched message.]]"
+  },
+  "sources": [
+    {
+      "title": "Wikipedia: Nassington",
+      "url": "https://en.wikipedia.org/wiki/Nassington"
+    },
+    {
+      "title": "Prebendal Manor history",
+      "url": "https://prebendal-manor.co.uk/history"
+    }
+  ],
+  "puzzle": {
+    "ref": "N1",
+    "title": "[[c:The scratched message]]",
+    "intro": "[[c:Each letter has been moved one place along the alphabet. Move each one back a place.]]",
+    "material": [
+      "[[c:IBMM]]"
+    ],
+    "question": "[[c:Where should you go first? (one word)]]",
+    "answer": "hall",
+    "accepted_variants": [
+      "the hall"
+    ],
+    "hints": [
+      "[[c:I becomes H.]]",
+      "[[c:B becomes A.]]",
+      "[[c:Where the King feasts.]]"
+    ],
+    "reveal": "[[c:It says HALL. Start where the King played.]]",
+    "fallback": "[[c:Stuck? Take a hint: hints are free.]]"
+  },
+  "evidence": [
+    "[[c:A message says HALL.]]"
+  ],
+  "support": "[[c:Support the village: have a drink at the Black Horse before or after the walk.]]",
+  "directions_to_next": "[[c:Head west, about 240 metres as the crow flies, to the village hall on Church Street. Walk west along Church Street. Keep to pavements and public paths.]]"
+}

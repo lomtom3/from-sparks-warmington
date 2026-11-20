@@ -1,0 +1,30 @@
+{
+  "_readme": "Draft Fotheringhay walk. [[c:...]] = cyan, not confirmed. Positions are guesses until recorded on site.",
+  "id": "fotheringhay-03",
+  "order": 3,
+  "name": "The college site",
+  "map": [
+    813,
+    752,
+    "guess"
+  ],
+  "layers": {
+    "essential_history": "[[c:South of the church stood a college of priests, built as a cloister. Today only the earthworks and the church itself remain.]]",
+    "deeper_history": "[[c:The college was finished around 1430. Much of it was destroyed in the 1500s.]]",
+    "mystery": "[[c:In the cloister garth, Kit the page admits he was meant to guard the rose but fell asleep. He saw someone with a candle walk towards the river.]]"
+  },
+  "sources": [
+    {
+      "title": "Wikipedia: Fotheringhay",
+      "url": "https://en.wikipedia.org/wiki/Fotheringhay"
+    },
+    {
+      "title": "Wikipedia: Fotheringhay Castle",
+      "url": "https://en.wikipedia.org/wiki/Fotheringhay_Castle"
+    }
+  ],
+  "evidence": [
+    "[[c:Kit saw someone with a candle walking towards the river.]]"
+  ],
+  "directions_to_next": "[[c:Head south, about 130 metres as the crow flies, to the bridge over the Nene.  Keep to pavements and public paths.]]"
+}

@@ -1,0 +1,53 @@
+{
+  "_readme": "Draft Nassington walk. [[c:...]] = cyan, not confirmed. Positions are guesses until recorded on site.",
+  "id": "nassington-04",
+  "order": 4,
+  "name": "The Prebendal Manor",
+  "map": [
+    585,
+    750,
+    "guess"
+  ],
+  "layers": {
+    "essential_history": "[[c:In 1107 Henry I gave the old royal hall here to the Bishop of Lincoln. Excavations, shown on Time Team in 2004, found remains of an earlier timber hall, thought to be the hall King Cnut used.]]",
+    "deeper_history": "[[c:The Prebendal Manor and its tithe barn are sometimes open to visitors. Its gardens grow only plants known in England before 1485.]]",
+    "mystery": "[[c:In the manor yard, the chessboard is still set out. One square is marked with a scratch.]]"
+  },
+  "sources": [
+    {
+      "title": "Wikipedia: Nassington",
+      "url": "https://en.wikipedia.org/wiki/Nassington"
+    },
+    {
+      "title": "Prebendal Manor history",
+      "url": "https://prebendal-manor.co.uk/history"
+    }
+  ],
+  "puzzle": {
+    "ref": "N3",
+    "title": "[[c:The chessboard]]",
+    "intro": "",
+    "material": [
+      "[[c:The pieces stand where the game ended.]]",
+      "[[c:The empty square is where the King's piece stood.]]",
+      "[[c:Beside it, someone has scratched: E-A-S-T.]]"
+    ],
+    "question": "[[c:Which way did the thief go? (one word)]]",
+    "answer": "east",
+    "accepted_variants": [
+      "to the east",
+      "eastwards"
+    ],
+    "hints": [
+      "[[c:Read the scratched letters.]]",
+      "[[c:E, A, S, T.]]",
+      "[[c:Where the sun rises.]]"
+    ],
+    "reveal": "[[c:EAST. The thief went east, towards the river.]]",
+    "fallback": "[[c:Stuck? Take a hint: hints are free.]]"
+  },
+  "evidence": [
+    "[[c:A scratch on the board says the thief went EAST.]]"
+  ],
+  "directions_to_next": "[[c:Head north, about 180 metres as the crow flies, to St Mary's Close. Head north from the church. Keep to pavements and public paths.]]"
+}

@@ -1,0 +1,47 @@
+{
+  "_readme": "Draft Wansford walk. [[c:...]] = cyan, not confirmed. Positions are guesses until recorded on site.",
+  "id": "wansford-06",
+  "order": 6,
+  "name": "The Papermills",
+  "map": [
+    874,
+    696,
+    "guess"
+  ],
+  "layers": {
+    "essential_history": "[[c:The Papermills is one of Wansford's inns, close to the bridge on the old road.]]",
+    "deeper_history": "[[c:Wansford grew up as a stopping place for travellers crossing the Nene.]]",
+    "mystery": "[[c:The ostler shows you a coded tag tied to the coach guard's lantern.]]"
+  },
+  "sources": [
+    {
+      "title": "Wikipedia: Wansford, Cambridgeshire",
+      "url": "https://en.wikipedia.org/wiki/Wansford,_Cambridgeshire"
+    }
+  ],
+  "puzzle": {
+    "ref": "W4",
+    "title": "[[c:The lantern tag]]",
+    "intro": "[[c:A is 1, B is 2, C is 3, and so on.]]",
+    "material": [
+      "[[c:7 21 1 18 4]]"
+    ],
+    "question": "[[c:Whose lantern is it? (job)]]",
+    "answer": "guard",
+    "accepted_variants": [
+      "the guard",
+      "coach guard"
+    ],
+    "hints": [
+      "[[c:7 is G.]]",
+      "[[c:21 is U.]]",
+      "[[c:Ned's job.]]"
+    ],
+    "reveal": "[[c:7 21 1 18 4 spells GUARD. It's the coach guard's lantern, found by the bridge.]]",
+    "fallback": "[[c:Stuck? Take a hint: hints are free.]]"
+  },
+  "evidence": [
+    "[[c:The coach guard's lantern was found near the bridge.]]"
+  ],
+  "directions_to_next": "[[c:Head south-east, about 100 metres as the crow flies, to the Cross Keys.  Keep to pavements and public paths.]]"
+}

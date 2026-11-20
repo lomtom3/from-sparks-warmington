@@ -1,0 +1,48 @@
+{
+  "_readme": "Draft Barnwell walk. [[c:...]] = cyan, not confirmed. Positions are guesses until recorded on site.",
+  "id": "barnwell-04",
+  "order": 4,
+  "name": "St Andrew's Church",
+  "map": [
+    885,
+    721,
+    "guess"
+  ],
+  "layers": {
+    "essential_history": "[[c:St Andrew's is mostly 13th century outside, including its tower. Inside are monuments to Christopher Freeman, who died in 1610, and Parson Nicholas Latham, who died in 1620.]]",
+    "deeper_history": "[[c:In 1818 and 1819 Henry Rolls, husband of the poet Mary Rolls, was rector here.]]",
+    "mystery": "[[c:In the church, the parson's plans for the almshouses lie open. A page is missing, and someone has written on the next page in a backwards hand.]]"
+  },
+  "sources": [
+    {
+      "title": "Wikipedia: Barnwell, Northamptonshire",
+      "url": "https://en.wikipedia.org/wiki/Barnwell,_Northamptonshire"
+    }
+  ],
+  "puzzle": {
+    "ref": "B3",
+    "title": "[[c:Backwards writing]]",
+    "intro": "[[c:Read it from right to left.]]",
+    "material": [
+      "[[c:NROHT]]"
+    ],
+    "question": "[[c:Whose name is it? (surname)]]",
+    "answer": "Thorne",
+    "accepted_variants": [
+      "thorn",
+      "master thorne",
+      "giles thorne"
+    ],
+    "hints": [
+      "[[c:Start at the end.]]",
+      "[[c:The first letter is T.]]",
+      "[[c:He's the lawyer.]]"
+    ],
+    "reveal": "[[c:NROHT backwards is THORN, the start of THORNE. The lawyer was here.]]",
+    "fallback": "[[c:Stuck? Take a hint: hints are free.]]"
+  },
+  "evidence": [
+    "[[c:THORN is written backwards in the parson's book.]]"
+  ],
+  "directions_to_next": "[[c:Head west, about 50 metres as the crow flies, to the old rectory.  Keep to pavements and public paths.]]"
+}

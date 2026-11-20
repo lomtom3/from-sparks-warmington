@@ -1,0 +1,30 @@
+{
+  "_readme": "Draft Nassington walk. [[c:...]] = cyan, not confirmed. Positions are guesses until recorded on site.",
+  "id": "nassington-03",
+  "order": 3,
+  "name": "St Mary the Virgin and All Saints Church",
+  "map": [
+    602,
+    708,
+    "guess"
+  ],
+  "layers": {
+    "essential_history": "[[c:The church stands beside the Prebendal Manor, at the heart of the old village.]]",
+    "deeper_history": "[[c:Cnut's court included Aethelric, Bishop of Dorchester-on-Thames, who later bought the nearby village of Elton.]]",
+    "mystery": "[[c:Brother Aldred is praying. He saw Ulf the guard slip out of the hall with something hidden in his cloak.]]"
+  },
+  "sources": [
+    {
+      "title": "Wikipedia: Nassington",
+      "url": "https://en.wikipedia.org/wiki/Nassington"
+    },
+    {
+      "title": "Prebendal Manor history",
+      "url": "https://prebendal-manor.co.uk/history"
+    }
+  ],
+  "evidence": [
+    "[[c:Brother Aldred saw Ulf leave the hall with something under his cloak.]]"
+  ],
+  "directions_to_next": "[[c:Head south, about 50 metres as the crow flies, to the Prebendal Manor.  Keep to pavements and public paths.]]"
+}

@@ -1,0 +1,26 @@
+{
+  "_readme": "Draft Barnwell walk. [[c:...]] = cyan, not confirmed. Positions are guesses until recorded on site.",
+  "id": "barnwell-02",
+  "order": 2,
+  "name": "Latham's Almshouses",
+  "map": [
+    911,
+    820,
+    "guess"
+  ],
+  "layers": {
+    "essential_history": "[[c:Parson Nicholas Latham founded almshouses here in 1601 for the poor of the village. They were rebuilt in 1874.]]",
+    "deeper_history": "[[c:Latham also founded a hospital in Oundle. He died in 1620 and has a monument in St Andrew's church.]]",
+    "mystery": "[[c:Bess the housekeeper says Master Thorne the lawyer asked her three times where the parson kept his keys.]]"
+  },
+  "sources": [
+    {
+      "title": "Wikipedia: Barnwell, Northamptonshire",
+      "url": "https://en.wikipedia.org/wiki/Barnwell,_Northamptonshire"
+    }
+  ],
+  "evidence": [
+    "[[c:Master Thorne kept asking where the parson kept his keys.]]"
+  ],
+  "directions_to_next": "[[c:Head north, about 70 metres as the crow flies, to the war memorial.  Keep to pavements and public paths.]]"
+}

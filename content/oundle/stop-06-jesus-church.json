@@ -1,0 +1,26 @@
+{
+  "_readme": "Draft Oundle walk. [[c:...]] = cyan, not confirmed. Positions are guesses until recorded on site.",
+  "id": "oundle-06",
+  "order": 6,
+  "name": "The Jesus Church",
+  "map": [
+    730,
+    1242,
+    "guess"
+  ],
+  "layers": {
+    "essential_history": "[[c:The Catholic church of the Most Holy Name of Jesus stands at the west end of the town, near the old road to the river.]]",
+    "deeper_history": "[[c:Oundle's churches and chapels show how many different groups of worshippers the town has had over the centuries.]]",
+    "mystery": "[[c:A carter resting here says Martha Pell's horses were stabled at the edge of town all night, a long way from the Talbot. (Long walk only.)]]"
+  },
+  "sources": [
+    {
+      "title": "Wikipedia: Oundle",
+      "url": "https://en.wikipedia.org/wiki/Oundle"
+    }
+  ],
+  "evidence": [
+    "[[c:Martha's horses and cart were stabled at the edge of town all night.]]"
+  ],
+  "directions_to_next": "[[c:Head south, about 40 metres as the crow flies, to Oundle Museum.  Keep to pavements and public paths.]]"
+}

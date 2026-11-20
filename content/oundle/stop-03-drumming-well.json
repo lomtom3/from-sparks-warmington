@@ -1,0 +1,51 @@
+{
+  "_readme": "Draft Oundle walk. [[c:...]] = cyan, not confirmed. Positions are guesses until recorded on site.",
+  "id": "oundle-03",
+  "order": 3,
+  "name": "Drumming Well Lane",
+  "map": [
+    1055,
+    1102,
+    "guess"
+  ],
+  "layers": {
+    "essential_history": "[[c:The Drumming Well was in a yard by the Talbot. People said it made a drumming sound before something terrible happened. The lane here is named after it.]]",
+    "deeper_history": "[[c:Stories of the well were told for centuries, and a room at the Talbot is named after it.]]",
+    "mystery": "[[c:By the lane, the schoolboy Tom Crane admits he crept out to hear the well drum. He says he heard more than drumming.]]"
+  },
+  "sources": [
+    {
+      "title": "Wikipedia: Oundle",
+      "url": "https://en.wikipedia.org/wiki/Oundle"
+    }
+  ],
+  "puzzle": {
+    "ref": "O3",
+    "title": "[[c:What Tom heard]]",
+    "intro": "[[c:Read the first letter of each line.]]",
+    "material": [
+      "[[c:TOM: \"Around midnight I heard footsteps,]]",
+      "[[c:Over by the stone carts,]]",
+      "[[c:Weighed down, slow and heavy,]]",
+      "[[c:Each step went towards the church,]]",
+      "[[c:Right up the lane past me.\"]]"
+    ],
+    "question": "[[c:Where did the footsteps go? (one word)]]",
+    "answer": "tower",
+    "accepted_variants": [
+      "the tower",
+      "church tower"
+    ],
+    "hints": [
+      "[[c:Look at the first letters only.]]",
+      "[[c:T, O, W, E, R.]]",
+      "[[c:It's the tallest part of a church.]]"
+    ],
+    "reveal": "[[c:The first letters spell TOWER. Someone carried something heavy towards the church tower.]]",
+    "fallback": "[[c:Stuck? Take a hint: hints are free.]]"
+  },
+  "evidence": [
+    "[[c:Tom heard heavy footsteps heading for the church tower at midnight.]]"
+  ],
+  "directions_to_next": "[[c:Head north-west, about 200 metres as the crow flies, to Oundle School Chapel.  Keep to pavements and public paths.]]"
+}

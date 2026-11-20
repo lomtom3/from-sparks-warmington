@@ -1,0 +1,73 @@
+{
+  "_readme": "Draft Barnwell walk. [[c:...]] = cyan, not confirmed. Positions are guesses until recorded on site.",
+  "id": "barnwell-09",
+  "order": 9,
+  "name": "Back to the Montagu Arms",
+  "map": [
+    1000,
+    828,
+    "guess"
+  ],
+  "layers": {
+    "essential_history": "[[c:Back where you started, in a village with a castle, two churches and four centuries of almshouses.]]",
+    "deeper_history": "[[c:Barnwell Country Park, along the Nene, was made from old gravel workings.]]",
+    "mystery": "[[c:The parson, the keeper, the housekeeper, the miller's son and the lawyer are all here. Who took the key?]]"
+  },
+  "sources": [
+    {
+      "title": "Wikipedia: Barnwell, Northamptonshire",
+      "url": "https://en.wikipedia.org/wiki/Barnwell,_Northamptonshire"
+    }
+  ],
+  "directions_to_next": "[[c:That's the end of the walk. Well done, detective!]]",
+  "puzzle": {
+    "ref": "B6",
+    "type": "accuse",
+    "title": "[[c:Who took the castle key?]]",
+    "intro": "[[c:Look through your evidence notebook, then make your accusation.]]",
+    "material": [],
+    "question": "[[c:Who took the key, why, and where is it now?]]",
+    "fields": [
+      {
+        "key": "who",
+        "label": "Who did it?",
+        "options": [
+          "Hal Freeman (the castle keeper)",
+          "Bess Carter (the housekeeper)",
+          "Robin Stokes (the miller's son)",
+          "Master Giles Thorne (the lawyer)"
+        ],
+        "answer": "Master Giles Thorne (the lawyer)"
+      },
+      {
+        "key": "why",
+        "label": "Why?",
+        "options": [
+          "To take the almshouse money for himself",
+          "To lock the parson out",
+          "To mend the lock",
+          "To keep the money safe"
+        ],
+        "answer": "To take the almshouse money for himself"
+      },
+      {
+        "key": "where",
+        "label": "Where is it now?",
+        "options": [
+          "In his coat pocket, about to leave for London",
+          "In the castle moat",
+          "In the church tower",
+          "In the mill"
+        ],
+        "answer": "In his coat pocket, about to leave for London"
+      }
+    ],
+    "hints": [
+      "[[c:Who kept asking about the keys?]]",
+      "[[c:Whose shoes made the prints at the castle?]]",
+      "[[c:Whose name was written backwards?]]"
+    ],
+    "reveal": "[[c:It was Master Giles Thorne. He took the key to empty the almshouse chest and ride back to London, but Robin saw his light and you followed his trail. The key is still in his coat, and the money is safe. The almshouses are built, and still stand today.]]",
+    "fallback": "[[c:You can solve this from your notebook alone.]]"
+  }
+}

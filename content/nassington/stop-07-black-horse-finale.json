@@ -1,0 +1,77 @@
+{
+  "_readme": "Draft Nassington walk. [[c:...]] = cyan, not confirmed. Positions are guesses until recorded on site.",
+  "id": "nassington-07",
+  "order": 7,
+  "name": "Back to the Black Horse",
+  "map": [
+    1024,
+    716,
+    "guess"
+  ],
+  "layers": {
+    "essential_history": "[[c:Back where you started, in a village that once had a royal hall.]]",
+    "deeper_history": "[[c:Nassington's story runs from Roman farms to King Cnut and the Bishops of Lincoln.]]",
+    "mystery": "[[c:The King is waiting. Say who took the chessman.]]"
+  },
+  "sources": [
+    {
+      "title": "Wikipedia: Nassington",
+      "url": "https://en.wikipedia.org/wiki/Nassington"
+    },
+    {
+      "title": "Prebendal Manor history",
+      "url": "https://prebendal-manor.co.uk/history"
+    }
+  ],
+  "directions_to_next": "[[c:That's the end of the walk. Well done, detective!]]",
+  "puzzle": {
+    "ref": "N5",
+    "type": "accuse",
+    "title": "[[c:Who took the King's chessman?]]",
+    "intro": "[[c:Look through your evidence notebook, then make your accusation.]]",
+    "material": [],
+    "question": "[[c:Who took it, why, and where is it now?]]",
+    "fields": [
+      {
+        "key": "who",
+        "label": "Who did it?",
+        "options": [
+          "Ulf (the guard)",
+          "Edith (the cook)",
+          "Brother Aldred (the clerk)",
+          "Orm (the poet)"
+        ],
+        "answer": "Ulf (the guard)"
+      },
+      {
+        "key": "why",
+        "label": "Why?",
+        "options": [
+          "He lost a bet and was going to pay with it",
+          "To keep it safe",
+          "To give to the church",
+          "To sell to Orm"
+        ],
+        "answer": "He lost a bet and was going to pay with it"
+      },
+      {
+        "key": "where",
+        "label": "Where is it now?",
+        "options": [
+          "In the church",
+          "Hidden by the river, ready to take away",
+          "In the kitchen ovens",
+          "In the manor barn"
+        ],
+        "answer": "Hidden by the river, ready to take away"
+      }
+    ],
+    "hints": [
+      "[[c:Who was seen leaving with something under his cloak?]]",
+      "[[c:Whose buckle was on the river path?]]",
+      "[[c:Who was singing all night?]]"
+    ],
+    "reveal": "[[c:It was Ulf. He lost a bet at dice and planned to pay his debt with the ivory king, so he hid it by the river ready to take away. The chessman is back on the board, and the King wins his game.]]",
+    "fallback": "[[c:You can solve this from your notebook alone.]]"
+  }
+}

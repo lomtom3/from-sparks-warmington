@@ -1,0 +1,50 @@
+{
+  "_readme": "Elton draft. [[c:...]] is cyan = not confirmed. History from the Elton Parish Council short history unless noted.",
+  "id": "elton-04",
+  "order": 4,
+  "name": "Elton Lock",
+  "map": [
+    447,
+    856,
+    "guess"
+  ],
+  "layers": {
+    "essential_history": "[[c:This is the River Nene. For centuries Elton people crossed it at a ford, until a wooden bridge was built in 1844 and a stone one in 1875. Look out for boats working through the lock.]]",
+    "deeper_history": "[[c:The Nene runs from Northamptonshire to the Wash. The locks let boats climb and fall between stretches of the river.]]",
+    "mystery": "[[c:Long before the lock and the bridges, people crossed the Nene here at a ford. Ned Cobb kept the crossing and wrote down everyone he helped across. He hands you his ledger.]]"
+  },
+  "sources": [
+    {
+      "title": "Elton Parish Council: A short history of Elton",
+      "url": "https://eltonparishcouncil.gov.uk/a-short-history-of-elton"
+    }
+  ],
+  "directions_to_next": "[[c:Head east, about 240 metres as the crow flies, to Elton Methodist Church. Head back up River Lane and turn right along Middle Street. Keep to the pavements and paths.]]",
+  "puzzle": {
+    "ref": "E3",
+    "title": "[[c:The ford-keeper's ledger]]",
+    "intro": "",
+    "material": [
+      "[[c:Ten o'clock: Mistress Carey, to the church side.]]",
+      "[[c:Eleven o'clock: Master Hale, to the far bank, with a bundle.]]",
+      "[[c:Midnight: Master Hale, back again, hands empty.]]",
+      "[[c:One o'clock: Thomas Wade, home from the inn.]]"
+    ],
+    "question": "[[c:Who crossed the ford twice? (surname)]]",
+    "answer": "Hale",
+    "accepted_variants": [
+      "master hale",
+      "richard hale",
+      "mr hale"
+    ],
+    "hints": [
+      "[[c:Read the names one by one.]]",
+      "[[c:One name appears on two lines.]]",
+      "[[c:He is the Queen's officer.]]"
+    ],
+    "reveal": "[[c:Master Hale crossed twice, carrying a bundle one way and nothing the other, even though he told everyone he never left the inn.]]"
+  },
+  "evidence": [
+    "[[c:Master Hale crossed the ford twice that night, though he said he never left the inn.]]"
+  ]
+}

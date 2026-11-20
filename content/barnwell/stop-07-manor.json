@@ -1,0 +1,47 @@
+{
+  "_readme": "Draft Barnwell walk. [[c:...]] = cyan, not confirmed. Positions are guesses until recorded on site.",
+  "id": "barnwell-07",
+  "order": 7,
+  "name": "Barnwell Manor",
+  "map": [
+    955,
+    540,
+    "guess"
+  ],
+  "layers": {
+    "essential_history": "[[c:Barnwell Manor was home to the Montagu family from 1540. In 1938 Prince Henry, Duke of Gloucester, bought the house and estate.]]",
+    "deeper_history": "[[c:It is a private home: please look from the road.]]",
+    "mystery": "[[c:A stable boy at the manor saw Master Thorne's saddlebag left by All Saints, at the south end of the village.]]"
+  },
+  "sources": [
+    {
+      "title": "Wikipedia: Barnwell, Northamptonshire",
+      "url": "https://en.wikipedia.org/wiki/Barnwell,_Northamptonshire"
+    }
+  ],
+  "puzzle": {
+    "ref": "B5",
+    "title": "[[c:The saddlebag]]",
+    "intro": "[[c:A is 1, B is 2, C is 3, and so on.]]",
+    "material": [
+      "[[c:3 8 1 14 3 5 12]]"
+    ],
+    "question": "[[c:Where was the saddlebag left? (one word)]]",
+    "answer": "chancel",
+    "accepted_variants": [
+      "the chancel",
+      "all saints chancel"
+    ],
+    "hints": [
+      "[[c:3 is C, 8 is H.]]",
+      "[[c:It's part of a church.]]",
+      "[[c:All Saints has only this part left.]]"
+    ],
+    "reveal": "[[c:3 8 1 14 3 5 12 spells CHANCEL. The bag is in the chancel of All Saints.]]",
+    "fallback": "[[c:Stuck? Take a hint: hints are free.]]"
+  },
+  "evidence": [
+    "[[c:Master Thorne's saddlebag was left at the chancel of All Saints.]]"
+  ],
+  "directions_to_next": "[[c:Head south, about 750 metres as the crow flies, to All Saints chancel. Head back through the village and south along Main Street. Keep to pavements and public paths.]]"
+}

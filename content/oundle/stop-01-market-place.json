@@ -1,0 +1,48 @@
+{
+  "_readme": "Draft Oundle walk. [[c:...]] = cyan, not confirmed. Positions are guesses until recorded on site.",
+  "id": "oundle-01",
+  "order": 1,
+  "name": "Market Place and the old town hall",
+  "map": [
+    1228,
+    1242,
+    "guess"
+  ],
+  "layers": {
+    "essential_history": "[[c:Oundle has had a market for over a thousand years: a market charter is recorded in 972. The old town hall in the middle of the square was finished in 1830, replacing a 16th-century building on the same spot.]]",
+    "deeper_history": "[[c:A market is still held here every Thursday, with a farmers' market on the second Saturday of the month.]]",
+    "mystery": "[[c:Morning, 1626. The landlord of the Talbot is beside himself: the oak crown has gone. A market boy hands you a scrap he found by the stalls.]]"
+  },
+  "sources": [
+    {
+      "title": "Wikipedia: Oundle",
+      "url": "https://en.wikipedia.org/wiki/Oundle"
+    }
+  ],
+  "puzzle": {
+    "ref": "O1",
+    "title": "[[c:The market scrap]]",
+    "intro": "[[c:Each letter has been moved one place along the alphabet. Move each one back a place.]]",
+    "material": [
+      "[[c:XFMM]]"
+    ],
+    "question": "[[c:Where should you look first? (one word)]]",
+    "answer": "well",
+    "accepted_variants": [
+      "the well",
+      "drumming well"
+    ],
+    "hints": [
+      "[[c:W comes before X.]]",
+      "[[c:X becomes W, F becomes E.]]",
+      "[[c:It's in the inn yard.]]"
+    ],
+    "reveal": "[[c:It says WELL. Someone wants you to start at the Drumming Well.]]",
+    "fallback": "[[c:Stuck? Take a hint: hints are free.]]"
+  },
+  "evidence": [
+    "[[c:A note in the market said WELL.]]"
+  ],
+  "support": "[[c:Support the town: there are cafés and independent shops all around the Market Place.]]",
+  "directions_to_next": "[[c:Head west, about 140 metres as the crow flies, to the Talbot. It's on New Street, just west of the Market Place. Keep to pavements and public paths.]]"
+}

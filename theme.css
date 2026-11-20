@@ -200,3 +200,9 @@ pre.recce { white-space: pre-wrap; font-size: 12px; background: rgba(255,250,235
 .card.village button { margin-top: auto; }
 .card.village.soon { opacity: .72; }
 .badge-soon { display: inline-block; align-self: flex-start; margin-top: auto; padding: 4px 12px; border: 1.5px dashed var(--muted); border-radius: 99px; color: var(--muted); font-size: .85em; font-weight: 600; letter-spacing: .04em; }
+.center { text-align: center; }
+.card.address address { font-style: normal; font-size: 1.1em; line-height: 1.5; }
+.card.address h2 { margin-top: 0; }
+.suggest-input { width: 100%; box-sizing: border-box; font-size: 1em; padding: 10px; border: 2px solid var(--forest); border-radius: 6px; background: #fffaf0; margin: 4px 0 8px; }
+.card.village.suggest { border-style: dashed; }
+.suspect.no-pic { min-height: 0; padding: 10px; background: rgba(255,250,235,.6); border: 1px dashed var(--line); border-radius: 6px; }

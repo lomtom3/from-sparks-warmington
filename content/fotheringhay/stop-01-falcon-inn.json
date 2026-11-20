@@ -1,0 +1,51 @@
+{
+  "_readme": "Draft Fotheringhay walk. [[c:...]] = cyan, not confirmed. Positions are guesses until recorded on site.",
+  "id": "fotheringhay-01",
+  "order": 1,
+  "name": "The Falcon Inn",
+  "map": [
+    718,
+    598,
+    "guess"
+  ],
+  "layers": {
+    "essential_history": "[[c:Fotheringhay is a tiny village with a huge history. In the 1500s it was described as a single street of around 40 houses.]]",
+    "deeper_history": "[[c:The village once had a weekly market and an annual fair, and its population peaked at about 310 in 1811.]]",
+    "mystery": "[[c:The night before the royal burial, a page runs into the inn: the white rose has gone from the church. He drops a note in his hurry.]]"
+  },
+  "sources": [
+    {
+      "title": "Wikipedia: Fotheringhay",
+      "url": "https://en.wikipedia.org/wiki/Fotheringhay"
+    },
+    {
+      "title": "Wikipedia: Fotheringhay Castle",
+      "url": "https://en.wikipedia.org/wiki/Fotheringhay_Castle"
+    }
+  ],
+  "puzzle": {
+    "ref": "F1",
+    "title": "[[c:The page's note]]",
+    "intro": "[[c:Each letter has been moved one place along the alphabet. Move each one back a place.]]",
+    "material": [
+      "[[c:DIVSDI]]"
+    ],
+    "question": "[[c:Where did the page last see the rose? (one word)]]",
+    "answer": "church",
+    "accepted_variants": [
+      "the church"
+    ],
+    "hints": [
+      "[[c:D becomes C.]]",
+      "[[c:I becomes H.]]",
+      "[[c:It's the building with the tall tower.]]"
+    ],
+    "reveal": "[[c:It says CHURCH. The rose was last seen in the church.]]",
+    "fallback": "[[c:Stuck? Take a hint: hints are free.]]"
+  },
+  "evidence": [
+    "[[c:The rose was last seen in the church.]]"
+  ],
+  "support": "[[c:Support the village: the Falcon is the village pub.]]",
+  "directions_to_next": "[[c:Head south-east, about 140 metres as the crow flies, to the church. It's just along the street, you can't miss the tower. Keep to pavements and public paths.]]"
+}

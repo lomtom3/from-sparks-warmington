@@ -1,0 +1,239 @@
+{
+  "_readme": "DRAFT Polebrook walk (status draft in content/walks.json: only shown with draft colours on). Made by Claude from public sources; everything cyan until the owner approves. Character art still to make.",
+  "id": "polebrook",
+  "title": "The Missing Reel",
+  "subtitle": "Polebrook Walk",
+  "welcome_text": "[[c:A mystery walk around Polebrook, a quiet village that found itself next to a busy American bomber base in the Second World War.]]",
+  "start_text": "[[c:Start at the Kings Arms on Kings Arms Lane.]]",
+  "coins": {
+    "start_total": 5,
+    "cost_by_hints_used": {
+      "0": 4,
+      "1": 3,
+      "2": 2,
+      "3": 1
+    },
+    "explain": "[[c:You have a purse of 5 coins for the whole walk. Hints are free. Showing an answer costs coins.]]"
+  },
+  "layers": [
+    {
+      "key": "essential_history",
+      "label": "Essential history",
+      "description": "[[c:Short, true facts about each stop.]]",
+      "default_on": true
+    },
+    {
+      "key": "deeper_history",
+      "label": "Deeper history",
+      "description": "[[c:More history for the curious.]]",
+      "default_on": false
+    },
+    {
+      "key": "mystery",
+      "label": "Mystery story",
+      "description": "[[c:The story and the puzzles. Switch it off for a history-only walk.]]",
+      "default_on": true
+    }
+  ],
+  "stops": [
+    "stop-01-kings-arms.json",
+    "stop-02-village-hall.json",
+    "stop-03-all-saints.json",
+    "stop-04-polebrook-hall.json",
+    "stop-05-school.json",
+    "stop-06-lutton-road.json",
+    "stop-07-hemington-road.json",
+    "stop-08-kings-arms-finale.json"
+  ],
+  "route": [
+    {
+      "n": 1,
+      "name": "The Kings Arms",
+      "label": "Kings Arms",
+      "dir": "l",
+      "map": [
+        626,
+        504,
+        "guess"
+      ]
+    },
+    {
+      "n": 2,
+      "name": "The village hall",
+      "label": "Village hall",
+      "dir": "l",
+      "map": [
+        722,
+        592,
+        "guess"
+      ]
+    },
+    {
+      "n": 3,
+      "name": "All Saints Church",
+      "label": "All Saints",
+      "dir": "r",
+      "map": [
+        752,
+        582,
+        "guess"
+      ]
+    },
+    {
+      "n": 4,
+      "name": "Polebrook Hall",
+      "label": "Polebrook Hall",
+      "dir": "r",
+      "map": [
+        891,
+        567,
+        "guess"
+      ]
+    },
+    {
+      "n": 5,
+      "name": "The village school",
+      "label": "School",
+      "dir": "r",
+      "map": [
+        1024,
+        544,
+        "guess"
+      ]
+    },
+    {
+      "n": 6,
+      "name": "Lutton Road, towards the old airfield",
+      "label": "Towards the airfield",
+      "dir": "r",
+      "map": [
+        1230,
+        574,
+        "guess"
+      ]
+    },
+    {
+      "n": 7,
+      "name": "Hemington Road and the brook",
+      "label": "Hemington Road",
+      "dir": "r",
+      "map": [
+        782,
+        923,
+        "guess"
+      ]
+    },
+    {
+      "n": 8,
+      "name": "Back to the Kings Arms",
+      "label": "Kings Arms",
+      "dir": "l",
+      "map": [
+        626,
+        504,
+        "guess"
+      ]
+    }
+  ],
+  "story": [
+    "[[c:Polebrook, summer 1943. The airfield just outside the village is home to the 351st Bomb Group of the US Army Air Forces, and a film crew is making a picture about the airmen.]]",
+    "[[c:A reel of film has gone missing from the crew's van parked in the village. It holds shots of the airfield that must not fall into the wrong hands.]]",
+    "[[c:Four people were nearby: Peggy Ward, a Land Girl; Sergeant Hank Miller, a young American airman; Arthur Gibbs, the pub landlord; and Mr Leonard Pryce, a visiting salesman. Find the reel.]]"
+  ],
+  "start_page": {
+    "title": "Getting to the start",
+    "intro": "[[c:The walk starts and finishes at the Kings Arms.]]",
+    "address": [
+      "The Kings Arms",
+      "Kings Arms Lane",
+      "Polebrook",
+      "Peterborough",
+      "PE8 5LW"
+    ],
+    "parking": [
+      "[[c:Parking: please park considerately on the village streets, or ask at the pub. If you're driving, park first and then open the walk.]]"
+    ],
+    "support": "[[c:Support the village: have a drink at the Kings Arms before or after your walk. The walk takes about 45 minutes to 1 hour 15.]]",
+    "directions": {
+      "heading": "[[c:How to get here]]",
+      "text": "[[c:Tap a button to open Google Maps with directions from where you are now.]]",
+      "destination": "The Kings Arms, Kings Arms Lane, Polebrook, Peterborough PE8 5LW",
+      "buttons": [
+        {
+          "label": "[[c:Drive there]]",
+          "mode": "driving"
+        },
+        {
+          "label": "[[c:Public transport]]",
+          "mode": "transit"
+        },
+        {
+          "label": "[[c:Walk there]]",
+          "mode": "walking"
+        }
+      ]
+    },
+    "parking_photos": [],
+    "map_label": "Open the start in Maps",
+    "map_url": "https://www.google.com/maps/search/?api=1&query=The+Kings+Arms+Kings+Arms+Lane+Polebrook+Peterborough+PE8+5LW",
+    "begin_label": "[[c:I'm at the Kings Arms: begin the walk]]"
+  },
+  "access": {
+    "enabled": false,
+    "free_stops": 2,
+    "verify_url": "",
+    "buy_url": "",
+    "title": "[[c:Unlock the rest of the walk]]",
+    "text": "[[c:The first two stops are free to try. Enter your access code to carry on.]]",
+    "buy_text": "[[c:Don't have a code yet? Get one here.]]"
+  },
+  "map": {
+    "src": "map/polebrook-map.svg",
+    "x0": 250,
+    "y0": 150,
+    "w": 1100,
+    "h": 900,
+    "scale": 1.8
+  },
+  "geo": {
+    "lat0": 52.47623,
+    "lon0": -0.43967,
+    "x0": 0,
+    "y0": 0,
+    "mpp": 1
+  },
+  "lengths": [
+    {
+      "key": "standard",
+      "label": "[[c:The full walk]]",
+      "description": "[[c:All the stops.]]",
+      "stops": "all"
+    }
+  ],
+  "cast": [
+    {
+      "key": "PEGGY",
+      "name": "Peggy Ward",
+      "role": "a Land Girl",
+      "img": "images/characters/polebrook/peggy-portrait.jpg"
+    },
+    {
+      "key": "HANK",
+      "name": "Sergeant Hank Miller",
+      "role": "an American airman",
+      "img": "images/characters/polebrook/hank-portrait.jpg"
+    },
+    {
+      "key": "ARTHUR",
+      "name": "Arthur Gibbs",
+      "role": "the pub landlord",
+      "img": "images/characters/polebrook/arthur-portrait.jpg"
+    },
+    {
+      "key": "MR PRYCE",
+      "name": "Mr Leonard Pryce",
+      "role": "a visiting salesman",
+      "img": "images/characters/polebrook/pryce-portrait.jpg"
+    }
+  ]
+}

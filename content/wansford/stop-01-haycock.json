@@ -1,0 +1,48 @@
+{
+  "_readme": "Draft Wansford walk. [[c:...]] = cyan, not confirmed. Positions are guesses until recorded on site.",
+  "id": "wansford-01",
+  "order": 1,
+  "name": "The Haycock",
+  "map": [
+    912,
+    577,
+    "guess"
+  ],
+  "layers": {
+    "essential_history": "[[c:The Haycock is named after the village legend: a man fell asleep on a haycock, floated down the Nene, and on waking asked where he was. Told 'Wansford', he replied, 'Wansford in England?']]",
+    "deeper_history": "[[c:Daniel Defoe recorded the tale in 1724. It may come from Richard Brathwait's poem about Drunken Barnaby, published in 1638.]]",
+    "mystery": "[[c:The coachman roars: the strongbox has gone from the yard. Barnaby, still damp from his river trip, hands you a soggy note.]]"
+  },
+  "sources": [
+    {
+      "title": "Wikipedia: Wansford, Cambridgeshire",
+      "url": "https://en.wikipedia.org/wiki/Wansford,_Cambridgeshire"
+    }
+  ],
+  "puzzle": {
+    "ref": "W1",
+    "title": "[[c:The soggy note]]",
+    "intro": "[[c:Each letter has been moved one place along the alphabet. Move each one back a place.]]",
+    "material": [
+      "[[c:CSJEHF]]"
+    ],
+    "question": "[[c:Where was the strongbox carried? (one word)]]",
+    "answer": "bridge",
+    "accepted_variants": [
+      "the bridge",
+      "old bridge"
+    ],
+    "hints": [
+      "[[c:C becomes B.]]",
+      "[[c:S becomes R.]]",
+      "[[c:It crosses the river.]]"
+    ],
+    "reveal": "[[c:It says BRIDGE. Someone carried the box towards the old bridge.]]",
+    "fallback": "[[c:Stuck? Take a hint: hints are free.]]"
+  },
+  "evidence": [
+    "[[c:A note says the box went towards the BRIDGE.]]"
+  ],
+  "support": "[[c:Support the village: the Haycock is a hotel and restaurant.]]",
+  "directions_to_next": "[[c:Head west, about 110 metres as the crow flies, to the Old Bridge. Walk onto the old stone bridge. Take care of traffic. Keep to pavements and public paths.]]"
+}

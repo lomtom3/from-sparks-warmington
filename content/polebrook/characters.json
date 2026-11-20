@@ -1,0 +1,29 @@
+{
+  "_readme": "Polebrook cast (made-up characters).",
+  "characters": [
+    {
+      "key": "PEGGY",
+      "name": "Peggy Ward",
+      "role": "a Land Girl",
+      "img": "images/characters/polebrook/peggy-portrait.jpg"
+    },
+    {
+      "key": "HANK",
+      "name": "Sergeant Hank Miller",
+      "role": "an American airman",
+      "img": "images/characters/polebrook/hank-portrait.jpg"
+    },
+    {
+      "key": "ARTHUR",
+      "name": "Arthur Gibbs",
+      "role": "the pub landlord",
+      "img": "images/characters/polebrook/arthur-portrait.jpg"
+    },
+    {
+      "key": "MR PRYCE",
+      "name": "Mr Leonard Pryce",
+      "role": "a visiting salesman",
+      "img": "images/characters/polebrook/pryce-portrait.jpg"
+    }
+  ]
+}

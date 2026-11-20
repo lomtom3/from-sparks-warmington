@@ -1,0 +1,23 @@
+{
+  "_readme": "Draft Oundle walk. [[c:...]] = cyan, not confirmed. Positions are guesses until recorded on site.",
+  "id": "oundle-12",
+  "order": 12,
+  "name": "Oundle School and the Cripps Library",
+  "map": [
+    1223,
+    1207,
+    "guess"
+  ],
+  "layers": {
+    "essential_history": "[[c:Oundle School's buildings are spread through the town centre, so pupils walk between lessons along the old streets.]]",
+    "deeper_history": "[[c:The school's links with the Grocers' Company go back to Sir William Laxton's will of 1556.]]",
+    "mystery": "[[c:A pupil tells you why Josiah might want the crown: an inn with the Queen's staircase would draw every traveller on the road, and his own inn would be empty.]]"
+  },
+  "sources": [
+    {
+      "title": "Wikipedia: Oundle",
+      "url": "https://en.wikipedia.org/wiki/Oundle"
+    }
+  ],
+  "directions_to_next": "[[c:Head south, about 40 metres as the crow flies, to the Market Place.  Keep to pavements and public paths.]]"
+}

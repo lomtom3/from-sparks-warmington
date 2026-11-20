@@ -1,0 +1,227 @@
+{
+  "_readme": "DRAFT Nassington walk (status draft in content/walks.json: only shown with draft colours on). Made by Claude from public sources; everything cyan until the owner approves. Character art still to make.",
+  "id": "nassington",
+  "title": "The King's Chessman",
+  "subtitle": "Nassington Walk",
+  "welcome_text": "[[c:A mystery walk around Nassington, where a royal hall once stood and King Cnut is said to have feasted and played chess.]]",
+  "start_text": "[[c:Start at the Black Horse Inn on Fotheringhay Road.]]",
+  "coins": {
+    "start_total": 5,
+    "cost_by_hints_used": {
+      "0": 4,
+      "1": 3,
+      "2": 2,
+      "3": 1
+    },
+    "explain": "[[c:You have a purse of 5 coins for the whole walk. Hints are free. Showing an answer costs coins.]]"
+  },
+  "layers": [
+    {
+      "key": "essential_history",
+      "label": "Essential history",
+      "description": "[[c:Short, true facts about each stop.]]",
+      "default_on": true
+    },
+    {
+      "key": "deeper_history",
+      "label": "Deeper history",
+      "description": "[[c:More history for the curious.]]",
+      "default_on": false
+    },
+    {
+      "key": "mystery",
+      "label": "Mystery story",
+      "description": "[[c:The story and the puzzles. Switch it off for a history-only walk.]]",
+      "default_on": true
+    }
+  ],
+  "stops": [
+    "stop-01-black-horse.json",
+    "stop-02-village-hall.json",
+    "stop-03-church.json",
+    "stop-04-prebendal-manor.json",
+    "stop-05-st-marys-close.json",
+    "stop-06-queens-head.json",
+    "stop-07-black-horse-finale.json"
+  ],
+  "route": [
+    {
+      "n": 1,
+      "name": "The Black Horse",
+      "label": "Black Horse",
+      "dir": "r",
+      "map": [
+        1024,
+        716,
+        "guess"
+      ]
+    },
+    {
+      "n": 2,
+      "name": "Church Street and the village hall",
+      "label": "Village hall",
+      "dir": "u",
+      "map": [
+        780,
+        709,
+        "guess"
+      ]
+    },
+    {
+      "n": 3,
+      "name": "St Mary the Virgin and All Saints Church",
+      "label": "Church",
+      "dir": "l",
+      "map": [
+        602,
+        708,
+        "guess"
+      ]
+    },
+    {
+      "n": 4,
+      "name": "The Prebendal Manor",
+      "label": "Prebendal Manor",
+      "dir": "l",
+      "map": [
+        585,
+        750,
+        "guess"
+      ]
+    },
+    {
+      "n": 5,
+      "name": "St Mary's Close",
+      "label": "St Mary's Close",
+      "dir": "r",
+      "map": [
+        591,
+        572,
+        "guess"
+      ]
+    },
+    {
+      "n": 6,
+      "name": "The Queen's Head",
+      "label": "Queen's Head",
+      "dir": "r",
+      "map": [
+        1105,
+        418,
+        "guess"
+      ]
+    },
+    {
+      "n": 7,
+      "name": "Back to the Black Horse",
+      "label": "Black Horse",
+      "dir": "r",
+      "map": [
+        1024,
+        716,
+        "guess"
+      ]
+    }
+  ],
+  "story": [
+    "[[c:Nassington, about the year 1020. King Cnut is staying at his royal hall by the church, with his court and his bishops.]]",
+    "[[c:Every night the King plays chess, and his favourite piece is a carved walrus-ivory king. This morning it is gone.]]",
+    "[[c:Four people were in the hall: Ulf, a Danish guard; Edith, the hall cook; Brother Aldred, a bishop's clerk; and Orm, a travelling poet. Find the chessman before the King loses his temper.]]"
+  ],
+  "start_page": {
+    "title": "Getting to the start",
+    "intro": "[[c:The walk starts and finishes at the Black Horse Inn.]]",
+    "address": [
+      "The Black Horse Inn",
+      "2 Fotheringhay Road",
+      "Nassington",
+      "Peterborough",
+      "PE8 6QU"
+    ],
+    "parking": [
+      "[[c:Parking: please park considerately on the village streets, or ask at the pub. If you're driving, park first and then open the walk.]]"
+    ],
+    "support": "[[c:Support the village: Nassington has two pubs, the Black Horse and the Queen's Head. The walk takes about 1 hour to 1 hour 30.]]",
+    "directions": {
+      "heading": "[[c:How to get here]]",
+      "text": "[[c:Tap a button to open Google Maps with directions from where you are now.]]",
+      "destination": "The Black Horse Inn, 2 Fotheringhay Road, Nassington, Peterborough PE8 6QU",
+      "buttons": [
+        {
+          "label": "[[c:Drive there]]",
+          "mode": "driving"
+        },
+        {
+          "label": "[[c:Public transport]]",
+          "mode": "transit"
+        },
+        {
+          "label": "[[c:Walk there]]",
+          "mode": "walking"
+        }
+      ]
+    },
+    "parking_photos": [],
+    "map_label": "Open the start in Maps",
+    "map_url": "https://www.google.com/maps/search/?api=1&query=The+Black+Horse+Inn+2+Fotheringhay+Road+Nassington+Peterborough+PE8+6QU",
+    "begin_label": "[[c:I'm at the Black Horse: begin the walk]]"
+  },
+  "access": {
+    "enabled": false,
+    "free_stops": 2,
+    "verify_url": "",
+    "buy_url": "",
+    "title": "[[c:Unlock the rest of the walk]]",
+    "text": "[[c:The first two stops are free to try. Enter your access code to carry on.]]",
+    "buy_text": "[[c:Don't have a code yet? Get one here.]]"
+  },
+  "map": {
+    "src": "map/nassington-map.svg",
+    "x0": 300,
+    "y0": 200,
+    "w": 1100,
+    "h": 900,
+    "scale": 1.8
+  },
+  "geo": {
+    "lat0": 52.5594,
+    "lon0": -0.44207,
+    "x0": 0,
+    "y0": 0,
+    "mpp": 1
+  },
+  "lengths": [
+    {
+      "key": "standard",
+      "label": "[[c:The full walk]]",
+      "description": "[[c:All the stops.]]",
+      "stops": "all"
+    }
+  ],
+  "cast": [
+    {
+      "key": "ULF",
+      "name": "Ulf",
+      "role": "a Danish guard",
+      "img": "images/characters/nassington/ulf-portrait.jpg"
+    },
+    {
+      "key": "EDITH",
+      "name": "Edith",
+      "role": "the hall cook",
+      "img": "images/characters/nassington/edith-portrait.jpg"
+    },
+    {
+      "key": "BROTHER ALDRED",
+      "name": "Brother Aldred",
+      "role": "a bishop's clerk",
+      "img": "images/characters/nassington/aldred-portrait.jpg"
+    },
+    {
+      "key": "ORM",
+      "name": "Orm",
+      "role": "a travelling poet",
+      "img": "images/characters/nassington/orm-portrait.jpg"
+    }
+  ]
+}

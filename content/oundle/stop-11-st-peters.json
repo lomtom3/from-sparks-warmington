@@ -1,0 +1,48 @@
+{
+  "_readme": "Draft Oundle walk. [[c:...]] = cyan, not confirmed. Positions are guesses until recorded on site.",
+  "id": "oundle-11",
+  "order": 11,
+  "name": "St Peter's Church",
+  "map": [
+    1239,
+    1153,
+    "guess"
+  ],
+  "layers": {
+    "essential_history": "[[c:St Peter's stands on the site of the church founded by St Wilfrid, who died in Oundle in 709. Its spire, 210 feet high, is the tallest in Northamptonshire.]]",
+    "deeper_history": "[[c:Oundle is one of the oldest named places in the county: Wilfrid's monk Eddi wrote of it as Undolum in about 715.]]",
+    "mystery": "[[c:The church tower door has been forced. Scratched on the stone beside it is a message, written backwards.]]"
+  },
+  "sources": [
+    {
+      "title": "Wikipedia: Oundle",
+      "url": "https://en.wikipedia.org/wiki/Oundle"
+    }
+  ],
+  "puzzle": {
+    "ref": "O7",
+    "title": "[[c:The backwards message]]",
+    "intro": "[[c:Read it from right to left.]]",
+    "material": [
+      "[[c:TNAG SAW EREH]]"
+    ],
+    "question": "[[c:Who does the message name? (surname)]]",
+    "answer": "Gant",
+    "accepted_variants": [
+      "josiah gant",
+      "josiah",
+      "gant"
+    ],
+    "hints": [
+      "[[c:Start at the end of the line.]]",
+      "[[c:The last word backwards is HERE.]]",
+      "[[c:The first word backwards is a name.]]"
+    ],
+    "reveal": "[[c:It reads HERE WAS GANT. Someone saw Josiah Gant at the tower door.]]",
+    "fallback": "[[c:Stuck? Take a hint: hints are free.]]"
+  },
+  "evidence": [
+    "[[c:A message by the tower door names GANT.]]"
+  ],
+  "directions_to_next": "[[c:Head south, about 60 metres as the crow flies, to Oundle School's buildings by the church.  Keep to pavements and public paths.]]"
+}

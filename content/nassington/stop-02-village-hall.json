@@ -1,0 +1,51 @@
+{
+  "_readme": "Draft Nassington walk. [[c:...]] = cyan, not confirmed. Positions are guesses until recorded on site.",
+  "id": "nassington-02",
+  "order": 2,
+  "name": "Church Street and the village hall",
+  "map": [
+    780,
+    709,
+    "guess"
+  ],
+  "layers": {
+    "essential_history": "[[c:Church Street runs from the village crossroads to the church and the old manor, the oldest part of the village.]]",
+    "deeper_history": "[[c:Nassington and its neighbour Yarwell share a long history along the River Nene.]]",
+    "mystery": "[[c:Edith the cook stops you. She says the poet Orm was singing in the kitchen all night, and the bread ovens prove it.]]"
+  },
+  "sources": [
+    {
+      "title": "Wikipedia: Nassington",
+      "url": "https://en.wikipedia.org/wiki/Nassington"
+    },
+    {
+      "title": "Prebendal Manor history",
+      "url": "https://prebendal-manor.co.uk/history"
+    }
+  ],
+  "puzzle": {
+    "ref": "N2",
+    "title": "[[c:Edith's loaves]]",
+    "intro": "",
+    "material": [
+      "[[c:EDITH: \"Orm sang one song for every batch of loaves. I baked from dusk to dawn: six batches, each taking two hours.\"]]"
+    ],
+    "question": "[[c:How many hours did Orm sing for?]]",
+    "answer": "12",
+    "accepted_variants": [
+      "twelve",
+      "12 hours"
+    ],
+    "hints": [
+      "[[c:Six batches.]]",
+      "[[c:Two hours each.]]",
+      "[[c:Six times two.]]"
+    ],
+    "reveal": "[[c:Twelve hours: Orm was singing in the kitchen all night.]]",
+    "fallback": "[[c:Stuck? Take a hint: hints are free.]]"
+  },
+  "evidence": [
+    "[[c:Orm the poet sang in the kitchen all night.]]"
+  ],
+  "directions_to_next": "[[c:Head west, about 180 metres as the crow flies, to the church.  Keep to pavements and public paths.]]"
+}

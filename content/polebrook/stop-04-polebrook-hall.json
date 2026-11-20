@@ -1,0 +1,30 @@
+{
+  "_readme": "Draft Polebrook walk. [[c:...]] = cyan, not confirmed. Positions are guesses until recorded on site.",
+  "id": "polebrook-04",
+  "order": 4,
+  "name": "Polebrook Hall",
+  "map": [
+    891,
+    567,
+    "guess"
+  ],
+  "layers": {
+    "essential_history": "[[c:Polebrook Hall is the village's manor house. It is private, so please look from the road.]]",
+    "deeper_history": "[[c:In the war, big houses near airfields were often used by officers.]]",
+    "mystery": "[[c:Hank the airman says he was on duty at the airfield all night. The duty roster backs him up.]]"
+  },
+  "sources": [
+    {
+      "title": "Wikipedia: Polebrook",
+      "url": "https://en.wikipedia.org/wiki/Polebrook"
+    },
+    {
+      "title": "Wikipedia: RAF Polebrook",
+      "url": "https://en.wikipedia.org/wiki/RAF_Polebrook"
+    }
+  ],
+  "evidence": [
+    "[[c:Sergeant Miller was on duty at the airfield all night.]]"
+  ],
+  "directions_to_next": "[[c:Head east, about 130 metres as the crow flies, to the village school.  Keep to pavements and public paths.]]"
+}

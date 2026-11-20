@@ -1,0 +1,77 @@
+{
+  "_readme": "Draft Polebrook walk. [[c:...]] = cyan, not confirmed. Positions are guesses until recorded on site.",
+  "id": "polebrook-08",
+  "order": 8,
+  "name": "Back to the Kings Arms",
+  "map": [
+    626,
+    504,
+    "guess"
+  ],
+  "layers": {
+    "essential_history": "[[c:Back where you started. In 1943 this small village was next door to one of the busiest airfields in England.]]",
+    "deeper_history": "[[c:Every year people come to Polebrook to remember the men of the 351st Bomb Group.]]",
+    "mystery": "[[c:The film crew, the airman, the Land Girl, the landlord and Mr Pryce are all here. Who took the reel?]]"
+  },
+  "sources": [
+    {
+      "title": "Wikipedia: Polebrook",
+      "url": "https://en.wikipedia.org/wiki/Polebrook"
+    },
+    {
+      "title": "Wikipedia: RAF Polebrook",
+      "url": "https://en.wikipedia.org/wiki/RAF_Polebrook"
+    }
+  ],
+  "directions_to_next": "[[c:That's the end of the walk. Well done, detective!]]",
+  "puzzle": {
+    "ref": "P5",
+    "type": "accuse",
+    "title": "[[c:Who took the reel?]]",
+    "intro": "[[c:Look through your evidence notebook, then make your accusation.]]",
+    "material": [],
+    "question": "[[c:Who took it, why, and where is it now?]]",
+    "fields": [
+      {
+        "key": "who",
+        "label": "Who did it?",
+        "options": [
+          "Peggy Ward (the Land Girl)",
+          "Sergeant Hank Miller (the airman)",
+          "Arthur Gibbs (the landlord)",
+          "Mr Leonard Pryce (the salesman)"
+        ],
+        "answer": "Mr Leonard Pryce (the salesman)"
+      },
+      {
+        "key": "why",
+        "label": "Why?",
+        "options": [
+          "To sell the pictures of the airfield to the enemy",
+          "To keep a film star's autograph",
+          "To use the tin for sweets",
+          "By accident"
+        ],
+        "answer": "To sell the pictures of the airfield to the enemy"
+      },
+      {
+        "key": "where",
+        "label": "Where is it now?",
+        "options": [
+          "In his suitcase at the inn",
+          "In the church porch",
+          "At the village hall",
+          "In the brook"
+        ],
+        "answer": "In his suitcase at the inn"
+      }
+    ],
+    "hints": [
+      "[[c:Who was out of his room at one in the morning?]]",
+      "[[c:Whose notebook was in code?]]",
+      "[[c:Who was seen at the airfield fence with a camera?]]"
+    ],
+    "reveal": "[[c:It was Mr Leonard Pryce, who was no salesman at all. He took the reel to sell pictures of the airfield, and hid it in his suitcase at the inn. The military police arrive in time, and the reel goes back to the film crew.]]",
+    "fallback": "[[c:You can solve this from your notebook alone.]]"
+  }
+}

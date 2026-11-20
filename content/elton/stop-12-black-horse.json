@@ -1,0 +1,48 @@
+{
+  "_readme": "Elton draft. [[c:...]] is cyan = not confirmed. History from the Elton Parish Council short history unless noted.",
+  "id": "elton-12",
+  "order": 12,
+  "name": "The Black Horse",
+  "map": [
+    1052,
+    1349,
+    "guess"
+  ],
+  "layers": {
+    "essential_history": "[[c:In the 1700s the Black Horse was the village post house, where travellers could change horses and post was collected.]]",
+    "deeper_history": "[[c:Overend, the road outside, is the old way south out of the village towards Elton Hall.]]",
+    "mystery": "[[c:A rider from the procession left a letter here to go by post. The post bag was torn in the night and half the letter is smudged.]]"
+  },
+  "sources": [
+    {
+      "title": "Elton Parish Council: A short history of Elton",
+      "url": "https://eltonparishcouncil.gov.uk/a-short-history-of-elton"
+    }
+  ],
+  "directions_to_next": "[[c:Head south, about 160 metres as the crow flies, to Overend. Carry on south along Overend. Keep to the pavements and paths.]]",
+  "support": "[[c:Support the village: the Black Horse is still a working pub.]]",
+  "puzzle": {
+    "ref": "E8",
+    "title": "[[c:The torn letter]]",
+    "intro": "[[c:Fill in the missing letters.]]",
+    "material": [
+      "[[c:\"...to Master Goldsmith of Cheapside, London. I have j_w_ls fit for a queen to sell. I will bring them within the week. R. H.\"]]"
+    ],
+    "question": "[[c:What did R. H. plan to sell? (one word)]]",
+    "answer": "jewels",
+    "accepted_variants": [
+      "the jewels",
+      "jewells",
+      "jewls"
+    ],
+    "hints": [
+      "[[c:R. H. are someone's initials.]]",
+      "[[c:The missing letters are E and E.]]",
+      "[[c:Rubies and pearls are these.]]"
+    ],
+    "reveal": "[[c:JEWELS. R. H. is Richard Hale. He planned to sell the Queen's jewels from the casket to a London goldsmith.]]"
+  },
+  "evidence": [
+    "[[c:Richard Hale wrote to a London goldsmith offering to sell jewels.]]"
+  ]
+}

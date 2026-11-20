@@ -1,0 +1,53 @@
+{
+  "_readme": "Draft Oundle walk. [[c:...]] = cyan, not confirmed. Positions are guesses until recorded on site.",
+  "id": "oundle-02",
+  "order": 2,
+  "name": "The Talbot",
+  "map": [
+    1089,
+    1216,
+    "guess"
+  ],
+  "layers": {
+    "essential_history": "[[c:The Talbot began as a Tudor inn called the Tabard. It was rebuilt in stone in the 1600s, traditionally in 1626, and local tradition says some of the stone, a great window and even the staircase came from Fotheringhay Castle.]]",
+    "deeper_history": "[[c:Historians think the window could have come from the castle, but the staircase looks Jacobean, from the early 1600s, so the story may be more legend than fact. In 1755 travellers scratched messages into the window panes, and they are still there.]]",
+    "mystery": "[[c:In the Talbot yard the masons are arguing. The carter's delivery note has been torn, but the numbers still add up, or do they?]]"
+  },
+  "sources": [
+    {
+      "title": "Wikipedia: Oundle",
+      "url": "https://en.wikipedia.org/wiki/Oundle"
+    },
+    {
+      "title": "Talbot Hotel history (Coaching Inn Group)",
+      "url": "https://coachinginngroup.co.uk/wp-content/uploads/2025/09/Talbot-Hotel-History.pdf"
+    }
+  ],
+  "puzzle": {
+    "ref": "O2",
+    "title": "[[c:The carter's load]]",
+    "intro": "",
+    "material": [
+      "[[c:MARTHA: \"I brought nine carts of stone from Fotheringhay. Four went into the front wall, three into the back, and the rest are stacked in the yard.\"]]",
+      "[[c:You count the carts' worth of stone in the yard: there are three.]]"
+    ],
+    "question": "[[c:How many carts' worth SHOULD be in the yard?]]",
+    "answer": "2",
+    "accepted_variants": [
+      "two",
+      "2 carts"
+    ],
+    "hints": [
+      "[[c:Nine take away four, take away three.]]",
+      "[[c:It's fewer than three.]]",
+      "[[c:Nine minus seven.]]"
+    ],
+    "reveal": "[[c:There should be two, but there are three. An extra load was stacked in the yard during the night, and something could be hidden in it.]]",
+    "fallback": "[[c:Stuck? Take a hint: hints are free.]]"
+  },
+  "evidence": [
+    "[[c:An extra load of stone appeared in the Talbot yard overnight.]]"
+  ],
+  "support": "[[c:Support the town: the Talbot is still a hotel and restaurant today.]]",
+  "directions_to_next": "[[c:Head north, about 120 metres as the crow flies, to Drumming Well Lane. Walk north up the lane named after the well. Keep to pavements and public paths.]]"
+}

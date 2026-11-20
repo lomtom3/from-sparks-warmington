@@ -1,0 +1,30 @@
+{
+  "_readme": "Draft Polebrook walk. [[c:...]] = cyan, not confirmed. Positions are guesses until recorded on site.",
+  "id": "polebrook-06",
+  "order": 6,
+  "name": "Lutton Road, towards the old airfield",
+  "map": [
+    1230,
+    574,
+    "guess"
+  ],
+  "layers": {
+    "essential_history": "[[c:The airfield lay just south-east of the village. The RAF used it from 1941, and the American 351st Bomb Group flew from here from April 1943 to June 1945. The film star Clark Gable was stationed here during the war.]]",
+    "deeper_history": "[[c:In the 1950s the site was used for Thor missiles. A US flag at the old airfield remembers the men of the 351st.]]",
+    "mystery": "[[c:A farmer saw a man in a smart suit walking from the airfield fence with a camera, an hour after midnight.]]"
+  },
+  "sources": [
+    {
+      "title": "Wikipedia: Polebrook",
+      "url": "https://en.wikipedia.org/wiki/Polebrook"
+    },
+    {
+      "title": "Wikipedia: RAF Polebrook",
+      "url": "https://en.wikipedia.org/wiki/RAF_Polebrook"
+    }
+  ],
+  "evidence": [
+    "[[c:A man in a smart suit was seen at the airfield fence with a camera after midnight.]]"
+  ],
+  "directions_to_next": "[[c:Head south-west, about 570 metres as the crow flies, to Hemington Road. Head back through the village and south down Hemington Road. Keep to pavements and public paths.]]"
+}

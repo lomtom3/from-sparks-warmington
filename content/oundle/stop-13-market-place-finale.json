@@ -1,0 +1,73 @@
+{
+  "_readme": "Draft Oundle walk. [[c:...]] = cyan, not confirmed. Positions are guesses until recorded on site.",
+  "id": "oundle-13",
+  "order": 13,
+  "name": "Back to the Market Place",
+  "map": [
+    1228,
+    1242,
+    "guess"
+  ],
+  "layers": {
+    "essential_history": "[[c:Back where you started. Oundle has been a market town for over a thousand years.]]",
+    "deeper_history": "[[c:The Talbot's stories, from the Drumming Well to the Queen's staircase, are still told in the town today.]]",
+    "mystery": "[[c:The landlord, the mason, the carter, the schoolboy and Josiah Gant are all here. Time to say who took the crown.]]"
+  },
+  "sources": [
+    {
+      "title": "Wikipedia: Oundle",
+      "url": "https://en.wikipedia.org/wiki/Oundle"
+    }
+  ],
+  "directions_to_next": "[[c:That's the end of the walk. Well done, detective!]]",
+  "puzzle": {
+    "ref": "O8",
+    "type": "accuse",
+    "title": "[[c:Who took the oak crown?]]",
+    "intro": "[[c:Look through your evidence notebook, then make your accusation.]]",
+    "material": [],
+    "question": "[[c:Who took the crown, why, and where is it hidden?]]",
+    "fields": [
+      {
+        "key": "who",
+        "label": "Who took it?",
+        "options": [
+          "Silas Webb (the master mason)",
+          "Tom Crane (the schoolboy)",
+          "Martha Pell (the carter)",
+          "Josiah Gant (the rival landlord)"
+        ],
+        "answer": "Josiah Gant (the rival landlord)"
+      },
+      {
+        "key": "why",
+        "label": "Why?",
+        "options": [
+          "To sell it in London",
+          "So his own inn would have the Queen's staircase story",
+          "To give it back to Fotheringhay",
+          "As a joke on the schoolboys"
+        ],
+        "answer": "So his own inn would have the Queen's staircase story"
+      },
+      {
+        "key": "where",
+        "label": "Where is it hidden?",
+        "options": [
+          "In the river",
+          "In the church tower",
+          "In the school chapel",
+          "Under the market stalls"
+        ],
+        "answer": "In the church tower"
+      }
+    ],
+    "hints": [
+      "[[c:Whose story about being behind his bar didn't add up?]]",
+      "[[c:Whose handcart had a splinter of carved oak?]]",
+      "[[c:Where did Tom hear the footsteps going?]]"
+    ],
+    "reveal": "[[c:It was Josiah Gant. He wheeled the crown away on his handcart and hid it in the church tower, meaning to set it on his own staircase so travellers would stay at his inn instead of the Talbot. The crown goes back to the Talbot, and the Drumming Well falls silent.]]",
+    "fallback": "[[c:You can solve this from your notebook alone.]]"
+  }
+}

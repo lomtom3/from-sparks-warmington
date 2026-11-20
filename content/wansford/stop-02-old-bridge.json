@@ -1,0 +1,49 @@
+{
+  "_readme": "Draft Wansford walk. [[c:...]] = cyan, not confirmed. Positions are guesses until recorded on site.",
+  "id": "wansford-02",
+  "order": 2,
+  "name": "Wansford Old Bridge",
+  "map": [
+    800,
+    565,
+    "guess"
+  ],
+  "layers": {
+    "essential_history": "[[c:The stone bridge carried the Great North Road over the Nene. It replaced an eight-arch wooden bridge damaged by floods in 1571. A post halfway across marks the old border between Northamptonshire and Huntingdonshire.]]",
+    "deeper_history": "[[c:The bridge is Grade I listed. Since the 1920s a concrete bridge has carried the northbound A1 nearby.]]",
+    "mystery": "[[c:Halfway across, by the county post, there are cart marks and a scrape of red paint, the colour of the London coach.]]"
+  },
+  "sources": [
+    {
+      "title": "Wikipedia: Wansford, Cambridgeshire",
+      "url": "https://en.wikipedia.org/wiki/Wansford,_Cambridgeshire"
+    }
+  ],
+  "puzzle": {
+    "ref": "W2",
+    "title": "[[c:The boundary post]]",
+    "intro": "",
+    "material": [
+      "[[c:On one side of the post is Northamptonshire, on the other Huntingdonshire.]]",
+      "[[c:The cart marks start on the inn side and stop at the post.]]",
+      "[[c:The scrape of red paint is on the Northamptonshire side.]]"
+    ],
+    "question": "[[c:On which county's side did the cart stop? (county)]]",
+    "answer": "Northamptonshire",
+    "accepted_variants": [
+      "northants",
+      "northampton"
+    ],
+    "hints": [
+      "[[c:Read the third line.]]",
+      "[[c:The paint is on one side.]]",
+      "[[c:Not Huntingdonshire.]]"
+    ],
+    "reveal": "[[c:Northamptonshire. Someone wheeled the box to the middle of the bridge and stopped on the Northamptonshire side.]]",
+    "fallback": "[[c:Stuck? Take a hint: hints are free.]]"
+  },
+  "evidence": [
+    "[[c:The box was wheeled to the middle of the bridge.]]"
+  ],
+  "directions_to_next": "[[c:Head north, about 130 metres as the crow flies, to the riverside. Follow the road north along the river. Keep to pavements and public paths.]]"
+}

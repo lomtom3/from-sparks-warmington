@@ -1,0 +1,49 @@
+{
+  "_readme": "Draft Barnwell walk. [[c:...]] = cyan, not confirmed. Positions are guesses until recorded on site.",
+  "id": "barnwell-03",
+  "order": 3,
+  "name": "The war memorial",
+  "map": [
+    887,
+    753,
+    "guess"
+  ],
+  "layers": {
+    "essential_history": "[[c:The war memorial stands near the church, remembering villagers who died in the World Wars.]]",
+    "deeper_history": "[[c:Look for familiar village surnames among the names.]]",
+    "mystery": "[[c:Robin the miller's son says he saw a light in the castle at midnight.]]"
+  },
+  "sources": [
+    {
+      "title": "Wikipedia: Barnwell, Northamptonshire",
+      "url": "https://en.wikipedia.org/wiki/Barnwell,_Northamptonshire"
+    }
+  ],
+  "puzzle": {
+    "ref": "B2",
+    "title": "[[c:Robin's lantern count]]",
+    "intro": "",
+    "material": [
+      "[[c:ROBIN: \"I saw the light come on at midnight and go out an hour and a half later.\"]]"
+    ],
+    "question": "[[c:At what time did the light go out? (for example 1.30)]]",
+    "answer": "1.30",
+    "accepted_variants": [
+      "1:30",
+      "half past one",
+      "one thirty",
+      "130"
+    ],
+    "hints": [
+      "[[c:Start at midnight, which is 12.]]",
+      "[[c:Add one hour and a half.]]",
+      "[[c:Half past one.]]"
+    ],
+    "reveal": "[[c:Half past one. Someone was in the castle for an hour and a half.]]",
+    "fallback": "[[c:Stuck? Take a hint: hints are free.]]"
+  },
+  "evidence": [
+    "[[c:Someone was in the castle from midnight to half past one.]]"
+  ],
+  "directions_to_next": "[[c:Head north, about 30 metres as the crow flies, to St Andrew's Church.  Keep to pavements and public paths.]]"
+}

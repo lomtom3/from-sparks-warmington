@@ -1,0 +1,53 @@
+{
+  "_readme": "Draft Fotheringhay walk. [[c:...]] = cyan, not confirmed. Positions are guesses until recorded on site.",
+  "id": "fotheringhay-04",
+  "order": 4,
+  "name": "Fotheringhay Bridge",
+  "map": [
+    848,
+    879,
+    "guess"
+  ],
+  "layers": {
+    "essential_history": "[[c:People once crossed the Nene here by a ford next to the castle. Elizabeth I ordered the first bridge in 1573, and the present stone bridge was built in 1722 by George Portwood of Stamford.]]",
+    "deeper_history": "[[c:Take care: there is traffic on the bridge. The view of the church from here is one of the best in the county.]]",
+    "mystery": "[[c:The ferryman kept a tally of who crossed the ford that night.]]"
+  },
+  "sources": [
+    {
+      "title": "Wikipedia: Fotheringhay",
+      "url": "https://en.wikipedia.org/wiki/Fotheringhay"
+    },
+    {
+      "title": "Wikipedia: Fotheringhay Castle",
+      "url": "https://en.wikipedia.org/wiki/Fotheringhay_Castle"
+    }
+  ],
+  "puzzle": {
+    "ref": "F3",
+    "title": "[[c:The ferry tally]]",
+    "intro": "",
+    "material": [
+      "[[c:Nine o'clock: Will Hobbs, home to the far bank.]]",
+      "[[c:Ten o'clock: Master Venn, over, with a sack.]]",
+      "[[c:Eleven o'clock: Master Venn, back, no sack.]]"
+    ],
+    "question": "[[c:Who crossed twice? (surname)]]",
+    "answer": "Venn",
+    "accepted_variants": [
+      "master venn",
+      "lucas venn"
+    ],
+    "hints": [
+      "[[c:One name appears twice.]]",
+      "[[c:He came back without his sack.]]",
+      "[[c:He sells wine.]]"
+    ],
+    "reveal": "[[c:Master Venn crossed twice: over with a sack, back with nothing.]]",
+    "fallback": "[[c:Stuck? Take a hint: hints are free.]]"
+  },
+  "evidence": [
+    "[[c:Master Venn crossed the ford twice: over with a sack, back without it.]]"
+  ],
+  "directions_to_next": "[[c:Head east, about 160 metres as the crow flies, to the castle mound. Follow the path to the castle mound by the river. Keep to pavements and public paths.]]"
+}

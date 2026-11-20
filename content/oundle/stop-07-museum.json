@@ -1,0 +1,47 @@
+{
+  "_readme": "Draft Oundle walk. [[c:...]] = cyan, not confirmed. Positions are guesses until recorded on site.",
+  "id": "oundle-07",
+  "order": 7,
+  "name": "Oundle Museum",
+  "map": [
+    720,
+    1280,
+    "guess"
+  ],
+  "layers": {
+    "essential_history": "[[c:Oundle Museum is run by volunteers and tells the story of the town and the villages around it.]]",
+    "deeper_history": "[[c:Check opening times before you go in.]]",
+    "mystery": "[[c:In the museum, an old map shows a hidden stair in the church tower. (Long walk only: a bonus clue.)]]"
+  },
+  "sources": [
+    {
+      "title": "Wikipedia: Oundle",
+      "url": "https://en.wikipedia.org/wiki/Oundle"
+    }
+  ],
+  "puzzle": {
+    "ref": "O5",
+    "title": "[[c:The tower stair]]",
+    "intro": "[[c:A is 1, B is 2, C is 3, and so on.]]",
+    "material": [
+      "[[c:2 5 12 12 19]]"
+    ],
+    "question": "[[c:What is kept in the tower room where something could be hidden? (one word)]]",
+    "answer": "bells",
+    "accepted_variants": [
+      "the bells",
+      "bell"
+    ],
+    "hints": [
+      "[[c:2 is B.]]",
+      "[[c:5 is E, 12 is L.]]",
+      "[[c:They ring on Sundays.]]"
+    ],
+    "reveal": "[[c:2 5 12 12 19 spells BELLS. The bell chamber is a good hiding place.]]",
+    "fallback": "[[c:Stuck? Take a hint: hints are free.]]"
+  },
+  "evidence": [
+    "[[c:An old map shows a way up to the bell chamber in the church tower.]]"
+  ],
+  "directions_to_next": "[[c:Head south, about 270 metres as the crow flies, to South Bridge and the River Nene. Follow the road south towards the river. Take care: this road can be busy. Keep to pavements and public paths.]]"
+}

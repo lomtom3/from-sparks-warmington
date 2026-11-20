@@ -1,0 +1,50 @@
+{
+  "_readme": "Elton draft. [[c:...]] is cyan = not confirmed. History from the Elton Parish Council short history unless noted.",
+  "id": "elton-08",
+  "order": 8,
+  "name": "Highgate Green and Highgate Hall",
+  "map": [
+    1124,
+    1027,
+    "guess"
+  ],
+  "layers": {
+    "essential_history": "[[c:Highgate Hall began life as the village Reading Room. It was made bigger in the 1930s, and today the parish council meets here.]]",
+    "deeper_history": "[[c:After the First World War the village population fell below 550, the lowest for centuries.]]",
+    "mystery": "[[c:Here you find Thomas Wade's neighbour, who knows where the miller was at midnight.]]"
+  },
+  "sources": [
+    {
+      "title": "Elton Parish Council: A short history of Elton",
+      "url": "https://eltonparishcouncil.gov.uk/a-short-history-of-elton"
+    }
+  ],
+  "directions_to_next": "[[c:Head west, about 260 metres as the crow flies, to Elton Village Store. Head back west along Middle Street to the shop. Keep to the pavements and paths.]]",
+  "puzzle": {
+    "ref": "E6",
+    "title": "[[c:Where was the miller?]]",
+    "intro": "[[c:Only one person could NOT have been at the mill at midnight.]]",
+    "material": [
+      "[[c:NEIGHBOUR: \"Thomas was home all night with his poorly little boy. I sat with them myself until dawn.\"]]",
+      "[[c:APPRENTICE: \"Master Hale asked Thomas for the mill key so his horses could shelter in the yard.\"]]",
+      "[[c:STABLE BOY: \"A rider went out after midnight towards the river.\"]]"
+    ],
+    "question": "[[c:Who could NOT have been at the mill at midnight? (surname)]]",
+    "answer": "Wade",
+    "accepted_variants": [
+      "thomas wade",
+      "thomas",
+      "the miller",
+      "miller"
+    ],
+    "hints": [
+      "[[c:Look for someone with a witness all night.]]",
+      "[[c:The neighbour sat with him until dawn.]]",
+      "[[c:He is the miller.]]"
+    ],
+    "reveal": "[[c:Thomas Wade was home all night with his sick son. He only lent the key. Someone else used it.]]"
+  },
+  "evidence": [
+    "[[c:Thomas Wade was at home all night. He lent the mill key to Master Hale.]]"
+  ]
+}

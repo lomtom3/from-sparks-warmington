@@ -1,0 +1,52 @@
+{
+  "_readme": "Draft Fotheringhay walk. [[c:...]] = cyan, not confirmed. Positions are guesses until recorded on site.",
+  "id": "fotheringhay-06",
+  "order": 6,
+  "name": "Mary, Queen of Scots memorial",
+  "map": [
+    983,
+    952,
+    "guess"
+  ],
+  "layers": {
+    "essential_history": "[[c:A memorial near the castle mound remembers Mary, Queen of Scots. Her body stayed in the village for months after her execution before burial at Peterborough Cathedral.]]",
+    "deeper_history": "[[c:She was later moved to Westminster Abbey by her son, James I.]]",
+    "mystery": "[[c:Hidden under a stone you find a scrap of a merchant's bill, written in numbers.]]"
+  },
+  "sources": [
+    {
+      "title": "Wikipedia: Fotheringhay",
+      "url": "https://en.wikipedia.org/wiki/Fotheringhay"
+    },
+    {
+      "title": "Wikipedia: Fotheringhay Castle",
+      "url": "https://en.wikipedia.org/wiki/Fotheringhay_Castle"
+    }
+  ],
+  "puzzle": {
+    "ref": "F5",
+    "title": "[[c:The merchant's bill]]",
+    "intro": "[[c:A is 1, B is 2, C is 3, and so on.]]",
+    "material": [
+      "[[c:2 1 18 18 5 12]]"
+    ],
+    "question": "[[c:Where was the rose hidden? (one word)]]",
+    "answer": "barrel",
+    "accepted_variants": [
+      "a barrel",
+      "wine barrel",
+      "the barrel"
+    ],
+    "hints": [
+      "[[c:2 is B, 1 is A.]]",
+      "[[c:18 is R.]]",
+      "[[c:Wine is kept in one.]]"
+    ],
+    "reveal": "[[c:2 1 18 18 5 12 spells BARREL. The rose is hidden in a wine barrel.]]",
+    "fallback": "[[c:Stuck? Take a hint: hints are free.]]"
+  },
+  "evidence": [
+    "[[c:A merchant's bill spells BARREL.]]"
+  ],
+  "directions_to_next": "[[c:Head north-west, about 440 metres as the crow flies, to the Falcon Inn.  Keep to pavements and public paths.]]"
+}

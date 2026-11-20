@@ -1,0 +1,51 @@
+{
+  "_readme": "Elton draft. [[c:...]] is cyan = not confirmed. History from the Elton Parish Council short history unless noted.",
+  "id": "elton-13",
+  "order": 13,
+  "name": "Overend",
+  "map": [
+    1078,
+    1505,
+    "guess"
+  ],
+  "layers": {
+    "essential_history": "[[c:In July 1587 the coffin of Mary, Queen of Scots travelled along Overend on its way from Fotheringhay to Peterborough Cathedral. She had been executed at Fotheringhay Castle that February.]]",
+    "deeper_history": "[[c:Elton Hall, the home of the Proby family since 1664, lies further south. It was begun by Sir Richard Sapcote in the 1400s. It is a private house.]]",
+    "mystery": "[[c:This is the road the procession took towards Peterborough at dawn. Scratched on a milestone is a row of numbers, left by someone who wanted the casket found.]]"
+  },
+  "sources": [
+    {
+      "title": "Elton Parish Council: A short history of Elton",
+      "url": "https://eltonparishcouncil.gov.uk/a-short-history-of-elton"
+    },
+    {
+      "title": "Wikipedia: Elton, Cambridgeshire",
+      "url": "https://en.wikipedia.org/wiki/Elton,_Cambridgeshire"
+    }
+  ],
+  "directions_to_next": "[[c:Head north-west, about 770 metres as the crow flies, to The Crown Inn (finale). Head back north along Overend and west along Middle Street to the Crown. Keep to the pavements and paths.]]",
+  "puzzle": {
+    "ref": "E9",
+    "title": "[[c:The milestone numbers]]",
+    "intro": "[[c:A is 1, B is 2, C is 3, and so on.]]",
+    "material": [
+      "[[c:13 9 12 12]]"
+    ],
+    "question": "[[c:Where is the casket hidden? (one word)]]",
+    "answer": "mill",
+    "accepted_variants": [
+      "the mill",
+      "elton mill",
+      "in the mill"
+    ],
+    "hints": [
+      "[[c:13 is M.]]",
+      "[[c:9 is I and 12 is L.]]",
+      "[[c:It's somewhere you visited near the river.]]"
+    ],
+    "reveal": "[[c:13 9 12 12 spells MILL. The casket is hidden at the mill.]]"
+  },
+  "evidence": [
+    "[[c:The numbers on the milestone spell MILL.]]"
+  ]
+}

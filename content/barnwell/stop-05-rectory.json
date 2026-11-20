@@ -1,0 +1,26 @@
+{
+  "_readme": "Draft Barnwell walk. [[c:...]] = cyan, not confirmed. Positions are guesses until recorded on site.",
+  "id": "barnwell-05",
+  "order": 5,
+  "name": "The Rectory",
+  "map": [
+    835,
+    704,
+    "guess"
+  ],
+  "layers": {
+    "essential_history": "[[c:The Rectory stands close to St Andrew's, where the parish priests lived for centuries.]]",
+    "deeper_history": "[[c:Please look from the road: it is a private house.]]",
+    "mystery": "[[c:Hal the castle keeper swears he was asleep in the rectory loft, guarding the parson's horses. The groom agrees.]]"
+  },
+  "sources": [
+    {
+      "title": "Wikipedia: Barnwell, Northamptonshire",
+      "url": "https://en.wikipedia.org/wiki/Barnwell,_Northamptonshire"
+    }
+  ],
+  "evidence": [
+    "[[c:Hal the castle keeper was asleep in the rectory loft all night.]]"
+  ],
+  "directions_to_next": "[[c:Head north, about 250 metres as the crow flies, to Barnwell Castle. Follow the road north along the brook. Keep to pavements and public paths.]]"
+}

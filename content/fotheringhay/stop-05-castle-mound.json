@@ -1,0 +1,54 @@
+{
+  "_readme": "Draft Fotheringhay walk. [[c:...]] = cyan, not confirmed. Positions are guesses until recorded on site.",
+  "id": "fotheringhay-05",
+  "order": 5,
+  "name": "Fotheringhay Castle mound",
+  "map": [
+    1004,
+    912,
+    "guess"
+  ],
+  "layers": {
+    "essential_history": "[[c:Only the mound of Fotheringhay Castle remains. Richard III was born here in 1452, and Mary, Queen of Scots, was tried and beheaded here in 1587.]]",
+    "deeper_history": "[[c:The castle was taken down in 1627 and its stone reused. Local legend says part of it, even a staircase, ended up in the Talbot inn at Oundle.]]",
+    "mystery": "[[c:At the castle, Joan the cook says Will the mason was in her kitchen all evening, eating pie. Two kitchen boys agree.]]"
+  },
+  "sources": [
+    {
+      "title": "Wikipedia: Fotheringhay",
+      "url": "https://en.wikipedia.org/wiki/Fotheringhay"
+    },
+    {
+      "title": "Wikipedia: Fotheringhay Castle",
+      "url": "https://en.wikipedia.org/wiki/Fotheringhay_Castle"
+    }
+  ],
+  "puzzle": {
+    "ref": "F4",
+    "title": "[[c:The kitchen]]",
+    "intro": "[[c:Who could NOT have taken the rose?]]",
+    "material": [
+      "[[c:JOAN: \"Will sat by my fire from dusk to dawn.\"]]",
+      "[[c:KITCHEN BOY: \"Will never left the kitchen.\"]]",
+      "[[c:KIT: \"I saw a man with a sack at the ford.\"]]"
+    ],
+    "question": "[[c:Who could not have taken the rose? (name)]]",
+    "answer": "Will",
+    "accepted_variants": [
+      "will hobbs",
+      "hobbs",
+      "the mason"
+    ],
+    "hints": [
+      "[[c:Who has two witnesses?]]",
+      "[[c:He sat by the fire all night.]]",
+      "[[c:He's the mason.]]"
+    ],
+    "reveal": "[[c:Will Hobbs was in the kitchen all night with witnesses.]]",
+    "fallback": "[[c:Stuck? Take a hint: hints are free.]]"
+  },
+  "evidence": [
+    "[[c:Will Hobbs was in the castle kitchen all night.]]"
+  ],
+  "directions_to_next": "[[c:Head south-west, about 50 metres as the crow flies, to the memorial to Mary, Queen of Scots.  Keep to pavements and public paths.]]"
+}

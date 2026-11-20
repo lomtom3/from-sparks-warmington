@@ -1,0 +1,53 @@
+{
+  "_readme": "Draft Polebrook walk. [[c:...]] = cyan, not confirmed. Positions are guesses until recorded on site.",
+  "id": "polebrook-03",
+  "order": 3,
+  "name": "All Saints Church",
+  "map": [
+    752,
+    582,
+    "guess"
+  ],
+  "layers": {
+    "essential_history": "[[c:All Saints dates from the 12th century, and a wooden church may have stood here before it. Inside is a roll of honour and a memorial chapel for the men of the 351st Bomb Group.]]",
+    "deeper_history": "[[c:Thomas de Thelwall, later Chancellor of the Duchy of Lancaster, was the parish priest here in the 1360s.]]",
+    "mystery": "[[c:In the porch you find a torn train ticket and a receipt.]]"
+  },
+  "sources": [
+    {
+      "title": "Wikipedia: Polebrook",
+      "url": "https://en.wikipedia.org/wiki/Polebrook"
+    },
+    {
+      "title": "Wikipedia: RAF Polebrook",
+      "url": "https://en.wikipedia.org/wiki/RAF_Polebrook"
+    }
+  ],
+  "puzzle": {
+    "ref": "P2",
+    "title": "[[c:The receipt]]",
+    "intro": "",
+    "material": [
+      "[[c:Bought: 1 film tin, 2 shillings.]]",
+      "[[c:Paid with: 5 shillings.]]",
+      "[[c:Change given: 1 shilling.]]"
+    ],
+    "question": "[[c:How many shillings of change is missing?]]",
+    "answer": "2",
+    "accepted_variants": [
+      "two",
+      "2 shillings"
+    ],
+    "hints": [
+      "[[c:Five take away two.]]",
+      "[[c:He should get three shillings back.]]",
+      "[[c:Three minus one.]]"
+    ],
+    "reveal": "[[c:Two shillings are missing from the change. Someone was in such a hurry they didn't wait for it.]]",
+    "fallback": "[[c:Stuck? Take a hint: hints are free.]]"
+  },
+  "evidence": [
+    "[[c:Someone bought a film tin in a hurry and left without their change.]]"
+  ],
+  "directions_to_next": "[[c:Head east, about 140 metres as the crow flies, to Polebrook Hall.  Keep to pavements and public paths.]]"
+}

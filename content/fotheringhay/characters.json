@@ -1,0 +1,29 @@
+{
+  "_readme": "Fotheringhay cast (made-up characters).",
+  "characters": [
+    {
+      "key": "WILL",
+      "name": "Will Hobbs",
+      "role": "a mason",
+      "img": "images/characters/fotheringhay/will-portrait.jpg"
+    },
+    {
+      "key": "JOAN",
+      "name": "Joan Fairfax",
+      "role": "the castle cook",
+      "img": "images/characters/fotheringhay/joan-portrait.jpg"
+    },
+    {
+      "key": "KIT",
+      "name": "Kit Ashby",
+      "role": "a young page",
+      "img": "images/characters/fotheringhay/kit-portrait.jpg"
+    },
+    {
+      "key": "MASTER VENN",
+      "name": "Master Lucas Venn",
+      "role": "a wine merchant",
+      "img": "images/characters/fotheringhay/venn-portrait.jpg"
+    }
+  ]
+}

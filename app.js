@@ -102,6 +102,7 @@
   function mapView(focus) {
     var NS = 'http://www.w3.org/2000/svg';
     var RED = '#c0281d', GREY = '#8a8578', GREYT = '#6f6a5c', BLACK = '#1e1a12', CYAN = '#00a5b8', CYANT = '#007f92';
+    var K = MAP.scale || 1;
     var wrap = el('div', { className: 'mapwrap' });
     var img = document.createElement('img');
     img.src = MAP.src;
@@ -126,8 +127,8 @@
       if (pa.map[0] === pb.map[0] && pa.map[1] === pb.map[1]) continue;
       var walked = far >= pa.n;                                      // you have moved on from stop pa
       add('line', walked
-        ? { x1: pa.map[0], y1: pa.map[1], x2: pb.map[0], y2: pb.map[1], stroke: '#1e1a12', 'stroke-opacity': 0.55, 'stroke-width': 2.4, 'stroke-linecap': 'round' }
-        : { x1: pa.map[0], y1: pa.map[1], x2: pb.map[0], y2: pb.map[1], stroke: '#8a8578', 'stroke-opacity': 0.28, 'stroke-width': 2, 'stroke-linecap': 'round', 'stroke-dasharray': '5 4' });
+        ? { x1: pa.map[0], y1: pa.map[1], x2: pb.map[0], y2: pb.map[1], stroke: '#1e1a12', 'stroke-opacity': 0.55, 'stroke-width': 2.4 * K, 'stroke-linecap': 'round' }
+        : { x1: pa.map[0], y1: pa.map[1], x2: pb.map[0], y2: pb.map[1], stroke: '#8a8578', 'stroke-opacity': 0.28, 'stroke-width': 2 * K, 'stroke-linecap': 'round', 'stroke-dasharray': (5 * K) + ' ' + (4 * K) });
     }
     placed.forEach(function (r) {
       var twin = placed.filter(function (o) { return o.n !== r.n && o.map[0] === r.map[0] && o.map[1] === r.map[1]; })[0];
@@ -143,22 +144,23 @@
       else { dot = BLACK; txt = BLACK; }
       var x = r.map[0], y = r.map[1];
       if (isFocus) {
-        var ring = { cx: x, cy: y, r: 13, fill: 'none', stroke: RED, 'stroke-width': 3 };
-        if (unconfirmed) ring['stroke-dasharray'] = '4 3';
+        var ring = { cx: x, cy: y, r: 13 * K, fill: 'none', stroke: RED, 'stroke-width': 3 * K };
+        if (unconfirmed) ring['stroke-dasharray'] = (4 * K) + ' ' + (3 * K);
         add('circle', ring);
       }
       var fade = (visited && !isFocus && !unconfirmed) ? 0.5 : 1;
-      add('circle', { cx: x, cy: y, r: 7, fill: dot, stroke: '#f3e7c9', 'stroke-width': 1.5, opacity: fade });
-      add('text', { x: x, y: y + 3, 'text-anchor': 'middle', 'font-size': 8.5, 'font-weight': 700, fill: '#fff', 'font-family': 'system-ui,sans-serif' }, String(group[0]));
+      add('circle', { cx: x, cy: y, r: 7 * K, fill: dot, stroke: '#f3e7c9', 'stroke-width': 1.5 * K, opacity: fade });
+      add('text', { x: x, y: y + 3 * K, 'text-anchor': 'middle', 'font-size': 8.5 * K, 'font-weight': 700, fill: '#fff', 'font-family': 'system-ui,sans-serif' }, String(group[0]));
       var left = r.dir === 'l', up = r.dir === 'u', down = r.dir === 'd';
       add('text', {
-        x: (up || down) ? x : (left ? x - 12 : x + 12), y: up ? y - 13 : (down ? y + 21 : y + 3.5), 'text-anchor': (up || down) ? 'middle' : (left ? 'end' : 'start'), 'font-size': 11.5,
+        x: (up || down) ? x : (left ? x - 12 * K : x + 12 * K), y: up ? y - 13 * K : (down ? y + 21 * K : y + 3.5 * K), 'text-anchor': (up || down) ? 'middle' : (left ? 'end' : 'start'), 'font-size': 11.5 * K,
         'font-family': 'Georgia,serif', 'font-weight': isFocus ? 700 : 400, fill: txt, opacity: fade,
-        stroke: '#ead9ab', 'stroke-width': 2.6, 'paint-order': 'stroke'
+        stroke: '#ead9ab', 'stroke-width': 2.6 * K, 'paint-order': 'stroke'
       }, r.label + (twin ? ' (start, finish)' : ''));
     });
-    add('circle', { class: 'you-halo', cx: 0, cy: 0, r: 13, fill: 'rgba(43,108,255,.25)', style: 'display:none' });
-    add('circle', { class: 'you-dot', cx: 0, cy: 0, r: 6, fill: '#2b6cff', stroke: '#fff', 'stroke-width': 2, style: 'display:none' });
+    add('text', { x: MAP.x0 + MAP.w - 5 * K, y: MAP.y0 + MAP.h - 5 * K, 'text-anchor': 'end', 'font-size': 7.5 * K, fill: '#3b2a14', stroke: '#ead9ab', 'stroke-width': 2 * K, 'paint-order': 'stroke', 'font-family': 'system-ui,sans-serif' }, '© OpenStreetMap contributors');
+    add('circle', { class: 'you-halo', cx: 0, cy: 0, r: 13 * K, fill: 'rgba(43,108,255,.25)', style: 'display:none' });
+    add('circle', { class: 'you-dot', cx: 0, cy: 0, r: 6 * K, fill: '#2b6cff', stroke: '#fff', 'stroke-width': 2 * K, style: 'display:none' });
     wrap.appendChild(svg);
     return wrap;
   }
@@ -235,6 +237,11 @@
       settingsEl.appendChild(el('h3', { text: 'Walk length' }));
       lengthRows().forEach(function (r) { r.querySelector('input').addEventListener('change', function () { route(true); }); settingsEl.appendChild(r); });
     }
+    var offOut = el('p', { className: 'muted' });
+    settingsEl.appendChild(el('h3', { text: 'No signal on the walk?' }));
+    settingsEl.appendChild(el('button', { className: 'secondary wide', text: 'Save this walk to my phone', onClick: function () { saveOffline(offOut); } }));
+    settingsEl.appendChild(offOut);
+    settingsEl.appendChild(el('button', { className: 'secondary wide', text: 'About, safety and privacy', onClick: function () { closeSettings(); location.hash = '#about'; } }));
     settingsEl.appendChild(el('button', { className: 'secondary wide', text: 'Choose a different village', onClick: function () { closeSettings(); location.hash = '#villages'; } }));
     settingsEl.appendChild(el('button', { className: 'secondary wide', text: 'Welcome page', onClick: function () { closeSettings(); location.hash = '#welcome'; } }));
     settingsEl.appendChild(el('h3', { text: 'The walk' }));
@@ -264,12 +271,7 @@
 
 
   // ---------- characters (pictures from the owner's artwork) ----------
-  var CHARS = [
-    { key: 'MARTHA', name: 'Martha', role: "Mrs Reed, the miller's assistant", img: 'images/characters/martha-portrait.jpg' },
-    { key: 'JONAS', name: 'Jonas Pike', role: 'the stable hand', img: 'images/characters/jonas-portrait.jpg' },
-    { key: 'ALICE', name: 'Alice Fen', role: 'the messenger', img: 'images/characters/alice-portrait.jpg' },
-    { key: 'MR VALE', name: 'Mr Vale', role: 'the steward', img: 'images/characters/mr-vale-portrait.jpg' }
-  ];
+  var CHARS = [];   // set from the walk's "cast" list when a walk loads
   function charFor(text) {
     var t = String(text).replace(/\[\[[rc]:|\]\]/g, '').trim().toUpperCase();
     for (var i = 0; i < CHARS.length; i++) if (t.indexOf(CHARS[i].key) === 0) return CHARS[i];
@@ -287,7 +289,7 @@
       var fig = el('figure', { className: 'suspect' });
       var img = document.createElement('img');
       img.src = c.img; img.alt = c.name; img.loading = 'lazy';
-      img.addEventListener('error', function () { fig.remove(); });
+      img.addEventListener('error', function () { img.remove(); fig.classList.add('no-pic'); });
       fig.appendChild(img);
       fig.appendChild(el('figcaption', {}, [el('strong', { text: c.name }), document.createElement('br'), document.createTextNode(c.role)]));
       grid.appendChild(fig);
@@ -308,6 +310,7 @@
   // ---------- location (opt-in, stays on the phone) ----------
   var GEO = { lat0: 52.50988, lon0: -0.41583, x0: 433, y0: 635, mpp: 3.4 };
   var kLat = 111320 / GEO.mpp, kLon = kLat * Math.cos(GEO.lat0 * Math.PI / 180);
+  function setGeo(g) { if (!g) return; GEO = g; kLat = 111320 / GEO.mpp; kLon = kLat * Math.cos(GEO.lat0 * Math.PI / 180); }
   function xyToLL(x, y) { return { lat: GEO.lat0 - (y - GEO.y0) / kLat, lon: GEO.lon0 + (x - GEO.x0) / kLon }; }
   function llToXY(lat, lon) { return { x: GEO.x0 + (lon - GEO.lon0) * kLon, y: GEO.y0 - (lat - GEO.lat0) * kLat }; }
   function distM(a, b) {
@@ -403,10 +406,11 @@
   function heroImage() {
     var fig = el('figure', { className: 'stop-photo hero' });
     var img = document.createElement('img');
-    img.src = 'images/characters.jpg'; img.alt = 'First concept of the characters in the story (draft)';
+    if (!walk.hero_image) return null;
+    img.src = walk.hero_image.src; img.alt = walk.hero_image.alt || '';
     img.addEventListener('error', function () { fig.remove(); });
     fig.appendChild(img);
-    fig.appendChild(el('figcaption', { text: 'The characters: first concept (draft).' }));
+    if (walk.hero_image.caption) fig.appendChild(el('figcaption', { text: walk.hero_image.caption }));
     return fig;
   }
 
@@ -476,16 +480,18 @@
 
   function storyScreen() {
     var nodes = [el('p', { className: 'kicker', text: 'The story so far' }), el('h1', { text: walk.title })];
-    var sealed = el('figure', { className: 'stop-photo hero' }), simg = document.createElement('img');
-    simg.src = 'images/scenes/sealed-order.jpg'; simg.alt = 'A sealed letter on a wooden table by a village window';
-    simg.addEventListener('error', function () { sealed.remove(); });
-    sealed.appendChild(simg); sealed.appendChild(el('figcaption', { text: '[[c:The sealed order: the letter that went missing.]]' }));
-    nodes.push(sealed);
+    if (walk.story_image) {
+      var sealed = el('figure', { className: 'stop-photo hero' }), simg = document.createElement('img');
+      simg.src = walk.story_image.src; simg.alt = walk.story_image.alt || '';
+      simg.addEventListener('error', function () { sealed.remove(); });
+      sealed.appendChild(simg); if (walk.story_image.caption) sealed.appendChild(el('figcaption', { text: walk.story_image.caption }));
+      nodes.push(sealed);
+    }
     walk.story.forEach(function (p) { nodes.push(el('p', { className: 'story', text: p })); });
-    nodes.push(suspectsGrid('Who you\'ll meet'));
+    if (CHARS.length) nodes.push(suspectsGrid('Who you\'ll meet'));
     nodes.push(
       el('button', { className: 'wide copper', text: '[[c:Find the start]]', onClick: function () { location.hash = '#start'; } }),
-      el('button', { className: 'wide secondary', text: "[[c:I'm at the Red Lion: begin the walk]]", onClick: function () { var s1 = stops[0]; state.arrived[s1.id] = true; state.current = 0; saveState(); goStop(0); } }),
+      el('button', { className: 'wide secondary', text: walk.start_page.begin_label, onClick: function () { var s1 = stops[0]; state.arrived[s1.id] = true; state.current = 0; saveState(); goStop(0); } }),
       el('div', { className: 'nav' }, [el('button', { className: 'secondary', text: 'Back', onClick: function () { location.hash = '#setup'; } })])
     );
     show(nodes);
@@ -514,6 +520,39 @@
     });
   }
 
+  // ---------- about, safety and privacy ----------
+  var aboutInfo = null;
+  function aboutScreen() {
+    var nodes = [el('p', { className: 'kicker', text: 'From Sparks Adventures' }), el('h1', { text: aboutInfo ? aboutInfo.title : 'About' })];
+    if (aboutInfo) aboutInfo.sections.forEach(function (s) {
+      nodes.push(el('section', { className: 'card' }, [el('h2', { text: s.heading })].concat(s.text.map(function (t) { return el('p', { text: t }); }))));
+    });
+    nodes.push(el('div', { className: 'nav' }, [el('button', { className: 'secondary', text: 'Back', onClick: function () { history.length > 1 ? history.back() : (location.hash = walk ? '#welcome' : '#villages'); } })]));
+    show(nodes);
+  }
+
+  // ---------- save the walk for use without signal ----------
+  function offlineUrls() {
+    var urls = [CONTENT + 'walk.json', MAP.src];
+    if (walk.story_image) urls.push(walk.story_image.src);
+    if (walk.hero_image) urls.push(walk.hero_image.src);
+    walk.stops.forEach(function (f) { urls.push(CONTENT + f); });
+    allStops.forEach(function (s) { if (s.photo) urls.push(s.photo); if (s.character_art && s.character_art.src) urls.push(s.character_art.src); });
+    CHARS.forEach(function (c) { urls.push(c.img); });
+    return urls.filter(function (u, i) { return urls.indexOf(u) === i; });
+  }
+  function saveOffline(out) {
+    if (!('serviceWorker' in navigator)) { out.textContent = 'This browser cannot save the walk for offline use.'; return; }
+    var urls = offlineUrls(), done = 0, failed = 0;
+    out.textContent = 'Saving 0 of ' + urls.length + '...';
+    urls.reduce(function (p, u) {
+      return p.then(function () { return fetch(u, { cache: 'reload' }).then(function (r) { if (!r.ok) failed++; }).catch(function () { failed++; }); })
+        .then(function () { done++; out.textContent = 'Saving ' + done + ' of ' + urls.length + '...'; });
+    }, Promise.resolve()).then(function () {
+      out.textContent = failed ? 'Saved, but ' + failed + ' item(s) could not be fetched. Try again with a better signal.' : 'Done. The walk will work even with no signal.';
+    });
+  }
+
   // ---------- village chooser ----------
   function villagesScreen() {
     menuButton.hidden = !walk;
@@ -521,15 +560,27 @@
     var nodes = [logoHero(), el('p', { className: 'kicker', text: 'From Sparks Adventures' }), el('h1', { text: '[[c:Where would you like to walk?]]' }),
       el('p', { className: 'muted', text: '[[c:Choose a village to start. More walks are on the way.]]' })];
     var grid = el('div', { className: 'villages' });
+    var showDrafts = state ? !!state.review : reviewGuess();
     villages.forEach(function (v) {
-      var ready = v.status === 'ready';
+      if (v.status === 'draft' && !showDrafts) return;
+      var ready = v.status === 'ready' || v.status === 'draft';
       var kids = [];
+      if (v.status === 'suggest') {
+        var box = document.createElement('input'); box.type = 'text'; box.placeholder = 'Village or town name'; box.className = 'suggest-input';
+        grid.appendChild(el('section', { className: 'card village suggest' }, [el('h2', { text: v.name }), el('p', { text: v.teaser }), box,
+          el('button', { className: 'wide secondary', text: 'Send my suggestion', onClick: function () {
+            var place = box.value.trim();
+            location.href = 'mailto:' + v.email + '?subject=' + encodeURIComponent('Walk suggestion: ' + (place || 'a village')) + '&body=' + encodeURIComponent('I would love a From Sparks walk in: ' + place + '\n\nWhy it would be a good one:\n');
+          } })]));
+        return;
+      }
       if (v.image) {
         var im = document.createElement('img'); im.src = v.image; im.alt = v.image_alt || v.name; im.className = 'village-img';
         im.addEventListener('error', function () { im.remove(); });
         kids.push(im);
       }
       kids.push(el('h2', { text: ready ? v.walk_title : v.name }));
+      if (v.status === 'draft') kids.push(el('p', { className: 'badge-soon', text: 'Draft: only you can see this' }));
       if (ready && v.story) kids.push(el('p', { className: 'kicker', text: v.story }));
       if (v.teaser) kids.push(el('p', { text: v.teaser }));
       if (v.details) kids.push(el('p', { className: 'muted', text: v.details }));
@@ -539,6 +590,7 @@
       grid.appendChild(el('section', { className: 'card village' + (ready ? '' : ' soon') }, kids));
     });
     nodes.push(grid);
+    nodes.push(el('p', { className: 'muted center' }, [el('a', { text: 'About, safety and privacy', attrs: { href: '#about' } })]));
     show(nodes);
   }
   function chooseVillage(v) {
@@ -591,6 +643,11 @@
   function startScreen() {
     var sp = walk.start_page;
     var nodes = [el('p', { className: 'kicker', text: 'Before you set off' }), el('h1', { text: sp.title }), el('p', { text: sp.intro })];
+    if (sp.address && sp.address.length) {
+      var adr = el('address', { className: 'addr' });
+      sp.address.forEach(function (line, i) { if (i) adr.appendChild(document.createElement('br')); adr.appendChild(document.createTextNode(line)); });
+      nodes.push(el('section', { className: 'card address' }, [el('h2', { text: 'Address' }), adr]));
+    }
     if (stops[0].photo) nodes.push(photoFigure(stops[0]));
     sp.parking.forEach(function (p) { nodes.push(el('p', { text: p })); });
     (sp.parking_photos || []).forEach(function (ph) {
@@ -610,7 +667,7 @@
       el('section', { className: 'card support' }, [el('p', { text: sp.support })]),
       el('a', { className: 'btn-link wide', text: sp.map_label, attrs: { href: sp.map_url, target: '_blank', rel: 'noopener' } }),
       mapView(1),
-      el('button', { className: 'wide copper', text: "[[c:I'm at the Red Lion: begin the walk]]", onClick: function () { var s1 = stops[0]; state.arrived[s1.id] = true; state.current = 0; saveState(); goStop(0); } }),
+      el('button', { className: 'wide copper', text: walk.start_page.begin_label, onClick: function () { var s1 = stops[0]; state.arrived[s1.id] = true; state.current = 0; saveState(); goStop(0); } }),
       el('div', { className: 'nav' }, [el('button', { className: 'secondary', text: 'Back', onClick: function () { history.length > 1 ? history.back() : (location.hash = '#welcome'); } })])
     );
     show(nodes);
@@ -623,7 +680,7 @@
       stops.forEach(function (s, i) { if (s.order === r.n) idx = i; });
       var name = idx >= 0 && idx <= maxOpen()
         ? el('a', { text: r.name, attrs: { href: '#' + stops[idx].id } })
-        : el('span', { className: 'soon', text: r.name + (idx >= 0 ? ' (opens as you walk)' : ' (coming soon)') });
+        : el('span', { className: 'soon', text: r.name + (idx >= 0 ? (accessLocked(idx) ? ' (unlock with a code)' : ' (opens as you walk)') : ' (coming soon)') });
       list.appendChild(el('li', {}, [el('span', { className: 'num', text: String(r.n) }), name]));
     });
     show([
@@ -646,7 +703,7 @@
 
   function notebookScreen() {
     var items = collectEvidence();
-    var nodes = [el('p', { className: 'kicker', text: 'Your notes' }), el('h1', { text: 'Evidence notebook' }), suspectsGrid('The four suspects')];
+    var nodes = [el('p', { className: 'kicker', text: 'Your notes' }), el('h1', { text: 'Evidence notebook' }), (CHARS.length ? suspectsGrid('The suspects') : null)];
     if (!items.length) nodes.push(el('p', { className: 'muted', text: 'Nothing yet. Solve puzzles as you walk and your clues will turn up here.' }));
     items.forEach(function (it) {
       nodes.push(el('section', { className: 'card mystery' }, [el('p', { className: 'kicker', text: it.stop }), el('p', { text: it.text })]));
@@ -869,6 +926,7 @@
     if (keepScroll === true) lastScroll = window.scrollY;
     var id = location.hash.replace('#', '');
     if (id === 'villages') { villagesScreen(); return; }
+    if (id === 'about') { aboutScreen(); return; }
     if (id === 'route') routeScreen();
     else if (id === 'setup') setupScreen();
     else if (id === 'story') storyScreen();
@@ -901,6 +959,7 @@
       .then(function (w) {
         walk = w;
         if (w.map) MAP = w.map;
+        setGeo(w.geo); CHARS = w.cast || [];
         return Promise.all(w.stops.map(function (f) { return fetchJson(CONTENT + f); }));
       })
       .then(function (loaded) {
@@ -920,14 +979,16 @@
       .catch(showError);
   }
 
+  if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost')) navigator.serviceWorker.register('sw.js').catch(function () { /* offline support is optional */ });
   loadLogo();
-  window.addEventListener('hashchange', function () { if (walk) route(); else villagesScreen(); });
+  window.addEventListener('hashchange', function () { if (location.hash === '#about') aboutScreen(); else if (walk) route(); else villagesScreen(); });
   fetchJson(ROOT_CONTENT + 'walks.json')
     .then(function (idx) {
-      villages = idx.villages;
+      villages = idx.villages; aboutInfo = idx.about || null;
       var saved = null;
       try { saved = localStorage.getItem(VILLAGE_KEY); } catch (e) { saved = null; }
-      var v = villages.filter(function (x) { return x.id === saved && x.status === 'ready'; })[0];
+      var v = villages.filter(function (x) { return x.id === saved && (x.status === 'ready' || x.status === 'draft'); })[0];
+      if (location.hash === '#about' && !v) { aboutScreen(); return; }
       if (!v || location.hash === '#villages') { villagesScreen(); if (v) loadWalkQuiet(v); return; }
       loadWalk(v);
     })
@@ -938,7 +999,7 @@
     villageId = v.id; CONTENT = v.folder;
     fetchJson(CONTENT + 'walk.json').then(function (w) {
       return Promise.all(w.stops.map(function (f) { return fetchJson(CONTENT + f); })).then(function (loaded) {
-        walk = w; if (w.map) MAP = w.map; allStops = loaded; stops = loaded; state = loadState(); applyLength();
+        walk = w; if (w.map) MAP = w.map; setGeo(w.geo); CHARS = w.cast || []; allStops = loaded; stops = loaded; state = loadState(); applyLength();
         if (!booted) {
           booted = true;
           menuButton.addEventListener('click', function () { if (settingsEl.hidden) openSettings(); else closeSettings(); });

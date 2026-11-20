@@ -295,7 +295,7 @@
     "directions": {
       "heading": "[[c:How to get here]]",
       "text": "[[c:The Red Lion is on the Peterborough Road in Eaglethorpe, Warmington. Tap a button to open Google Maps with directions from where you are now.]]",
-      "destination": "Red Lion Eaglethorpe Warmington Peterborough",
+      "destination": "The Red Lion, Peterborough Road, Warmington, Peterborough PE8 6TN",
       "buttons": [
         {
           "label": "[[c:Drive there]]",
@@ -311,7 +311,15 @@
         }
       ]
     },
-    "parking_photos": []
+    "parking_photos": [],
+    "begin_label": "[[c:I'm at the Red Lion: begin the walk]]",
+    "address": [
+      "The Red Lion",
+      "Peterborough Road",
+      "Warmington",
+      "Peterborough",
+      "PE8 6TN"
+    ]
   },
   "access": {
     "enabled": false,
@@ -338,5 +346,48 @@
       "stops": "all"
     }
   ],
-  "lengths_note": "Add more entries (e.g. shorter, longer) with 'stops': [list of stop numbers]. The choice appears in setup and the menu once there are two or more."
+  "lengths_note": "Add more entries (e.g. shorter, longer) with 'stops': [list of stop numbers]. The choice appears in setup and the menu once there are two or more.",
+  "geo": {
+    "lat0": 52.50988,
+    "lon0": -0.41583,
+    "x0": 433,
+    "y0": 635,
+    "mpp": 3.4
+  },
+  "cast": [
+    {
+      "key": "MARTHA",
+      "name": "Martha",
+      "role": "Mrs Reed, the miller's assistant",
+      "img": "images/characters/martha-portrait.jpg"
+    },
+    {
+      "key": "JONAS",
+      "name": "Jonas Pike",
+      "role": "the stable hand",
+      "img": "images/characters/jonas-portrait.jpg"
+    },
+    {
+      "key": "ALICE",
+      "name": "Alice Fen",
+      "role": "the messenger",
+      "img": "images/characters/alice-portrait.jpg"
+    },
+    {
+      "key": "MR VALE",
+      "name": "Mr Vale",
+      "role": "the steward",
+      "img": "images/characters/mr-vale-portrait.jpg"
+    }
+  ],
+  "hero_image": {
+    "src": "images/characters.jpg",
+    "alt": "First concept of the characters in the story (draft)",
+    "caption": "The characters: first concept (draft)."
+  },
+  "story_image": {
+    "src": "images/scenes/sealed-order.jpg",
+    "alt": "A sealed letter on a wooden table by a village window",
+    "caption": "[[c:The sealed order: the letter that went missing.]]"
+  }
 }

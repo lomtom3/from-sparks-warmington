@@ -1,0 +1,51 @@
+{
+  "_readme": "Draft Oundle walk. [[c:...]] = cyan, not confirmed. Positions are guesses until recorded on site.",
+  "id": "oundle-09",
+  "order": 9,
+  "name": "The Ship Inn",
+  "map": [
+    1032,
+    1284,
+    "guess"
+  ],
+  "layers": {
+    "essential_history": "[[c:The Ship on West Street is an old coaching inn. Inns like this were busy when travellers and goods moved by horse and coach.]]",
+    "deeper_history": "[[c:Oundle had many inns. The Rose and Crown on the Market Place dates from the 1600s.]]",
+    "mystery": "[[c:At the Ship, the potboy shows you a muddy handcart. Its wheels have left a trail of stone dust.]]"
+  },
+  "sources": [
+    {
+      "title": "Wikipedia: Oundle",
+      "url": "https://en.wikipedia.org/wiki/Oundle"
+    }
+  ],
+  "puzzle": {
+    "ref": "O6",
+    "title": "[[c:The handcart]]",
+    "intro": "",
+    "material": [
+      "[[c:The handcart belongs to Josiah Gant's inn.]]",
+      "[[c:Its wheels are white with stone dust, the same pale stone as Fotheringhay.]]",
+      "[[c:A splinter of carved oak is caught in the boards.]]"
+    ],
+    "question": "[[c:What did the handcart carry? (one word)]]",
+    "answer": "crown",
+    "accepted_variants": [
+      "the crown",
+      "oak crown",
+      "the oak crown"
+    ],
+    "hints": [
+      "[[c:What was stolen?]]",
+      "[[c:It was carved from oak.]]",
+      "[[c:A king or queen wears one.]]"
+    ],
+    "reveal": "[[c:The splinter of carved oak shows the handcart carried the oak crown.]]",
+    "fallback": "[[c:Stuck? Take a hint: hints are free.]]"
+  },
+  "evidence": [
+    "[[c:Josiah Gant's handcart has stone dust and a splinter of carved oak in it.]]"
+  ],
+  "support": "[[c:Support the town: the Ship is still a working pub.]]",
+  "directions_to_next": "[[c:Head east, about 120 metres as the crow flies, to the war memorial.  Keep to pavements and public paths.]]"
+}

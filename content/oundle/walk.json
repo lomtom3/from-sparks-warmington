@@ -1,0 +1,315 @@
+{
+  "_readme": "DRAFT Oundle walk (status draft in content/walks.json: only shown with draft colours on). Made by Claude from public sources; everything cyan until the owner approves. Character art still to make.",
+  "id": "oundle",
+  "title": "The Drumming Well",
+  "subtitle": "Oundle Walk",
+  "welcome_text": "[[c:A mystery walk through Oundle's market place, inns, school and church. Choose the short town-centre loop or the longer walk down to the River Nene.]]",
+  "start_text": "[[c:Start in the Market Place, by the old town hall in the middle of Oundle.]]",
+  "coins": {
+    "start_total": 5,
+    "cost_by_hints_used": {
+      "0": 4,
+      "1": 3,
+      "2": 2,
+      "3": 1
+    },
+    "explain": "[[c:You have a purse of 5 coins for the whole walk. Hints are free. Showing an answer costs coins.]]"
+  },
+  "layers": [
+    {
+      "key": "essential_history",
+      "label": "Essential history",
+      "description": "[[c:Short, true facts about each stop.]]",
+      "default_on": true
+    },
+    {
+      "key": "deeper_history",
+      "label": "Deeper history",
+      "description": "[[c:More history for the curious.]]",
+      "default_on": false
+    },
+    {
+      "key": "mystery",
+      "label": "Mystery story",
+      "description": "[[c:The story and the puzzles. Switch it off for a history-only walk.]]",
+      "default_on": true
+    }
+  ],
+  "stops": [
+    "stop-01-market-place.json",
+    "stop-02-talbot.json",
+    "stop-03-drumming-well.json",
+    "stop-04-school-chapel.json",
+    "stop-05-stahl-theatre.json",
+    "stop-06-jesus-church.json",
+    "stop-07-museum.json",
+    "stop-08-south-bridge.json",
+    "stop-09-ship-inn.json",
+    "stop-10-war-memorial.json",
+    "stop-11-st-peters.json",
+    "stop-12-oundle-school.json",
+    "stop-13-market-place-finale.json"
+  ],
+  "route": [
+    {
+      "n": 1,
+      "name": "Market Place and the old town hall",
+      "label": "Market Place",
+      "dir": "r",
+      "map": [
+        1228,
+        1242,
+        "guess"
+      ]
+    },
+    {
+      "n": 2,
+      "name": "The Talbot",
+      "label": "The Talbot",
+      "dir": "l",
+      "map": [
+        1089,
+        1216,
+        "guess"
+      ]
+    },
+    {
+      "n": 3,
+      "name": "Drumming Well Lane",
+      "label": "Drumming Well",
+      "dir": "r",
+      "map": [
+        1055,
+        1102,
+        "guess"
+      ]
+    },
+    {
+      "n": 4,
+      "name": "Oundle School Chapel",
+      "label": "School Chapel",
+      "dir": "l",
+      "map": [
+        884,
+        1005,
+        "guess"
+      ]
+    },
+    {
+      "n": 5,
+      "name": "West Street and the Stahl Theatre",
+      "label": "Stahl Theatre",
+      "dir": "r",
+      "map": [
+        880,
+        1227,
+        "guess"
+      ]
+    },
+    {
+      "n": 6,
+      "name": "The Jesus Church",
+      "label": "Jesus Church",
+      "dir": "l",
+      "map": [
+        730,
+        1242,
+        "guess"
+      ]
+    },
+    {
+      "n": 7,
+      "name": "Oundle Museum",
+      "label": "Museum",
+      "dir": "l",
+      "map": [
+        720,
+        1280,
+        "guess"
+      ]
+    },
+    {
+      "n": 8,
+      "name": "South Bridge and the River Nene",
+      "label": "South Bridge",
+      "dir": "r",
+      "map": [
+        754,
+        1551,
+        "guess"
+      ]
+    },
+    {
+      "n": 9,
+      "name": "The Ship Inn",
+      "label": "The Ship",
+      "dir": "l",
+      "map": [
+        1032,
+        1284,
+        "guess"
+      ]
+    },
+    {
+      "n": 10,
+      "name": "The war memorial",
+      "label": "War memorial",
+      "dir": "r",
+      "map": [
+        1145,
+        1258,
+        "guess"
+      ]
+    },
+    {
+      "n": 11,
+      "name": "St Peter's Church",
+      "label": "St Peter's",
+      "dir": "r",
+      "map": [
+        1239,
+        1153,
+        "guess"
+      ]
+    },
+    {
+      "n": 12,
+      "name": "Oundle School and the Cripps Library",
+      "label": "Oundle School",
+      "dir": "r",
+      "map": [
+        1223,
+        1207,
+        "guess"
+      ]
+    },
+    {
+      "n": 13,
+      "name": "Back to the Market Place",
+      "label": "Market Place",
+      "dir": "r",
+      "map": [
+        1228,
+        1242,
+        "guess"
+      ]
+    }
+  ],
+  "story": [
+    "[[c:Oundle, 1626. The Talbot inn is being rebuilt in fine stone, and carts have been bringing stone from the ruins of Fotheringhay Castle, where Mary, Queen of Scots, was executed.]]",
+    "[[c:With the stone came a carved oak crown, said to be from the staircase the Queen walked down on her last morning. The landlord meant to set it on his new staircase.]]",
+    "[[c:Last night the old well in the inn yard began to drum, as people say it does before trouble. By morning the oak crown was gone.]]",
+    "[[c:Four people were about the yard that night: Silas Webb, the master mason; Tom Crane, a boy from Laxton's school; Martha Pell, the carter who brought the stone; and Josiah Gant, landlord of a rival inn. Find out who took the crown, and why.]]"
+  ],
+  "start_page": {
+    "title": "Getting to the start",
+    "intro": "[[c:The walk starts and finishes in the Market Place, in the centre of Oundle.]]",
+    "address": [
+      "Market Place",
+      "Oundle",
+      "Peterborough",
+      "PE8 4BA"
+    ],
+    "parking": [
+      "[[c:Parking: Oundle has several town car parks a short walk from the Market Place. If you're driving, park first and then open the walk.]]"
+    ],
+    "support": "[[c:Support the town: there are cafés, pubs and independent shops around the Market Place. The short walk takes about 45 minutes to 1 hour 15; the long walk about 1 hour 30 to 2 hours.]]",
+    "directions": {
+      "heading": "[[c:How to get here]]",
+      "text": "[[c:Tap a button to open Google Maps with directions from where you are now.]]",
+      "destination": "Market Place, Oundle, Peterborough PE8 4BA",
+      "buttons": [
+        {
+          "label": "[[c:Drive there]]",
+          "mode": "driving"
+        },
+        {
+          "label": "[[c:Public transport]]",
+          "mode": "transit"
+        },
+        {
+          "label": "[[c:Walk there]]",
+          "mode": "walking"
+        }
+      ]
+    },
+    "parking_photos": [],
+    "map_label": "Open the start in Maps",
+    "map_url": "https://www.google.com/maps/search/?api=1&query=Market+Place+Oundle+Peterborough+PE8+4BA",
+    "begin_label": "[[c:I'm in the Market Place: begin the walk]]"
+  },
+  "access": {
+    "enabled": false,
+    "free_stops": 2,
+    "verify_url": "",
+    "buy_url": "",
+    "title": "[[c:Unlock the rest of the walk]]",
+    "text": "[[c:The first two stops are free to try. Enter your access code to carry on.]]",
+    "buy_text": "[[c:Don't have a code yet? Get one here.]]"
+  },
+  "map": {
+    "src": "map/oundle-map.svg",
+    "x0": 550,
+    "y0": 850,
+    "w": 1100,
+    "h": 1000,
+    "scale": 1.8
+  },
+  "geo": {
+    "lat0": 52.49213,
+    "lon0": -0.48543,
+    "x0": 0,
+    "y0": 0,
+    "mpp": 1
+  },
+  "lengths": [
+    {
+      "key": "short",
+      "label": "[[c:Short walk: the town centre]]",
+      "description": "[[c:About 1.5 km, 9 stops, fewer puzzles. 45 minutes to 1 hour 15.]]",
+      "stops": [
+        1,
+        2,
+        3,
+        5,
+        9,
+        10,
+        11,
+        12,
+        13
+      ]
+    },
+    {
+      "key": "long",
+      "label": "[[c:Long walk: town and river]]",
+      "description": "[[c:About 3.5 km, 13 stops, every puzzle. 1 hour 30 to 2 hours.]]",
+      "stops": "all"
+    }
+  ],
+  "cast": [
+    {
+      "key": "SILAS",
+      "name": "Silas Webb",
+      "role": "the master mason",
+      "img": "images/characters/oundle/silas-portrait.jpg"
+    },
+    {
+      "key": "TOM",
+      "name": "Tom Crane",
+      "role": "a boy from Laxton's school",
+      "img": "images/characters/oundle/tom-portrait.jpg"
+    },
+    {
+      "key": "MARTHA",
+      "name": "Martha Pell",
+      "role": "the carter",
+      "img": "images/characters/oundle/martha-portrait.jpg"
+    },
+    {
+      "key": "JOSIAH",
+      "name": "Josiah Gant",
+      "role": "landlord of a rival inn",
+      "img": "images/characters/oundle/josiah-portrait.jpg"
+    }
+  ]
+}

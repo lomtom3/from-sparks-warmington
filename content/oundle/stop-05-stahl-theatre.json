@@ -1,0 +1,50 @@
+{
+  "_readme": "Draft Oundle walk. [[c:...]] = cyan, not confirmed. Positions are guesses until recorded on site.",
+  "id": "oundle-05",
+  "order": 5,
+  "name": "West Street and the Stahl Theatre",
+  "map": [
+    880,
+    1227,
+    "guess"
+  ],
+  "layers": {
+    "essential_history": "[[c:The Stahl Theatre on West Street was a Congregational chapel. Oundle School bought it in the late 1970s and opened it as a theatre in 1980.]]",
+    "deeper_history": "[[c:West Street is one of Oundle's old streets, lined with stone houses and inns.]]",
+    "mystery": "[[c:On West Street you meet Josiah Gant, landlord of a rival inn. He is very keen to tell you where he was last night.]]"
+  },
+  "sources": [
+    {
+      "title": "Wikipedia: Oundle",
+      "url": "https://en.wikipedia.org/wiki/Oundle"
+    }
+  ],
+  "puzzle": {
+    "ref": "O4",
+    "title": "[[c:Josiah's story]]",
+    "intro": "[[c:One of these can't be true.]]",
+    "material": [
+      "[[c:JOSIAH: \"I was behind my own bar from dusk till dawn. Ask anyone.\"]]",
+      "[[c:POTBOY: \"Master Gant sent me to bed at ten and locked up himself.\"]]",
+      "[[c:WATCHMAN: \"I saw Master Gant near the Talbot yard after midnight, with a handcart.\"]]"
+    ],
+    "question": "[[c:Whose story can't be true? (name)]]",
+    "answer": "Josiah",
+    "accepted_variants": [
+      "josiah gant",
+      "gant",
+      "master gant"
+    ],
+    "hints": [
+      "[[c:Who says he never left his inn?]]",
+      "[[c:The watchman saw someone after midnight.]]",
+      "[[c:It's the rival landlord.]]"
+    ],
+    "reveal": "[[c:Josiah says he was behind his bar all night, but the watchman saw him by the Talbot yard after midnight with a handcart.]]",
+    "fallback": "[[c:Stuck? Take a hint: hints are free.]]"
+  },
+  "evidence": [
+    "[[c:The watchman saw Josiah Gant near the Talbot yard after midnight with a handcart.]]"
+  ],
+  "directions_to_next": "[[c:Head west, about 150 metres as the crow flies, to the Jesus Church.  Keep to pavements and public paths.]]"
+}
